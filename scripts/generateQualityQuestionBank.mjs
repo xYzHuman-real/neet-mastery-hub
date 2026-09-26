@@ -319,3 +319,5 @@ fs.writeFileSync("data/questions.json", JSON.stringify({
   questions
 }, null, 2) + "\n");
 console.log(`Generated ${questions.length} questions.`);
+
+// Regeneration trigger: generated bank is validated before commit.
