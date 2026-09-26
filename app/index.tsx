@@ -13,7 +13,7 @@ export default function Startup() {
     const timer = setTimeout(() => {
       if (!onboarded) router.replace("/onboarding");
       else if (!user) router.replace("/login");
-      else if (!telegramDone) router.replace("/telegram");
+      else if (!telegramDone) router.replace("/home");
       else router.replace("/home");
     }, 700);
 
