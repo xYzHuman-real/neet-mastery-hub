@@ -4,16 +4,16 @@ import{Pressable,Text,View}from"react-native";
 import{Shell,Card}from"../native/ui";
 import{C}from"../native/theme";
 
-import{useStore,type Rating}from"../native/store";
+import{useStore,type Rating}from"../native/store";import{loadContent,filterQuestions,chapterById}from"../native/content";
 
 export default function Practice(){
   const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string}>();
-  const{due,mistakes,record,rate}=useStore(); const[content,setContent]=useState<any>(null); const[contentError,setContentError]=useState(false); useEffect(()=>{import("../native/content").then(setContent).catch(()=>setContentError(true))},[]);
+  const{due,mistakes,record,rate}=useStore(); const[content,setContent]=useState<any[]|null>(null); const[contentError,setContentError]=useState(false); useEffect(()=>{loadContent().then(setContent).catch(()=>setContentError(true))},[]);
   const mode=p.mode||"revision";
   const deck=useMemo(()=>{
-    if(p.review)return content.filterQuestions(undefined,"revision").filter(x=>due.includes(x.id));
-    if(p.mistakes)return content.filterQuestions(undefined,"revision").filter((x:any)=>mistakes[x.id]);
-    return content.filterQuestions(p.chapter,mode);
+    if(p.review)return filterQuestions(content!,undefined,"revision").filter(x=>due.includes(x.id));
+    if(p.mistakes)return content.filterQuestions(content!,undefined,"revision").filter((x:any)=>mistakes[x.id]);
+    return filterQuestions(content!,p.chapter,mode);
   },[p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
   const[i,setI]=useState(0);
   const[pick,setPick]=useState<number|null>(null);
@@ -63,7 +63,7 @@ export default function Practice(){
   };
   const next=(r:Rating)=>{rate(q.id,r);setPick(null);setText("");setShown(false);setI(x=>x+1)};
 
-  return <Shell title={p.chapter?(content.chapterById(p.chapter)?.name||"Practice"):modeLabel} subtitle={modeLabel} right={<Text style={{fontWeight:"800",color:C.primary}}>{i+1}/{deck.length}</Text>}>
+  return <Shell title={p.chapter?(chapterById(p.chapter)?.name||"Practice"):modeLabel} subtitle={modeLabel} right={<Text style={{fontWeight:"800",color:C.primary}}>{i+1}/{deck.length}</Text>}>
     <View style={{height:6,borderRadius:4,backgroundColor:C.muted,overflow:"hidden",marginBottom:12}}><View style={{height:6,width:(`${((i)/deck.length)*100}%` as any),backgroundColor:C.primary}}/></View>
     <Card><Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>{q.reviewStatus==="draft"&&<Text style={{fontSize:10,color:C.mutedText,marginTop:10}}>Draft bank item · verify before treating as final NCERT line-by-line content.</Text>}</Card>
     <View style={{gap:8,marginTop:12}}>{q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>submit(k)} style={{padding:14,borderRadius:16,borderWidth:1,borderColor:(shown&&k===q.answer)?C.success:(shown&&pick===k)?C.destructive:C.border,backgroundColor:(shown&&k===q.answer)?C.accent:(shown&&pick===k)?"#FCEAE6":C.card}}><Text style={{fontSize:13,color:C.foreground}}>{String.fromCharCode(65+k)}. {o}</Text></Pressable>)}</View>
