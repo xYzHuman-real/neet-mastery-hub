@@ -1,0 +1,39 @@
+name: Generate NEET Question Bank
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/chapters.json"
+      - "scripts/generateQualityQuestionBank.mjs"
+      - ".github/workflows/generate-question-bank.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate 4,350-question draft bank
+        run: node scripts/generateQualityQuestionBank.mjs
+
+      - name: Validate question bank
+        run: node scripts/validateQuestionQuality.mjs
+
+      - name: Commit generated bank
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/questions.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Generate validated 4350-question draft bank"
+          git push
