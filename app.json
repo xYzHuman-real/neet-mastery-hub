@@ -7,9 +7,14 @@
     "scheme": "buzneet",
     "userInterfaceStyle": "light",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "@react-native-google-signin/google-signin"
     ],
-    "android": { "package": "com.buzneet.app" },
-    "ios": { "bundleIdentifier": "com.buzneet.app" }
+    "android": {
+      "package": "com.buzneet.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.buzneet.app"
+    }
   }
 }
