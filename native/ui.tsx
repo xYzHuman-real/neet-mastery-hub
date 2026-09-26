@@ -9,7 +9,7 @@ export function Phone({ children }: { children: ReactNode }) {
 
 export function Shell({ title, subtitle, children, right }: { title: string; subtitle?: string; children: ReactNode; right?: ReactNode }) {
   const { hydrated, onboarded, user, telegramDone } = useStore();
-  if (!hydrated || !onboarded || !user || !telegramDone) return <Phone><View style={{ flex: 1, backgroundColor: C.background }} /></Phone>;
+  if (!hydrated || !onboarded || !user) return <Phone><View style={{ flex: 1, backgroundColor: C.background }} /></Phone>;
   return <Phone><View style={{ flex: 1 }}>
     <View style={s.header}><View>{subtitle && <Text style={s.eyebrow}>{subtitle}</Text>}<Text style={s.title}>{title}</Text></View>{right}</View>
     <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={s.content}>{children}</ScrollView>
