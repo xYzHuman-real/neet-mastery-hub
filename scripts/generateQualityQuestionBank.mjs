@@ -315,9 +315,9 @@ for (const ch of chapters) {
 fs.writeFileSync("data/questions.json", JSON.stringify({
   version: "2.0",
   description: "NEET UG practice question bank. Generated drafts require subject-matter review before release.",
-  policy: { minimumPerChapter: 50, totalMinimum: 4350, noUnverifiedPYQs: true, noInventedNCERTPageCitations: true },
+  policy: { minimumPerChapter: 50, maximumPerChapter: 150, variableCounts: true, noUnverifiedPYQs: true, noInventedNCERTPageCitations: true },
   questions
 }, null, 2) + "\n");
-console.log(`Generated ${questions.length} questions.`);
+console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with variable 50–150 chapter sizes.`);
 
 // Regeneration trigger: generated bank is validated before commit.
