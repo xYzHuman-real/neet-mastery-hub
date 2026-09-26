@@ -7,14 +7,7 @@
     "scheme": "buzneet",
     "userInterfaceStyle": "light",
     "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "backgroundColor": "#FAF9F1",
-          "imageWidth": 120
-        }
-      ]
+      "expo-router"
     ],
     "android": { "package": "com.buzneet.app" },
     "ios": { "bundleIdentifier": "com.buzneet.app" }
