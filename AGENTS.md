@@ -10,4 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Mock NEET content lives in src/data/neet.ts; add chapters/questions there only — single source for all screens.
-- User progress (streak, SRS cards, mistakes) is client-side React context persisted to localStorage (src/lib/store.tsx) — prototype, no backend yet.
+- User progress, mock login, onboarding and Telegram-step flags are client-side React context persisted to localStorage (src/lib/store.tsx); AppShell redirects splash→login→telegram until done — prototype, no backend yet.
