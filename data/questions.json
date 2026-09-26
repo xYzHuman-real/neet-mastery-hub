@@ -455,7 +455,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XI",
-      "chapter": "Anatomy of Flowering Plants",
+      "chapter": "Morphology of Flowering Plants",
       "page": null,
       "line": null,
       "reference": "Meristematic tissues"
@@ -497,7 +497,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Biology XI",
-      "chapter": "Photosynthesis in Higher Plants",
+      "chapter": "Transport in Plants",
       "page": null,
       "line": null,
       "reference": "Photolysis of water"
@@ -518,7 +518,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XI",
-      "chapter": "Body Fluids and Circulation",
+      "chapter": "Digestion and Absorption",
       "page": null,
       "line": null,
       "reference": "Conducting system of the human heart"
@@ -539,7 +539,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Human Reproduction",
+      "chapter": "Sexual Reproduction in Flowering Plants",
       "page": null,
       "line": null,
       "reference": "Site of fertilisation"
@@ -581,7 +581,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Microbes in Human Welfare",
+      "chapter": "Human Health and Disease",
       "page": null,
       "line": null,
       "reference": "Microbes in household food processing"
@@ -602,7 +602,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Biotechnology and its Applications",
+      "chapter": "Biotechnology: Principles and Processes",
       "page": null,
       "line": null,
       "reference": "Bt crops"
@@ -623,7 +623,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Ecosystem",
+      "chapter": "Organisms and Populations",
       "page": null,
       "line": null,
       "reference": "Ecological pyramids and energy flow"
@@ -644,7 +644,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Mechanical Properties of Fluids",
+      "chapter": "Mechanical Properties of Solids",
       "page": null,
       "line": null,
       "reference": "Surface tension"
@@ -791,7 +791,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Nuclei",
+      "chapter": "Atoms",
       "page": null,
       "line": null,
       "reference": "Mass defect and binding energy"
@@ -895,7 +895,7 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XI",
+      "book": "NCERT Chemistry XII",
       "chapter": "The p-Block Elements",
       "page": null,
       "line": null,
@@ -959,7 +959,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XI",
-      "chapter": "Organic Chemistry: Some Basic Principles and Techniques",
+      "chapter": "Organic Chemistry – Some Basic Principles and Techniques",
       "page": null,
       "line": null,
       "reference": "Lewis acid-base concept"
@@ -1064,7 +1064,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Dimensions of physical quantities",
+      "chapter": "Units and Measurements",
       "page": null,
       "line": null,
       "reference": "Dimensions of physical quantities"
@@ -1073,7 +1073,7 @@
   },
   {
     "id": "phy-q22",
-    "chapterId": "phy-c2",
+    "chapterId": "phy-c3",
     "mode": "mcq",
     "prompt": "The slope of a velocity-time graph represents:",
     "options": [
@@ -1086,7 +1086,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Velocity-time graph",
+      "chapter": "Motion in a Plane",
       "page": null,
       "line": null,
       "reference": "Velocity-time graph"
@@ -1108,7 +1108,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Laws of friction",
+      "chapter": "Laws of Motion",
       "page": null,
       "line": null,
       "reference": "Laws of friction"
@@ -1130,7 +1130,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Power",
+      "chapter": "Work, Energy and Power",
       "page": null,
       "line": null,
       "reference": "Power"
@@ -1152,7 +1152,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Moment of a force",
+      "chapter": "System of Particles and Rotational Motion",
       "page": null,
       "line": null,
       "reference": "Moment of a force"
@@ -1174,7 +1174,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Escape speed",
+      "chapter": "Gravitation",
       "page": null,
       "line": null,
       "reference": "Escape speed"
@@ -1183,7 +1183,7 @@
   },
   {
     "id": "phy-q27",
-    "chapterId": "phy-c8",
+    "chapterId": "phy-c9",
     "mode": "mcq",
     "prompt": "According to Bernoulli's principle for steady ideal flow, an increase in fluid speed is associated with:",
     "options": [
@@ -1196,7 +1196,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Bernoulli principle",
+      "chapter": "Mechanical Properties of Fluids",
       "page": null,
       "line": null,
       "reference": "Bernoulli principle"
@@ -1218,7 +1218,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Cyclic process",
+      "chapter": "Thermodynamics",
       "page": null,
       "line": null,
       "reference": "Cyclic process"
@@ -1240,7 +1240,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Molecular interpretation of temperature",
+      "chapter": "Kinetic Theory",
       "page": null,
       "line": null,
       "reference": "Molecular interpretation of temperature"
@@ -1249,7 +1249,7 @@
   },
   {
     "id": "phy-q30",
-    "chapterId": "phy-c13",
+    "chapterId": "phy-c14",
     "mode": "mcq",
     "prompt": "In SHM, the restoring acceleration is directed:",
     "options": [
@@ -1262,7 +1262,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XI",
-      "chapter": "Acceleration in SHM",
+      "chapter": "Waves",
       "page": null,
       "line": null,
       "reference": "Acceleration in SHM"
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "phy-q31",
-    "chapterId": "phy-c15",
+    "chapterId": "phy-c16",
     "mode": "mcq",
     "prompt": "The capacitance of a parallel-plate capacitor increases when the plate separation is:",
     "options": [
@@ -1284,7 +1284,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Parallel-plate capacitor",
+      "chapter": "Electrostatic Potential and Capacitance",
       "page": null,
       "line": null,
       "reference": "Parallel-plate capacitor"
@@ -1306,7 +1306,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Temperature dependence of resistance",
+      "chapter": "Current Electricity",
       "page": null,
       "line": null,
       "reference": "Temperature dependence of resistance"
@@ -1315,7 +1315,7 @@
   },
   {
     "id": "phy-q33",
-    "chapterId": "phy-c18",
+    "chapterId": "phy-c19",
     "mode": "mcq",
     "prompt": "A charged particle moving parallel to a uniform magnetic field experiences magnetic force:",
     "options": [
@@ -1328,7 +1328,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Magnetic force",
+      "chapter": "Magnetism and Matter",
       "page": null,
       "line": null,
       "reference": "Magnetic force"
@@ -1337,7 +1337,7 @@
   },
   {
     "id": "phy-q34",
-    "chapterId": "phy-c20",
+    "chapterId": "phy-c21",
     "mode": "mcq",
     "prompt": "The RMS value of an alternating current with peak value I0 is:",
     "options": [
@@ -1350,7 +1350,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "RMS value of AC",
+      "chapter": "Alternating Current",
       "page": null,
       "line": null,
       "reference": "RMS value of AC"
@@ -1372,7 +1372,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Electromagnetic spectrum",
+      "chapter": "Electromagnetic Waves",
       "page": null,
       "line": null,
       "reference": "Electromagnetic spectrum"
@@ -1381,7 +1381,7 @@
   },
   {
     "id": "phy-q36",
-    "chapterId": "phy-c23",
+    "chapterId": "phy-c24",
     "mode": "mcq",
     "prompt": "When light passes from air into glass, its frequency:",
     "options": [
@@ -1394,7 +1394,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Refraction",
+      "chapter": "Wave Optics",
       "page": null,
       "line": null,
       "reference": "Refraction"
@@ -1416,7 +1416,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Matter waves",
+      "chapter": "Dual Nature of Radiation and Matter",
       "page": null,
       "line": null,
       "reference": "Matter waves"
@@ -1425,7 +1425,7 @@
   },
   {
     "id": "phy-q38",
-    "chapterId": "phy-c26",
+    "chapterId": "phy-c27",
     "mode": "mcq",
     "prompt": "The half-life of a radioactive substance is independent of the:",
     "options": [
@@ -1438,7 +1438,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Radioactive decay",
+      "chapter": "Nuclei",
       "page": null,
       "line": null,
       "reference": "Radioactive decay"
@@ -1460,7 +1460,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Physics XII",
-      "chapter": "Zener diode",
+      "chapter": "Semiconductor Electronics",
       "page": null,
       "line": null,
       "reference": "Zener diode"
@@ -1504,7 +1504,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XI",
-      "chapter": "Avogadro constant",
+      "chapter": "Some Basic Concepts of Chemistry",
       "page": null,
       "line": null,
       "reference": "Avogadro constant"
@@ -1526,7 +1526,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XI",
-      "chapter": "Subshell capacity",
+      "chapter": "Structure of Atom",
       "page": null,
       "line": null,
       "reference": "Subshell capacity"
@@ -1548,7 +1548,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XI",
-      "chapter": "VSEPR and molecular geometry",
+      "chapter": "Chemical Bonding and Molecular Structure",
       "page": null,
       "line": null,
       "reference": "VSEPR and molecular geometry"
@@ -1570,7 +1570,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Chemistry XI",
-      "chapter": "Gibbs energy",
+      "chapter": "Thermodynamics",
       "page": null,
       "line": null,
       "reference": "Gibbs energy"
@@ -1591,8 +1591,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XI",
-      "chapter": "Colligative properties",
+      "book": "NCERT Chemistry XII",
+      "chapter": "Solutions",
       "page": null,
       "line": null,
       "reference": "Colligative properties"
@@ -1614,7 +1614,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XI",
-      "chapter": "pH scale",
+      "chapter": "Equilibrium",
       "page": null,
       "line": null,
       "reference": "pH scale"
@@ -1623,7 +1623,7 @@
   },
   {
     "id": "chem-q47",
-    "chapterId": "chem-c7",
+    "chapterId": "chem-c11",
     "mode": "mcq",
     "prompt": "Oxidation occurs at the:",
     "options": [
@@ -1636,7 +1636,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "Electrochemical cells",
+      "chapter": "Electrochemistry",
       "page": null,
       "line": null,
       "reference": "Electrochemical cells"
@@ -1658,7 +1658,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "First-order kinetics",
+      "chapter": "Chemical Kinetics",
       "page": null,
       "line": null,
       "reference": "First-order kinetics"
@@ -1679,8 +1679,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XII",
-      "chapter": "Periodic trends",
+      "book": "NCERT Chemistry XI",
+      "chapter": "Classification of Elements and Periodicity in Properties",
       "page": null,
       "line": null,
       "reference": "Periodic trends"
@@ -1702,7 +1702,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "Oxidation states",
+      "chapter": "The p-Block Elements",
       "page": null,
       "line": null,
       "reference": "Oxidation states"
@@ -1724,7 +1724,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "Colour in transition-metal compounds",
+      "chapter": "The d- and f-Block Elements",
       "page": null,
       "line": null,
       "reference": "Colour in transition-metal compounds"
@@ -1746,7 +1746,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "Coordination terminology",
+      "chapter": "Coordination Compounds",
       "page": null,
       "line": null,
       "reference": "Coordination terminology"
@@ -1789,8 +1789,8 @@
     "answer": 0,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XII",
-      "chapter": "Reaction intermediates",
+      "book": "NCERT Chemistry XI",
+      "chapter": "Organic Chemistry – Some Basic Principles and Techniques",
       "page": null,
       "line": null,
       "reference": "Reaction intermediates"
@@ -1811,8 +1811,8 @@
     "answer": 0,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XII",
-      "chapter": "Aromatic hydrocarbons",
+      "book": "NCERT Chemistry XI",
+      "chapter": "Hydrocarbons",
       "page": null,
       "line": null,
       "reference": "Aromatic hydrocarbons"
@@ -1834,7 +1834,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "SN1 mechanism",
+      "chapter": "Haloalkanes and Haloarenes",
       "page": null,
       "line": null,
       "reference": "SN1 mechanism"
@@ -1843,7 +1843,7 @@
   },
   {
     "id": "chem-q57",
-    "chapterId": "chem-c17",
+    "chapterId": "chem-c18",
     "mode": "mcq",
     "prompt": "The functional group characteristic of carboxylic acids is:",
     "options": [
@@ -1856,7 +1856,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "Carboxylic acids",
+      "chapter": "Aldehydes, Ketones and Carboxylic Acids",
       "page": null,
       "line": null,
       "reference": "Carboxylic acids"
@@ -1878,7 +1878,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "Classification of amines",
+      "chapter": "Amines",
       "page": null,
       "line": null,
       "reference": "Classification of amines"
@@ -1900,7 +1900,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Chemistry XII",
-      "chapter": "Proteins",
+      "chapter": "Biomolecules",
       "page": null,
       "line": null,
       "reference": "Proteins"
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "bio-q61",
-    "chapterId": "bio-c1",
+    "chapterId": "bio-c2",
     "mode": "mcq",
     "prompt": "The basic unit of classification immediately above species is generally:",
     "options": [
@@ -1943,8 +1943,8 @@
     "answer": 0,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Biology XII",
-      "chapter": "Taxonomic categories",
+      "book": "NCERT Biology XI",
+      "chapter": "Biological Classification",
       "page": null,
       "line": null,
       "reference": "Taxonomic categories"
@@ -1953,7 +1953,7 @@
   },
   {
     "id": "bio-q62",
-    "chapterId": "bio-c5",
+    "chapterId": "bio-c6",
     "mode": "mcq",
     "prompt": "Xylem primarily conducts:",
     "options": [
@@ -1965,8 +1965,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Biology XII",
-      "chapter": "Vascular tissues",
+      "book": "NCERT Biology XI",
+      "chapter": "Anatomy of Flowering Plants",
       "page": null,
       "line": null,
       "reference": "Vascular tissues"
@@ -1975,7 +1975,7 @@
   },
   {
     "id": "bio-q63",
-    "chapterId": "bio-c8",
+    "chapterId": "bio-c9",
     "mode": "mcq",
     "prompt": "The organelle containing most of the cell's genetic material in a eukaryotic cell is the:",
     "options": [
@@ -1987,8 +1987,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Biology XII",
-      "chapter": "Nucleus",
+      "book": "NCERT Biology XI",
+      "chapter": "Biomolecules",
       "page": null,
       "line": null,
       "reference": "Nucleus"
@@ -1997,7 +1997,7 @@
   },
   {
     "id": "bio-q64",
-    "chapterId": "bio-c11",
+    "chapterId": "bio-c12",
     "mode": "mcq",
     "prompt": "The primary site of light reactions of photosynthesis is the:",
     "options": [
@@ -2009,8 +2009,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Biology XII",
-      "chapter": "Light reactions",
+      "book": "NCERT Biology XI",
+      "chapter": "Mineral Nutrition",
       "page": null,
       "line": null,
       "reference": "Light reactions"
@@ -2019,7 +2019,7 @@
   },
   {
     "id": "bio-q65",
-    "chapterId": "bio-c16",
+    "chapterId": "bio-c17",
     "mode": "mcq",
     "prompt": "The hormone that lowers blood glucose concentration is:",
     "options": [
@@ -2031,8 +2031,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Biology XII",
-      "chapter": "Endocrine regulation",
+      "book": "NCERT Biology XI",
+      "chapter": "Breathing and Exchange of Gases",
       "page": null,
       "line": null,
       "reference": "Endocrine regulation"
@@ -2041,7 +2041,7 @@
   },
   {
     "id": "bio-q66",
-    "chapterId": "bio-c23",
+    "chapterId": "bio-c24",
     "mode": "mcq",
     "prompt": "The hormone mainly associated with ovulation is:",
     "options": [
@@ -2054,7 +2054,7 @@
     "difficulty": "medium",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Menstrual cycle",
+      "chapter": "Human Reproduction",
       "page": null,
       "line": null,
       "reference": "Menstrual cycle"
@@ -2063,7 +2063,7 @@
   },
   {
     "id": "bio-q67",
-    "chapterId": "bio-c26",
+    "chapterId": "bio-c27",
     "mode": "mcq",
     "prompt": "DNA replication is described as:",
     "options": [
@@ -2076,7 +2076,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "DNA replication",
+      "chapter": "Molecular Basis of Inheritance",
       "page": null,
       "line": null,
       "reference": "DNA replication"
@@ -2085,7 +2085,7 @@
   },
   {
     "id": "bio-q68",
-    "chapterId": "bio-c29",
+    "chapterId": "bio-c30",
     "mode": "mcq",
     "prompt": "The bacterium used in curd formation is commonly:",
     "options": [
@@ -2098,7 +2098,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Microbes in food processing",
+      "chapter": "Microbes in Human Welfare",
       "page": null,
       "line": null,
       "reference": "Microbes in food processing"
@@ -2107,7 +2107,7 @@
   },
   {
     "id": "bio-q69",
-    "chapterId": "bio-c31",
+    "chapterId": "bio-c32",
     "mode": "mcq",
     "prompt": "PCR is used to:",
     "options": [
@@ -2120,7 +2120,7 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Polymerase chain reaction",
+      "chapter": "Biotechnology and its Applications",
       "page": null,
       "line": null,
       "reference": "Polymerase chain reaction"
@@ -2129,7 +2129,7 @@
   },
   {
     "id": "bio-q70",
-    "chapterId": "bio-c33",
+    "chapterId": "bio-c34",
     "mode": "mcq",
     "prompt": "The first trophic level in a typical grazing food chain consists of:",
     "options": [
@@ -2142,11 +2142,385 @@
     "difficulty": "easy",
     "citation": {
       "book": "NCERT Biology XII",
-      "chapter": "Trophic levels",
+      "chapter": "Ecosystem",
       "page": null,
       "line": null,
       "reference": "Trophic levels"
     },
     "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chapter-q1",
+    "chapterId": "phy-c10",
+    "mode": "mcq",
+    "prompt": "At constant pressure, the volume of a gas generally increases when its temperature is increased. This is an example of:",
+    "options": [
+      "Charles' law",
+      "Boyle's law",
+      "Avogadro's law",
+      "Dalton's law"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Thermal Properties of Matter",
+      "page": null,
+      "line": null,
+      "reference": "thermal expansion"
+    }
+  },
+  {
+    "id": "chapter-q2",
+    "chapterId": "bio-c3",
+    "mode": "mcq",
+    "prompt": "In bryophytes, the dominant independent plant body is the:",
+    "options": [
+      "Gametophyte",
+      "Sporophyte",
+      "Embryo",
+      "Seed"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Plant Kingdom",
+      "page": null,
+      "line": null,
+      "reference": "algae"
+    }
+  },
+  {
+    "id": "chapter-q3",
+    "chapterId": "bio-c4",
+    "mode": "mcq",
+    "prompt": "Animals possessing a notochord at least during some stage of development belong to:",
+    "options": [
+      "Chordata",
+      "Arthropoda",
+      "Mollusca",
+      "Annelida"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Animal Kingdom",
+      "page": null,
+      "line": null,
+      "reference": "animal classification"
+    }
+  },
+  {
+    "id": "chapter-q4",
+    "chapterId": "bio-c7",
+    "mode": "mcq",
+    "prompt": "The epithelium specialized for rapid diffusion is typically:",
+    "options": [
+      "Simple squamous epithelium",
+      "Stratified cuboidal epithelium",
+      "Transitional epithelium",
+      "Stratified columnar epithelium"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Structural Organisation in Animals",
+      "page": null,
+      "line": null,
+      "reference": "animal tissues"
+    }
+  },
+  {
+    "id": "chapter-q5",
+    "chapterId": "bio-c10",
+    "mode": "mcq",
+    "prompt": "During meiosis, crossing over normally occurs during:",
+    "options": [
+      "Pachytene of prophase I",
+      "Metaphase I",
+      "Anaphase II",
+      "Telophase II"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Cell Cycle and Cell Division",
+      "page": null,
+      "line": null,
+      "reference": "cell cycle"
+    }
+  },
+  {
+    "id": "chapter-q6",
+    "chapterId": "bio-c13",
+    "mode": "mcq",
+    "prompt": "The oxygen released during photosynthesis comes primarily from:",
+    "options": [
+      "Water",
+      "Carbon dioxide",
+      "Glucose",
+      "Chlorophyll"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Photosynthesis in Higher Plants",
+      "page": null,
+      "line": null,
+      "reference": "light reaction"
+    }
+  },
+  {
+    "id": "chapter-q7",
+    "chapterId": "bio-c14",
+    "mode": "mcq",
+    "prompt": "In aerobic respiration, the Krebs cycle occurs mainly in the:",
+    "options": [
+      "Mitochondrial matrix",
+      "Cytoplasm",
+      "Nucleus",
+      "Chloroplast stroma"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Respiration in Plants",
+      "page": null,
+      "line": null,
+      "reference": "glycolysis"
+    }
+  },
+  {
+    "id": "chapter-q8",
+    "chapterId": "bio-c15",
+    "mode": "mcq",
+    "prompt": "Which plant hormone is commonly associated with cell elongation?",
+    "options": [
+      "Auxin",
+      "Ethylene",
+      "Abscisic acid",
+      "Cytokinin only"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Plant Growth and Development",
+      "page": null,
+      "line": null,
+      "reference": "growth phases"
+    }
+  },
+  {
+    "id": "chapter-q9",
+    "chapterId": "bio-c18",
+    "mode": "mcq",
+    "prompt": "The human heart normally has:",
+    "options": [
+      "Four chambers",
+      "Two chambers",
+      "Three chambers",
+      "Five chambers"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Body Fluids and Circulation",
+      "page": null,
+      "line": null,
+      "reference": "blood"
+    }
+  },
+  {
+    "id": "chapter-q10",
+    "chapterId": "bio-c19",
+    "mode": "mcq",
+    "prompt": "The functional unit of the kidney is the:",
+    "options": [
+      "Nephron",
+      "Neuron",
+      "Alveolus",
+      "Sarcomere"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Excretory Products and their Elimination",
+      "page": null,
+      "line": null,
+      "reference": "nephron"
+    }
+  },
+  {
+    "id": "chapter-q11",
+    "chapterId": "bio-c20",
+    "mode": "mcq",
+    "prompt": "The contractile proteins primarily responsible for skeletal muscle contraction are:",
+    "options": [
+      "Actin and myosin",
+      "Keratin and collagen",
+      "Tubulin and dynein",
+      "Elastin and fibrin"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Locomotion and Movement",
+      "page": null,
+      "line": null,
+      "reference": "muscles"
+    }
+  },
+  {
+    "id": "chapter-q12",
+    "chapterId": "bio-c21",
+    "mode": "mcq",
+    "prompt": "The resting potential of a neuron is maintained mainly by ionic gradients and the:",
+    "options": [
+      "Na+–K+ pump",
+      "Pepsin enzyme",
+      "Bile salts",
+      "Insulin receptor"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Neural Control and Coordination",
+      "page": null,
+      "line": null,
+      "reference": "neuron"
+    }
+  },
+  {
+    "id": "chapter-q13",
+    "chapterId": "bio-c22",
+    "mode": "mcq",
+    "prompt": "Insulin is secreted by the:",
+    "options": [
+      "Beta cells of pancreatic islets",
+      "Adrenal cortex",
+      "Thyroid follicles",
+      "Posterior pituitary"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Chemical Coordination and Integration",
+      "page": null,
+      "line": null,
+      "reference": "endocrine glands"
+    }
+  },
+  {
+    "id": "chapter-q14",
+    "chapterId": "bio-c25",
+    "mode": "mcq",
+    "prompt": "A method that prevents sperm from reaching the ovum is:",
+    "options": [
+      "Barrier contraception",
+      "In vitro fertilisation",
+      "Amniocentesis",
+      "Karyotyping"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Reproductive Health",
+      "page": null,
+      "line": null,
+      "reference": "contraception"
+    }
+  },
+  {
+    "id": "chapter-q15",
+    "chapterId": "bio-c28",
+    "mode": "mcq",
+    "prompt": "Natural selection was a major mechanism proposed to explain:",
+    "options": [
+      "Evolutionary change",
+      "DNA replication",
+      "Protein synthesis",
+      "Cell division"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Evolution",
+      "page": null,
+      "line": null,
+      "reference": "evolutionary evidence"
+    }
+  },
+  {
+    "id": "chapter-q16",
+    "chapterId": "bio-c35",
+    "mode": "mcq",
+    "prompt": "A biodiversity hotspot is characterized by high endemism and:",
+    "options": [
+      "Significant habitat loss",
+      "Absence of species",
+      "Only marine ecosystems",
+      "No human impact"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Biodiversity and Conservation",
+      "page": null,
+      "line": null,
+      "reference": "biodiversity"
+    }
+  },
+  {
+    "id": "chapter-q17",
+    "chapterId": "bio-c36",
+    "mode": "mcq",
+    "prompt": "A major greenhouse gas discussed in environmental biology is:",
+    "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Argon"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "explanation": "Review the cited NCERT concept and apply it to the question.",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Environmental Issues",
+      "page": null,
+      "line": null,
+      "reference": "pollution"
+    }
   }
 ]
