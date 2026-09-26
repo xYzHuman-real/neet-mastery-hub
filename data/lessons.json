@@ -1,22 +1,23 @@
 [
   {
-    "id": "phy-u1",
+    "id": "phy-c1",
     "subject": "Physics",
-    "unit": 1,
-    "title": "Physics and Measurement",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "phy-u1",
+    "title": "Units and Measurements",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "units and measurements",
+      "significant figures",
+      "errors and dimensions"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "SI units and dimensions",
-      "Significant figures and rounding",
-      "Measurement errors and dimensional analysis"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -24,23 +25,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u2",
+    "id": "phy-c2",
     "subject": "Physics",
-    "unit": 2,
-    "title": "Kinematics",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "phy-u2",
+    "title": "Motion in a Straight Line",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "position and displacement",
+      "velocity and acceleration",
+      "motion graphs"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Position, displacement, speed and velocity",
-      "Graphs and equations of uniformly accelerated motion",
-      "Vectors, relative velocity, projectile and circular motion"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -48,23 +50,49 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u3",
+    "id": "phy-c3",
     "subject": "Physics",
-    "unit": 3,
+    "class": 11,
+    "unitId": "phy-u2",
+    "title": "Motion in a Plane",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "vectors",
+      "projectile motion",
+      "uniform circular motion"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c4",
+    "subject": "Physics",
+    "class": 11,
+    "unitId": "phy-u3",
     "title": "Laws of Motion",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "Newton's laws",
+      "momentum and impulse",
+      "friction and circular motion"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Newton's laws and momentum",
-      "Friction and equilibrium of forces",
-      "Centripetal force and circular-road dynamics"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -72,23 +100,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u4",
+    "id": "phy-c5",
     "subject": "Physics",
-    "unit": 4,
+    "class": 11,
+    "unitId": "phy-u4",
     "title": "Work, Energy and Power",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "work",
+      "kinetic and potential energy",
+      "power and collisions"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Work by constant and variable forces",
-      "Kinetic and potential energy; work-energy theorem",
-      "Power, conservation of mechanical energy and collisions"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -96,23 +125,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u5",
+    "id": "phy-c6",
     "subject": "Physics",
-    "unit": 5,
-    "title": "Rotational Motion",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "phy-u5",
+    "title": "System of Particles and Rotational Motion",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "centre of mass",
+      "torque and angular momentum",
+      "moment of inertia"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Centre of mass and torque",
-      "Angular momentum and conservation",
-      "Moment of inertia and rotational equilibrium"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -120,23 +150,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u6",
+    "id": "phy-c7",
     "subject": "Physics",
-    "unit": 6,
+    "class": 11,
+    "unitId": "phy-u6",
     "title": "Gravitation",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "universal gravitation",
+      "g and gravitational potential",
+      "satellites and escape speed"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Universal law of gravitation",
-      "Acceleration due to gravity and variation with altitude/depth",
-      "Satellites, escape speed and orbital velocity"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -144,23 +175,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u7",
+    "id": "phy-c8",
     "subject": "Physics",
-    "unit": 7,
-    "title": "Properties of Solids and Liquids",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "phy-u7",
+    "title": "Mechanical Properties of Solids",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "stress and strain",
+      "elastic moduli",
+      "elastic energy"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Elasticity and stress-strain",
-      "Fluid pressure, viscosity and Bernoulli principle",
-      "Surface tension and thermal expansion"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -168,23 +200,74 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u8",
+    "id": "phy-c9",
     "subject": "Physics",
-    "unit": 8,
+    "class": 11,
+    "unitId": "phy-u7",
+    "title": "Mechanical Properties of Fluids",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "pressure",
+      "viscosity",
+      "Bernoulli principle and surface tension"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c10",
+    "subject": "Physics",
+    "class": 11,
+    "unitId": "phy-u7",
+    "title": "Thermal Properties of Matter",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "thermal expansion",
+      "calorimetry",
+      "heat transfer"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c11",
+    "subject": "Physics",
+    "class": 11,
+    "unitId": "phy-u8",
     "title": "Thermodynamics",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "zeroth law",
+      "first law",
+      "second law and heat engines"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Thermal equilibrium and zeroth law",
-      "First law and thermodynamic processes",
-      "Second law, heat engines and refrigerators"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -192,23 +275,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u9",
+    "id": "phy-c12",
     "subject": "Physics",
-    "unit": 9,
-    "title": "Kinetic Theory of Gases",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "phy-u9",
+    "title": "Kinetic Theory",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "kinetic model",
+      "gas pressure and temperature",
+      "degrees of freedom"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Kinetic model and molecular motion",
-      "Pressure-temperature interpretation of gas laws",
-      "Degrees of freedom and equipartition"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -216,23 +300,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u10",
+    "id": "phy-c13",
     "subject": "Physics",
-    "unit": 10,
-    "title": "Oscillations and Waves",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "phy-u10",
+    "title": "Oscillations",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "simple harmonic motion",
+      "energy in SHM",
+      "pendulum"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Simple harmonic motion",
-      "Wave motion and wave equation",
-      "Superposition, standing waves and sound"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -240,23 +325,49 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u11",
+    "id": "phy-c14",
     "subject": "Physics",
-    "unit": 11,
-    "title": "Electrostatics",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "phy-u10",
+    "title": "Waves",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "wave motion",
+      "superposition",
+      "standing waves and sound"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c15",
+    "subject": "Physics",
+    "class": 12,
+    "unitId": "phy-u11",
+    "title": "Electric Charges and Fields",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Coulomb's law and electric field",
-      "Electric potential and capacitance",
-      "Gauss's law and capacitors"
+      "Coulomb law",
+      "electric field",
+      "Gauss law"
     ],
-    "estimatedMinutes": 45,
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -264,23 +375,49 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u12",
+    "id": "phy-c16",
     "subject": "Physics",
-    "unit": 12,
+    "class": 12,
+    "unitId": "phy-u11",
+    "title": "Electrostatic Potential and Capacitance",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "electric potential",
+      "capacitors",
+      "dielectrics"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c17",
+    "subject": "Physics",
+    "class": 12,
+    "unitId": "phy-u12",
     "title": "Current Electricity",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "current and drift",
+      "resistance",
+      "Kirchhoff laws and cells"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Drift velocity and current",
-      "Ohm's law, resistance and resistivity",
-      "Kirchhoff laws, cells and electrical power"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -288,23 +425,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u13",
+    "id": "phy-c18",
     "subject": "Physics",
-    "unit": 13,
-    "title": "Magnetic Effects of Current and Magnetism",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "phy-u13",
+    "title": "Moving Charges and Magnetism",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "Lorentz force",
+      "Biot-Savart law",
+      "Ampere law"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Lorentz force and motion in magnetic field",
-      "Biot-Savart and Ampere laws",
-      "Magnetic dipole, torque and magnetism"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -312,23 +450,49 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u14",
+    "id": "phy-c19",
     "subject": "Physics",
-    "unit": 14,
-    "title": "Electromagnetic Induction and Alternating Currents",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "phy-u13",
+    "title": "Magnetism and Matter",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "magnetic dipoles",
+      "magnetic materials",
+      "earth magnetism"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c20",
+    "subject": "Physics",
+    "class": 12,
+    "unitId": "phy-u14",
+    "title": "Electromagnetic Induction",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Faraday's law and Lenz's law",
-      "Self and mutual inductance",
-      "AC circuits, RMS values, reactance and transformer"
+      "Faraday law",
+      "Lenz law",
+      "inductance"
     ],
-    "estimatedMinutes": 45,
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -336,23 +500,49 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u15",
+    "id": "phy-c21",
     "subject": "Physics",
-    "unit": 15,
+    "class": 12,
+    "unitId": "phy-u14",
+    "title": "Alternating Current",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "AC voltage and current",
+      "reactance and impedance",
+      "transformer"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c22",
+    "subject": "Physics",
+    "class": 12,
+    "unitId": "phy-u15",
     "title": "Electromagnetic Waves",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "EM wave properties",
+      "electromagnetic spectrum",
+      "applications"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Properties and production of electromagnetic waves",
-      "Electromagnetic spectrum",
-      "Uses and basic propagation properties"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -360,23 +550,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u16",
+    "id": "phy-c23",
     "subject": "Physics",
-    "unit": 16,
-    "title": "Optics",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "phy-u16",
+    "title": "Ray Optics and Optical Instruments",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "reflection and refraction",
+      "lenses",
+      "optical instruments"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Reflection and refraction",
-      "Lenses and optical instruments",
-      "Wave optics: interference, diffraction and polarisation"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -384,47 +575,49 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u17",
+    "id": "phy-c24",
     "subject": "Physics",
-    "unit": 17,
-    "title": "Dual Nature of Matter and Radiation",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "phy-u16",
+    "title": "Wave Optics",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "interference",
+      "diffraction",
+      "polarisation"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Photoelectric effect",
-      "Einstein photoelectric equation",
-      "Matter waves and de Broglie wavelength"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
     ],
-    "questionCount": 2
+    "questionCount": 0
   },
   {
-    "id": "phy-u18",
+    "id": "phy-c25",
     "subject": "Physics",
-    "unit": 18,
-    "title": "Atoms and Nuclei",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "phy-u17",
+    "title": "Dual Nature of Radiation and Matter",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "photoelectric effect",
+      "Einstein equation",
+      "de Broglie waves"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Rutherford and Bohr models",
-      "Hydrogen spectrum and atomic transitions",
-      "Nuclear size, binding energy, radioactivity and fission/fusion"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -432,23 +625,24 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u19",
+    "id": "phy-c26",
     "subject": "Physics",
-    "unit": 19,
-    "title": "Electronic Devices",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "phy-u18",
+    "title": "Atoms",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "Rutherford model",
+      "Bohr model",
+      "hydrogen spectrum"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Semiconductors and intrinsic/extrinsic conductivity",
-      "p-n junction and diode characteristics",
-      "Zener diode, rectifiers and digital logic"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -456,23 +650,49 @@
     "questionCount": 2
   },
   {
-    "id": "phy-u20",
+    "id": "phy-c27",
     "subject": "Physics",
-    "unit": 20,
-    "title": "Experimental Skills",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "phy-u18",
+    "title": "Nuclei",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "nuclear size",
+      "binding energy",
+      "radioactivity and nuclear reactions"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "phy-c28",
+    "subject": "Physics",
+    "class": 12,
+    "unitId": "phy-u19",
+    "title": "Semiconductor Electronics",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Vernier calipers and screw gauge",
-      "Measurement of length, mass and time",
-      "Graphical analysis, significant figures and experimental errors"
+      "semiconductors",
+      "p-n junction",
+      "diodes and logic gates"
     ],
-    "estimatedMinutes": 45,
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -480,23 +700,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u1",
+    "id": "chem-c1",
     "subject": "Chemistry",
-    "unit": 1,
-    "title": "Some Basic Concepts in Chemistry",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "chem-u1",
+    "title": "Some Basic Concepts of Chemistry",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "mole concept",
+      "stoichiometry",
+      "concentration"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Mole concept and molar mass",
-      "Stoichiometry and limiting reagent",
-      "Concentration terms and empirical/molecular formula"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -504,23 +725,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u2",
+    "id": "chem-c2",
     "subject": "Chemistry",
-    "unit": 2,
-    "title": "Atomic Structure",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "chem-u2",
+    "title": "Structure of Atom",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "atomic models",
+      "quantum numbers",
+      "electronic configuration"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Atomic models and spectra",
-      "Quantum numbers and orbitals",
-      "Electronic configuration and Aufbau principles"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -528,167 +750,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u3",
+    "id": "chem-c3",
     "subject": "Chemistry",
-    "unit": 3,
-    "title": "Chemical Bonding and Molecular Structure",
-    "lessonType": "topic-group",
-    "questionModes": [
-      "mcq",
-      "numerical",
-      "statement"
-    ],
-    "ncertAligned": true,
-    "topics": [
-      "Lewis structures and octet rule",
-      "VSEPR and molecular geometry",
-      "Hybridisation, polarity and hydrogen bonding"
-    ],
-    "estimatedMinutes": 45,
-    "examFocus": [
-      "NCERT-aligned concept",
-      "NEET-style application"
-    ],
-    "questionCount": 2
-  },
-  {
-    "id": "chem-u4",
-    "subject": "Chemistry",
-    "unit": 4,
-    "title": "Chemical Thermodynamics",
-    "lessonType": "topic-group",
-    "questionModes": [
-      "mcq",
-      "numerical",
-      "statement"
-    ],
-    "ncertAligned": true,
-    "topics": [
-      "System and surroundings; work and heat",
-      "Enthalpy and Hess's law",
-      "Entropy, Gibbs energy and spontaneity"
-    ],
-    "estimatedMinutes": 45,
-    "examFocus": [
-      "NCERT-aligned concept",
-      "NEET-style application"
-    ],
-    "questionCount": 2
-  },
-  {
-    "id": "chem-u5",
-    "subject": "Chemistry",
-    "unit": 5,
-    "title": "Solutions",
-    "lessonType": "topic-group",
-    "questionModes": [
-      "mcq",
-      "numerical",
-      "statement"
-    ],
-    "ncertAligned": true,
-    "topics": [
-      "Types of solutions and concentration",
-      "Raoult's law and vapour pressure",
-      "Colligative properties and abnormal molar mass"
-    ],
-    "estimatedMinutes": 45,
-    "examFocus": [
-      "NCERT-aligned concept",
-      "NEET-style application"
-    ],
-    "questionCount": 2
-  },
-  {
-    "id": "chem-u6",
-    "subject": "Chemistry",
-    "unit": 6,
-    "title": "Equilibrium",
-    "lessonType": "topic-group",
-    "questionModes": [
-      "mcq",
-      "numerical",
-      "statement"
-    ],
-    "ncertAligned": true,
-    "topics": [
-      "Dynamic equilibrium and equilibrium constant",
-      "Le Chatelier principle",
-      "Ionic equilibrium, pH, buffers and solubility"
-    ],
-    "estimatedMinutes": 45,
-    "examFocus": [
-      "NCERT-aligned concept",
-      "NEET-style application"
-    ],
-    "questionCount": 2
-  },
-  {
-    "id": "chem-u7",
-    "subject": "Chemistry",
-    "unit": 7,
-    "title": "Redox Reactions and Electrochemistry",
-    "lessonType": "topic-group",
-    "questionModes": [
-      "mcq",
-      "numerical",
-      "statement"
-    ],
-    "ncertAligned": true,
-    "topics": [
-      "Oxidation number and redox balancing",
-      "Electrochemical cells and electrode potential",
-      "Nernst equation, conductivity and electrolysis"
-    ],
-    "estimatedMinutes": 45,
-    "examFocus": [
-      "NCERT-aligned concept",
-      "NEET-style application"
-    ],
-    "questionCount": 2
-  },
-  {
-    "id": "chem-u8",
-    "subject": "Chemistry",
-    "unit": 8,
-    "title": "Chemical Kinetics",
-    "lessonType": "topic-group",
-    "questionModes": [
-      "mcq",
-      "numerical",
-      "statement"
-    ],
-    "ncertAligned": true,
-    "topics": [
-      "Rate law and reaction order",
-      "Integrated rate equations and half-life",
-      "Arrhenius equation and activation energy"
-    ],
-    "estimatedMinutes": 45,
-    "examFocus": [
-      "NCERT-aligned concept",
-      "NEET-style application"
-    ],
-    "questionCount": 2
-  },
-  {
-    "id": "chem-u9",
-    "subject": "Chemistry",
-    "unit": 9,
+    "class": 11,
+    "unitId": "chem-u9",
     "title": "Classification of Elements and Periodicity in Properties",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "periodic law",
+      "atomic radius",
+      "ionisation enthalpy and electronegativity"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Modern periodic law",
-      "Atomic and ionic radii",
-      "Ionisation enthalpy, electron gain enthalpy and electronegativity"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -696,23 +775,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u10",
+    "id": "chem-c4",
     "subject": "Chemistry",
-    "unit": 10,
-    "title": "p-Block Elements",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "chem-u3",
+    "title": "Chemical Bonding and Molecular Structure",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "Lewis structures",
+      "VSEPR",
+      "hybridisation and hydrogen bonding"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "General trends in p-block elements",
-      "Important compounds and reactions",
-      "Anomalous behaviour and oxidation states"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -720,23 +800,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u11",
+    "id": "chem-c5",
     "subject": "Chemistry",
-    "unit": 11,
-    "title": "d- and f-Block Elements",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "chem-u4",
+    "title": "Thermodynamics",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "enthalpy",
+      "Hess law",
+      "Gibbs energy"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Transition-metal configuration and properties",
-      "Oxidation states, colour and magnetic behaviour",
-      "Lanthanides, actinides and lanthanide contraction"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -744,23 +825,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u12",
+    "id": "chem-c6",
     "subject": "Chemistry",
-    "unit": 12,
-    "title": "Coordination Compounds",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "chem-u6",
+    "title": "Equilibrium",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "chemical equilibrium",
+      "ionic equilibrium",
+      "pH and buffers"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Coordination terminology and nomenclature",
-      "Isomerism and coordination geometry",
-      "Bonding theories and applications"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -768,23 +850,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u13",
+    "id": "chem-c7",
     "subject": "Chemistry",
-    "unit": 13,
-    "title": "Purification and Characterisation of Organic Compounds",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "chem-u7",
+    "title": "Redox Reactions",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "oxidation number",
+      "redox balancing",
+      "redox concepts"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Purification methods",
-      "Qualitative elemental analysis",
-      "Quantitative analysis and chromatography"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -792,23 +875,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u14",
+    "id": "chem-c8",
     "subject": "Chemistry",
-    "unit": 14,
-    "title": "Some Basic Principles of Organic Chemistry",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "chem-u14",
+    "title": "Organic Chemistry – Some Basic Principles and Techniques",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "organic nomenclature",
+      "electronic effects",
+      "reaction intermediates"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Electronic effects and resonance",
-      "Reaction intermediates and mechanism basics",
-      "Isomerism and common organic reagents"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -816,23 +900,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u15",
+    "id": "chem-c9",
     "subject": "Chemistry",
-    "unit": 15,
+    "class": 11,
+    "unitId": "chem-u15",
     "title": "Hydrocarbons",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "alkanes",
+      "alkenes and alkynes",
+      "aromatic hydrocarbons"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Alkanes and conformations",
-      "Alkenes and alkynes",
-      "Aromatic hydrocarbons and electrophilic substitution"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -840,23 +925,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u16",
+    "id": "chem-c10",
     "subject": "Chemistry",
-    "unit": 16,
-    "title": "Organic Compounds Containing Halogens",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "chem-u5",
+    "title": "Solutions",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "concentration",
+      "Raoult law",
+      "colligative properties"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Nomenclature and preparation of halo compounds",
-      "SN1 and SN2 mechanisms",
-      "Uses and environmental aspects of halogen compounds"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -864,23 +950,49 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u17",
+    "id": "chem-c11",
     "subject": "Chemistry",
-    "unit": 17,
-    "title": "Organic Compounds Containing Oxygen",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "chem-u7",
+    "title": "Electrochemistry",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "electrochemical cells",
+      "Nernst equation",
+      "conductance and electrolysis"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "chem-c12",
+    "subject": "Chemistry",
+    "class": 12,
+    "unitId": "chem-u8",
+    "title": "Chemical Kinetics",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Alcohols and phenols",
-      "Ethers and their reactions",
-      "Aldehydes and ketones; carboxylic acids"
+      "rate law",
+      "integrated rate equations",
+      "Arrhenius equation"
     ],
-    "estimatedMinutes": 45,
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -888,23 +1000,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u18",
+    "id": "chem-c13",
     "subject": "Chemistry",
-    "unit": 18,
-    "title": "Organic Compounds Containing Nitrogen",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "chem-u10",
+    "title": "The p-Block Elements",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "periodic trends",
+      "important compounds",
+      "oxidation states"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Amines and their classification",
-      "Basicity and reactions of amines",
-      "Diazonium salts and important reactions"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -912,23 +1025,174 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u19",
+    "id": "chem-c14",
     "subject": "Chemistry",
-    "unit": 19,
+    "class": 12,
+    "unitId": "chem-u11",
+    "title": "The d- and f-Block Elements",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "transition metals",
+      "lanthanides",
+      "actinides"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
+  },
+  {
+    "id": "chem-c15",
+    "subject": "Chemistry",
+    "class": 12,
+    "unitId": "chem-u12",
+    "title": "Coordination Compounds",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "coordination terminology",
+      "isomerism",
+      "bonding theories"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
+  },
+  {
+    "id": "chem-c16",
+    "subject": "Chemistry",
+    "class": 12,
+    "unitId": "chem-u16",
+    "title": "Haloalkanes and Haloarenes",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "C-X bond",
+      "SN1 and SN2",
+      "haloarene reactions"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
+  },
+  {
+    "id": "chem-c17",
+    "subject": "Chemistry",
+    "class": 12,
+    "unitId": "chem-u17",
+    "title": "Alcohols, Phenols and Ethers",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "alcohols",
+      "phenols",
+      "ethers"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
+  },
+  {
+    "id": "chem-c18",
+    "subject": "Chemistry",
+    "class": 12,
+    "unitId": "chem-u17",
+    "title": "Aldehydes, Ketones and Carboxylic Acids",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "carbonyl compounds",
+      "reactions of aldehydes and ketones",
+      "carboxylic acids"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "chem-c19",
+    "subject": "Chemistry",
+    "class": 12,
+    "unitId": "chem-u18",
+    "title": "Amines",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "classification of amines",
+      "basicity",
+      "diazonium salts"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
+  },
+  {
+    "id": "chem-c20",
+    "subject": "Chemistry",
+    "class": 12,
+    "unitId": "chem-u19",
     "title": "Biomolecules",
-    "lessonType": "topic-group",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "carbohydrates",
+      "proteins",
+      "nucleic acids"
+    ],
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "Carbohydrates",
-      "Proteins and amino acids",
-      "Nucleic acids and enzymes"
-    ],
-    "estimatedMinutes": 45,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -936,47 +1200,24 @@
     "questionCount": 2
   },
   {
-    "id": "chem-u20",
-    "subject": "Chemistry",
-    "unit": 20,
-    "title": "Principles Related to Practical Chemistry",
-    "lessonType": "topic-group",
-    "questionModes": [
-      "mcq",
-      "numerical",
-      "statement"
-    ],
-    "ncertAligned": true,
-    "topics": [
-      "Qualitative analysis of ions",
-      "Titrations and indicators",
-      "Practical identification of functional groups"
-    ],
-    "estimatedMinutes": 45,
-    "examFocus": [
-      "NCERT-aligned concept",
-      "NEET-style application"
-    ],
-    "questionCount": 2
-  },
-  {
-    "id": "bio-u1",
+    "id": "bio-c1",
     "subject": "Biology",
-    "unit": 1,
-    "title": "Diversity in Living World",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "bio-u1",
+    "title": "The Living World",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "characteristics of life",
+      "taxonomic categories",
+      "binomial nomenclature"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true,
-    "topics": [
-      "The living world and taxonomic categories",
-      "Biological classification and kingdoms",
-      "Plant kingdom and animal kingdom"
-    ],
-    "estimatedMinutes": 35,
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -984,23 +1225,99 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u2",
+    "id": "bio-c2",
     "subject": "Biology",
-    "unit": 2,
-    "title": "Structural Organisation in Animals and Plants",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "bio-u1",
+    "title": "Biological Classification",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "five-kingdom classification",
+      "monera",
+      "protista and fungi"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c3",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u1",
+    "title": "Plant Kingdom",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Morphology of flowering plants",
-      "Anatomy of flowering plants",
-      "Structural organisation and tissues in animals"
+      "algae",
+      "bryophytes and pteridophytes",
+      "gymnosperms and angiosperms"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c4",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u1",
+    "title": "Animal Kingdom",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "animal classification",
+      "non-chordates",
+      "chordates"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c5",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u2",
+    "title": "Morphology of Flowering Plants",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "root",
+      "stem and leaf",
+      "flower and fruit"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1008,23 +1325,74 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u3",
+    "id": "bio-c6",
     "subject": "Biology",
-    "unit": 3,
-    "title": "Cell Structure and Function",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "bio-u2",
+    "title": "Anatomy of Flowering Plants",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "plant tissues",
+      "tissue systems",
+      "secondary growth"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c7",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u2",
+    "title": "Structural Organisation in Animals",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Cell theory and prokaryotic/eukaryotic cells",
-      "Cell organelles and membrane transport",
-      "Cell cycle, mitosis and meiosis"
+      "animal tissues",
+      "earthworm",
+      "cockroach and frog"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c8",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u3",
+    "title": "Cell: The Unit of Life",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "cell structure",
+      "cell organelles",
+      "prokaryotic and eukaryotic cells"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1032,23 +1400,74 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u4",
+    "id": "bio-c9",
     "subject": "Biology",
-    "unit": 4,
-    "title": "Plant Physiology",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "bio-u3",
+    "title": "Biomolecules",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "carbohydrates",
+      "proteins and lipids",
+      "enzymes"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c10",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u3",
+    "title": "Cell Cycle and Cell Division",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Transport in plants and mineral nutrition",
-      "Photosynthesis",
-      "Respiration and plant growth regulators"
+      "cell cycle",
+      "mitosis",
+      "meiosis"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c11",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u4",
+    "title": "Transport in Plants",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "water transport",
+      "mineral transport",
+      "transpiration"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1056,23 +1475,124 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u5",
+    "id": "bio-c12",
     "subject": "Biology",
-    "unit": 5,
-    "title": "Human Physiology",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "bio-u4",
+    "title": "Mineral Nutrition",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "essential elements",
+      "deficiency symptoms",
+      "nitrogen metabolism"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c13",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u4",
+    "title": "Photosynthesis in Higher Plants",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Digestion and absorption",
-      "Breathing and exchange of gases; circulation",
-      "Excretion, locomotion, neural and endocrine control"
+      "light reaction",
+      "carbon fixation",
+      "photorespiration"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c14",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u4",
+    "title": "Respiration in Plants",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "glycolysis",
+      "Krebs cycle",
+      "electron transport"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c15",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u4",
+    "title": "Plant Growth and Development",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "growth phases",
+      "plant hormones",
+      "photoperiodism"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c16",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u5",
+    "title": "Digestion and Absorption",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "digestive system",
+      "digestion",
+      "absorption"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1080,23 +1600,174 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u6",
+    "id": "bio-c17",
     "subject": "Biology",
-    "unit": 6,
-    "title": "Reproduction",
-    "lessonType": "topic-group",
+    "class": 11,
+    "unitId": "bio-u5",
+    "title": "Breathing and Exchange of Gases",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "respiratory system",
+      "gas exchange",
+      "transport of gases"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c18",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u5",
+    "title": "Body Fluids and Circulation",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Flowering-plant reproduction",
-      "Human reproductive systems and gametogenesis",
-      "Menstrual cycle, fertilisation, pregnancy and contraception"
+      "blood",
+      "heart",
+      "circulation"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c19",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u5",
+    "title": "Excretory Products and their Elimination",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "nephron",
+      "urine formation",
+      "osmoregulation"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c20",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u5",
+    "title": "Locomotion and Movement",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "muscles",
+      "skeletal system",
+      "movement disorders"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c21",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u5",
+    "title": "Neural Control and Coordination",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "neuron",
+      "nerve impulse",
+      "central nervous system"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c22",
+    "subject": "Biology",
+    "class": 11,
+    "unitId": "bio-u5",
+    "title": "Chemical Coordination and Integration",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "endocrine glands",
+      "hormones",
+      "feedback regulation"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c23",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u6",
+    "title": "Sexual Reproduction in Flowering Plants",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "flower structure",
+      "pollination",
+      "double fertilisation"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1104,23 +1775,74 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u7",
+    "id": "bio-c24",
     "subject": "Biology",
-    "unit": 7,
-    "title": "Genetics and Evolution",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "bio-u6",
+    "title": "Human Reproduction",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "reproductive systems",
+      "gametogenesis",
+      "menstrual cycle"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c25",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u6",
+    "title": "Reproductive Health",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Mendelian inheritance",
-      "Molecular basis of inheritance",
-      "Evolution and population genetics"
+      "contraception",
+      "STIs",
+      "assisted reproductive technologies"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c26",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u7",
+    "title": "Principles of Inheritance and Variation",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "Mendelism",
+      "linkage and recombination",
+      "inheritance patterns"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1128,23 +1850,74 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u8",
+    "id": "bio-c27",
     "subject": "Biology",
-    "unit": 8,
-    "title": "Biology and Human Welfare",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "bio-u7",
+    "title": "Molecular Basis of Inheritance",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "DNA structure",
+      "replication and transcription",
+      "translation and regulation"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c28",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u7",
+    "title": "Evolution",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Human health and disease",
-      "Microbes in human welfare",
-      "Strategies for enhancement in food production"
+      "evolutionary evidence",
+      "natural selection",
+      "human evolution"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c29",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u8",
+    "title": "Human Health and Disease",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "common diseases",
+      "immunity",
+      "AIDS and cancer"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1152,23 +1925,49 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u9",
+    "id": "bio-c30",
     "subject": "Biology",
-    "unit": 9,
-    "title": "Biotechnology and Its Applications",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "bio-u8",
+    "title": "Microbes in Human Welfare",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "food processing",
+      "industrial products",
+      "biocontrol and biofertilisers"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c31",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u9",
+    "title": "Biotechnology: Principles and Processes",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Recombinant DNA technology",
-      "Bioprocesses and genetic engineering",
-      "Applications in health, agriculture and industry"
+      "genetic engineering",
+      "restriction enzymes",
+      "PCR and cloning"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
@@ -1176,27 +1975,128 @@
     "questionCount": 2
   },
   {
-    "id": "bio-u10",
+    "id": "bio-c32",
     "subject": "Biology",
-    "unit": 10,
-    "title": "Ecology and Environment",
-    "lessonType": "topic-group",
+    "class": 12,
+    "unitId": "bio-u9",
+    "title": "Biotechnology and its Applications",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "GM organisms",
+      "insulin",
+      "gene therapy and biosafety"
+    ],
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c33",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u10",
+    "title": "Organisms and Populations",
+    "lessonType": "chapter",
     "ncertAligned": true,
     "topics": [
-      "Organisms, populations and ecosystems",
-      "Energy flow and ecological pyramids",
-      "Biodiversity, conservation and environmental issues"
+      "population attributes",
+      "population interactions",
+      "adaptations"
     ],
-    "estimatedMinutes": 35,
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
     "examFocus": [
       "NCERT-aligned concept",
       "NEET-style application"
     ],
     "questionCount": 2
+  },
+  {
+    "id": "bio-c34",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u10",
+    "title": "Ecosystem",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "energy flow",
+      "food chains",
+      "ecological pyramids and cycles"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c35",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u10",
+    "title": "Biodiversity and Conservation",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "biodiversity",
+      "threats",
+      "conservation"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
+  },
+  {
+    "id": "bio-c36",
+    "subject": "Biology",
+    "class": 12,
+    "unitId": "bio-u10",
+    "title": "Environmental Issues",
+    "lessonType": "chapter",
+    "ncertAligned": true,
+    "topics": [
+      "pollution",
+      "global environmental issues",
+      "waste management"
+    ],
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "estimatedMinutes": 60,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 0
   }
 ]
