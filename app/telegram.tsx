@@ -1,20 +1,42 @@
-import{Pressable,Text,View,Linking}from"react-native";
-import{router}from"expo-router";
-import{Phone}from"../native/ui";
-import{C}from"../native/theme";
-import{useStore}from"../native/store";
+import { Pressable, Text, View } from "react-native";
+import { router } from "expo-router";
+import { Phone } from "../native/ui";
+import { C } from "../native/theme";
+import { useStore } from "../native/store";
 
-export default function Telegram(){
-  const{patch}=useStore();
-  const next=()=>{patch({telegramDone:true});router.replace("/")};
-  return <Phone><View style={{flex:1,justifyContent:"center",alignItems:"center",padding:30}}>
-    <View style={{height:110,width:110,borderRadius:55,backgroundColor:C.accent,alignItems:"center",justifyContent:"center"}}><Text style={{fontSize:48,color:C.primary}}>➤</Text></View>
-    <Text style={{fontSize:30,fontWeight:"900",color:C.foreground,textAlign:"center",marginTop:28}}>Join the Telegram</Text>
-    <Text style={{fontSize:14,lineHeight:22,color:C.mutedText,textAlign:"center",marginTop:10}}>Get daily NCERT questions, NEET updates, toppers' tips and quick doubt-solving in the BuzNeet community.</Text>
-    <Text style={{fontSize:14,fontWeight:"700",color:C.primary,marginTop:12}}>t.me/buzneet</Text>
-  </View><View style={{padding:24,width:"100%"}}>
-    <Pressable onPress={()=>{Linking.openURL("https://t.me/buzneet");next()}} style={a.button}><Text style={a.buttonText}>Join Telegram</Text></Pressable>
-    <Pressable onPress={next} style={{padding:12,alignItems:"center"}}><Text style={{color:C.mutedText,fontWeight:"700"}}>Maybe later</Text></Pressable>
-  </View></Phone>
+export default function Telegram() {
+  const { patch } = useStore();
+
+  const finish = () => {
+    patch({ telegramDone: true });
+    router.replace("/home");
+  };
+
+  return (
+    <Phone>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 30 }}>
+        <View style={{ height: 110, width: 110, borderRadius: 55, backgroundColor: C.accent, alignItems: "center", justifyContent: "center" }}>
+          <Text style={{ fontSize: 48, color: C.primary }}>➤</Text>
+        </View>
+        <Text style={{ fontSize: 30, fontWeight: "900", color: C.foreground, textAlign: "center", marginTop: 28 }}>
+          Join the Telegram
+        </Text>
+        <Text style={{ fontSize: 14, lineHeight: 22, color: C.mutedText, textAlign: "center", marginTop: 10 }}>
+          Get daily NCERT questions, NEET updates, toppers' tips and quick doubt-solving in the BuzNeet community.
+        </Text>
+        <Text style={{ fontSize: 14, fontWeight: "700", color: C.primary, marginTop: 12 }}>
+          BuzNeet community
+        </Text>
+      </View>
+
+      <View style={{ padding: 24, width: "100%" }}>
+        <Pressable onPress={finish} style={{ minHeight: 52, borderRadius: 16, alignItems: "center", justifyContent: "center", paddingHorizontal: 18, backgroundColor: C.primary }}>
+          <Text style={{ fontSize: 15, fontWeight: "800", color: C.primaryText }}>Continue</Text>
+        </Pressable>
+        <Pressable onPress={finish} style={{ padding: 12, alignItems: "center" }}>
+          <Text style={{ color: C.mutedText, fontWeight: "700" }}>Maybe later</Text>
+        </Pressable>
+      </View>
+    </Phone>
+  );
 }
-const a=StyleSheet.create({button:{minHeight:52,borderRadius:16,alignItems:"center",justifyContent:"center",paddingHorizontal:18,backgroundColor:C.primary},buttonText:{fontSize:15,fontWeight:"800",color:C.primaryText}});
