@@ -6,7 +6,16 @@
     "orientation": "portrait",
     "scheme": "buzneet",
     "userInterfaceStyle": "light",
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FAF9F1",
+          "imageWidth": 120
+        }
+      ]
+    ],
     "android": { "package": "com.buzneet.app" },
     "ios": { "bundleIdentifier": "com.buzneet.app" }
   }
