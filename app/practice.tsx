@@ -1,6 +1,6 @@
 import{useLocalSearchParams,router}from"expo-router";
 import{useMemo,useState,useEffect}from"react";
-import{Pressable,Text,TextInput,View}from"react-native";
+import{Pressable,Text,View}from"react-native";
 import{Shell,Card}from"../native/ui";
 import{C}from"../native/theme";
 import{filterQuestions,chapterById,type NativeQuestion,type ContentMode}from"../native/content";
@@ -8,8 +8,8 @@ import{useStore,type Rating}from"../native/store";
 
 export default function Practice(){
   const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string}>();
-  const{due,mistakes,record,rate,toggle}=useStore();
-  const mode=(p.mode as ContentMode)|"revision";
+  const{due,mistakes,record,rate}=useStore();
+  const mode=(p.mode as ContentMode)||"revision";
   const deck=useMemo(()=>{
     if(p.review)return filterQuestions(undefined,"revision").filter(x=>due.includes(x.id));
     if(p.mistakes)return filterQuestions(undefined,"revision").filter(x=>mistakes[x.id]);
@@ -64,7 +64,7 @@ export default function Practice(){
   return <Shell title={p.chapter?(chapterById(p.chapter)?.name||"Practice"):modeLabel} subtitle={modeLabel} right={<Text style={{fontWeight:"800",color:C.primary}}>{i+1}/{deck.length}</Text>}>
     <View style={{height:6,borderRadius:4,backgroundColor:C.muted,overflow:"hidden",marginBottom:12}}><View style={{height:6,width:(`${((i)/deck.length)*100}%` as any),backgroundColor:C.primary}}/></View>
     <Card><Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>{q.reviewStatus==="draft"&&<Text style={{fontSize:10,color:C.mutedText,marginTop:10}}>Draft bank item · verify before treating as final NCERT line-by-line content.</Text>}</Card>
-    <View style={{gap:8,marginTop:12}}>{q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>submit(k)} style={{padding:14,borderRadius:16,borderWidth:1,borderColor={true}?((shown&&k===q.answer)?C.success:(shown&&pick===k)?C.destructive:C.border):C.border,backgroundColor:(shown&&k===q.answer)?C.accent:(shown&&pick===k)?"#FCEAE6":C.card}}><Text style={{fontSize:13,color:C.foreground}}>{String.fromCharCode(65+k)}. {o}</Text></Pressable>)}</View>
+    <View style={{gap:8,marginTop:12}}>{q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>submit(k)} style={{padding:14,borderRadius:16,borderWidth:1,borderColor:(shown&&k===q.answer)?C.success:(shown&&pick===k)?C.destructive:C.border,backgroundColor:(shown&&k===q.answer)?C.accent:(shown&&pick===k)?"#FCEAE6":C.card}}><Text style={{fontSize:13,color:C.foreground}}>{String.fromCharCode(65+k)}. {o}</Text></Pressable>)}</View>
     {shown&&<Card style={{marginTop:12,backgroundColor:C.accent}}><Text style={{fontWeight:"900",color:correct?C.success:C.destructive}}>{correct?"Correct":"Review this answer"}</Text>{q.explanation&&<Text style={{fontSize:12,lineHeight:19,color:C.foreground,marginTop:6}}>{q.explanation}</Text>}</Card>}
     {shown&&<View style={{flexDirection:"row",gap:7,marginTop:10}}>{(["again","hard","good","easy"] as Rating[]).map(r=><Pressable key={r} onPress={()=>next(r)} style={{flex:1,paddingVertical:10,borderRadius:13,backgroundColor:C.card,borderWidth:1,borderColor:C.border}}><Text style={{fontSize:10,fontWeight:"800",textAlign:"center"}}>{r}</Text></Pressable>)}</View>}
   </Shell>
