@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "BuzNeet",
+    "slug": "buzneet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "buzneet",
+    "userInterfaceStyle": "light",
+    "plugins": ["expo-router"],
+    "android": { "package": "com.buzneet.app" },
+    "ios": { "bundleIdentifier": "com.buzneet.app" }
+  }
+}
