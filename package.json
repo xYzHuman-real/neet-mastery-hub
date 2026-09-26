@@ -80,7 +80,8 @@
     "react-native-screens": "~4.26.0",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "expo-constants": "57.0.19",
-    "expo-modules-core": "57.0.19"
+    "expo-modules-core": "57.0.19",
+    "@react-native-google-signin/google-signin": "16.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
