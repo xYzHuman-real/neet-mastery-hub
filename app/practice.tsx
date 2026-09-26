@@ -11,9 +11,10 @@ export default function Practice(){
   const{due,mistakes,record,rate}=useStore(); const[content,setContent]=useState<any[]|null>(null); const[contentError,setContentError]=useState(false); useEffect(()=>{loadContent().then(setContent).catch(()=>setContentError(true))},[]);
   const mode=p.mode||"revision";
   const deck=useMemo(()=>{
-    if(p.review)return filterQuestions(content!,undefined,"revision").filter(x=>due.includes(x.id));
-    if(p.mistakes)return content.filterQuestions(content!,undefined,"revision").filter((x:any)=>mistakes[x.id]);
-    return filterQuestions(content!,p.chapter,mode);
+    if(!content)return [];
+    if(p.review)return filterQuestions(content,undefined,"revision").filter(x=>due.includes(x.id));
+    if(p.mistakes)return filterQuestions(content,undefined,"revision").filter((x:any)=>mistakes[x.id]);
+    return filterQuestions(content,p.chapter,mode);
   },[p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
   const[i,setI]=useState(0);
   const[pick,setPick]=useState<number|null>(null);
