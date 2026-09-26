@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEET Mastery Hub Question",
+  "type": "object",
+  "required": [
+    "id",
+    "chapterId",
+    "mode",
+    "prompt",
+    "options",
+    "answer",
+    "difficulty",
+    "citation"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "chapterId": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "mcq",
+        "numerical",
+        "statement",
+        "match"
+      ]
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2
+    },
+    "answer": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "difficulty": {
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "citation": {
+      "type": "object",
+      "required": [
+        "book",
+        "chapter",
+        "page",
+        "line",
+        "reference"
+      ],
+      "properties": {
+        "book": {
+          "type": "string"
+        },
+        "chapter": {
+          "type": "string"
+        },
+        "page": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "line": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "reference": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
