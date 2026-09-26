@@ -3,17 +3,17 @@ import{useMemo,useState,useEffect}from"react";
 import{Pressable,Text,View}from"react-native";
 import{Shell,Card}from"../native/ui";
 import{C}from"../native/theme";
-import{filterQuestions,chapterById,type NativeQuestion,type ContentMode}from"../native/content";
+
 import{useStore,type Rating}from"../native/store";
 
 export default function Practice(){
   const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string}>();
-  const{due,mistakes,record,rate}=useStore();
-  const mode=(p.mode as ContentMode)||"revision";
+  const{due,mistakes,record,rate}=useStore(); const[content,setContent]=useState<any>(null); useEffect(()=>{import("../native/content").then(setContent).catch(()=>setContent({}))},[]);
+  const mode=p.mode||"revision";
   const deck=useMemo(()=>{
-    if(p.review)return filterQuestions(undefined,"revision").filter(x=>due.includes(x.id));
+    if(p.review)return content.filterQuestions(undefined,"revision").filter(x=>due.includes(x.id));
     if(p.mistakes)return filterQuestions(undefined,"revision").filter(x=>mistakes[x.id]);
-    return filterQuestions(p.chapter,mode);
+    return content.filterQuestions(p.chapter,mode);
   },[p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
   const[i,setI]=useState(0);
   const[pick,setPick]=useState<number|null>(null);
@@ -23,6 +23,7 @@ export default function Practice(){
   const[results,setResults]=useState<{qid:string;correct:boolean;pick:number|null;time:number}[]>([]);
   const q=deck[i];
 
+  if(!content)return <Shell title="Loading practice" subtitle="BuzNeet"><Card><Text style={{fontSize:16,fontWeight:"800",color:C.foreground}}>Preparing your question bank…</Text></Card></Shell>;
   if(!deck.length)return <Shell title="Series empty" subtitle="Content review"><Card><Text style={{fontSize:22,fontWeight:"900",color:C.foreground}}>No released questions here yet.</Text><Text style={{fontSize:13,lineHeight:20,color:C.mutedText,marginTop:8}}>This series is kept separate rather than inventing or falsely labelling questions as NCERT line-by-line or verified PYQs.</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
 
   if(i>=deck.length){
@@ -61,7 +62,7 @@ export default function Practice(){
   };
   const next=(r:Rating)=>{rate(q.id,r);setPick(null);setText("");setShown(false);setI(x=>x+1)};
 
-  return <Shell title={p.chapter?(chapterById(p.chapter)?.name||"Practice"):modeLabel} subtitle={modeLabel} right={<Text style={{fontWeight:"800",color:C.primary}}>{i+1}/{deck.length}</Text>}>
+  return <Shell title={p.chapter?(content.chapterById(p.chapter)?.name||"Practice"):modeLabel} subtitle={modeLabel} right={<Text style={{fontWeight:"800",color:C.primary}}>{i+1}/{deck.length}</Text>}>
     <View style={{height:6,borderRadius:4,backgroundColor:C.muted,overflow:"hidden",marginBottom:12}}><View style={{height:6,width:(`${((i)/deck.length)*100}%` as any),backgroundColor:C.primary}}/></View>
     <Card><Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>{q.reviewStatus==="draft"&&<Text style={{fontSize:10,color:C.mutedText,marginTop:10}}>Draft bank item · verify before treating as final NCERT line-by-line content.</Text>}</Card>
     <View style={{gap:8,marginTop:12}}>{q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>submit(k)} style={{padding:14,borderRadius:16,borderWidth:1,borderColor:(shown&&k===q.answer)?C.success:(shown&&pick===k)?C.destructive:C.border,backgroundColor:(shown&&k===q.answer)?C.accent:(shown&&pick===k)?"#FCEAE6":C.card}}><Text style={{fontSize:13,color:C.foreground}}>{String.fromCharCode(65+k)}. {o}</Text></Pressable>)}</View>
