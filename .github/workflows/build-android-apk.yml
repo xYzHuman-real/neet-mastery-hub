@@ -24,14 +24,13 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 22
-          cache: npm
+          package-manager-cache: false
 
       - name: Setup Java
         uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
-          cache: gradle
 
       - name: Install dependencies
         run: npm install
