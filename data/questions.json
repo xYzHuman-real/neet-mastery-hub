@@ -1,7 +1,7 @@
 [
   {
     "id": "phy-q1",
-    "chapterId": "phy-u1",
+    "chapterId": "phy-c1",
     "mode": "mcq",
     "prompt": "The number of significant figures in 0.00450 is:",
     "options": [
@@ -22,7 +22,7 @@
   },
   {
     "id": "phy-q2",
-    "chapterId": "phy-u2",
+    "chapterId": "phy-c2",
     "mode": "mcq",
     "prompt": "For a particle moving with constant acceleration, which graph is necessarily a straight line?",
     "options": [
@@ -43,7 +43,7 @@
   },
   {
     "id": "phy-q3",
-    "chapterId": "phy-u3",
+    "chapterId": "phy-c4",
     "mode": "mcq",
     "prompt": "A body continues in its state of rest or uniform motion in a straight line unless acted upon by an external unbalanced force. This is:",
     "options": [
@@ -64,7 +64,7 @@
   },
   {
     "id": "phy-q4",
-    "chapterId": "phy-u4",
+    "chapterId": "phy-c5",
     "mode": "mcq",
     "prompt": "The work done by a force perpendicular to the displacement is:",
     "options": [
@@ -85,7 +85,7 @@
   },
   {
     "id": "phy-q5",
-    "chapterId": "phy-u6",
+    "chapterId": "phy-c7",
     "mode": "mcq",
     "prompt": "If the distance of a satellite from the centre of Earth is increased, its orbital speed:",
     "options": [
@@ -106,7 +106,7 @@
   },
   {
     "id": "phy-q6",
-    "chapterId": "phy-u8",
+    "chapterId": "phy-c11",
     "mode": "mcq",
     "prompt": "For an ideal gas, the internal energy depends only on:",
     "options": [
@@ -127,7 +127,7 @@
   },
   {
     "id": "phy-q7",
-    "chapterId": "phy-u11",
+    "chapterId": "phy-c15",
     "mode": "mcq",
     "prompt": "The electric field inside a conductor in electrostatic equilibrium is:",
     "options": [
@@ -148,7 +148,7 @@
   },
   {
     "id": "phy-q8",
-    "chapterId": "phy-u12",
+    "chapterId": "phy-c17",
     "mode": "mcq",
     "prompt": "The SI unit of resistivity is:",
     "options": [
@@ -169,7 +169,7 @@
   },
   {
     "id": "phy-q9",
-    "chapterId": "phy-u17",
+    "chapterId": "phy-c25",
     "mode": "mcq",
     "prompt": "In the photoelectric effect, the maximum kinetic energy of emitted electrons depends primarily on the:",
     "options": [
@@ -190,7 +190,7 @@
   },
   {
     "id": "phy-q10",
-    "chapterId": "phy-u19",
+    "chapterId": "phy-c28",
     "mode": "mcq",
     "prompt": "A Zener diode is commonly used as a:",
     "options": [
@@ -211,7 +211,7 @@
   },
   {
     "id": "chem-q1",
-    "chapterId": "chem-u1",
+    "chapterId": "chem-c1",
     "mode": "mcq",
     "prompt": "One mole of a substance contains approximately:",
     "options": [
@@ -232,7 +232,7 @@
   },
   {
     "id": "chem-q2",
-    "chapterId": "chem-u2",
+    "chapterId": "chem-c2",
     "mode": "mcq",
     "prompt": "The maximum number of electrons that can occupy the third shell is:",
     "options": [
@@ -253,7 +253,7 @@
   },
   {
     "id": "chem-q3",
-    "chapterId": "chem-u3",
+    "chapterId": "chem-c4",
     "mode": "mcq",
     "prompt": "Which bond is formed by sharing of an electron pair between two atoms?",
     "options": [
@@ -274,7 +274,7 @@
   },
   {
     "id": "chem-q4",
-    "chapterId": "chem-u5",
+    "chapterId": "chem-c10",
     "mode": "mcq",
     "prompt": "For a dilute solution, the concentration of a solute can be expressed in terms of:",
     "options": [
@@ -295,7 +295,7 @@
   },
   {
     "id": "chem-q5",
-    "chapterId": "chem-u6",
+    "chapterId": "chem-c6",
     "mode": "mcq",
     "prompt": "At equilibrium, the forward and reverse reactions have:",
     "options": [
@@ -316,7 +316,7 @@
   },
   {
     "id": "chem-q6",
-    "chapterId": "chem-u7",
+    "chapterId": "chem-c7",
     "mode": "mcq",
     "prompt": "Oxidation involves:",
     "options": [
@@ -337,7 +337,7 @@
   },
   {
     "id": "chem-q7",
-    "chapterId": "chem-u8",
+    "chapterId": "chem-c12",
     "mode": "mcq",
     "prompt": "For a first-order reaction, the half-life is:",
     "options": [
@@ -358,7 +358,7 @@
   },
   {
     "id": "chem-q8",
-    "chapterId": "chem-u12",
+    "chapterId": "chem-c15",
     "mode": "mcq",
     "prompt": "A ligand that can donate an electron pair through two donor atoms is called:",
     "options": [
@@ -379,7 +379,7 @@
   },
   {
     "id": "chem-q9",
-    "chapterId": "chem-u19",
+    "chapterId": "chem-c20",
     "mode": "mcq",
     "prompt": "The bond linking amino acids in a polypeptide chain is the:",
     "options": [
@@ -400,7 +400,7 @@
   },
   {
     "id": "chem-q10",
-    "chapterId": "chem-u18",
+    "chapterId": "chem-c19",
     "mode": "mcq",
     "prompt": "Aniline is classified as a:",
     "options": [
@@ -421,7 +421,7 @@
   },
   {
     "id": "bio-q1",
-    "chapterId": "bio-u1",
+    "chapterId": "bio-c1",
     "mode": "mcq",
     "prompt": "The scientific naming system using two words, genus and species, is called:",
     "options": [
@@ -442,7 +442,7 @@
   },
   {
     "id": "bio-q2",
-    "chapterId": "bio-u2",
+    "chapterId": "bio-c5",
     "mode": "mcq",
     "prompt": "The tissue responsible for increase in length of a plant organ is:",
     "options": [
@@ -463,7 +463,7 @@
   },
   {
     "id": "bio-q3",
-    "chapterId": "bio-u3",
+    "chapterId": "bio-c8",
     "mode": "mcq",
     "prompt": "Which organelle is primarily associated with intracellular digestion?",
     "options": [
@@ -484,7 +484,7 @@
   },
   {
     "id": "bio-q4",
-    "chapterId": "bio-u4",
+    "chapterId": "bio-c11",
     "mode": "mcq",
     "prompt": "The oxygen released during photosynthesis is derived from:",
     "options": [
@@ -505,7 +505,7 @@
   },
   {
     "id": "bio-q5",
-    "chapterId": "bio-u5",
+    "chapterId": "bio-c16",
     "mode": "mcq",
     "prompt": "The normal pacemaker of the human heart is the:",
     "options": [
@@ -526,7 +526,7 @@
   },
   {
     "id": "bio-q6",
-    "chapterId": "bio-u6",
+    "chapterId": "bio-c23",
     "mode": "mcq",
     "prompt": "In humans, fertilisation normally occurs in the:",
     "options": [
@@ -547,7 +547,7 @@
   },
   {
     "id": "bio-q7",
-    "chapterId": "bio-u7",
+    "chapterId": "bio-c26",
     "mode": "mcq",
     "prompt": "The law stating that alleles of a gene pair segregate during gamete formation is Mendel's law of:",
     "options": [
@@ -568,7 +568,7 @@
   },
   {
     "id": "bio-q8",
-    "chapterId": "bio-u8",
+    "chapterId": "bio-c29",
     "mode": "mcq",
     "prompt": "The bacterium commonly associated with curd formation is:",
     "options": [
@@ -589,7 +589,7 @@
   },
   {
     "id": "bio-q9",
-    "chapterId": "bio-u9",
+    "chapterId": "bio-c31",
     "mode": "mcq",
     "prompt": "Bt cotton is genetically modified primarily for resistance against:",
     "options": [
@@ -610,7 +610,7 @@
   },
   {
     "id": "bio-q10",
-    "chapterId": "bio-u10",
+    "chapterId": "bio-c33",
     "mode": "mcq",
     "prompt": "The pyramid of energy in an ecosystem is always:",
     "options": [
@@ -631,7 +631,7 @@
   },
   {
     "id": "phy-q11",
-    "chapterId": "phy-u7",
+    "chapterId": "phy-c8",
     "mode": "mcq",
     "prompt": "For a liquid surface, surface tension tends to make the surface area:",
     "options": [
@@ -652,7 +652,7 @@
   },
   {
     "id": "phy-q12",
-    "chapterId": "phy-u9",
+    "chapterId": "phy-c12",
     "mode": "mcq",
     "prompt": "At the same temperature, the average translational kinetic energy of ideal gas molecules is:",
     "options": [
@@ -673,7 +673,7 @@
   },
   {
     "id": "phy-q13",
-    "chapterId": "phy-u10",
+    "chapterId": "phy-c13",
     "mode": "mcq",
     "prompt": "In simple harmonic motion, acceleration is:",
     "options": [
@@ -694,7 +694,7 @@
   },
   {
     "id": "phy-q14",
-    "chapterId": "phy-u13",
+    "chapterId": "phy-c18",
     "mode": "mcq",
     "prompt": "The magnetic force on a moving charged particle is maximum when its velocity is:",
     "options": [
@@ -715,7 +715,7 @@
   },
   {
     "id": "phy-q15",
-    "chapterId": "phy-u14",
+    "chapterId": "phy-c20",
     "mode": "mcq",
     "prompt": "Lenz's law is consistent with the conservation of:",
     "options": [
@@ -736,7 +736,7 @@
   },
   {
     "id": "phy-q16",
-    "chapterId": "phy-u15",
+    "chapterId": "phy-c22",
     "mode": "mcq",
     "prompt": "Electromagnetic waves in vacuum are:",
     "options": [
@@ -757,7 +757,7 @@
   },
   {
     "id": "phy-q17",
-    "chapterId": "phy-u16",
+    "chapterId": "phy-c23",
     "mode": "mcq",
     "prompt": "The power of a lens is measured in:",
     "options": [
@@ -778,7 +778,7 @@
   },
   {
     "id": "phy-q18",
-    "chapterId": "phy-u18",
+    "chapterId": "phy-c26",
     "mode": "mcq",
     "prompt": "The energy released in nuclear fission is associated mainly with:",
     "options": [
@@ -820,7 +820,7 @@
   },
   {
     "id": "phy-q20",
-    "chapterId": "phy-u5",
+    "chapterId": "phy-c6",
     "mode": "mcq",
     "prompt": "The angular momentum of a system is conserved when the net external torque on it is:",
     "options": [
@@ -841,7 +841,7 @@
   },
   {
     "id": "chem-q11",
-    "chapterId": "chem-u4",
+    "chapterId": "chem-c5",
     "mode": "mcq",
     "prompt": "For an exothermic reaction at constant pressure, the enthalpy change is:",
     "options": [
@@ -862,7 +862,7 @@
   },
   {
     "id": "chem-q12",
-    "chapterId": "chem-u9",
+    "chapterId": "chem-c3",
     "mode": "mcq",
     "prompt": "Across a period, atomic radius generally:",
     "options": [
@@ -883,7 +883,7 @@
   },
   {
     "id": "chem-q13",
-    "chapterId": "chem-u10",
+    "chapterId": "chem-c13",
     "mode": "mcq",
     "prompt": "The oxidation state of oxygen in most oxides is:",
     "options": [
@@ -904,7 +904,7 @@
   },
   {
     "id": "chem-q14",
-    "chapterId": "chem-u11",
+    "chapterId": "chem-c14",
     "mode": "mcq",
     "prompt": "The lanthanide contraction is associated with the gradual decrease in:",
     "options": [
@@ -946,7 +946,7 @@
   },
   {
     "id": "chem-q16",
-    "chapterId": "chem-u14",
+    "chapterId": "chem-c8",
     "mode": "mcq",
     "prompt": "A species that accepts an electron pair is a:",
     "options": [
@@ -967,7 +967,7 @@
   },
   {
     "id": "chem-q17",
-    "chapterId": "chem-u15",
+    "chapterId": "chem-c9",
     "mode": "mcq",
     "prompt": "The characteristic reaction of alkenes is commonly:",
     "options": [
@@ -988,7 +988,7 @@
   },
   {
     "id": "chem-q18",
-    "chapterId": "chem-u16",
+    "chapterId": "chem-c16",
     "mode": "mcq",
     "prompt": "In an SN2 reaction, the nucleophile attacks the carbon atom:",
     "options": [
@@ -1009,7 +1009,7 @@
   },
   {
     "id": "chem-q19",
-    "chapterId": "chem-u17",
+    "chapterId": "chem-c17",
     "mode": "mcq",
     "prompt": "Oxidation of a primary alcohol under controlled conditions can give an:",
     "options": [
@@ -1051,7 +1051,7 @@
   },
   {
     "id": "phy-q21",
-    "chapterId": "phy-u1",
+    "chapterId": "phy-c1",
     "mode": "mcq",
     "prompt": "The dimensional formula of velocity is:",
     "options": [
@@ -1073,7 +1073,7 @@
   },
   {
     "id": "phy-q22",
-    "chapterId": "phy-u2",
+    "chapterId": "phy-c2",
     "mode": "mcq",
     "prompt": "The slope of a velocity-time graph represents:",
     "options": [
@@ -1095,7 +1095,7 @@
   },
   {
     "id": "phy-q23",
-    "chapterId": "phy-u3",
+    "chapterId": "phy-c4",
     "mode": "mcq",
     "prompt": "The coefficient of friction is defined as the ratio of limiting friction to:",
     "options": [
@@ -1117,7 +1117,7 @@
   },
   {
     "id": "phy-q24",
-    "chapterId": "phy-u4",
+    "chapterId": "phy-c5",
     "mode": "mcq",
     "prompt": "The SI unit of power is:",
     "options": [
@@ -1139,7 +1139,7 @@
   },
   {
     "id": "phy-q25",
-    "chapterId": "phy-u5",
+    "chapterId": "phy-c6",
     "mode": "mcq",
     "prompt": "For a rigid body, torque is the product of force and:",
     "options": [
@@ -1161,7 +1161,7 @@
   },
   {
     "id": "phy-q26",
-    "chapterId": "phy-u6",
+    "chapterId": "phy-c7",
     "mode": "mcq",
     "prompt": "The escape speed from the surface of a planet depends on its:",
     "options": [
@@ -1183,7 +1183,7 @@
   },
   {
     "id": "phy-q27",
-    "chapterId": "phy-u7",
+    "chapterId": "phy-c8",
     "mode": "mcq",
     "prompt": "According to Bernoulli's principle for steady ideal flow, an increase in fluid speed is associated with:",
     "options": [
@@ -1205,7 +1205,7 @@
   },
   {
     "id": "phy-q28",
-    "chapterId": "phy-u8",
+    "chapterId": "phy-c11",
     "mode": "mcq",
     "prompt": "For a cyclic thermodynamic process, the net change in internal energy is:",
     "options": [
@@ -1227,7 +1227,7 @@
   },
   {
     "id": "phy-q29",
-    "chapterId": "phy-u9",
+    "chapterId": "phy-c12",
     "mode": "mcq",
     "prompt": "At a fixed temperature, the average kinetic energy of ideal-gas molecules is:",
     "options": [
@@ -1249,7 +1249,7 @@
   },
   {
     "id": "phy-q30",
-    "chapterId": "phy-u10",
+    "chapterId": "phy-c13",
     "mode": "mcq",
     "prompt": "In SHM, the restoring acceleration is directed:",
     "options": [
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "phy-q31",
-    "chapterId": "phy-u11",
+    "chapterId": "phy-c15",
     "mode": "mcq",
     "prompt": "The capacitance of a parallel-plate capacitor increases when the plate separation is:",
     "options": [
@@ -1293,7 +1293,7 @@
   },
   {
     "id": "phy-q32",
-    "chapterId": "phy-u12",
+    "chapterId": "phy-c17",
     "mode": "mcq",
     "prompt": "For metallic conductors, resistance generally increases with increase in:",
     "options": [
@@ -1315,7 +1315,7 @@
   },
   {
     "id": "phy-q33",
-    "chapterId": "phy-u13",
+    "chapterId": "phy-c18",
     "mode": "mcq",
     "prompt": "A charged particle moving parallel to a uniform magnetic field experiences magnetic force:",
     "options": [
@@ -1337,7 +1337,7 @@
   },
   {
     "id": "phy-q34",
-    "chapterId": "phy-u14",
+    "chapterId": "phy-c20",
     "mode": "mcq",
     "prompt": "The RMS value of an alternating current with peak value I0 is:",
     "options": [
@@ -1359,7 +1359,7 @@
   },
   {
     "id": "phy-q35",
-    "chapterId": "phy-u15",
+    "chapterId": "phy-c22",
     "mode": "mcq",
     "prompt": "Which has the highest frequency among these?",
     "options": [
@@ -1381,7 +1381,7 @@
   },
   {
     "id": "phy-q36",
-    "chapterId": "phy-u16",
+    "chapterId": "phy-c23",
     "mode": "mcq",
     "prompt": "When light passes from air into glass, its frequency:",
     "options": [
@@ -1403,7 +1403,7 @@
   },
   {
     "id": "phy-q37",
-    "chapterId": "phy-u17",
+    "chapterId": "phy-c25",
     "mode": "mcq",
     "prompt": "The de Broglie wavelength of a particle is inversely proportional to its:",
     "options": [
@@ -1425,7 +1425,7 @@
   },
   {
     "id": "phy-q38",
-    "chapterId": "phy-u18",
+    "chapterId": "phy-c26",
     "mode": "mcq",
     "prompt": "The half-life of a radioactive substance is independent of the:",
     "options": [
@@ -1447,7 +1447,7 @@
   },
   {
     "id": "phy-q39",
-    "chapterId": "phy-u19",
+    "chapterId": "phy-c28",
     "mode": "mcq",
     "prompt": "A Zener diode is commonly used for:",
     "options": [
@@ -1491,7 +1491,7 @@
   },
   {
     "id": "chem-q41",
-    "chapterId": "chem-u1",
+    "chapterId": "chem-c1",
     "mode": "mcq",
     "prompt": "One mole of any substance contains approximately:",
     "options": [
@@ -1513,7 +1513,7 @@
   },
   {
     "id": "chem-q42",
-    "chapterId": "chem-u2",
+    "chapterId": "chem-c2",
     "mode": "mcq",
     "prompt": "The maximum number of electrons in a p subshell is:",
     "options": [
@@ -1535,7 +1535,7 @@
   },
   {
     "id": "chem-q43",
-    "chapterId": "chem-u3",
+    "chapterId": "chem-c4",
     "mode": "mcq",
     "prompt": "The shape of a methane molecule is:",
     "options": [
@@ -1557,7 +1557,7 @@
   },
   {
     "id": "chem-q44",
-    "chapterId": "chem-u4",
+    "chapterId": "chem-c5",
     "mode": "mcq",
     "prompt": "For a spontaneous process at constant temperature and pressure, Gibbs energy change is:",
     "options": [
@@ -1579,7 +1579,7 @@
   },
   {
     "id": "chem-q45",
-    "chapterId": "chem-u5",
+    "chapterId": "chem-c10",
     "mode": "mcq",
     "prompt": "A colligative property depends primarily on the:",
     "options": [
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "chem-q46",
-    "chapterId": "chem-u6",
+    "chapterId": "chem-c6",
     "mode": "mcq",
     "prompt": "At 25 °C, a neutral aqueous solution has pH approximately:",
     "options": [
@@ -1623,7 +1623,7 @@
   },
   {
     "id": "chem-q47",
-    "chapterId": "chem-u7",
+    "chapterId": "chem-c7",
     "mode": "mcq",
     "prompt": "Oxidation occurs at the:",
     "options": [
@@ -1645,7 +1645,7 @@
   },
   {
     "id": "chem-q48",
-    "chapterId": "chem-u8",
+    "chapterId": "chem-c12",
     "mode": "mcq",
     "prompt": "For a first-order reaction, the half-life is:",
     "options": [
@@ -1667,7 +1667,7 @@
   },
   {
     "id": "chem-q49",
-    "chapterId": "chem-u9",
+    "chapterId": "chem-c3",
     "mode": "mcq",
     "prompt": "Across a period, electronegativity generally:",
     "options": [
@@ -1689,7 +1689,7 @@
   },
   {
     "id": "chem-q50",
-    "chapterId": "chem-u10",
+    "chapterId": "chem-c13",
     "mode": "mcq",
     "prompt": "The element fluorine most commonly exhibits oxidation state:",
     "options": [
@@ -1711,7 +1711,7 @@
   },
   {
     "id": "chem-q51",
-    "chapterId": "chem-u11",
+    "chapterId": "chem-c14",
     "mode": "mcq",
     "prompt": "Transition-metal ions often show colour due to:",
     "options": [
@@ -1733,7 +1733,7 @@
   },
   {
     "id": "chem-q52",
-    "chapterId": "chem-u12",
+    "chapterId": "chem-c15",
     "mode": "mcq",
     "prompt": "A ligand that donates one lone pair to a central metal ion is called:",
     "options": [
@@ -1777,7 +1777,7 @@
   },
   {
     "id": "chem-q54",
-    "chapterId": "chem-u14",
+    "chapterId": "chem-c8",
     "mode": "mcq",
     "prompt": "A carbocation is an organic intermediate with a positively charged:",
     "options": [
@@ -1799,7 +1799,7 @@
   },
   {
     "id": "chem-q55",
-    "chapterId": "chem-u15",
+    "chapterId": "chem-c9",
     "mode": "mcq",
     "prompt": "Benzene commonly undergoes:",
     "options": [
@@ -1821,7 +1821,7 @@
   },
   {
     "id": "chem-q56",
-    "chapterId": "chem-u16",
+    "chapterId": "chem-c16",
     "mode": "mcq",
     "prompt": "In an SN1 reaction, the rate-determining step involves:",
     "options": [
@@ -1843,7 +1843,7 @@
   },
   {
     "id": "chem-q57",
-    "chapterId": "chem-u17",
+    "chapterId": "chem-c17",
     "mode": "mcq",
     "prompt": "The functional group characteristic of carboxylic acids is:",
     "options": [
@@ -1865,7 +1865,7 @@
   },
   {
     "id": "chem-q58",
-    "chapterId": "chem-u18",
+    "chapterId": "chem-c19",
     "mode": "mcq",
     "prompt": "Aniline is classified as a:",
     "options": [
@@ -1887,7 +1887,7 @@
   },
   {
     "id": "chem-q59",
-    "chapterId": "chem-u19",
+    "chapterId": "chem-c20",
     "mode": "mcq",
     "prompt": "Proteins are polymers primarily made from:",
     "options": [
@@ -1931,7 +1931,7 @@
   },
   {
     "id": "bio-q61",
-    "chapterId": "bio-u1",
+    "chapterId": "bio-c1",
     "mode": "mcq",
     "prompt": "The basic unit of classification immediately above species is generally:",
     "options": [
@@ -1953,7 +1953,7 @@
   },
   {
     "id": "bio-q62",
-    "chapterId": "bio-u2",
+    "chapterId": "bio-c5",
     "mode": "mcq",
     "prompt": "Xylem primarily conducts:",
     "options": [
@@ -1975,7 +1975,7 @@
   },
   {
     "id": "bio-q63",
-    "chapterId": "bio-u3",
+    "chapterId": "bio-c8",
     "mode": "mcq",
     "prompt": "The organelle containing most of the cell's genetic material in a eukaryotic cell is the:",
     "options": [
@@ -1997,7 +1997,7 @@
   },
   {
     "id": "bio-q64",
-    "chapterId": "bio-u4",
+    "chapterId": "bio-c11",
     "mode": "mcq",
     "prompt": "The primary site of light reactions of photosynthesis is the:",
     "options": [
@@ -2019,7 +2019,7 @@
   },
   {
     "id": "bio-q65",
-    "chapterId": "bio-u5",
+    "chapterId": "bio-c16",
     "mode": "mcq",
     "prompt": "The hormone that lowers blood glucose concentration is:",
     "options": [
@@ -2041,7 +2041,7 @@
   },
   {
     "id": "bio-q66",
-    "chapterId": "bio-u6",
+    "chapterId": "bio-c23",
     "mode": "mcq",
     "prompt": "The hormone mainly associated with ovulation is:",
     "options": [
@@ -2063,7 +2063,7 @@
   },
   {
     "id": "bio-q67",
-    "chapterId": "bio-u7",
+    "chapterId": "bio-c26",
     "mode": "mcq",
     "prompt": "DNA replication is described as:",
     "options": [
@@ -2085,7 +2085,7 @@
   },
   {
     "id": "bio-q68",
-    "chapterId": "bio-u8",
+    "chapterId": "bio-c29",
     "mode": "mcq",
     "prompt": "The bacterium used in curd formation is commonly:",
     "options": [
@@ -2107,7 +2107,7 @@
   },
   {
     "id": "bio-q69",
-    "chapterId": "bio-u9",
+    "chapterId": "bio-c31",
     "mode": "mcq",
     "prompt": "PCR is used to:",
     "options": [
@@ -2129,7 +2129,7 @@
   },
   {
     "id": "bio-q70",
-    "chapterId": "bio-u10",
+    "chapterId": "bio-c33",
     "mode": "mcq",
     "prompt": "The first trophic level in a typical grazing food chain consists of:",
     "options": [
