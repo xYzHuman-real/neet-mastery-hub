@@ -1014,6 +1014,45 @@
         "global environmental issues",
         "waste management"
       ]
+    },
+    {
+      "id": "phy-c29",
+      "subject": "Physics",
+      "class": null,
+      "ncertChapter": "Experimental Skills",
+      "unitId": "phy-u20",
+      "chapterType": "syllabus-section",
+      "topics": [
+        "measurement instruments",
+        "experimental errors",
+        "graphs and data interpretation"
+      ]
+    },
+    {
+      "id": "chem-c21",
+      "subject": "Chemistry",
+      "class": null,
+      "ncertChapter": "Purification and Characterisation of Organic Compounds",
+      "unitId": "chem-u13",
+      "chapterType": "syllabus-section",
+      "topics": [
+        "purification methods",
+        "qualitative analysis",
+        "characterisation"
+      ]
+    },
+    {
+      "id": "chem-c22",
+      "subject": "Chemistry",
+      "class": null,
+      "ncertChapter": "Principles Related to Practical Chemistry",
+      "unitId": "chem-u20",
+      "chapterType": "syllabus-section",
+      "topics": [
+        "qualitative analysis",
+        "volumetric analysis",
+        "laboratory principles"
+      ]
     }
   ]
 }
