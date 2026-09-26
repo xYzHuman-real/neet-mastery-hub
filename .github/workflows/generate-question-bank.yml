@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: Generate 4,350-question draft bank
+      - name: Generate variable 50–150-question draft bank
         run: node scripts/generateQualityQuestionBank.mjs
 
       - name: Validate question bank
@@ -36,5 +36,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/questions.json
           git diff --cached --quiet && exit 0
-          git commit -m "Generate validated 4350-question draft bank"
+          git commit -m "Generate validated variable-size question bank"
           git push
