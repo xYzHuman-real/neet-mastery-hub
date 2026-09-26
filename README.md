@@ -1,50 +1,63 @@
 # NEET Mastery Hub
 
-Create a NEET exam prep app prototype inspired by Memoneet, styled and formatted like a mobile app:
+Content foundation for a NEET preparation app.
 
-1. Home / Progress Hub:
-- NCERT syllabus mastery percentage gauge by subject (Physics, Chemistry, Biology - Class 11 & 12)
-- Daily streak tracker and daily goal counter (e.g. 50 NCERT lines)
-- "Due for Revision Today" spaced repetition deck (cards due on Day 1, 3, 7, 30 intervals)
-- Subject navigation cards
+## Current coverage
 
-2. Chapter Content Hub:
-- Browse chapters by subject
-- Multiple study modes: Line-by-Line MCQs, Fill-in-the-Blanks, Diagram-based recall, Assertion & Reason, and PYQ tagged questions
+- **Physics:** 20/20 official NEET UG 2026 units
+- **Chemistry:** 20/20 official NEET UG 2026 units
+- **Biology:** 10/10 official NEET UG 2026 units
+- **Lessons:** 50 unit-level lesson records, each expanded with 3 granular topic groups
+- **Questions:** 100 NEET-style MCQs, with two questions mapped to every syllabus unit
+- **Question schema:** `data/question.schema.json`
 
-3. Active Practice & Recall Screen:
-- Mobile flashcard / question card UI
-- Instant answer check with exact NCERT textbook citation (Book, Page number, and quoted line)
-- Spaced repetition rating buttons: "Easy", "Hard", "Forgot"
-- Bookmark / Save to Mistake Notebook button
+## Lesson data
 
-4. Mistake Notebook & Spaced Repetition:
-- Automated revision queue for missed and flagged questions
-- Filter by recent mistakes and difficulty
+Each lesson includes:
 
-5. Chapter Tests & Analytics:
-- Timed practice mode with standard NEET marking (+4 / -1)
-- Accuracy and time analysis
+- `id`
+- `subject`
+- `unit`
+- `title`
+- `topics`
+- `questionModes`
+- `estimatedMinutes`
+- `examFocus`
+- `questionCount`
+- `ncertAligned`
 
-Ensure the app has a clean mobile-viewport shell/experience, intuitive bottom navigation bar, and structured mock data in a clean data file so additional chapters and questions can easily be plugged in.
+The topic groups are based on the official NMC NEET UG 2026 syllabus. They are intended as app navigation/lesson metadata rather than reproductions of textbook text.
 
-This project was built with [Lovable](https://lovable.dev).
+## Question data
 
-## Build with Lovable
+Each question follows the requested structure:
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e012168c-1028-4d22-8b6c-ba5b5309890f).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+```json
+{
+  "id": "phy-q21",
+  "chapterId": "phy-u1",
+  "mode": "mcq",
+  "prompt": "...",
+  "options": ["...", "...", "...", "..."],
+  "answer": 0,
+  "difficulty": "easy",
+  "explanation": "...",
+  "citation": {
+    "book": "NCERT Physics XI",
+    "chapter": "...",
+    "page": null,
+    "line": null,
+    "reference": "..."
+  }
+}
 ```
+
+Page and line are intentionally nullable. They should only be populated after verifying the exact NCERT edition/page numbering used by the app; they are not guessed.
+
+## Source boundary
+
+The syllabus coverage follows the NMC's published **NEET (UG) 2026** syllabus. NMC published the updated syllabus notice on 23 December 2025, and NTA also lists the NEET UG 2026 syllabus notice.
+
+## Next content expansion
+
+The data model is ready for additional question modes such as numerical, statement/assertion-reasoning, and match-the-following without changing the core question structure.
