@@ -628,5 +628,425 @@
       "line": null,
       "reference": "Ecological pyramids and energy flow"
     }
+  },
+  {
+    "id": "phy-q11",
+    "chapterId": "phy-u7",
+    "mode": "mcq",
+    "prompt": "For a liquid surface, surface tension tends to make the surface area:",
+    "options": [
+      "Maximum",
+      "Minimum",
+      "Infinite",
+      "Unchanged in all cases"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Mechanical Properties of Fluids",
+      "page": null,
+      "line": null,
+      "reference": "Surface tension"
+    }
+  },
+  {
+    "id": "phy-q12",
+    "chapterId": "phy-u9",
+    "mode": "mcq",
+    "prompt": "At the same temperature, the average translational kinetic energy of ideal gas molecules is:",
+    "options": [
+      "Different for different gases",
+      "The same for all ideal gases",
+      "Zero for monoatomic gases",
+      "Dependent only on pressure"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Kinetic Theory",
+      "page": null,
+      "line": null,
+      "reference": "Molecular interpretation of temperature"
+    }
+  },
+  {
+    "id": "phy-q13",
+    "chapterId": "phy-u10",
+    "mode": "mcq",
+    "prompt": "In simple harmonic motion, acceleration is:",
+    "options": [
+      "Constant",
+      "Proportional to displacement and in the same direction",
+      "Proportional to displacement and opposite in direction",
+      "Independent of displacement"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Oscillations",
+      "page": null,
+      "line": null,
+      "reference": "Acceleration in SHM"
+    }
+  },
+  {
+    "id": "phy-q14",
+    "chapterId": "phy-u13",
+    "mode": "mcq",
+    "prompt": "The magnetic force on a moving charged particle is maximum when its velocity is:",
+    "options": [
+      "Parallel to the magnetic field",
+      "Perpendicular to the magnetic field",
+      "Zero",
+      "At 45° to the field only"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Moving Charges and Magnetism",
+      "page": null,
+      "line": null,
+      "reference": "Magnetic force on a moving charge"
+    }
+  },
+  {
+    "id": "phy-q15",
+    "chapterId": "phy-u14",
+    "mode": "mcq",
+    "prompt": "Lenz's law is consistent with the conservation of:",
+    "options": [
+      "Charge",
+      "Mass",
+      "Energy",
+      "Linear momentum only"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Electromagnetic Induction",
+      "page": null,
+      "line": null,
+      "reference": "Lenz's law"
+    }
+  },
+  {
+    "id": "phy-q16",
+    "chapterId": "phy-u15",
+    "mode": "mcq",
+    "prompt": "Electromagnetic waves in vacuum are:",
+    "options": [
+      "Longitudinal only",
+      "Transverse",
+      "Mechanical",
+      "Stationary only"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Electromagnetic Waves",
+      "page": null,
+      "line": null,
+      "reference": "Nature of electromagnetic waves"
+    }
+  },
+  {
+    "id": "phy-q17",
+    "chapterId": "phy-u16",
+    "mode": "mcq",
+    "prompt": "The power of a lens is measured in:",
+    "options": [
+      "Metre",
+      "Dioptre",
+      "Tesla",
+      "Watt"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Ray Optics and Optical Instruments",
+      "page": null,
+      "line": null,
+      "reference": "Power of a lens"
+    }
+  },
+  {
+    "id": "phy-q18",
+    "chapterId": "phy-u18",
+    "mode": "mcq",
+    "prompt": "The energy released in nuclear fission is associated mainly with:",
+    "options": [
+      "Chemical bonding",
+      "Mass defect and binding energy",
+      "Surface tension",
+      "Ionisation energy"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Nuclei",
+      "page": null,
+      "line": null,
+      "reference": "Mass defect and binding energy"
+    }
+  },
+  {
+    "id": "phy-q19",
+    "chapterId": "phy-u20",
+    "mode": "mcq",
+    "prompt": "A screw gauge is primarily used to measure:",
+    "options": [
+      "Very large distances",
+      "Small thicknesses or diameters",
+      "Temperature",
+      "Time period"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Units and Measurements",
+      "page": null,
+      "line": null,
+      "reference": "Experimental measurement instruments"
+    }
+  },
+  {
+    "id": "phy-q20",
+    "chapterId": "phy-u5",
+    "mode": "mcq",
+    "prompt": "The angular momentum of a system is conserved when the net external torque on it is:",
+    "options": [
+      "Maximum",
+      "Zero",
+      "Constant and non-zero",
+      "Equal to its kinetic energy"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "System of Particles and Rotational Motion",
+      "page": null,
+      "line": null,
+      "reference": "Conservation of angular momentum"
+    }
+  },
+  {
+    "id": "chem-q11",
+    "chapterId": "chem-u4",
+    "mode": "mcq",
+    "prompt": "For an exothermic reaction at constant pressure, the enthalpy change is:",
+    "options": [
+      "Positive",
+      "Negative",
+      "Always zero",
+      "Always equal to internal energy"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Thermodynamics",
+      "page": null,
+      "line": null,
+      "reference": "Enthalpy change"
+    }
+  },
+  {
+    "id": "chem-q12",
+    "chapterId": "chem-u9",
+    "mode": "mcq",
+    "prompt": "Across a period, atomic radius generally:",
+    "options": [
+      "Increases",
+      "Decreases",
+      "Remains exactly constant",
+      "First decreases then becomes infinite"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Classification of Elements and Periodicity in Properties",
+      "page": null,
+      "line": null,
+      "reference": "Periodic trends in atomic size"
+    }
+  },
+  {
+    "id": "chem-q13",
+    "chapterId": "chem-u10",
+    "mode": "mcq",
+    "prompt": "The oxidation state of oxygen in most oxides is:",
+    "options": [
+      "+2",
+      "−2",
+      "+1",
+      "0"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "The p-Block Elements",
+      "page": null,
+      "line": null,
+      "reference": "General oxidation-state trends"
+    }
+  },
+  {
+    "id": "chem-q14",
+    "chapterId": "chem-u11",
+    "mode": "mcq",
+    "prompt": "The lanthanide contraction is associated with the gradual decrease in:",
+    "options": [
+      "Atomic number",
+      "Atomic and ionic radii across the lanthanide series",
+      "Nuclear charge",
+      "Number of shells"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "The d- and f-Block Elements",
+      "page": null,
+      "line": null,
+      "reference": "Lanthanide contraction"
+    }
+  },
+  {
+    "id": "chem-q15",
+    "chapterId": "chem-u13",
+    "mode": "mcq",
+    "prompt": "Chromatography can be used primarily for:",
+    "options": [
+      "Separating components of a mixture",
+      "Increasing atomic number",
+      "Changing an element into another element",
+      "Measuring nuclear spin"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Organic Chemistry: Some Basic Principles and Techniques",
+      "page": null,
+      "line": null,
+      "reference": "Purification by chromatography"
+    }
+  },
+  {
+    "id": "chem-q16",
+    "chapterId": "chem-u14",
+    "mode": "mcq",
+    "prompt": "A species that accepts an electron pair is a:",
+    "options": [
+      "Lewis acid",
+      "Lewis base",
+      "Free radical",
+      "Nucleophile only"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Organic Chemistry: Some Basic Principles and Techniques",
+      "page": null,
+      "line": null,
+      "reference": "Lewis acid-base concept"
+    }
+  },
+  {
+    "id": "chem-q17",
+    "chapterId": "chem-u15",
+    "mode": "mcq",
+    "prompt": "The characteristic reaction of alkenes is commonly:",
+    "options": [
+      "Addition",
+      "Only substitution",
+      "Only neutralisation",
+      "Only precipitation"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Hydrocarbons",
+      "page": null,
+      "line": null,
+      "reference": "Addition reactions of alkenes"
+    }
+  },
+  {
+    "id": "chem-q18",
+    "chapterId": "chem-u16",
+    "mode": "mcq",
+    "prompt": "In an SN2 reaction, the nucleophile attacks the carbon atom:",
+    "options": [
+      "From the same side as the leaving group",
+      "From the opposite side to the leaving group",
+      "Only through oxygen",
+      "Only after carbocation formation"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Haloalkanes and Haloarenes",
+      "page": null,
+      "line": null,
+      "reference": "SN2 mechanism"
+    }
+  },
+  {
+    "id": "chem-q19",
+    "chapterId": "chem-u17",
+    "mode": "mcq",
+    "prompt": "Oxidation of a primary alcohol under controlled conditions can give an:",
+    "options": [
+      "Aldehyde",
+      "Amine",
+      "Alkene only",
+      "Ether only"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Alcohols, Phenols and Ethers",
+      "page": null,
+      "line": null,
+      "reference": "Oxidation of primary alcohols"
+    }
+  },
+  {
+    "id": "chem-q20",
+    "chapterId": "chem-u20",
+    "mode": "mcq",
+    "prompt": "A common test for the presence of a carbonyl group in an organic compound uses:",
+    "options": [
+      "2,4-DNP reagent",
+      "Sodium chloride only",
+      "Benedict's solution for every carbonyl compound",
+      "Litmus only"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Practical Chemistry",
+      "page": null,
+      "line": null,
+      "reference": "Detection of functional groups"
+    }
   }
 ]
