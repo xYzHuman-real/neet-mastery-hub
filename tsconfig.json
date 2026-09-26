@@ -1,28 +1,13 @@
 {
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "native/**/*.ts",
-    "native/**/*.tsx",
-    "vite.config.ts",
-    "eslint.config.js"
-  ],
+  "include": ["src/**/*.ts","src/**/*.tsx","app/**/*.ts","app/**/*.tsx","native/**/*.ts","native/**/*.tsx","vite.config.ts","eslint.config.js"],
   "compilerOptions": {
     "target": "ES2022",
     "jsx": "react-jsx",
     "module": "ESNext",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "types": [
-      "vite/client",
-      "expo"
-    ],
+    "lib": ["ES2022","DOM","DOM.Iterable"],
+    "types": ["vite/client","expo"],
     "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": false,
     "noEmit": true,
@@ -37,10 +22,6 @@
     "noUncheckedIndexedAccess": false,
     "exactOptionalPropertyTypes": false,
     "noUncheckedSideEffectImports": true,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+    "paths": {"@/*": ["./src/*"]}
   }
 }
