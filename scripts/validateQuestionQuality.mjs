@@ -1,0 +1,19 @@
+const fs = require("node:fs");
+const chapters = JSON.parse(fs.readFileSync("data/chapters.json","utf8")).chapters;
+const bank = JSON.parse(fs.readFileSync("data/questions.json","utf8")).questions;
+const counts = Object.fromEntries(chapters.map(c => [c.id, 0]));
+const errors = [];
+for (const q of bank) {
+  if (counts[q.chapterId] !== undefined) counts[q.chapterId]++;
+  if (!q.topicId) errors.push(q.id + ": missing topicId");
+  if (!q.sourceType) errors.push(q.id + ": missing sourceType");
+  if (!q.reviewStatus) errors.push(q.id + ": missing reviewStatus");
+  if (["reviewed","verified"].includes(q.reviewStatus) && q.quality?.placeholder) errors.push(q.id + ": released reviewStatus on placeholder");
+  if (q.sourceType === "pyq" && !q.pyq?.verified) errors.push(q.id + ": PYQ is not explicitly verified");
+  if (q.citation?.page != null || q.citation?.line != null) errors.push(q.id + ": NCERT page/line must remain null until independently verified");
+}
+for (const c of chapters) {
+  if ((counts[c.id] || 0) < (c.minimumQuestionCount || 50)) errors.push(c.id + ": " + (counts[c.id] || 0) + " questions; minimum is " + (c.minimumQuestionCount || 50));
+}
+console.log(JSON.stringify({total: bank.length, chapters: counts, errors}, null, 2));
+if (errors.length) process.exit(1);
