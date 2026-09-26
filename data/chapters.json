@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "description": "NCERT chapter layer mapped into official NEET UG syllabus units.",
   "hierarchy": "Subject > Unit > Chapter > Topic > Questions",
   "source": [
@@ -17,7 +17,9 @@
         "units and measurements",
         "significant figures",
         "errors and dimensions"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c2",
@@ -29,7 +31,9 @@
         "position and displacement",
         "velocity and acceleration",
         "motion graphs"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c3",
@@ -41,7 +45,9 @@
         "vectors",
         "projectile motion",
         "uniform circular motion"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c4",
@@ -53,7 +59,9 @@
         "Newton's laws",
         "momentum and impulse",
         "friction and circular motion"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c5",
@@ -65,7 +73,9 @@
         "work",
         "kinetic and potential energy",
         "power and collisions"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c6",
@@ -77,7 +87,9 @@
         "centre of mass",
         "torque and angular momentum",
         "moment of inertia"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c7",
@@ -89,7 +101,9 @@
         "universal gravitation",
         "g and gravitational potential",
         "satellites and escape speed"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c8",
@@ -101,7 +115,9 @@
         "stress and strain",
         "elastic moduli",
         "elastic energy"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c9",
@@ -113,7 +129,9 @@
         "pressure",
         "viscosity",
         "Bernoulli principle and surface tension"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c10",
@@ -125,7 +143,9 @@
         "thermal expansion",
         "calorimetry",
         "heat transfer"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c11",
@@ -137,7 +157,9 @@
         "zeroth law",
         "first law",
         "second law and heat engines"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c12",
@@ -149,7 +171,9 @@
         "kinetic model",
         "gas pressure and temperature",
         "degrees of freedom"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c13",
@@ -161,7 +185,9 @@
         "simple harmonic motion",
         "energy in SHM",
         "pendulum"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c14",
@@ -173,7 +199,9 @@
         "wave motion",
         "superposition",
         "standing waves and sound"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c15",
@@ -185,7 +213,9 @@
         "Coulomb law",
         "electric field",
         "Gauss law"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c16",
@@ -197,7 +227,9 @@
         "electric potential",
         "capacitors",
         "dielectrics"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c17",
@@ -209,7 +241,9 @@
         "current and drift",
         "resistance",
         "Kirchhoff laws and cells"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c18",
@@ -221,7 +255,9 @@
         "Lorentz force",
         "Biot-Savart law",
         "Ampere law"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c19",
@@ -233,7 +269,9 @@
         "magnetic dipoles",
         "magnetic materials",
         "earth magnetism"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c20",
@@ -245,7 +283,9 @@
         "Faraday law",
         "Lenz law",
         "inductance"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c21",
@@ -257,7 +297,9 @@
         "AC voltage and current",
         "reactance and impedance",
         "transformer"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c22",
@@ -269,7 +311,9 @@
         "EM wave properties",
         "electromagnetic spectrum",
         "applications"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c23",
@@ -281,7 +325,9 @@
         "reflection and refraction",
         "lenses",
         "optical instruments"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c24",
@@ -293,7 +339,9 @@
         "interference",
         "diffraction",
         "polarisation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c25",
@@ -305,7 +353,9 @@
         "photoelectric effect",
         "Einstein equation",
         "de Broglie waves"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c26",
@@ -317,7 +367,9 @@
         "Rutherford model",
         "Bohr model",
         "hydrogen spectrum"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c27",
@@ -329,7 +381,9 @@
         "nuclear size",
         "binding energy",
         "radioactivity and nuclear reactions"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c28",
@@ -341,7 +395,9 @@
         "semiconductors",
         "p-n junction",
         "diodes and logic gates"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c1",
@@ -353,7 +409,9 @@
         "mole concept",
         "stoichiometry",
         "concentration"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c2",
@@ -365,7 +423,9 @@
         "atomic models",
         "quantum numbers",
         "electronic configuration"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c3",
@@ -377,7 +437,9 @@
         "periodic law",
         "atomic radius",
         "ionisation enthalpy and electronegativity"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c4",
@@ -389,7 +451,9 @@
         "Lewis structures",
         "VSEPR",
         "hybridisation and hydrogen bonding"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c5",
@@ -401,7 +465,9 @@
         "enthalpy",
         "Hess law",
         "Gibbs energy"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c6",
@@ -413,7 +479,9 @@
         "chemical equilibrium",
         "ionic equilibrium",
         "pH and buffers"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c7",
@@ -425,7 +493,9 @@
         "oxidation number",
         "redox balancing",
         "redox concepts"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c8",
@@ -437,7 +507,9 @@
         "organic nomenclature",
         "electronic effects",
         "reaction intermediates"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c9",
@@ -449,7 +521,9 @@
         "alkanes",
         "alkenes and alkynes",
         "aromatic hydrocarbons"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c10",
@@ -461,7 +535,9 @@
         "concentration",
         "Raoult law",
         "colligative properties"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c11",
@@ -473,7 +549,9 @@
         "electrochemical cells",
         "Nernst equation",
         "conductance and electrolysis"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c12",
@@ -485,7 +563,9 @@
         "rate law",
         "integrated rate equations",
         "Arrhenius equation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c13",
@@ -497,7 +577,9 @@
         "periodic trends",
         "important compounds",
         "oxidation states"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c14",
@@ -509,7 +591,9 @@
         "transition metals",
         "lanthanides",
         "actinides"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c15",
@@ -521,7 +605,9 @@
         "coordination terminology",
         "isomerism",
         "bonding theories"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c16",
@@ -533,7 +619,9 @@
         "C-X bond",
         "SN1 and SN2",
         "haloarene reactions"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c17",
@@ -545,7 +633,9 @@
         "alcohols",
         "phenols",
         "ethers"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c18",
@@ -557,7 +647,9 @@
         "carbonyl compounds",
         "reactions of aldehydes and ketones",
         "carboxylic acids"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c19",
@@ -569,7 +661,9 @@
         "classification of amines",
         "basicity",
         "diazonium salts"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c20",
@@ -581,7 +675,9 @@
         "carbohydrates",
         "proteins",
         "nucleic acids"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c1",
@@ -593,7 +689,9 @@
         "characteristics of life",
         "taxonomic categories",
         "binomial nomenclature"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c2",
@@ -605,7 +703,9 @@
         "five-kingdom classification",
         "monera",
         "protista and fungi"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c3",
@@ -617,7 +717,9 @@
         "algae",
         "bryophytes and pteridophytes",
         "gymnosperms and angiosperms"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c4",
@@ -629,7 +731,9 @@
         "animal classification",
         "non-chordates",
         "chordates"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c5",
@@ -641,7 +745,9 @@
         "root",
         "stem and leaf",
         "flower and fruit"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c6",
@@ -653,7 +759,9 @@
         "plant tissues",
         "tissue systems",
         "secondary growth"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c7",
@@ -665,7 +773,9 @@
         "animal tissues",
         "earthworm",
         "cockroach and frog"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c8",
@@ -677,7 +787,9 @@
         "cell structure",
         "cell organelles",
         "prokaryotic and eukaryotic cells"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c9",
@@ -689,7 +801,9 @@
         "carbohydrates",
         "proteins and lipids",
         "enzymes"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c10",
@@ -701,7 +815,9 @@
         "cell cycle",
         "mitosis",
         "meiosis"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c11",
@@ -713,7 +829,9 @@
         "water transport",
         "mineral transport",
         "transpiration"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c12",
@@ -725,7 +843,9 @@
         "essential elements",
         "deficiency symptoms",
         "nitrogen metabolism"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c13",
@@ -737,7 +857,9 @@
         "light reaction",
         "carbon fixation",
         "photorespiration"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c14",
@@ -749,7 +871,9 @@
         "glycolysis",
         "Krebs cycle",
         "electron transport"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c15",
@@ -761,7 +885,9 @@
         "growth phases",
         "plant hormones",
         "photoperiodism"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c16",
@@ -773,7 +899,9 @@
         "digestive system",
         "digestion",
         "absorption"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c17",
@@ -785,7 +913,9 @@
         "respiratory system",
         "gas exchange",
         "transport of gases"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c18",
@@ -797,7 +927,9 @@
         "blood",
         "heart",
         "circulation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c19",
@@ -809,7 +941,9 @@
         "nephron",
         "urine formation",
         "osmoregulation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c20",
@@ -821,7 +955,9 @@
         "muscles",
         "skeletal system",
         "movement disorders"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c21",
@@ -833,7 +969,9 @@
         "neuron",
         "nerve impulse",
         "central nervous system"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c22",
@@ -845,7 +983,9 @@
         "endocrine glands",
         "hormones",
         "feedback regulation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c23",
@@ -857,7 +997,9 @@
         "flower structure",
         "pollination",
         "double fertilisation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c24",
@@ -869,7 +1011,9 @@
         "reproductive systems",
         "gametogenesis",
         "menstrual cycle"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c25",
@@ -881,7 +1025,9 @@
         "contraception",
         "STIs",
         "assisted reproductive technologies"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c26",
@@ -893,7 +1039,9 @@
         "Mendelism",
         "linkage and recombination",
         "inheritance patterns"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c27",
@@ -905,7 +1053,9 @@
         "DNA structure",
         "replication and transcription",
         "translation and regulation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c28",
@@ -917,7 +1067,9 @@
         "evolutionary evidence",
         "natural selection",
         "human evolution"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c29",
@@ -929,7 +1081,9 @@
         "common diseases",
         "immunity",
         "AIDS and cancer"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c30",
@@ -941,7 +1095,9 @@
         "food processing",
         "industrial products",
         "biocontrol and biofertilisers"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c31",
@@ -953,7 +1109,9 @@
         "genetic engineering",
         "restriction enzymes",
         "PCR and cloning"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c32",
@@ -965,7 +1123,9 @@
         "GM organisms",
         "insulin",
         "gene therapy and biosafety"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c33",
@@ -977,7 +1137,9 @@
         "population attributes",
         "population interactions",
         "adaptations"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c34",
@@ -989,7 +1151,9 @@
         "energy flow",
         "food chains",
         "ecological pyramids and cycles"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c35",
@@ -1001,7 +1165,9 @@
         "biodiversity",
         "threats",
         "conservation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "bio-c36",
@@ -1013,7 +1179,9 @@
         "pollution",
         "global environmental issues",
         "waste management"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "phy-c29",
@@ -1026,7 +1194,9 @@
         "measurement instruments",
         "experimental errors",
         "graphs and data interpretation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c21",
@@ -1039,7 +1209,9 @@
         "purification methods",
         "qualitative analysis",
         "characterisation"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     },
     {
       "id": "chem-c22",
@@ -1052,7 +1224,14 @@
         "qualitative analysis",
         "volumetric analysis",
         "laboratory principles"
-      ]
+      ],
+      "questionTarget": 50,
+      "minimumQuestionCount": 50
     }
-  ]
+  ],
+  "questionPolicy": {
+    "minimumPerChapter": 50,
+    "totalMinimum": 4350,
+    "enforcement": "validation"
+  }
 }
