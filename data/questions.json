@@ -799,7 +799,7 @@
   },
   {
     "id": "phy-q19",
-    "chapterId": "phy-u20",
+    "chapterId": "phy-c29",
     "mode": "mcq",
     "prompt": "A screw gauge is primarily used to measure:",
     "options": [
@@ -811,8 +811,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Physics XI",
-      "chapter": "Units and Measurements",
+      "book": "NMC NEET UG 2026 syllabus",
+      "chapter": "Experimental Skills",
       "page": null,
       "line": null,
       "reference": "Experimental measurement instruments"
@@ -925,7 +925,7 @@
   },
   {
     "id": "chem-q15",
-    "chapterId": "chem-u13",
+    "chapterId": "chem-c21",
     "mode": "mcq",
     "prompt": "Chromatography can be used primarily for:",
     "options": [
@@ -937,8 +937,8 @@
     "answer": 0,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XI",
-      "chapter": "Organic Chemistry: Some Basic Principles and Techniques",
+      "book": "NMC NEET UG 2026 syllabus",
+      "chapter": "Purification and Characterisation of Organic Compounds",
       "page": null,
       "line": null,
       "reference": "Purification by chromatography"
@@ -1030,7 +1030,7 @@
   },
   {
     "id": "chem-q20",
-    "chapterId": "chem-u20",
+    "chapterId": "chem-c22",
     "mode": "mcq",
     "prompt": "A common test for the presence of a carbonyl group in an organic compound uses:",
     "options": [
@@ -1042,8 +1042,8 @@
     "answer": 0,
     "difficulty": "medium",
     "citation": {
-      "book": "NCERT Chemistry XII",
-      "chapter": "Practical Chemistry",
+      "book": "NMC NEET UG 2026 syllabus",
+      "chapter": "Principles Related to Practical Chemistry",
       "page": null,
       "line": null,
       "reference": "Detection of functional groups"
@@ -1469,7 +1469,7 @@
   },
   {
     "id": "phy-q40",
-    "chapterId": "phy-u20",
+    "chapterId": "phy-c29",
     "mode": "mcq",
     "prompt": "A screw gauge is particularly suitable for measuring:",
     "options": [
@@ -1481,8 +1481,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Physics XII",
-      "chapter": "Screw gauge",
+      "book": "NMC NEET UG 2026 syllabus",
+      "chapter": "Experimental Skills",
       "page": null,
       "line": null,
       "reference": "Screw gauge"
@@ -1755,7 +1755,7 @@
   },
   {
     "id": "chem-q53",
-    "chapterId": "chem-u13",
+    "chapterId": "chem-c21",
     "mode": "mcq",
     "prompt": "Distillation is primarily used to separate liquids based on differences in:",
     "options": [
@@ -1767,8 +1767,8 @@
     "answer": 1,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XII",
-      "chapter": "Purification methods",
+      "book": "NMC NEET UG 2026 syllabus",
+      "chapter": "Purification and Characterisation of Organic Compounds",
       "page": null,
       "line": null,
       "reference": "Purification methods"
@@ -1909,7 +1909,7 @@
   },
   {
     "id": "chem-q60",
-    "chapterId": "chem-u20",
+    "chapterId": "chem-c22",
     "mode": "mcq",
     "prompt": "Phenolphthalein is commonly used as an indicator in:",
     "options": [
@@ -1921,8 +1921,8 @@
     "answer": 0,
     "difficulty": "easy",
     "citation": {
-      "book": "NCERT Chemistry XII",
-      "chapter": "Indicators",
+      "book": "NMC NEET UG 2026 syllabus",
+      "chapter": "Principles Related to Practical Chemistry",
       "page": null,
       "line": null,
       "reference": "Indicators"
