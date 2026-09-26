@@ -1,4 +1,4 @@
-import { Link, usePathname } from "expo-router";
+import { router, usePathname } from "expo-router";
 import { Pressable, ScrollView, StyleSheet, Text, View, type ReactNode } from "react-native";
 import { useStore } from "./store";
 import { C, R } from "./theme";
@@ -19,12 +19,12 @@ export function Shell({ title, subtitle, children, right }: { title: string; sub
 
 function Nav() {
   const p = usePathname();
-  const a = [["/","⌂","Home"],["/chapters","▦","Chapters"],["/mistakes","▤","Notebook"],["/tests","◷","Tests"],["/profile","◯","Profile"]];
+  const a = [["/home","⌂","Home"],["/chapters","▦","Chapters"],["/mistakes","▤","Notebook"],["/tests","◷","Tests"],["/profile","◯","Profile"]];
   return <View style={s.navWrap}><View style={s.navGlass}>{a.map(([h,i,l]) =>
-    <Link key={h} href={h as any} asChild><Pressable style={[s.navItem, p === h && s.navActive]}>
-      <Text style={[s.navIcon, p === h && { color: C.primary }]}>{i}</Text>
-      <Text style={[s.navLabel, p === h && { color: C.primary }]}>{l}</Text>
-    </Pressable></Link>
+    <Pressable key={h} onPress={()=>router.push(h as any)} style={[s.navItem, p === h && s.navActive]}>
+      <Text style={[s.navIcon, p === h && { color:C.primary }]}>{i}</Text>
+      <Text style={[s.navLabel, p === h && { color:C.primary }]}>{l}</Text>
+    </Pressable>
   )}</View></View>;
 }
 
@@ -42,11 +42,11 @@ const s = StyleSheet.create({
   content:{paddingHorizontal:20,paddingBottom:118},
   card:{backgroundColor:C.card,borderWidth:1,borderColor:"rgba(225,222,213,0.72)",borderRadius:R.lg,padding:16},
   navWrap:{position:"absolute",left:12,right:12,bottom:10},
-  navGlass:{height:70,borderRadius:25,backgroundColor:"rgba(255,255,255,0.78)",borderWidth:1,borderColor:"rgba(255,255,255,0.95)",flexDirection:"row",justifyContent:"space-around",paddingTop:7,paddingBottom:8,shadowColor:"#263C3A",shadowOpacity:0.12,shadowRadius:18,shadowOffset:{width:0,height:8},elevation:10},
-  navItem:{alignItems:"center",justifyContent:"center",width:66,borderRadius:18},
+  navGlass:{height:78,borderRadius:27,backgroundColor:"rgba(255,255,255,0.78)",borderWidth:1,borderColor:"rgba(255,255,255,0.95)",flexDirection:"row",justifyContent:"space-around",paddingTop:6,paddingBottom:7,shadowColor:"#263C3A",shadowOpacity:0.12,shadowRadius:18,shadowOffset:{width:0,height:8},elevation:10},
+  navItem:{alignItems:"center",justifyContent:"center",width:72,borderRadius:18},
   navActive:{backgroundColor:"rgba(231,241,237,0.88)"},
-  navIcon:{fontSize:21,color:C.mutedText},
-  navLabel:{fontSize:10,fontWeight:"700",color:C.mutedText,marginTop:1},
+  navIcon:{fontSize:27,color:C.mutedText},
+  navLabel:{fontSize:12,fontWeight:"700",color:C.mutedText,marginTop:1},
   button:{minHeight:52,borderRadius:16,alignItems:"center",justifyContent:"center",paddingHorizontal:18},
   primaryButton:{backgroundColor:C.primary},
   buttonText:{fontSize:15,fontWeight:"800",color:C.primaryText}
