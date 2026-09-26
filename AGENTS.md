@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Mock NEET content lives in src/data/neet.ts; add chapters/questions there only — single source for all screens.
+- User progress (streak, SRS cards, mistakes) is client-side React context persisted to localStorage (src/lib/store.tsx) — prototype, no backend yet.
