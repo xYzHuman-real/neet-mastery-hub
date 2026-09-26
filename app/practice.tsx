@@ -8,11 +8,11 @@ import{useStore,type Rating}from"../native/store";
 
 export default function Practice(){
   const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string}>();
-  const{due,mistakes,record,rate}=useStore(); const[content,setContent]=useState<any>(null); useEffect(()=>{import("../native/content").then(setContent).catch(()=>setContent({}))},[]);
+  const{due,mistakes,record,rate}=useStore(); const[content,setContent]=useState<any>(null); const[contentError,setContentError]=useState(false); useEffect(()=>{import("../native/content").then(setContent).catch(()=>setContentError(true))},[]);
   const mode=p.mode||"revision";
   const deck=useMemo(()=>{
     if(p.review)return content.filterQuestions(undefined,"revision").filter(x=>due.includes(x.id));
-    if(p.mistakes)return filterQuestions(undefined,"revision").filter(x=>mistakes[x.id]);
+    if(p.mistakes)return content.filterQuestions(undefined,"revision").filter((x:any)=>mistakes[x.id]);
     return content.filterQuestions(p.chapter,mode);
   },[p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
   const[i,setI]=useState(0);
@@ -23,6 +23,7 @@ export default function Practice(){
   const[results,setResults]=useState<{qid:string;correct:boolean;pick:number|null;time:number}[]>([]);
   const q=deck[i];
 
+  if(contentError)return <Shell title="Practice unavailable" subtitle="BuzNeet"><Card><Text style={{fontSize:16,fontWeight:"800",color:C.foreground}}>The question bank could not be loaded.</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
   if(!content)return <Shell title="Loading practice" subtitle="BuzNeet"><Card><Text style={{fontSize:16,fontWeight:"800",color:C.foreground}}>Preparing your question bank…</Text></Card></Shell>;
   if(!deck.length)return <Shell title="Series empty" subtitle="Content review"><Card><Text style={{fontSize:22,fontWeight:"900",color:C.foreground}}>No released questions here yet.</Text><Text style={{fontSize:13,lineHeight:20,color:C.mutedText,marginTop:8}}>This series is kept separate rather than inventing or falsely labelling questions as NCERT line-by-line or verified PYQs.</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
 
