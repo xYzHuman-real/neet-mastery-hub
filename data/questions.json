@@ -1,0 +1,632 @@
+[
+  {
+    "id": "phy-q1",
+    "chapterId": "phy-u1",
+    "mode": "mcq",
+    "prompt": "The number of significant figures in 0.00450 is:",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Units and Measurements",
+      "page": null,
+      "line": null,
+      "reference": "Significant figures"
+    }
+  },
+  {
+    "id": "phy-q2",
+    "chapterId": "phy-u2",
+    "mode": "mcq",
+    "prompt": "For a particle moving with constant acceleration, which graph is necessarily a straight line?",
+    "options": [
+      "Position-time",
+      "Velocity-time",
+      "Acceleration-time only if acceleration is zero",
+      "Distance-time"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Motion in a Straight Line",
+      "page": null,
+      "line": null,
+      "reference": "Velocity-time relation for uniformly accelerated motion"
+    }
+  },
+  {
+    "id": "phy-q3",
+    "chapterId": "phy-u3",
+    "mode": "mcq",
+    "prompt": "A body continues in its state of rest or uniform motion in a straight line unless acted upon by an external unbalanced force. This is:",
+    "options": [
+      "Newton's first law",
+      "Newton's second law",
+      "Newton's third law",
+      "Law of conservation of energy"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Laws of Motion",
+      "page": null,
+      "line": null,
+      "reference": "Newton's first law"
+    }
+  },
+  {
+    "id": "phy-q4",
+    "chapterId": "phy-u4",
+    "mode": "mcq",
+    "prompt": "The work done by a force perpendicular to the displacement is:",
+    "options": [
+      "Maximum",
+      "Minimum but non-zero",
+      "Zero",
+      "Negative"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Work, Energy and Power",
+      "page": null,
+      "line": null,
+      "reference": "Work done by a constant force"
+    }
+  },
+  {
+    "id": "phy-q5",
+    "chapterId": "phy-u6",
+    "mode": "mcq",
+    "prompt": "If the distance of a satellite from the centre of Earth is increased, its orbital speed:",
+    "options": [
+      "Increases",
+      "Decreases",
+      "Remains unchanged",
+      "First increases then decreases"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Gravitation",
+      "page": null,
+      "line": null,
+      "reference": "Orbital velocity"
+    }
+  },
+  {
+    "id": "phy-q6",
+    "chapterId": "phy-u8",
+    "mode": "mcq",
+    "prompt": "For an ideal gas, the internal energy depends only on:",
+    "options": [
+      "Pressure",
+      "Volume",
+      "Temperature",
+      "Pressure and volume independently"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Thermodynamics",
+      "page": null,
+      "line": null,
+      "reference": "Internal energy of an ideal gas"
+    }
+  },
+  {
+    "id": "phy-q7",
+    "chapterId": "phy-u11",
+    "mode": "mcq",
+    "prompt": "The electric field inside a conductor in electrostatic equilibrium is:",
+    "options": [
+      "Zero",
+      "Constant but non-zero",
+      "Maximum at the centre",
+      "Dependent on the charge sign"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Electric Charges and Fields",
+      "page": null,
+      "line": null,
+      "reference": "Electrostatic equilibrium of conductors"
+    }
+  },
+  {
+    "id": "phy-q8",
+    "chapterId": "phy-u12",
+    "mode": "mcq",
+    "prompt": "The SI unit of resistivity is:",
+    "options": [
+      "ohm",
+      "ohm metre",
+      "ohm per metre",
+      "siemens metre"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Current Electricity",
+      "page": null,
+      "line": null,
+      "reference": "Resistivity"
+    }
+  },
+  {
+    "id": "phy-q9",
+    "chapterId": "phy-u17",
+    "mode": "mcq",
+    "prompt": "In the photoelectric effect, the maximum kinetic energy of emitted electrons depends primarily on the:",
+    "options": [
+      "Intensity of incident light only",
+      "Frequency of incident light",
+      "Area of the metal surface",
+      "Exposure time only"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Dual Nature of Radiation and Matter",
+      "page": null,
+      "line": null,
+      "reference": "Einstein's photoelectric equation"
+    }
+  },
+  {
+    "id": "phy-q10",
+    "chapterId": "phy-u19",
+    "mode": "mcq",
+    "prompt": "A Zener diode is commonly used as a:",
+    "options": [
+      "Voltage regulator",
+      "Current amplifier",
+      "Transformer",
+      "Capacitor"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Semiconductor Electronics",
+      "page": null,
+      "line": null,
+      "reference": "Zener diode as voltage regulator"
+    }
+  },
+  {
+    "id": "chem-q1",
+    "chapterId": "chem-u1",
+    "mode": "mcq",
+    "prompt": "One mole of a substance contains approximately:",
+    "options": [
+      "6.022 × 10²¹ entities",
+      "6.022 × 10²² entities",
+      "6.022 × 10²³ entities",
+      "6.022 × 10²⁴ entities"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Some Basic Concepts of Chemistry",
+      "page": null,
+      "line": null,
+      "reference": "Mole concept and Avogadro constant"
+    }
+  },
+  {
+    "id": "chem-q2",
+    "chapterId": "chem-u2",
+    "mode": "mcq",
+    "prompt": "The maximum number of electrons that can occupy the third shell is:",
+    "options": [
+      "8",
+      "18",
+      "32",
+      "9"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Structure of Atom",
+      "page": null,
+      "line": null,
+      "reference": "Shells and subshells"
+    }
+  },
+  {
+    "id": "chem-q3",
+    "chapterId": "chem-u3",
+    "mode": "mcq",
+    "prompt": "Which bond is formed by sharing of an electron pair between two atoms?",
+    "options": [
+      "Ionic bond",
+      "Covalent bond",
+      "Metallic bond",
+      "Hydrogen bond"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Chemical Bonding and Molecular Structure",
+      "page": null,
+      "line": null,
+      "reference": "Covalent bond"
+    }
+  },
+  {
+    "id": "chem-q4",
+    "chapterId": "chem-u5",
+    "mode": "mcq",
+    "prompt": "For a dilute solution, the concentration of a solute can be expressed in terms of:",
+    "options": [
+      "Molarity",
+      "Molality",
+      "Both molarity and molality",
+      "Neither"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Solutions",
+      "page": null,
+      "line": null,
+      "reference": "Concentration terms"
+    }
+  },
+  {
+    "id": "chem-q5",
+    "chapterId": "chem-u6",
+    "mode": "mcq",
+    "prompt": "At equilibrium, the forward and reverse reactions have:",
+    "options": [
+      "Stopped completely",
+      "Equal rates",
+      "Equal concentrations of reactants and products",
+      "Equal activation energies"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Equilibrium",
+      "page": null,
+      "line": null,
+      "reference": "Dynamic nature of chemical equilibrium"
+    }
+  },
+  {
+    "id": "chem-q6",
+    "chapterId": "chem-u7",
+    "mode": "mcq",
+    "prompt": "Oxidation involves:",
+    "options": [
+      "Gain of electrons only",
+      "Loss of electrons only",
+      "Gain of protons only",
+      "Loss of neutrons"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Redox Reactions",
+      "page": null,
+      "line": null,
+      "reference": "Electronic concept of oxidation and reduction"
+    }
+  },
+  {
+    "id": "chem-q7",
+    "chapterId": "chem-u8",
+    "mode": "mcq",
+    "prompt": "For a first-order reaction, the half-life is:",
+    "options": [
+      "Dependent on initial concentration",
+      "Independent of initial concentration",
+      "Always zero",
+      "Equal to the rate constant"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Chemical Kinetics",
+      "page": null,
+      "line": null,
+      "reference": "Half-life of first-order reaction"
+    }
+  },
+  {
+    "id": "chem-q8",
+    "chapterId": "chem-u12",
+    "mode": "mcq",
+    "prompt": "A ligand that can donate an electron pair through two donor atoms is called:",
+    "options": [
+      "Monodentate",
+      "Bidentate",
+      "Ambidentate only",
+      "Unidentate"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Coordination Compounds",
+      "page": null,
+      "line": null,
+      "reference": "Denticity of ligands"
+    }
+  },
+  {
+    "id": "chem-q9",
+    "chapterId": "chem-u19",
+    "mode": "mcq",
+    "prompt": "The bond linking amino acids in a polypeptide chain is the:",
+    "options": [
+      "Glycosidic bond",
+      "Peptide bond",
+      "Phosphodiester bond",
+      "Hydrogen bond"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Biomolecules",
+      "page": null,
+      "line": null,
+      "reference": "Peptide linkage"
+    }
+  },
+  {
+    "id": "chem-q10",
+    "chapterId": "chem-u18",
+    "mode": "mcq",
+    "prompt": "Aniline is classified as a:",
+    "options": [
+      "Primary aromatic amine",
+      "Secondary aromatic amine",
+      "Tertiary amine",
+      "Amide"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Amines",
+      "page": null,
+      "line": null,
+      "reference": "Classification of amines"
+    }
+  },
+  {
+    "id": "bio-q1",
+    "chapterId": "bio-u1",
+    "mode": "mcq",
+    "prompt": "The scientific naming system using two words, genus and species, is called:",
+    "options": [
+      "Trinomial nomenclature",
+      "Binomial nomenclature",
+      "Polynomial nomenclature",
+      "Phylogenetic nomenclature"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "The Living World",
+      "page": null,
+      "line": null,
+      "reference": "Binomial nomenclature"
+    }
+  },
+  {
+    "id": "bio-q2",
+    "chapterId": "bio-u2",
+    "mode": "mcq",
+    "prompt": "The tissue responsible for increase in length of a plant organ is:",
+    "options": [
+      "Lateral meristem",
+      "Apical meristem",
+      "Permanent tissue",
+      "Sclerenchyma"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Anatomy of Flowering Plants",
+      "page": null,
+      "line": null,
+      "reference": "Meristematic tissues"
+    }
+  },
+  {
+    "id": "bio-q3",
+    "chapterId": "bio-u3",
+    "mode": "mcq",
+    "prompt": "Which organelle is primarily associated with intracellular digestion?",
+    "options": [
+      "Ribosome",
+      "Lysosome",
+      "Golgi apparatus",
+      "Centriole"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Cell: The Unit of Life",
+      "page": null,
+      "line": null,
+      "reference": "Lysosomes"
+    }
+  },
+  {
+    "id": "bio-q4",
+    "chapterId": "bio-u4",
+    "mode": "mcq",
+    "prompt": "The oxygen released during photosynthesis is derived from:",
+    "options": [
+      "Carbon dioxide",
+      "Water",
+      "Glucose",
+      "Chlorophyll"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Photosynthesis in Higher Plants",
+      "page": null,
+      "line": null,
+      "reference": "Photolysis of water"
+    }
+  },
+  {
+    "id": "bio-q5",
+    "chapterId": "bio-u5",
+    "mode": "mcq",
+    "prompt": "The normal pacemaker of the human heart is the:",
+    "options": [
+      "AV node",
+      "SA node",
+      "Bundle of His",
+      "Purkinje fibres"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XI",
+      "chapter": "Body Fluids and Circulation",
+      "page": null,
+      "line": null,
+      "reference": "Conducting system of the human heart"
+    }
+  },
+  {
+    "id": "bio-q6",
+    "chapterId": "bio-u6",
+    "mode": "mcq",
+    "prompt": "In humans, fertilisation normally occurs in the:",
+    "options": [
+      "Uterus",
+      "Cervix",
+      "Ampullary-isthmic junction of the oviduct",
+      "Vagina"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Human Reproduction",
+      "page": null,
+      "line": null,
+      "reference": "Site of fertilisation"
+    }
+  },
+  {
+    "id": "bio-q7",
+    "chapterId": "bio-u7",
+    "mode": "mcq",
+    "prompt": "The law stating that alleles of a gene pair segregate during gamete formation is Mendel's law of:",
+    "options": [
+      "Dominance",
+      "Segregation",
+      "Independent assortment",
+      "Linkage"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Principles of Inheritance and Variation",
+      "page": null,
+      "line": null,
+      "reference": "Law of segregation"
+    }
+  },
+  {
+    "id": "bio-q8",
+    "chapterId": "bio-u8",
+    "mode": "mcq",
+    "prompt": "The bacterium commonly associated with curd formation is:",
+    "options": [
+      "Lactobacillus",
+      "Rhizobium",
+      "Nitrosomonas",
+      "Acetobacter"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Microbes in Human Welfare",
+      "page": null,
+      "line": null,
+      "reference": "Microbes in household food processing"
+    }
+  },
+  {
+    "id": "bio-q9",
+    "chapterId": "bio-u9",
+    "mode": "mcq",
+    "prompt": "Bt cotton is genetically modified primarily for resistance against:",
+    "options": [
+      "Bollworms",
+      "Fungi",
+      "Viruses",
+      "Nematodes only"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Biotechnology and its Applications",
+      "page": null,
+      "line": null,
+      "reference": "Bt crops"
+    }
+  },
+  {
+    "id": "bio-q10",
+    "chapterId": "bio-u10",
+    "mode": "mcq",
+    "prompt": "The pyramid of energy in an ecosystem is always:",
+    "options": [
+      "Inverted",
+      "Upright",
+      "Spindle-shaped",
+      "Horizontal"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Ecosystem",
+      "page": null,
+      "line": null,
+      "reference": "Ecological pyramids and energy flow"
+    }
+  }
+]
