@@ -9,9 +9,9 @@ export const Route = createFileRoute("/chapters")({
   validateSearch: z.object({ subject: z.enum(["physics", "chemistry", "biology"]).optional() }),
   head: () => ({
     meta: [
-      { title: "Chapters — NEET Recall" },
+      { title: "Chapters — BuzNeet" },
       { name: "description", content: "Browse NCERT chapters and pick a study mode: MCQs, fill-in-the-blanks, diagrams, A&R and PYQs." },
-      { property: "og:title", content: "Chapters — NEET Recall" },
+      { property: "og:title", content: "Chapters — BuzNeet" },
       { property: "og:description", content: "Browse NCERT chapters by subject with multiple study modes." },
     ],
   }),

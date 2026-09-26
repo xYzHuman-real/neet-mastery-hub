@@ -15,9 +15,9 @@ export const Route = createFileRoute("/practice")({
   }),
   head: () => ({
     meta: [
-      { title: "Active Recall Practice — NEET Recall" },
+      { title: "Active Recall Practice — BuzNeet" },
       { name: "description", content: "Answer NCERT line-based questions with instant citations and spaced repetition ratings." },
-      { property: "og:title", content: "Active Recall Practice — NEET Recall" },
+      { property: "og:title", content: "Active Recall Practice — BuzNeet" },
       { property: "og:description", content: "Flashcard-style NEET practice with exact NCERT citations." },
     ],
   }),

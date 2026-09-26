@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/tests")({
   head: () => ({
     meta: [
-      { title: "Chapter Tests — NEET Recall" },
+      { title: "Chapter Tests — BuzNeet" },
       { name: "description", content: "Timed NEET chapter tests with +4/-1 marking, accuracy and time analysis." },
-      { property: "og:title", content: "Chapter Tests — NEET Recall" },
+      { property: "og:title", content: "Chapter Tests — BuzNeet" },
       { property: "og:description", content: "Timed NEET practice tests with standard marking and analytics." },
     ],
   }),

@@ -1,16 +1,37 @@
-import { Link } from "@tanstack/react-router";
-import { Home, BookOpen, Zap, NotebookPen, Timer } from "lucide-react";
+import { Link, useNavigate } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { useStore } from "@/lib/store";
+import { Home, BookOpen, NotebookPen, Timer, User } from "lucide-react";
 import type { ReactNode } from "react";
 
 const NAV = [
   { to: "/", label: "Home", icon: Home },
   { to: "/chapters", label: "Chapters", icon: BookOpen },
-  { to: "/practice", label: "Practice", icon: Zap },
   { to: "/mistakes", label: "Notebook", icon: NotebookPen },
   { to: "/tests", label: "Tests", icon: Timer },
+  { to: "/profile", label: "Profile", icon: User },
 ] as const;
 
+export function PhoneFrame({ children }: { children: ReactNode }) {
+  return (
+    <div className="min-h-screen bg-muted sm:flex sm:items-center sm:justify-center sm:py-8">
+      <div className="relative mx-auto flex h-[100dvh] w-full max-w-[420px] flex-col overflow-hidden bg-background sm:h-[860px] sm:rounded-[2.5rem] sm:border-8 sm:border-foreground sm:shadow-2xl">
+        {children}
+      </div>
+    </div>
+  );
+}
+
 export function AppShell({ title, subtitle, children, right }: { title: string; subtitle?: string; children: ReactNode; right?: ReactNode }) {
+  const { hydrated, onboarded, user, telegramDone } = useStore();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!hydrated) return;
+    if (!onboarded) navigate({ to: "/splash", replace: true });
+    else if (!user) navigate({ to: "/login", replace: true });
+    else if (!telegramDone) navigate({ to: "/telegram", replace: true });
+  }, [hydrated, onboarded, user, telegramDone, navigate]);
+  if (!hydrated || !onboarded || !user || !telegramDone) return <PhoneFrame><div className="flex-1" /></PhoneFrame>;
   return (
     <div className="min-h-screen bg-muted sm:flex sm:items-center sm:justify-center sm:py-8">
       <div className="relative mx-auto flex h-[100dvh] w-full max-w-[420px] flex-col overflow-hidden bg-background sm:h-[860px] sm:rounded-[2.5rem] sm:border-8 sm:border-foreground sm:shadow-2xl">

@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/mistakes")({
   head: () => ({
     meta: [
-      { title: "Mistake Notebook — NEET Recall" },
+      { title: "Mistake Notebook — BuzNeet" },
       { name: "description", content: "An automated revision queue of missed and flagged NEET questions." },
-      { property: "og:title", content: "Mistake Notebook — NEET Recall" },
+      { property: "og:title", content: "Mistake Notebook — BuzNeet" },
       { property: "og:description", content: "Revise missed and flagged questions with spaced repetition." },
     ],
   }),
