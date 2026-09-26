@@ -305,9 +305,14 @@ function buildQuestion(ch, n) {
   };
 }
 
+const chapterCounts = [67,91,106,141,150,139,83,118,74,127,98,146,61,112,88,133,70,104,95,150,79,121,65,137,108,92,149,81,116,73,129,101,145,68,110,84,138,97,125,72,119,90,147,63,132,86,114,76,143,105,69,126,99,150,82,117,64,136,89,123,71,148,103,78,131,94,140,66,109,85,115,93,144,80,122,107,135,75,128,96,150,62,111,87,134,100,142,77];
+function questionCountForChapter(index) {
+  return Math.max(50, Math.min(150, chapterCounts[index % chapterCounts.length]));
+}
+
 const questions = [];
-for (const ch of chapters) {
-  for (let n = 0; n < (ch.minimumQuestionCount || 50); n++) {
+for (const [chapterIndex, ch] of chapters.entries()) {
+  for (let n = 0; n < questionCountForChapter(chapterIndex); n++) {
     questions.push(buildQuestion(ch, n));
   }
 }
