@@ -27,8 +27,8 @@ export type NativeChapter = {
   topics: string[];
 };
 
-const rawChapters = (chapterData as any).chapters as any[];
-const rawQuestions = (questionData as any).questions as any[];
+const rawChapters = (Array.isArray(chapterData) ? chapterData : (chapterData as any).chapters ?? []) as any[];
+const rawQuestions = (Array.isArray(questionData) ? questionData : (questionData as any).questions ?? []) as any[];
 
 export const CHAPTERS = rawChapters.map((c) => ({
   id: c.id,
