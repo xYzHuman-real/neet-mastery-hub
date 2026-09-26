@@ -2,49 +2,61 @@
 
 Content foundation for a NEET preparation app.
 
+## Data hierarchy
+
+**Subject → Unit → Chapter → Topic → Questions**
+
+The official NMC NEET UG 2026 syllabus remains the top-level syllabus layer. NCERT chapters/topics are mapped underneath those units. The NMC published the updated NEET UG 2026 syllabus notice on 23 December 2025.
+
 ## Current coverage
 
 - **Physics:** 20/20 official NEET UG 2026 units
 - **Chemistry:** 20/20 official NEET UG 2026 units
 - **Biology:** 10/10 official NEET UG 2026 units
-- **Lessons:** 50 unit-level lesson records, each expanded with 3 granular topic groups
-- **Questions:** 100 NEET-style MCQs, with two questions mapped to every syllabus unit
+- **Chapter layer:** 87 chapter/syllabus-section records mapped to units
+- **Lessons:** 87 chapter-level lesson records
+- **Questions:** 117 NEET-style MCQs
+- **Chapter coverage:** every chapter/syllabus-section record has at least one question
 - **Question schema:** `data/question.schema.json`
 
-## Lesson data
+## Files
 
-Each lesson includes:
+- `data/syllabus.json` — official 50-unit syllabus layer
+- `data/chapters.json` — NCERT chapter mapping plus practical/syllabus sections
+- `data/lessons.json` — app-ready chapter lessons
+- `data/questions.json` — question bank
+- `data/question.schema.json` — validation schema
+
+## Chapter records
+
+Chapter records include:
 
 - `id`
 - `subject`
-- `unit`
-- `title`
+- `class`
+- `ncertChapter`
+- `unitId`
 - `topics`
-- `questionModes`
-- `estimatedMinutes`
-- `examFocus`
-- `questionCount`
-- `ncertAligned`
+- `chapterType` where a syllabus section is not a standalone NCERT chapter
 
-The topic groups are based on the official NMC NEET UG 2026 syllabus. They are intended as app navigation/lesson metadata rather than reproductions of textbook text.
+The practical/syllabus sections are explicitly marked instead of pretending they are NCERT textbook chapters.
 
-## Question data
+## Question records
 
 Each question follows the requested structure:
 
 ```json
 {
-  "id": "phy-q21",
-  "chapterId": "phy-u1",
+  "id": "phy-q1",
+  "chapterId": "phy-c1",
   "mode": "mcq",
   "prompt": "...",
   "options": ["...", "...", "...", "..."],
   "answer": 0,
   "difficulty": "easy",
-  "explanation": "...",
   "citation": {
     "book": "NCERT Physics XI",
-    "chapter": "...",
+    "chapter": "Units and Measurements",
     "page": null,
     "line": null,
     "reference": "..."
@@ -54,10 +66,10 @@ Each question follows the requested structure:
 
 Page and line are intentionally nullable. They should only be populated after verifying the exact NCERT edition/page numbering used by the app; they are not guessed.
 
-## Source boundary
+## NCERT alignment
 
-The syllabus coverage follows the NMC's published **NEET (UG) 2026** syllabus. NMC published the updated syllabus notice on 23 December 2025, and NTA also lists the NEET UG 2026 syllabus notice.
+Questions are original questions based on NCERT concepts and the official NEET syllabus. The app should **not reproduce NCERT textbook passages line-by-line**. Page/line metadata can be added later from a specific NCERT edition when verified.
 
-## Next content expansion
+## Next expansion
 
-The data model is ready for additional question modes such as numerical, statement/assertion-reasoning, and match-the-following without changing the core question structure.
+The schema already supports `mcq`, `numerical`, `statement`, and `match` modes. The current bank is a foundation; additional chapter-specific question sets can be added without changing the data model.
