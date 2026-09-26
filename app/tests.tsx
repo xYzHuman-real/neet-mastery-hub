@@ -1,7 +1,7 @@
 import{useEffect,useMemo,useState}from"react";
 import{Pressable,Text,View}from"react-native";
 import{Shell,Card}from"../native/ui";
-import{C}from"../native/theme";import{loadContent}from"../native/content";
+import{C}from"../native/theme";import{loadContent,CHAPTERS}from"../native/content";
 
 
 export default function Tests(){
@@ -13,7 +13,7 @@ export default function Tests(){
   const[done,setDone]=useState(false); const[contentError,setContentError]=useState(false);
 
   const start=(sub?:string)=>{
-    const a=content.filter(q=>q.options.length&&(!sub||contentChapter(c=>c.id===q.chapterId)?.subject===sub)).slice(0,50);
+    const a=content!.filter(q=>q.options.length&&(!sub||CHAPTERS.find(c=>c.id===q.chapterId)?.subject===sub)).slice(0,50);
     setQs(a);setPicks(a.map(()=>null));setI(0);setLeft(a.length*60);setStarted(Date.now());setDone(false);
   };
   useEffect(()=>{loadContent().then(setContent).catch(()=>setContentError(true));},[]); useEffect(()=>{if(!qs.length||done)return;const t=setInterval(()=>setLeft(x=>{if(x<=1){setDone(true);return 0}return x-1}),1000);return()=>clearInterval(t)},[qs.length,done]);
