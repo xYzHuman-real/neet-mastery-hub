@@ -40,7 +40,7 @@ jobs:
         run: npm install
 
       - name: Align Expo SDK dependencies
-        run: npx expo install --fix --non-interactive
+        run: CI=1 npx expo install --fix
 
       - name: Expo Doctor
         run: npx expo-doctor
