@@ -11,8 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ChaptersRouteImport } from './routes/chapters'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as MistakesRouteImport } from './routes/mistakes'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as PracticeRouteImport } from './routes/practice'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as SplashRouteImport } from './routes/splash'
+import { Route as TelegramRouteImport } from './routes/telegram'
 import { Route as TestsRouteImport } from './routes/tests'
 
 const IndexRoute = IndexRouteImport.update({
@@ -25,14 +30,39 @@ const ChaptersRoute = ChaptersRouteImport.update({
   path: '/chapters',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MistakesRoute = MistakesRouteImport.update({
   id: '/mistakes',
   path: '/mistakes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PracticeRoute = PracticeRouteImport.update({
   id: '/practice',
   path: '/practice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplashRoute = SplashRouteImport.update({
+  id: '/splash',
+  path: '/splash',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TelegramRoute = TelegramRouteImport.update({
+  id: '/telegram',
+  path: '/telegram',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TestsRoute = TestsRouteImport.update({
@@ -44,38 +74,89 @@ const TestsRoute = TestsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chapters': typeof ChaptersRoute
+  '/login': typeof LoginRoute
   '/mistakes': typeof MistakesRoute
+  '/onboarding': typeof OnboardingRoute
   '/practice': typeof PracticeRoute
+  '/profile': typeof ProfileRoute
+  '/splash': typeof SplashRoute
+  '/telegram': typeof TelegramRoute
   '/tests': typeof TestsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chapters': typeof ChaptersRoute
+  '/login': typeof LoginRoute
   '/mistakes': typeof MistakesRoute
+  '/onboarding': typeof OnboardingRoute
   '/practice': typeof PracticeRoute
+  '/profile': typeof ProfileRoute
+  '/splash': typeof SplashRoute
+  '/telegram': typeof TelegramRoute
   '/tests': typeof TestsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chapters': typeof ChaptersRoute
+  '/login': typeof LoginRoute
   '/mistakes': typeof MistakesRoute
+  '/onboarding': typeof OnboardingRoute
   '/practice': typeof PracticeRoute
+  '/profile': typeof ProfileRoute
+  '/splash': typeof SplashRoute
+  '/telegram': typeof TelegramRoute
   '/tests': typeof TestsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/chapters' | '/mistakes' | '/practice' | '/tests'
+  fullPaths:
+    | '/'
+    | '/chapters'
+    | '/login'
+    | '/mistakes'
+    | '/onboarding'
+    | '/practice'
+    | '/profile'
+    | '/splash'
+    | '/telegram'
+    | '/tests'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/chapters' | '/mistakes' | '/practice' | '/tests'
-  id: '__root__' | '/' | '/chapters' | '/mistakes' | '/practice' | '/tests'
+  to:
+    | '/'
+    | '/chapters'
+    | '/login'
+    | '/mistakes'
+    | '/onboarding'
+    | '/practice'
+    | '/profile'
+    | '/splash'
+    | '/telegram'
+    | '/tests'
+  id:
+    | '__root__'
+    | '/'
+    | '/chapters'
+    | '/login'
+    | '/mistakes'
+    | '/onboarding'
+    | '/practice'
+    | '/profile'
+    | '/splash'
+    | '/telegram'
+    | '/tests'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChaptersRoute: typeof ChaptersRoute
+  LoginRoute: typeof LoginRoute
   MistakesRoute: typeof MistakesRoute
+  OnboardingRoute: typeof OnboardingRoute
   PracticeRoute: typeof PracticeRoute
+  ProfileRoute: typeof ProfileRoute
+  SplashRoute: typeof SplashRoute
+  TelegramRoute: typeof TelegramRoute
   TestsRoute: typeof TestsRoute
 }
 
@@ -95,6 +176,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChaptersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mistakes': {
       id: '/mistakes'
       path: '/mistakes'
@@ -102,11 +190,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MistakesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/practice': {
       id: '/practice'
       path: '/practice'
       fullPath: '/practice'
       preLoaderRoute: typeof PracticeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/splash': {
+      id: '/splash'
+      path: '/splash'
+      fullPath: '/splash'
+      preLoaderRoute: typeof SplashRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/telegram': {
+      id: '/telegram'
+      path: '/telegram'
+      fullPath: '/telegram'
+      preLoaderRoute: typeof TelegramRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tests': {
@@ -122,8 +238,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChaptersRoute: ChaptersRoute,
+  LoginRoute: LoginRoute,
   MistakesRoute: MistakesRoute,
+  OnboardingRoute: OnboardingRoute,
   PracticeRoute: PracticeRoute,
+  ProfileRoute: ProfileRoute,
+  SplashRoute: SplashRoute,
+  TelegramRoute: TelegramRoute,
   TestsRoute: TestsRoute,
 }
 export const routeTree = rootRouteImport

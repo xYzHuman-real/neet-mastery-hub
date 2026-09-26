@@ -7,9 +7,9 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NEET Recall — NCERT Progress Hub" },
+      { title: "BuzNeet — NCERT Progress Hub" },
       { name: "description", content: "Track NCERT syllabus mastery, streaks and spaced repetition revisions for NEET." },
-      { property: "og:title", content: "NEET Recall — NCERT Progress Hub" },
+      { property: "og:title", content: "BuzNeet — NCERT Progress Hub" },
       { property: "og:description", content: "Track NCERT syllabus mastery, streaks and spaced repetition revisions for NEET." },
     ],
   }),
@@ -37,9 +37,9 @@ export function subjectMastery(answered: Record<string, boolean>, subject: strin
 }
 
 function Home() {
-  const { streak, todayCount, goal, answered, dueToday, cards } = useStore();
+  const { user, streak, todayCount, goal, answered, dueToday, cards } = useStore();
   return (
-    <AppShell title="Namaste, Rakesh" subtitle="NEET 2027">
+    <AppShell title={`Namaste, ${user?.name.split(" ")[0] ?? ""}`} subtitle="NEET 2027">
       <div className="grid grid-cols-2 gap-3">
         <div className="rounded-3xl bg-primary p-4 text-primary-foreground">
           <Flame className="h-5 w-5" />

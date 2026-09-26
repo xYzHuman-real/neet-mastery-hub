@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NEET Recall" },
+      { title: "BuzNeet" },
       { name: "description", content: "NCERT line-by-line NEET prep with spaced repetition." },
       { name: "author", content: "Lovable" },
       

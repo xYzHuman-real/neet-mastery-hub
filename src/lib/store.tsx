@@ -20,6 +20,9 @@ interface State {
   answered: Record<string, boolean>; // qid -> correct last time
   cards: Record<string, CardState>;
   mistakes: Record<string, Mistake>;
+  user: { name: string; email: string } | null;
+  onboarded: boolean;
+  telegramDone: boolean;
 }
 
 const DAY = 86400000;
@@ -36,6 +39,9 @@ const seed: State = {
     q15: { step: 3, due: now + 10 * DAY },
     q11: { step: 0, due: now - 1000 },
   },
+  user: null,
+  onboarded: false,
+  telegramDone: false,
   mistakes: {
     q11: { qid: "q11", at: now - 2 * 3600000, flagged: false },
     q3: { qid: "q3", at: now - DAY, flagged: false },
@@ -49,17 +55,24 @@ interface Ctx extends State {
   toggleMistake: (qid: string) => void;
   removeMistake: (qid: string) => void;
   dueToday: string[];
+  hydrated: boolean;
+  patch: (p: Partial<State>) => void;
+  logout: () => void;
 }
 const StoreCtx = createContext<Ctx | null>(null);
-const KEY = "neet-proto-v1";
+const KEY = "buzneet-v1";
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [s, setS] = useState<State>(seed);
+  const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     const raw = localStorage.getItem(KEY);
-    if (raw) try { setS(JSON.parse(raw)); } catch {}
+    if (raw) try { setS({ ...seed, ...JSON.parse(raw) }); } catch {}
+    setHydrated(true);
   }, []);
-  useEffect(() => { localStorage.setItem(KEY, JSON.stringify(s)); }, [s]);
+  useEffect(() => { if (hydrated) localStorage.setItem(KEY, JSON.stringify(s)); }, [s, hydrated]);
+  const patch = (p: Partial<State>) => setS((o) => ({ ...o, ...p }));
+  const logout = () => setS((o) => ({ ...o, user: null, telegramDone: false }));
 
   const record = (qid: string, correct: boolean) =>
     setS((p) => ({
@@ -87,7 +100,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const dueToday = Object.entries(s.cards).filter(([, c]) => c.due <= Date.now()).map(([id]) => id)
     .filter((id) => QUESTIONS.some((q) => q.id === id));
 
-  return <StoreCtx.Provider value={{ ...s, record, rate, toggleMistake, removeMistake, dueToday }}>{children}</StoreCtx.Provider>;
+  return <StoreCtx.Provider value={{ ...s, record, rate, toggleMistake, removeMistake, dueToday, hydrated, patch, logout }}>{children}</StoreCtx.Provider>;
 }
 
 export function useStore() {
