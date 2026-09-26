@@ -73,3 +73,10 @@ Questions are original questions based on NCERT concepts and the official NEET s
 ## Next expansion
 
 The schema already supports `mcq`, `numerical`, `statement`, and `match` modes. The current bank is a foundation; additional chapter-specific question sets can be added without changing the data model.
+
+
+## Question-bank minimum
+
+Every chapter has a hard minimum target of **50 questions**. With 87 chapters, the complete bank must contain at least **4,350 questions**. The repository includes `scripts/validateQuestionMinimum.mjs` to fail validation whenever a chapter is below 50.
+
+Question records should use `topicId`, `sourceType`, and `reviewStatus`. Exact NCERT page/line citations must not be invented; they should remain null until verified against the intended textbook edition.
