@@ -1,0 +1,1019 @@
+{
+  "version": "1.0",
+  "description": "NCERT chapter layer mapped into official NEET UG syllabus units.",
+  "hierarchy": "Subject > Unit > Chapter > Topic > Questions",
+  "source": [
+    "NMC NEET UG 2026 syllabus",
+    "NCERT Class XI/XII textbooks"
+  ],
+  "chapters": [
+    {
+      "id": "phy-c1",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Units and Measurements",
+      "unitId": "phy-u1",
+      "topics": [
+        "units and measurements",
+        "significant figures",
+        "errors and dimensions"
+      ]
+    },
+    {
+      "id": "phy-c2",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Motion in a Straight Line",
+      "unitId": "phy-u2",
+      "topics": [
+        "position and displacement",
+        "velocity and acceleration",
+        "motion graphs"
+      ]
+    },
+    {
+      "id": "phy-c3",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Motion in a Plane",
+      "unitId": "phy-u2",
+      "topics": [
+        "vectors",
+        "projectile motion",
+        "uniform circular motion"
+      ]
+    },
+    {
+      "id": "phy-c4",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Laws of Motion",
+      "unitId": "phy-u3",
+      "topics": [
+        "Newton's laws",
+        "momentum and impulse",
+        "friction and circular motion"
+      ]
+    },
+    {
+      "id": "phy-c5",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Work, Energy and Power",
+      "unitId": "phy-u4",
+      "topics": [
+        "work",
+        "kinetic and potential energy",
+        "power and collisions"
+      ]
+    },
+    {
+      "id": "phy-c6",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "System of Particles and Rotational Motion",
+      "unitId": "phy-u5",
+      "topics": [
+        "centre of mass",
+        "torque and angular momentum",
+        "moment of inertia"
+      ]
+    },
+    {
+      "id": "phy-c7",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Gravitation",
+      "unitId": "phy-u6",
+      "topics": [
+        "universal gravitation",
+        "g and gravitational potential",
+        "satellites and escape speed"
+      ]
+    },
+    {
+      "id": "phy-c8",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Mechanical Properties of Solids",
+      "unitId": "phy-u7",
+      "topics": [
+        "stress and strain",
+        "elastic moduli",
+        "elastic energy"
+      ]
+    },
+    {
+      "id": "phy-c9",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Mechanical Properties of Fluids",
+      "unitId": "phy-u7",
+      "topics": [
+        "pressure",
+        "viscosity",
+        "Bernoulli principle and surface tension"
+      ]
+    },
+    {
+      "id": "phy-c10",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Thermal Properties of Matter",
+      "unitId": "phy-u7",
+      "topics": [
+        "thermal expansion",
+        "calorimetry",
+        "heat transfer"
+      ]
+    },
+    {
+      "id": "phy-c11",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Thermodynamics",
+      "unitId": "phy-u8",
+      "topics": [
+        "zeroth law",
+        "first law",
+        "second law and heat engines"
+      ]
+    },
+    {
+      "id": "phy-c12",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Kinetic Theory",
+      "unitId": "phy-u9",
+      "topics": [
+        "kinetic model",
+        "gas pressure and temperature",
+        "degrees of freedom"
+      ]
+    },
+    {
+      "id": "phy-c13",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Oscillations",
+      "unitId": "phy-u10",
+      "topics": [
+        "simple harmonic motion",
+        "energy in SHM",
+        "pendulum"
+      ]
+    },
+    {
+      "id": "phy-c14",
+      "subject": "Physics",
+      "class": 11,
+      "ncertChapter": "Waves",
+      "unitId": "phy-u10",
+      "topics": [
+        "wave motion",
+        "superposition",
+        "standing waves and sound"
+      ]
+    },
+    {
+      "id": "phy-c15",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Electric Charges and Fields",
+      "unitId": "phy-u11",
+      "topics": [
+        "Coulomb law",
+        "electric field",
+        "Gauss law"
+      ]
+    },
+    {
+      "id": "phy-c16",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Electrostatic Potential and Capacitance",
+      "unitId": "phy-u11",
+      "topics": [
+        "electric potential",
+        "capacitors",
+        "dielectrics"
+      ]
+    },
+    {
+      "id": "phy-c17",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Current Electricity",
+      "unitId": "phy-u12",
+      "topics": [
+        "current and drift",
+        "resistance",
+        "Kirchhoff laws and cells"
+      ]
+    },
+    {
+      "id": "phy-c18",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Moving Charges and Magnetism",
+      "unitId": "phy-u13",
+      "topics": [
+        "Lorentz force",
+        "Biot-Savart law",
+        "Ampere law"
+      ]
+    },
+    {
+      "id": "phy-c19",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Magnetism and Matter",
+      "unitId": "phy-u13",
+      "topics": [
+        "magnetic dipoles",
+        "magnetic materials",
+        "earth magnetism"
+      ]
+    },
+    {
+      "id": "phy-c20",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Electromagnetic Induction",
+      "unitId": "phy-u14",
+      "topics": [
+        "Faraday law",
+        "Lenz law",
+        "inductance"
+      ]
+    },
+    {
+      "id": "phy-c21",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Alternating Current",
+      "unitId": "phy-u14",
+      "topics": [
+        "AC voltage and current",
+        "reactance and impedance",
+        "transformer"
+      ]
+    },
+    {
+      "id": "phy-c22",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Electromagnetic Waves",
+      "unitId": "phy-u15",
+      "topics": [
+        "EM wave properties",
+        "electromagnetic spectrum",
+        "applications"
+      ]
+    },
+    {
+      "id": "phy-c23",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Ray Optics and Optical Instruments",
+      "unitId": "phy-u16",
+      "topics": [
+        "reflection and refraction",
+        "lenses",
+        "optical instruments"
+      ]
+    },
+    {
+      "id": "phy-c24",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Wave Optics",
+      "unitId": "phy-u16",
+      "topics": [
+        "interference",
+        "diffraction",
+        "polarisation"
+      ]
+    },
+    {
+      "id": "phy-c25",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Dual Nature of Radiation and Matter",
+      "unitId": "phy-u17",
+      "topics": [
+        "photoelectric effect",
+        "Einstein equation",
+        "de Broglie waves"
+      ]
+    },
+    {
+      "id": "phy-c26",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Atoms",
+      "unitId": "phy-u18",
+      "topics": [
+        "Rutherford model",
+        "Bohr model",
+        "hydrogen spectrum"
+      ]
+    },
+    {
+      "id": "phy-c27",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Nuclei",
+      "unitId": "phy-u18",
+      "topics": [
+        "nuclear size",
+        "binding energy",
+        "radioactivity and nuclear reactions"
+      ]
+    },
+    {
+      "id": "phy-c28",
+      "subject": "Physics",
+      "class": 12,
+      "ncertChapter": "Semiconductor Electronics",
+      "unitId": "phy-u19",
+      "topics": [
+        "semiconductors",
+        "p-n junction",
+        "diodes and logic gates"
+      ]
+    },
+    {
+      "id": "chem-c1",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Some Basic Concepts of Chemistry",
+      "unitId": "chem-u1",
+      "topics": [
+        "mole concept",
+        "stoichiometry",
+        "concentration"
+      ]
+    },
+    {
+      "id": "chem-c2",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Structure of Atom",
+      "unitId": "chem-u2",
+      "topics": [
+        "atomic models",
+        "quantum numbers",
+        "electronic configuration"
+      ]
+    },
+    {
+      "id": "chem-c3",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Classification of Elements and Periodicity in Properties",
+      "unitId": "chem-u9",
+      "topics": [
+        "periodic law",
+        "atomic radius",
+        "ionisation enthalpy and electronegativity"
+      ]
+    },
+    {
+      "id": "chem-c4",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Chemical Bonding and Molecular Structure",
+      "unitId": "chem-u3",
+      "topics": [
+        "Lewis structures",
+        "VSEPR",
+        "hybridisation and hydrogen bonding"
+      ]
+    },
+    {
+      "id": "chem-c5",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Thermodynamics",
+      "unitId": "chem-u4",
+      "topics": [
+        "enthalpy",
+        "Hess law",
+        "Gibbs energy"
+      ]
+    },
+    {
+      "id": "chem-c6",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Equilibrium",
+      "unitId": "chem-u6",
+      "topics": [
+        "chemical equilibrium",
+        "ionic equilibrium",
+        "pH and buffers"
+      ]
+    },
+    {
+      "id": "chem-c7",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Redox Reactions",
+      "unitId": "chem-u7",
+      "topics": [
+        "oxidation number",
+        "redox balancing",
+        "redox concepts"
+      ]
+    },
+    {
+      "id": "chem-c8",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Organic Chemistry – Some Basic Principles and Techniques",
+      "unitId": "chem-u14",
+      "topics": [
+        "organic nomenclature",
+        "electronic effects",
+        "reaction intermediates"
+      ]
+    },
+    {
+      "id": "chem-c9",
+      "subject": "Chemistry",
+      "class": 11,
+      "ncertChapter": "Hydrocarbons",
+      "unitId": "chem-u15",
+      "topics": [
+        "alkanes",
+        "alkenes and alkynes",
+        "aromatic hydrocarbons"
+      ]
+    },
+    {
+      "id": "chem-c10",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Solutions",
+      "unitId": "chem-u5",
+      "topics": [
+        "concentration",
+        "Raoult law",
+        "colligative properties"
+      ]
+    },
+    {
+      "id": "chem-c11",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Electrochemistry",
+      "unitId": "chem-u7",
+      "topics": [
+        "electrochemical cells",
+        "Nernst equation",
+        "conductance and electrolysis"
+      ]
+    },
+    {
+      "id": "chem-c12",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Chemical Kinetics",
+      "unitId": "chem-u8",
+      "topics": [
+        "rate law",
+        "integrated rate equations",
+        "Arrhenius equation"
+      ]
+    },
+    {
+      "id": "chem-c13",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "The p-Block Elements",
+      "unitId": "chem-u10",
+      "topics": [
+        "periodic trends",
+        "important compounds",
+        "oxidation states"
+      ]
+    },
+    {
+      "id": "chem-c14",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "The d- and f-Block Elements",
+      "unitId": "chem-u11",
+      "topics": [
+        "transition metals",
+        "lanthanides",
+        "actinides"
+      ]
+    },
+    {
+      "id": "chem-c15",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Coordination Compounds",
+      "unitId": "chem-u12",
+      "topics": [
+        "coordination terminology",
+        "isomerism",
+        "bonding theories"
+      ]
+    },
+    {
+      "id": "chem-c16",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Haloalkanes and Haloarenes",
+      "unitId": "chem-u16",
+      "topics": [
+        "C-X bond",
+        "SN1 and SN2",
+        "haloarene reactions"
+      ]
+    },
+    {
+      "id": "chem-c17",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Alcohols, Phenols and Ethers",
+      "unitId": "chem-u17",
+      "topics": [
+        "alcohols",
+        "phenols",
+        "ethers"
+      ]
+    },
+    {
+      "id": "chem-c18",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Aldehydes, Ketones and Carboxylic Acids",
+      "unitId": "chem-u17",
+      "topics": [
+        "carbonyl compounds",
+        "reactions of aldehydes and ketones",
+        "carboxylic acids"
+      ]
+    },
+    {
+      "id": "chem-c19",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Amines",
+      "unitId": "chem-u18",
+      "topics": [
+        "classification of amines",
+        "basicity",
+        "diazonium salts"
+      ]
+    },
+    {
+      "id": "chem-c20",
+      "subject": "Chemistry",
+      "class": 12,
+      "ncertChapter": "Biomolecules",
+      "unitId": "chem-u19",
+      "topics": [
+        "carbohydrates",
+        "proteins",
+        "nucleic acids"
+      ]
+    },
+    {
+      "id": "bio-c1",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "The Living World",
+      "unitId": "bio-u1",
+      "topics": [
+        "characteristics of life",
+        "taxonomic categories",
+        "binomial nomenclature"
+      ]
+    },
+    {
+      "id": "bio-c2",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Biological Classification",
+      "unitId": "bio-u1",
+      "topics": [
+        "five-kingdom classification",
+        "monera",
+        "protista and fungi"
+      ]
+    },
+    {
+      "id": "bio-c3",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Plant Kingdom",
+      "unitId": "bio-u1",
+      "topics": [
+        "algae",
+        "bryophytes and pteridophytes",
+        "gymnosperms and angiosperms"
+      ]
+    },
+    {
+      "id": "bio-c4",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Animal Kingdom",
+      "unitId": "bio-u1",
+      "topics": [
+        "animal classification",
+        "non-chordates",
+        "chordates"
+      ]
+    },
+    {
+      "id": "bio-c5",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Morphology of Flowering Plants",
+      "unitId": "bio-u2",
+      "topics": [
+        "root",
+        "stem and leaf",
+        "flower and fruit"
+      ]
+    },
+    {
+      "id": "bio-c6",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Anatomy of Flowering Plants",
+      "unitId": "bio-u2",
+      "topics": [
+        "plant tissues",
+        "tissue systems",
+        "secondary growth"
+      ]
+    },
+    {
+      "id": "bio-c7",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Structural Organisation in Animals",
+      "unitId": "bio-u2",
+      "topics": [
+        "animal tissues",
+        "earthworm",
+        "cockroach and frog"
+      ]
+    },
+    {
+      "id": "bio-c8",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Cell: The Unit of Life",
+      "unitId": "bio-u3",
+      "topics": [
+        "cell structure",
+        "cell organelles",
+        "prokaryotic and eukaryotic cells"
+      ]
+    },
+    {
+      "id": "bio-c9",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Biomolecules",
+      "unitId": "bio-u3",
+      "topics": [
+        "carbohydrates",
+        "proteins and lipids",
+        "enzymes"
+      ]
+    },
+    {
+      "id": "bio-c10",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Cell Cycle and Cell Division",
+      "unitId": "bio-u3",
+      "topics": [
+        "cell cycle",
+        "mitosis",
+        "meiosis"
+      ]
+    },
+    {
+      "id": "bio-c11",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Transport in Plants",
+      "unitId": "bio-u4",
+      "topics": [
+        "water transport",
+        "mineral transport",
+        "transpiration"
+      ]
+    },
+    {
+      "id": "bio-c12",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Mineral Nutrition",
+      "unitId": "bio-u4",
+      "topics": [
+        "essential elements",
+        "deficiency symptoms",
+        "nitrogen metabolism"
+      ]
+    },
+    {
+      "id": "bio-c13",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Photosynthesis in Higher Plants",
+      "unitId": "bio-u4",
+      "topics": [
+        "light reaction",
+        "carbon fixation",
+        "photorespiration"
+      ]
+    },
+    {
+      "id": "bio-c14",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Respiration in Plants",
+      "unitId": "bio-u4",
+      "topics": [
+        "glycolysis",
+        "Krebs cycle",
+        "electron transport"
+      ]
+    },
+    {
+      "id": "bio-c15",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Plant Growth and Development",
+      "unitId": "bio-u4",
+      "topics": [
+        "growth phases",
+        "plant hormones",
+        "photoperiodism"
+      ]
+    },
+    {
+      "id": "bio-c16",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Digestion and Absorption",
+      "unitId": "bio-u5",
+      "topics": [
+        "digestive system",
+        "digestion",
+        "absorption"
+      ]
+    },
+    {
+      "id": "bio-c17",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Breathing and Exchange of Gases",
+      "unitId": "bio-u5",
+      "topics": [
+        "respiratory system",
+        "gas exchange",
+        "transport of gases"
+      ]
+    },
+    {
+      "id": "bio-c18",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Body Fluids and Circulation",
+      "unitId": "bio-u5",
+      "topics": [
+        "blood",
+        "heart",
+        "circulation"
+      ]
+    },
+    {
+      "id": "bio-c19",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Excretory Products and their Elimination",
+      "unitId": "bio-u5",
+      "topics": [
+        "nephron",
+        "urine formation",
+        "osmoregulation"
+      ]
+    },
+    {
+      "id": "bio-c20",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Locomotion and Movement",
+      "unitId": "bio-u5",
+      "topics": [
+        "muscles",
+        "skeletal system",
+        "movement disorders"
+      ]
+    },
+    {
+      "id": "bio-c21",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Neural Control and Coordination",
+      "unitId": "bio-u5",
+      "topics": [
+        "neuron",
+        "nerve impulse",
+        "central nervous system"
+      ]
+    },
+    {
+      "id": "bio-c22",
+      "subject": "Biology",
+      "class": 11,
+      "ncertChapter": "Chemical Coordination and Integration",
+      "unitId": "bio-u5",
+      "topics": [
+        "endocrine glands",
+        "hormones",
+        "feedback regulation"
+      ]
+    },
+    {
+      "id": "bio-c23",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Sexual Reproduction in Flowering Plants",
+      "unitId": "bio-u6",
+      "topics": [
+        "flower structure",
+        "pollination",
+        "double fertilisation"
+      ]
+    },
+    {
+      "id": "bio-c24",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Human Reproduction",
+      "unitId": "bio-u6",
+      "topics": [
+        "reproductive systems",
+        "gametogenesis",
+        "menstrual cycle"
+      ]
+    },
+    {
+      "id": "bio-c25",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Reproductive Health",
+      "unitId": "bio-u6",
+      "topics": [
+        "contraception",
+        "STIs",
+        "assisted reproductive technologies"
+      ]
+    },
+    {
+      "id": "bio-c26",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Principles of Inheritance and Variation",
+      "unitId": "bio-u7",
+      "topics": [
+        "Mendelism",
+        "linkage and recombination",
+        "inheritance patterns"
+      ]
+    },
+    {
+      "id": "bio-c27",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Molecular Basis of Inheritance",
+      "unitId": "bio-u7",
+      "topics": [
+        "DNA structure",
+        "replication and transcription",
+        "translation and regulation"
+      ]
+    },
+    {
+      "id": "bio-c28",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Evolution",
+      "unitId": "bio-u7",
+      "topics": [
+        "evolutionary evidence",
+        "natural selection",
+        "human evolution"
+      ]
+    },
+    {
+      "id": "bio-c29",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Human Health and Disease",
+      "unitId": "bio-u8",
+      "topics": [
+        "common diseases",
+        "immunity",
+        "AIDS and cancer"
+      ]
+    },
+    {
+      "id": "bio-c30",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Microbes in Human Welfare",
+      "unitId": "bio-u8",
+      "topics": [
+        "food processing",
+        "industrial products",
+        "biocontrol and biofertilisers"
+      ]
+    },
+    {
+      "id": "bio-c31",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Biotechnology: Principles and Processes",
+      "unitId": "bio-u9",
+      "topics": [
+        "genetic engineering",
+        "restriction enzymes",
+        "PCR and cloning"
+      ]
+    },
+    {
+      "id": "bio-c32",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Biotechnology and its Applications",
+      "unitId": "bio-u9",
+      "topics": [
+        "GM organisms",
+        "insulin",
+        "gene therapy and biosafety"
+      ]
+    },
+    {
+      "id": "bio-c33",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Organisms and Populations",
+      "unitId": "bio-u10",
+      "topics": [
+        "population attributes",
+        "population interactions",
+        "adaptations"
+      ]
+    },
+    {
+      "id": "bio-c34",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Ecosystem",
+      "unitId": "bio-u10",
+      "topics": [
+        "energy flow",
+        "food chains",
+        "ecological pyramids and cycles"
+      ]
+    },
+    {
+      "id": "bio-c35",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Biodiversity and Conservation",
+      "unitId": "bio-u10",
+      "topics": [
+        "biodiversity",
+        "threats",
+        "conservation"
+      ]
+    },
+    {
+      "id": "bio-c36",
+      "subject": "Biology",
+      "class": 12,
+      "ncertChapter": "Environmental Issues",
+      "unitId": "bio-u10",
+      "topics": [
+        "pollution",
+        "global environmental issues",
+        "waste management"
+      ]
+    }
+  ]
+}
