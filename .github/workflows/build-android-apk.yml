@@ -1,4 +1,5 @@
 name: Build Android APK
+run-name: Build BuzNeet installable APK
 
 on:
   workflow_dispatch:
