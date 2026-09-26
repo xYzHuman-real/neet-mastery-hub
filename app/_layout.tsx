@@ -1,3 +1,4 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-export default function Layout(){return <><StatusBar style="dark"/><Stack screenOptions={{headerShown:false}}/></>}
+import { StoreProvider } from "../native/store";
+export default function Layout(){return <StoreProvider><StatusBar style="dark"/><Stack screenOptions={{headerShown:false}}/></StoreProvider>}
