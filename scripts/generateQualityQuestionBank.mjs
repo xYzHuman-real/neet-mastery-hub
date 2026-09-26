@@ -8,7 +8,7 @@
  * - Keep all generated questions explicitly marked as draft until human review.
  *
  * This script is intentionally deterministic. It does not invent PYQ status or
- * NCERT page/line citations.
+ * NCERT page/line citations. Every generated item remains draft until reviewed.
  */
 
 const fs = require("node:fs");
