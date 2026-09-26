@@ -4,649 +4,1199 @@
     "subject": "Physics",
     "unit": 1,
     "title": "Physics and Measurement",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "SI units and dimensions",
+      "Significant figures and rounding",
+      "Measurement errors and dimensional analysis"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u2",
     "subject": "Physics",
     "unit": 2,
     "title": "Kinematics",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Position, displacement, speed and velocity",
+      "Graphs and equations of uniformly accelerated motion",
+      "Vectors, relative velocity, projectile and circular motion"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u3",
     "subject": "Physics",
     "unit": 3,
     "title": "Laws of Motion",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Newton's laws and momentum",
+      "Friction and equilibrium of forces",
+      "Centripetal force and circular-road dynamics"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u4",
     "subject": "Physics",
     "unit": 4,
     "title": "Work, Energy and Power",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Work by constant and variable forces",
+      "Kinetic and potential energy; work-energy theorem",
+      "Power, conservation of mechanical energy and collisions"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u5",
     "subject": "Physics",
     "unit": 5,
     "title": "Rotational Motion",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Centre of mass and torque",
+      "Angular momentum and conservation",
+      "Moment of inertia and rotational equilibrium"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u6",
     "subject": "Physics",
     "unit": 6,
     "title": "Gravitation",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Universal law of gravitation",
+      "Acceleration due to gravity and variation with altitude/depth",
+      "Satellites, escape speed and orbital velocity"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u7",
     "subject": "Physics",
     "unit": 7,
     "title": "Properties of Solids and Liquids",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Elasticity and stress-strain",
+      "Fluid pressure, viscosity and Bernoulli principle",
+      "Surface tension and thermal expansion"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u8",
     "subject": "Physics",
     "unit": 8,
     "title": "Thermodynamics",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Thermal equilibrium and zeroth law",
+      "First law and thermodynamic processes",
+      "Second law, heat engines and refrigerators"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u9",
     "subject": "Physics",
     "unit": 9,
     "title": "Kinetic Theory of Gases",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Kinetic model and molecular motion",
+      "Pressure-temperature interpretation of gas laws",
+      "Degrees of freedom and equipartition"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u10",
     "subject": "Physics",
     "unit": 10,
     "title": "Oscillations and Waves",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Simple harmonic motion",
+      "Wave motion and wave equation",
+      "Superposition, standing waves and sound"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u11",
     "subject": "Physics",
     "unit": 11,
     "title": "Electrostatics",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Coulomb's law and electric field",
+      "Electric potential and capacitance",
+      "Gauss's law and capacitors"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u12",
     "subject": "Physics",
     "unit": 12,
     "title": "Current Electricity",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Drift velocity and current",
+      "Ohm's law, resistance and resistivity",
+      "Kirchhoff laws, cells and electrical power"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u13",
     "subject": "Physics",
     "unit": 13,
     "title": "Magnetic Effects of Current and Magnetism",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Lorentz force and motion in magnetic field",
+      "Biot-Savart and Ampere laws",
+      "Magnetic dipole, torque and magnetism"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u14",
     "subject": "Physics",
     "unit": 14,
     "title": "Electromagnetic Induction and Alternating Currents",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Faraday's law and Lenz's law",
+      "Self and mutual inductance",
+      "AC circuits, RMS values, reactance and transformer"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u15",
     "subject": "Physics",
     "unit": 15,
     "title": "Electromagnetic Waves",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Properties and production of electromagnetic waves",
+      "Electromagnetic spectrum",
+      "Uses and basic propagation properties"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u16",
     "subject": "Physics",
     "unit": 16,
     "title": "Optics",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Reflection and refraction",
+      "Lenses and optical instruments",
+      "Wave optics: interference, diffraction and polarisation"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u17",
     "subject": "Physics",
     "unit": 17,
     "title": "Dual Nature of Matter and Radiation",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Photoelectric effect",
+      "Einstein photoelectric equation",
+      "Matter waves and de Broglie wavelength"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u18",
     "subject": "Physics",
     "unit": 18,
     "title": "Atoms and Nuclei",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Rutherford and Bohr models",
+      "Hydrogen spectrum and atomic transitions",
+      "Nuclear size, binding energy, radioactivity and fission/fusion"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u19",
     "subject": "Physics",
     "unit": 19,
     "title": "Electronic Devices",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Semiconductors and intrinsic/extrinsic conductivity",
+      "p-n junction and diode characteristics",
+      "Zener diode, rectifiers and digital logic"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "phy-u20",
     "subject": "Physics",
     "unit": 20,
     "title": "Experimental Skills",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Vernier calipers and screw gauge",
+      "Measurement of length, mass and time",
+      "Graphical analysis, significant figures and experimental errors"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u1",
     "subject": "Chemistry",
     "unit": 1,
     "title": "Some Basic Concepts in Chemistry",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Mole concept and molar mass",
+      "Stoichiometry and limiting reagent",
+      "Concentration terms and empirical/molecular formula"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u2",
     "subject": "Chemistry",
     "unit": 2,
     "title": "Atomic Structure",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Atomic models and spectra",
+      "Quantum numbers and orbitals",
+      "Electronic configuration and Aufbau principles"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u3",
     "subject": "Chemistry",
     "unit": 3,
     "title": "Chemical Bonding and Molecular Structure",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Lewis structures and octet rule",
+      "VSEPR and molecular geometry",
+      "Hybridisation, polarity and hydrogen bonding"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u4",
     "subject": "Chemistry",
     "unit": 4,
     "title": "Chemical Thermodynamics",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "System and surroundings; work and heat",
+      "Enthalpy and Hess's law",
+      "Entropy, Gibbs energy and spontaneity"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u5",
     "subject": "Chemistry",
     "unit": 5,
     "title": "Solutions",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Types of solutions and concentration",
+      "Raoult's law and vapour pressure",
+      "Colligative properties and abnormal molar mass"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u6",
     "subject": "Chemistry",
     "unit": 6,
     "title": "Equilibrium",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Dynamic equilibrium and equilibrium constant",
+      "Le Chatelier principle",
+      "Ionic equilibrium, pH, buffers and solubility"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u7",
     "subject": "Chemistry",
     "unit": 7,
     "title": "Redox Reactions and Electrochemistry",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Oxidation number and redox balancing",
+      "Electrochemical cells and electrode potential",
+      "Nernst equation, conductivity and electrolysis"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u8",
     "subject": "Chemistry",
     "unit": 8,
     "title": "Chemical Kinetics",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Rate law and reaction order",
+      "Integrated rate equations and half-life",
+      "Arrhenius equation and activation energy"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u9",
     "subject": "Chemistry",
     "unit": 9,
     "title": "Classification of Elements and Periodicity in Properties",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Modern periodic law",
+      "Atomic and ionic radii",
+      "Ionisation enthalpy, electron gain enthalpy and electronegativity"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u10",
     "subject": "Chemistry",
     "unit": 10,
     "title": "p-Block Elements",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "General trends in p-block elements",
+      "Important compounds and reactions",
+      "Anomalous behaviour and oxidation states"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u11",
     "subject": "Chemistry",
     "unit": 11,
     "title": "d- and f-Block Elements",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Transition-metal configuration and properties",
+      "Oxidation states, colour and magnetic behaviour",
+      "Lanthanides, actinides and lanthanide contraction"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u12",
     "subject": "Chemistry",
     "unit": 12,
     "title": "Coordination Compounds",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Coordination terminology and nomenclature",
+      "Isomerism and coordination geometry",
+      "Bonding theories and applications"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u13",
     "subject": "Chemistry",
     "unit": 13,
     "title": "Purification and Characterisation of Organic Compounds",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Purification methods",
+      "Qualitative elemental analysis",
+      "Quantitative analysis and chromatography"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u14",
     "subject": "Chemistry",
     "unit": 14,
     "title": "Some Basic Principles of Organic Chemistry",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Electronic effects and resonance",
+      "Reaction intermediates and mechanism basics",
+      "Isomerism and common organic reagents"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u15",
     "subject": "Chemistry",
     "unit": 15,
     "title": "Hydrocarbons",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Alkanes and conformations",
+      "Alkenes and alkynes",
+      "Aromatic hydrocarbons and electrophilic substitution"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u16",
     "subject": "Chemistry",
     "unit": 16,
     "title": "Organic Compounds Containing Halogens",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Nomenclature and preparation of halo compounds",
+      "SN1 and SN2 mechanisms",
+      "Uses and environmental aspects of halogen compounds"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u17",
     "subject": "Chemistry",
     "unit": 17,
     "title": "Organic Compounds Containing Oxygen",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Alcohols and phenols",
+      "Ethers and their reactions",
+      "Aldehydes and ketones; carboxylic acids"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u18",
     "subject": "Chemistry",
     "unit": 18,
     "title": "Organic Compounds Containing Nitrogen",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Amines and their classification",
+      "Basicity and reactions of amines",
+      "Diazonium salts and important reactions"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u19",
     "subject": "Chemistry",
     "unit": 19,
     "title": "Biomolecules",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Carbohydrates",
+      "Proteins and amino acids",
+      "Nucleic acids and enzymes"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "chem-u20",
     "subject": "Chemistry",
     "unit": 20,
     "title": "Principles Related to Practical Chemistry",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "numerical",
       "statement"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Qualitative analysis of ions",
+      "Titrations and indicators",
+      "Practical identification of functional groups"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u1",
     "subject": "Biology",
     "unit": 1,
     "title": "Diversity in Living World",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "The living world and taxonomic categories",
+      "Biological classification and kingdoms",
+      "Plant kingdom and animal kingdom"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u2",
     "subject": "Biology",
     "unit": 2,
     "title": "Structural Organisation in Animals and Plants",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Morphology of flowering plants",
+      "Anatomy of flowering plants",
+      "Structural organisation and tissues in animals"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u3",
     "subject": "Biology",
     "unit": 3,
     "title": "Cell Structure and Function",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Cell theory and prokaryotic/eukaryotic cells",
+      "Cell organelles and membrane transport",
+      "Cell cycle, mitosis and meiosis"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u4",
     "subject": "Biology",
     "unit": 4,
     "title": "Plant Physiology",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Transport in plants and mineral nutrition",
+      "Photosynthesis",
+      "Respiration and plant growth regulators"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u5",
     "subject": "Biology",
     "unit": 5,
     "title": "Human Physiology",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Digestion and absorption",
+      "Breathing and exchange of gases; circulation",
+      "Excretion, locomotion, neural and endocrine control"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u6",
     "subject": "Biology",
     "unit": 6,
     "title": "Reproduction",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Flowering-plant reproduction",
+      "Human reproductive systems and gametogenesis",
+      "Menstrual cycle, fertilisation, pregnancy and contraception"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u7",
     "subject": "Biology",
     "unit": 7,
     "title": "Genetics and Evolution",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Mendelian inheritance",
+      "Molecular basis of inheritance",
+      "Evolution and population genetics"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u8",
     "subject": "Biology",
     "unit": 8,
     "title": "Biology and Human Welfare",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Human health and disease",
+      "Microbes in human welfare",
+      "Strategies for enhancement in food production"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u9",
     "subject": "Biology",
     "unit": 9,
     "title": "Biotechnology and Its Applications",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Recombinant DNA technology",
+      "Bioprocesses and genetic engineering",
+      "Applications in health, agriculture and industry"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   },
   {
     "id": "bio-u10",
     "subject": "Biology",
     "unit": 10,
     "title": "Ecology and Environment",
-    "lessonType": "syllabus-unit",
+    "lessonType": "topic-group",
     "questionModes": [
       "mcq",
       "statement",
       "match"
     ],
-    "ncertAligned": true
+    "ncertAligned": true,
+    "topics": [
+      "Organisms, populations and ecosystems",
+      "Energy flow and ecological pyramids",
+      "Biodiversity, conservation and environmental issues"
+    ],
+    "estimatedMinutes": 35,
+    "examFocus": [
+      "NCERT-aligned concept",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   }
 ]
