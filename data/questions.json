@@ -1048,5 +1048,1105 @@
       "line": null,
       "reference": "Detection of functional groups"
     }
+  },
+  {
+    "id": "phy-q21",
+    "chapterId": "phy-u1",
+    "mode": "mcq",
+    "prompt": "The dimensional formula of velocity is:",
+    "options": [
+      "[L T^-1]",
+      "[L T^-2]",
+      "[M L T^-1]",
+      "[M L^2 T^-2]"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Dimensions of physical quantities",
+      "page": null,
+      "line": null,
+      "reference": "Dimensions of physical quantities"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q22",
+    "chapterId": "phy-u2",
+    "mode": "mcq",
+    "prompt": "The slope of a velocity-time graph represents:",
+    "options": [
+      "Displacement",
+      "Acceleration",
+      "Jerk",
+      "Speed only"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Velocity-time graph",
+      "page": null,
+      "line": null,
+      "reference": "Velocity-time graph"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q23",
+    "chapterId": "phy-u3",
+    "mode": "mcq",
+    "prompt": "The coefficient of friction is defined as the ratio of limiting friction to:",
+    "options": [
+      "Normal reaction",
+      "Mass",
+      "Area",
+      "Momentum"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Laws of friction",
+      "page": null,
+      "line": null,
+      "reference": "Laws of friction"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q24",
+    "chapterId": "phy-u4",
+    "mode": "mcq",
+    "prompt": "The SI unit of power is:",
+    "options": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Power",
+      "page": null,
+      "line": null,
+      "reference": "Power"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q25",
+    "chapterId": "phy-u5",
+    "mode": "mcq",
+    "prompt": "For a rigid body, torque is the product of force and:",
+    "options": [
+      "Mass",
+      "Perpendicular distance from the axis",
+      "Angular speed",
+      "Time"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Moment of a force",
+      "page": null,
+      "line": null,
+      "reference": "Moment of a force"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q26",
+    "chapterId": "phy-u6",
+    "mode": "mcq",
+    "prompt": "The escape speed from the surface of a planet depends on its:",
+    "options": [
+      "Mass and radius",
+      "Only mass",
+      "Only radius",
+      "Temperature only"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Escape speed",
+      "page": null,
+      "line": null,
+      "reference": "Escape speed"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q27",
+    "chapterId": "phy-u7",
+    "mode": "mcq",
+    "prompt": "According to Bernoulli's principle for steady ideal flow, an increase in fluid speed is associated with:",
+    "options": [
+      "Increase in static pressure",
+      "Decrease in static pressure",
+      "No pressure change in every case",
+      "Zero density"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Bernoulli principle",
+      "page": null,
+      "line": null,
+      "reference": "Bernoulli principle"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q28",
+    "chapterId": "phy-u8",
+    "mode": "mcq",
+    "prompt": "For a cyclic thermodynamic process, the net change in internal energy is:",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Infinite"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Cyclic process",
+      "page": null,
+      "line": null,
+      "reference": "Cyclic process"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q29",
+    "chapterId": "phy-u9",
+    "mode": "mcq",
+    "prompt": "At a fixed temperature, the average kinetic energy of ideal-gas molecules is:",
+    "options": [
+      "Proportional to molar mass",
+      "Independent of temperature",
+      "Determined by temperature",
+      "Always zero"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Molecular interpretation of temperature",
+      "page": null,
+      "line": null,
+      "reference": "Molecular interpretation of temperature"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q30",
+    "chapterId": "phy-u10",
+    "mode": "mcq",
+    "prompt": "In SHM, the restoring acceleration is directed:",
+    "options": [
+      "Away from mean position",
+      "Towards mean position",
+      "Along velocity always",
+      "Perpendicular to displacement always"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XI",
+      "chapter": "Acceleration in SHM",
+      "page": null,
+      "line": null,
+      "reference": "Acceleration in SHM"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q31",
+    "chapterId": "phy-u11",
+    "mode": "mcq",
+    "prompt": "The capacitance of a parallel-plate capacitor increases when the plate separation is:",
+    "options": [
+      "Increased",
+      "Decreased",
+      "Made infinite",
+      "Unchanged with all geometry"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Parallel-plate capacitor",
+      "page": null,
+      "line": null,
+      "reference": "Parallel-plate capacitor"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q32",
+    "chapterId": "phy-u12",
+    "mode": "mcq",
+    "prompt": "For metallic conductors, resistance generally increases with increase in:",
+    "options": [
+      "Temperature",
+      "Charge only",
+      "Cross-sectional area only",
+      "Number of electrons only"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Temperature dependence of resistance",
+      "page": null,
+      "line": null,
+      "reference": "Temperature dependence of resistance"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q33",
+    "chapterId": "phy-u13",
+    "mode": "mcq",
+    "prompt": "A charged particle moving parallel to a uniform magnetic field experiences magnetic force:",
+    "options": [
+      "Maximum",
+      "Zero",
+      "qvB",
+      "Always downward"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Magnetic force",
+      "page": null,
+      "line": null,
+      "reference": "Magnetic force"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q34",
+    "chapterId": "phy-u14",
+    "mode": "mcq",
+    "prompt": "The RMS value of an alternating current with peak value I0 is:",
+    "options": [
+      "I0",
+      "I0/2",
+      "I0/√2",
+      "√2 I0"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "RMS value of AC",
+      "page": null,
+      "line": null,
+      "reference": "RMS value of AC"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q35",
+    "chapterId": "phy-u15",
+    "mode": "mcq",
+    "prompt": "Which has the highest frequency among these?",
+    "options": [
+      "Radio waves",
+      "Microwaves",
+      "Visible light",
+      "Gamma rays"
+    ],
+    "answer": 3,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Electromagnetic spectrum",
+      "page": null,
+      "line": null,
+      "reference": "Electromagnetic spectrum"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q36",
+    "chapterId": "phy-u16",
+    "mode": "mcq",
+    "prompt": "When light passes from air into glass, its frequency:",
+    "options": [
+      "Increases",
+      "Decreases",
+      "Remains unchanged",
+      "Becomes zero"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Refraction",
+      "page": null,
+      "line": null,
+      "reference": "Refraction"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q37",
+    "chapterId": "phy-u17",
+    "mode": "mcq",
+    "prompt": "The de Broglie wavelength of a particle is inversely proportional to its:",
+    "options": [
+      "Momentum",
+      "Mass only",
+      "Kinetic energy only",
+      "Charge"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Matter waves",
+      "page": null,
+      "line": null,
+      "reference": "Matter waves"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q38",
+    "chapterId": "phy-u18",
+    "mode": "mcq",
+    "prompt": "The half-life of a radioactive substance is independent of the:",
+    "options": [
+      "Decay constant",
+      "Initial number of nuclei",
+      "Nature of the nuclide",
+      "Decay law"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Radioactive decay",
+      "page": null,
+      "line": null,
+      "reference": "Radioactive decay"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q39",
+    "chapterId": "phy-u19",
+    "mode": "mcq",
+    "prompt": "A Zener diode is commonly used for:",
+    "options": [
+      "Voltage regulation",
+      "Mechanical amplification",
+      "Heating only",
+      "Measuring mass"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Zener diode",
+      "page": null,
+      "line": null,
+      "reference": "Zener diode"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "phy-q40",
+    "chapterId": "phy-u20",
+    "mode": "mcq",
+    "prompt": "A screw gauge is particularly suitable for measuring:",
+    "options": [
+      "Large road distances",
+      "Small diameters",
+      "Room temperature",
+      "Electric current"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Physics XII",
+      "chapter": "Screw gauge",
+      "page": null,
+      "line": null,
+      "reference": "Screw gauge"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q41",
+    "chapterId": "chem-u1",
+    "mode": "mcq",
+    "prompt": "One mole of any substance contains approximately:",
+    "options": [
+      "6.022 × 10^23 entities",
+      "3.011 × 10^23 entities",
+      "9.8 × 10^23 entities",
+      "1.0 × 10^23 entities"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Avogadro constant",
+      "page": null,
+      "line": null,
+      "reference": "Avogadro constant"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q42",
+    "chapterId": "chem-u2",
+    "mode": "mcq",
+    "prompt": "The maximum number of electrons in a p subshell is:",
+    "options": [
+      "2",
+      "6",
+      "10",
+      "14"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Subshell capacity",
+      "page": null,
+      "line": null,
+      "reference": "Subshell capacity"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q43",
+    "chapterId": "chem-u3",
+    "mode": "mcq",
+    "prompt": "The shape of a methane molecule is:",
+    "options": [
+      "Linear",
+      "Trigonal planar",
+      "Tetrahedral",
+      "Square planar"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "VSEPR and molecular geometry",
+      "page": null,
+      "line": null,
+      "reference": "VSEPR and molecular geometry"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q44",
+    "chapterId": "chem-u4",
+    "mode": "mcq",
+    "prompt": "For a spontaneous process at constant temperature and pressure, Gibbs energy change is:",
+    "options": [
+      "Positive",
+      "Negative",
+      "Always zero",
+      "Infinite"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Gibbs energy",
+      "page": null,
+      "line": null,
+      "reference": "Gibbs energy"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q45",
+    "chapterId": "chem-u5",
+    "mode": "mcq",
+    "prompt": "A colligative property depends primarily on the:",
+    "options": [
+      "Nature of solute particles only",
+      "Number of solute particles",
+      "Colour of solution",
+      "Shape of container"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "Colligative properties",
+      "page": null,
+      "line": null,
+      "reference": "Colligative properties"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q46",
+    "chapterId": "chem-u6",
+    "mode": "mcq",
+    "prompt": "At 25 °C, a neutral aqueous solution has pH approximately:",
+    "options": [
+      "0",
+      "5",
+      "7",
+      "14"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XI",
+      "chapter": "pH scale",
+      "page": null,
+      "line": null,
+      "reference": "pH scale"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q47",
+    "chapterId": "chem-u7",
+    "mode": "mcq",
+    "prompt": "Oxidation occurs at the:",
+    "options": [
+      "Cathode only",
+      "Anode",
+      "Salt bridge only",
+      "Electrolyte surface only"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Electrochemical cells",
+      "page": null,
+      "line": null,
+      "reference": "Electrochemical cells"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q48",
+    "chapterId": "chem-u8",
+    "mode": "mcq",
+    "prompt": "For a first-order reaction, the half-life is:",
+    "options": [
+      "Dependent on initial concentration",
+      "Independent of initial concentration",
+      "Always zero",
+      "Equal to rate constant"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "First-order kinetics",
+      "page": null,
+      "line": null,
+      "reference": "First-order kinetics"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q49",
+    "chapterId": "chem-u9",
+    "mode": "mcq",
+    "prompt": "Across a period, electronegativity generally:",
+    "options": [
+      "Decreases",
+      "Increases",
+      "Becomes zero",
+      "Remains identical"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Periodic trends",
+      "page": null,
+      "line": null,
+      "reference": "Periodic trends"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q50",
+    "chapterId": "chem-u10",
+    "mode": "mcq",
+    "prompt": "The element fluorine most commonly exhibits oxidation state:",
+    "options": [
+      "+7",
+      "−1",
+      "0 only",
+      "+1"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Oxidation states",
+      "page": null,
+      "line": null,
+      "reference": "Oxidation states"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q51",
+    "chapterId": "chem-u11",
+    "mode": "mcq",
+    "prompt": "Transition-metal ions often show colour due to:",
+    "options": [
+      "d-d transitions",
+      "Nuclear fission",
+      "Only s-s transitions",
+      "Loss of all electrons"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Colour in transition-metal compounds",
+      "page": null,
+      "line": null,
+      "reference": "Colour in transition-metal compounds"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q52",
+    "chapterId": "chem-u12",
+    "mode": "mcq",
+    "prompt": "A ligand that donates one lone pair to a central metal ion is called:",
+    "options": [
+      "Monodentate",
+      "Bidentate",
+      "Polydentate only",
+      "Ambidentate necessarily"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Coordination terminology",
+      "page": null,
+      "line": null,
+      "reference": "Coordination terminology"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q53",
+    "chapterId": "chem-u13",
+    "mode": "mcq",
+    "prompt": "Distillation is primarily used to separate liquids based on differences in:",
+    "options": [
+      "Density only",
+      "Boiling points",
+      "Atomic numbers",
+      "Nuclear charge"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Purification methods",
+      "page": null,
+      "line": null,
+      "reference": "Purification methods"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q54",
+    "chapterId": "chem-u14",
+    "mode": "mcq",
+    "prompt": "A carbocation is an organic intermediate with a positively charged:",
+    "options": [
+      "Carbon atom",
+      "Oxygen atom only",
+      "Nitrogen atom only",
+      "Hydrogen atom only"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Reaction intermediates",
+      "page": null,
+      "line": null,
+      "reference": "Reaction intermediates"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q55",
+    "chapterId": "chem-u15",
+    "mode": "mcq",
+    "prompt": "Benzene commonly undergoes:",
+    "options": [
+      "Electrophilic substitution",
+      "Nucleophilic addition only",
+      "Neutralisation",
+      "Ionic dissociation in water"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Aromatic hydrocarbons",
+      "page": null,
+      "line": null,
+      "reference": "Aromatic hydrocarbons"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q56",
+    "chapterId": "chem-u16",
+    "mode": "mcq",
+    "prompt": "In an SN1 reaction, the rate-determining step involves:",
+    "options": [
+      "Two reactants simultaneously",
+      "Formation of a carbocation",
+      "Only proton transfer",
+      "Only solvent evaporation"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "SN1 mechanism",
+      "page": null,
+      "line": null,
+      "reference": "SN1 mechanism"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q57",
+    "chapterId": "chem-u17",
+    "mode": "mcq",
+    "prompt": "The functional group characteristic of carboxylic acids is:",
+    "options": [
+      "−OH only",
+      "−CHO",
+      "−COOH",
+      "−NH2"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Carboxylic acids",
+      "page": null,
+      "line": null,
+      "reference": "Carboxylic acids"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q58",
+    "chapterId": "chem-u18",
+    "mode": "mcq",
+    "prompt": "Aniline is classified as a:",
+    "options": [
+      "Primary aromatic amine",
+      "Secondary alcohol",
+      "Tertiary amide",
+      "Carboxylic acid"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Classification of amines",
+      "page": null,
+      "line": null,
+      "reference": "Classification of amines"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q59",
+    "chapterId": "chem-u19",
+    "mode": "mcq",
+    "prompt": "Proteins are polymers primarily made from:",
+    "options": [
+      "Monosaccharides",
+      "Amino acids",
+      "Nucleotides only",
+      "Fatty acids only"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Proteins",
+      "page": null,
+      "line": null,
+      "reference": "Proteins"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "chem-q60",
+    "chapterId": "chem-u20",
+    "mode": "mcq",
+    "prompt": "Phenolphthalein is commonly used as an indicator in:",
+    "options": [
+      "Acid-base titrations",
+      "Nuclear reactions",
+      "Chromatography only",
+      "Gravimetric filtration only"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Chemistry XII",
+      "chapter": "Indicators",
+      "page": null,
+      "line": null,
+      "reference": "Indicators"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q61",
+    "chapterId": "bio-u1",
+    "mode": "mcq",
+    "prompt": "The basic unit of classification immediately above species is generally:",
+    "options": [
+      "Genus",
+      "Family",
+      "Order",
+      "Class"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Taxonomic categories",
+      "page": null,
+      "line": null,
+      "reference": "Taxonomic categories"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q62",
+    "chapterId": "bio-u2",
+    "mode": "mcq",
+    "prompt": "Xylem primarily conducts:",
+    "options": [
+      "Food only",
+      "Water and minerals",
+      "Hormones only",
+      "Oxygen only"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Vascular tissues",
+      "page": null,
+      "line": null,
+      "reference": "Vascular tissues"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q63",
+    "chapterId": "bio-u3",
+    "mode": "mcq",
+    "prompt": "The organelle containing most of the cell's genetic material in a eukaryotic cell is the:",
+    "options": [
+      "Lysosome",
+      "Nucleus",
+      "Golgi apparatus",
+      "Ribosome"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Nucleus",
+      "page": null,
+      "line": null,
+      "reference": "Nucleus"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q64",
+    "chapterId": "bio-u4",
+    "mode": "mcq",
+    "prompt": "The primary site of light reactions of photosynthesis is the:",
+    "options": [
+      "Stroma only",
+      "Thylakoid membranes",
+      "Cytosol",
+      "Nucleus"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Light reactions",
+      "page": null,
+      "line": null,
+      "reference": "Light reactions"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q65",
+    "chapterId": "bio-u5",
+    "mode": "mcq",
+    "prompt": "The hormone that lowers blood glucose concentration is:",
+    "options": [
+      "Glucagon",
+      "Insulin",
+      "Adrenaline",
+      "Thyroxine"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Endocrine regulation",
+      "page": null,
+      "line": null,
+      "reference": "Endocrine regulation"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q66",
+    "chapterId": "bio-u6",
+    "mode": "mcq",
+    "prompt": "The hormone mainly associated with ovulation is:",
+    "options": [
+      "FSH only",
+      "LH surge",
+      "ADH",
+      "Insulin"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Menstrual cycle",
+      "page": null,
+      "line": null,
+      "reference": "Menstrual cycle"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q67",
+    "chapterId": "bio-u7",
+    "mode": "mcq",
+    "prompt": "DNA replication is described as:",
+    "options": [
+      "Conservative",
+      "Semi-conservative",
+      "Dispersive only",
+      "Random"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "DNA replication",
+      "page": null,
+      "line": null,
+      "reference": "DNA replication"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q68",
+    "chapterId": "bio-u8",
+    "mode": "mcq",
+    "prompt": "The bacterium used in curd formation is commonly:",
+    "options": [
+      "Lactobacillus",
+      "Rhizobium",
+      "Plasmodium",
+      "Yeast only"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Microbes in food processing",
+      "page": null,
+      "line": null,
+      "reference": "Microbes in food processing"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q69",
+    "chapterId": "bio-u9",
+    "mode": "mcq",
+    "prompt": "PCR is used to:",
+    "options": [
+      "Amplify DNA",
+      "Digest proteins only",
+      "Separate chromosomes by gravity",
+      "Produce ATP"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Polymerase chain reaction",
+      "page": null,
+      "line": null,
+      "reference": "Polymerase chain reaction"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
+  },
+  {
+    "id": "bio-q70",
+    "chapterId": "bio-u10",
+    "mode": "mcq",
+    "prompt": "The first trophic level in a typical grazing food chain consists of:",
+    "options": [
+      "Primary consumers",
+      "Producers",
+      "Secondary consumers",
+      "Decomposers"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "citation": {
+      "book": "NCERT Biology XII",
+      "chapter": "Trophic levels",
+      "page": null,
+      "line": null,
+      "reference": "Trophic levels"
+    },
+    "explanation": "Review the cited NCERT concept and apply the definition or principle directly."
   }
 ]
