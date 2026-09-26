@@ -2098,5 +2098,83 @@
       "NEET-style application"
     ],
     "questionCount": 1
+  },
+  {
+    "id": "phy-c29",
+    "subject": "Physics",
+    "class": null,
+    "unitId": "phy-u20",
+    "title": "Experimental Skills",
+    "lessonType": "chapter",
+    "chapterType": "syllabus-section",
+    "ncertAligned": true,
+    "topics": [
+      "measurement instruments",
+      "experimental errors",
+      "graphs and data interpretation"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "Official NEET syllabus section",
+      "NEET-style application"
+    ],
+    "questionCount": 2
+  },
+  {
+    "id": "chem-c21",
+    "subject": "Chemistry",
+    "class": null,
+    "unitId": "chem-u13",
+    "title": "Purification and Characterisation of Organic Compounds",
+    "lessonType": "chapter",
+    "chapterType": "syllabus-section",
+    "ncertAligned": true,
+    "topics": [
+      "purification methods",
+      "qualitative analysis",
+      "characterisation"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "Official NEET syllabus section",
+      "NEET-style application"
+    ],
+    "questionCount": 2
+  },
+  {
+    "id": "chem-c22",
+    "subject": "Chemistry",
+    "class": null,
+    "unitId": "chem-u20",
+    "title": "Principles Related to Practical Chemistry",
+    "lessonType": "chapter",
+    "chapterType": "syllabus-section",
+    "ncertAligned": true,
+    "topics": [
+      "qualitative analysis",
+      "volumetric analysis",
+      "laboratory principles"
+    ],
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "estimatedMinutes": 45,
+    "examFocus": [
+      "Official NEET syllabus section",
+      "NEET-style application"
+    ],
+    "questionCount": 2
   }
 ]
