@@ -8,7 +8,12 @@
     "userInterfaceStyle": "light",
     "plugins": [
       "expo-router",
-      "@react-native-google-signin/google-signin"
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.buzneet"
+        }
+      ]
     ],
     "android": {
       "package": "com.buzneet.app"
