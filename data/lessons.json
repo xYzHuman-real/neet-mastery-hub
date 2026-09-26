@@ -1,0 +1,652 @@
+[
+  {
+    "id": "phy-u1",
+    "subject": "Physics",
+    "unit": 1,
+    "title": "Physics and Measurement",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u2",
+    "subject": "Physics",
+    "unit": 2,
+    "title": "Kinematics",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u3",
+    "subject": "Physics",
+    "unit": 3,
+    "title": "Laws of Motion",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u4",
+    "subject": "Physics",
+    "unit": 4,
+    "title": "Work, Energy and Power",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u5",
+    "subject": "Physics",
+    "unit": 5,
+    "title": "Rotational Motion",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u6",
+    "subject": "Physics",
+    "unit": 6,
+    "title": "Gravitation",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u7",
+    "subject": "Physics",
+    "unit": 7,
+    "title": "Properties of Solids and Liquids",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u8",
+    "subject": "Physics",
+    "unit": 8,
+    "title": "Thermodynamics",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u9",
+    "subject": "Physics",
+    "unit": 9,
+    "title": "Kinetic Theory of Gases",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u10",
+    "subject": "Physics",
+    "unit": 10,
+    "title": "Oscillations and Waves",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u11",
+    "subject": "Physics",
+    "unit": 11,
+    "title": "Electrostatics",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u12",
+    "subject": "Physics",
+    "unit": 12,
+    "title": "Current Electricity",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u13",
+    "subject": "Physics",
+    "unit": 13,
+    "title": "Magnetic Effects of Current and Magnetism",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u14",
+    "subject": "Physics",
+    "unit": 14,
+    "title": "Electromagnetic Induction and Alternating Currents",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u15",
+    "subject": "Physics",
+    "unit": 15,
+    "title": "Electromagnetic Waves",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u16",
+    "subject": "Physics",
+    "unit": 16,
+    "title": "Optics",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u17",
+    "subject": "Physics",
+    "unit": 17,
+    "title": "Dual Nature of Matter and Radiation",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u18",
+    "subject": "Physics",
+    "unit": 18,
+    "title": "Atoms and Nuclei",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u19",
+    "subject": "Physics",
+    "unit": 19,
+    "title": "Electronic Devices",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "phy-u20",
+    "subject": "Physics",
+    "unit": 20,
+    "title": "Experimental Skills",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u1",
+    "subject": "Chemistry",
+    "unit": 1,
+    "title": "Some Basic Concepts in Chemistry",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u2",
+    "subject": "Chemistry",
+    "unit": 2,
+    "title": "Atomic Structure",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u3",
+    "subject": "Chemistry",
+    "unit": 3,
+    "title": "Chemical Bonding and Molecular Structure",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u4",
+    "subject": "Chemistry",
+    "unit": 4,
+    "title": "Chemical Thermodynamics",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u5",
+    "subject": "Chemistry",
+    "unit": 5,
+    "title": "Solutions",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u6",
+    "subject": "Chemistry",
+    "unit": 6,
+    "title": "Equilibrium",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u7",
+    "subject": "Chemistry",
+    "unit": 7,
+    "title": "Redox Reactions and Electrochemistry",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u8",
+    "subject": "Chemistry",
+    "unit": 8,
+    "title": "Chemical Kinetics",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u9",
+    "subject": "Chemistry",
+    "unit": 9,
+    "title": "Classification of Elements and Periodicity in Properties",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u10",
+    "subject": "Chemistry",
+    "unit": 10,
+    "title": "p-Block Elements",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u11",
+    "subject": "Chemistry",
+    "unit": 11,
+    "title": "d- and f-Block Elements",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u12",
+    "subject": "Chemistry",
+    "unit": 12,
+    "title": "Coordination Compounds",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u13",
+    "subject": "Chemistry",
+    "unit": 13,
+    "title": "Purification and Characterisation of Organic Compounds",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u14",
+    "subject": "Chemistry",
+    "unit": 14,
+    "title": "Some Basic Principles of Organic Chemistry",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u15",
+    "subject": "Chemistry",
+    "unit": 15,
+    "title": "Hydrocarbons",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u16",
+    "subject": "Chemistry",
+    "unit": 16,
+    "title": "Organic Compounds Containing Halogens",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u17",
+    "subject": "Chemistry",
+    "unit": 17,
+    "title": "Organic Compounds Containing Oxygen",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u18",
+    "subject": "Chemistry",
+    "unit": 18,
+    "title": "Organic Compounds Containing Nitrogen",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u19",
+    "subject": "Chemistry",
+    "unit": 19,
+    "title": "Biomolecules",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "chem-u20",
+    "subject": "Chemistry",
+    "unit": 20,
+    "title": "Principles Related to Practical Chemistry",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "numerical",
+      "statement"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u1",
+    "subject": "Biology",
+    "unit": 1,
+    "title": "Diversity in Living World",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u2",
+    "subject": "Biology",
+    "unit": 2,
+    "title": "Structural Organisation in Animals and Plants",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u3",
+    "subject": "Biology",
+    "unit": 3,
+    "title": "Cell Structure and Function",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u4",
+    "subject": "Biology",
+    "unit": 4,
+    "title": "Plant Physiology",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u5",
+    "subject": "Biology",
+    "unit": 5,
+    "title": "Human Physiology",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u6",
+    "subject": "Biology",
+    "unit": 6,
+    "title": "Reproduction",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u7",
+    "subject": "Biology",
+    "unit": 7,
+    "title": "Genetics and Evolution",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u8",
+    "subject": "Biology",
+    "unit": 8,
+    "title": "Biology and Human Welfare",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u9",
+    "subject": "Biology",
+    "unit": 9,
+    "title": "Biotechnology and Its Applications",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  },
+  {
+    "id": "bio-u10",
+    "subject": "Biology",
+    "unit": 10,
+    "title": "Ecology and Environment",
+    "lessonType": "syllabus-unit",
+    "questionModes": [
+      "mcq",
+      "statement",
+      "match"
+    ],
+    "ncertAligned": true
+  }
+]
