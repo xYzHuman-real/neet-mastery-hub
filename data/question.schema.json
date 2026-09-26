@@ -10,7 +10,10 @@
     "options",
     "answer",
     "difficulty",
-    "citation"
+    "citation",
+    "topicId",
+    "sourceType",
+    "reviewStatus"
   ],
   "properties": {
     "id": {
@@ -85,6 +88,23 @@
           "type": "string"
         }
       }
+    },
+    "topicId": {
+      "type": "string"
+    },
+    "sourceType": {
+      "enum": [
+        "ncert_based",
+        "original_neet_style",
+        "pyq"
+      ]
+    },
+    "reviewStatus": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "verified"
+      ]
     }
   }
 }
