@@ -2,10 +2,10 @@ import{useEffect,useMemo,useState}from"react";
 import{Pressable,Text,View}from"react-native";
 import{Shell,Card}from"../native/ui";
 import{C}from"../native/theme";
-import{CHAPTERS,QUESTIONS}from"../native/content";
+
 
 export default function Tests(){
-  const[qs,setQs]=useState<typeof QUESTIONS>([]);
+  const[qs,setQs]=useState<any[]>([]); const[content,setContent]=useState<any>(null);
   const[i,setI]=useState(0);
   const[picks,setPicks]=useState<(number|null)[]>([]);
   const[left,setLeft]=useState(0);
@@ -13,11 +13,12 @@ export default function Tests(){
   const[done,setDone]=useState(false);
 
   const start=(sub?:string)=>{
-    const a=QUESTIONS.filter(q=>q.options.length&&(!sub||CHAPTERS.find(c=>c.id===q.chapterId)?.subject===sub)).slice(0,50);
+    const a=content.QUESTIONS.filter(q=>q.options.length&&(!sub||content.CHAPTERS.find(c=>c.id===q.chapterId)?.subject===sub)).slice(0,50);
     setQs(a);setPicks(a.map(()=>null));setI(0);setLeft(a.length*60);setStarted(Date.now());setDone(false);
   };
-  useEffect(()=>{if(!qs.length||done)return;const t=setInterval(()=>setLeft(x=>{if(x<=1){setDone(true);return 0}return x-1}),1000);return()=>clearInterval(t)},[qs.length,done]);
+  useEffect(()=>{import("../native/content").then(setContent).catch(()=>setContent({}));},[]); useEffect(()=>{if(!qs.length||done)return;const t=setInterval(()=>setLeft(x=>{if(x<=1){setDone(true);return 0}return x-1}),1000);return()=>clearInterval(t)},[qs.length,done]);
 
+  if(!content)return <Shell title="Loading tests" subtitle="BuzNeet"><Text style={{fontSize:14,color:C.mutedText}}>Preparing the test bank…</Text></Shell>;
   if(!qs.length)return <Shell title="Tests" subtitle="Timed · +4 / −1"><Text style={{fontSize:13,color:C.mutedText}}>50-question tests from the full bank. Correct +4, wrong −1, unattempted 0.</Text>{[[undefined,"Full Mixed Test"],["biology","Biology Test"],["chemistry","Chemistry Test"],["physics","Physics Test"]].map(([id,n])=><Pressable key={String(n)} onPress={()=>start(id as string|undefined)} style={{marginTop:9,padding:16,borderRadius:18,borderWidth:1,borderColor:C.border,backgroundColor:C.card}}><Text style={{fontWeight:"800",color:C.foreground}}>{n}</Text><Text style={{fontSize:11,color:C.mutedText,marginTop:3}}>50 questions · 50 minute limit</Text></Pressable>)}</Shell>;
 
   if(done){
