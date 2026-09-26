@@ -7,6 +7,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: buzneet-android-build
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
