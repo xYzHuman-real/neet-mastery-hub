@@ -49,5 +49,18 @@ export async function loadContent() {
   return cache;
 }
 export function chapterById(id?:string){return CHAPTERS.find(c=>c.id===id)}
-export function filterQuestions(questions:NativeQuestion[],chapterId?:string,mode?:ContentMode){let list=questions;if(chapterId)list=list.filter(q=>q.chapterId===chapterId);if(!mode||mode==="revision")return list;if(mode==="ncert")return list.filter(q=>q.sourceType==="ncert_based");return list.filter(q=>q.mode===mode)}
+export function filterQuestions(questions:NativeQuestion[],chapterId?:string,mode?:ContentMode){
+  let list=questions;
+  if(chapterId)list=list.filter(q=>q.chapterId===chapterId);
+  if(!mode||mode==="revision")return list;
+  if(mode==="ncert"){
+    // Current bank items are NCERT-aligned originals, not fabricated textbook quotations.
+    return list.filter(q=>q.sourceType==="ncert_based" || q.sourceType==="original_neet_style");
+  }
+  if(mode==="pyq"){
+    // Never fall back to original questions here: PYQs must be explicitly verified.
+    return list.filter(q=>q.mode==="pyq" && q.sourceType==="pyq" && q.reviewStatus==="verified");
+  }
+  return list.filter(q=>q.mode===mode);
+}
 export function chapterQuestionCount(questions:NativeQuestion[],chapterId:string,mode:ContentMode){return filterQuestions(questions,chapterId,mode).length}
