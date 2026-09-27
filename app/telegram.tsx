@@ -1,4 +1,4 @@
-import { Pressable, Text, View } from "react-native";
+import { Linking, Pressable, Text, View } from "react-native";
 import { router } from "expo-router";
 import { Phone } from "../native/ui";
 import { C } from "../native/theme";
@@ -10,6 +10,12 @@ export default function Telegram() {
   const finish = () => {
     patch({ telegramDone: true });
     router.replace("/home");
+  };
+
+  const openTelegram = async () => {
+    const url = process.env.EXPO_PUBLIC_TELEGRAM_URL;
+    if (url) await Linking.openURL(url);
+    finish();
   };
 
   return (
@@ -30,8 +36,8 @@ export default function Telegram() {
       </View>
 
       <View style={{ padding: 24, width: "100%" }}>
-        <Pressable onPress={finish} style={{ minHeight: 52, borderRadius: 16, alignItems: "center", justifyContent: "center", paddingHorizontal: 18, backgroundColor: C.primary }}>
-          <Text style={{ fontSize: 15, fontWeight: "800", color: C.primaryText }}>Continue</Text>
+        <Pressable onPress={openTelegram} style={{ minHeight: 52, borderRadius: 16, alignItems: "center", justifyContent: "center", paddingHorizontal: 18, backgroundColor: C.primary }}>
+          <Text style={{ fontSize: 15, fontWeight: "800", color: C.primaryText }}>Open Telegram</Text>
         </Pressable>
         <Pressable onPress={finish} style={{ padding: 12, alignItems: "center" }}>
           <Text style={{ color: C.mutedText, fontWeight: "700" }}>Maybe later</Text>
