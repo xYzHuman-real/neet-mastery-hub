@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { logoutFirebase, watchFirebaseUser } from "./firebaseAuth";
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";\nimport { fetchEntitlement } from "./premiumEntitlement";
 
 export type Rating = "again" | "hard" | "good" | "easy";
 
@@ -22,7 +22,7 @@ const Ctx=createContext<Ctx|null>(null); const KEY="buzneet-native-v2";
 export function StoreProvider({children}:{children:ReactNode}){
  const[s,setS]=useState(initial); const[hydrated,setH]=useState(false);
  useEffect(()=>{AsyncStorage.getItem(KEY).then(x=>{if(x)try{setS({...initial,...JSON.parse(x)})}catch{}}).finally(()=>setH(true))},[]);
- useEffect(()=>watchFirebaseUser(user=>{if(!user){setS(x=>({...x,user:null}));return} setS(x=>({...x,user:{name:user.displayName||"NEET Aspirant",email:user.email||""},onboarded:true}))}),[]);
+ useEffect(()=>watchFirebaseUser(user=>{if(!user){setS(x=>({...x,user:null,premium:{active:false,plan:null,expiresAt:null}}));return} setS(x=>({...x,user:{name:user.displayName||"NEET Aspirant",email:user.email||""},onboarded:true})); if(user.localId&&user.idToken) fetchEntitlement(user.localId,user.idToken).then(premium=>setS(x=>({...x,premium})));}),[]);
  useEffect(()=>{if(hydrated)AsyncStorage.setItem(KEY,JSON.stringify(s))},[s,hydrated]);
  const v=useMemo<Ctx>(()=>({...s,hydrated,
   patch:p=>setS(x=>({...x,...p})),
