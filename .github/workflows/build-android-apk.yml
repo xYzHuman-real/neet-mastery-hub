@@ -101,11 +101,15 @@ jobs:
           echo "BUZNEET_KEYSTORE_PASSWORD=$BUZNEET_KEYSTORE_PASSWORD" >> gradle.properties
           echo "BUZNEET_KEY_ALIAS=$BUZNEET_KEY_ALIAS" >> gradle.properties
 
-      - name: Print persistent Android signing fingerprints
+      - name: Print persistent Android signing fingerprint
         working-directory: android
         run: |
-          ./gradlew signingReport --no-daemon
-          echo "This build uses the persistent BuzNeet release keystore. The SHA-1 will remain stable across GitHub Actions runs."
+          test -f app/buzneet-release.keystore
+          keytool -list -v \
+            -keystore app/buzneet-release.keystore \
+            -storepass "$BUZNEET_KEYSTORE_PASSWORD" \
+            -alias "$BUZNEET_KEY_ALIAS" \
+            | grep -E "Alias name:|SHA1:|SHA256:"
 
       - name: Build release APK
         working-directory: android
