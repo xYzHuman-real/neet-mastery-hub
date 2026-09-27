@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -11,8 +11,12 @@ import {
   View,
 } from "react-native";
 import { router } from "expo-router";
-import * as WebBrowser from "expo-web-browser";
-import * as Google from "expo-auth-session/providers/google";
+import {
+  GoogleSignin,
+  isErrorWithCode,
+  isSuccessResponse,
+  statusCodes,
+} from "@react-native-google-signin/google-signin";
 import { Phone } from "../native/ui";
 import { C } from "../native/theme";
 import { useStore } from "../native/store";
@@ -23,12 +27,14 @@ import {
   signInWithGoogleCredential,
 } from "../native/firebaseAuth";
 
-WebBrowser.maybeCompleteAuthSession();
-
-const ANDROID_CLIENT_ID =
-  "662275162506-8du5una6uau1pgk7jglktovbnd60h89b.apps.googleusercontent.com";
 const WEB_CLIENT_ID =
   "662275162506-85ojnhl3eafr4j53jog8c0ukmte3crj1.apps.googleusercontent.com";
+
+if (Platform.OS !== "web") {
+  GoogleSignin.configure({
+    webClientId: WEB_CLIENT_ID,
+  });
+}
 
 type Mode = "signIn" | "signUp";
 
@@ -53,6 +59,12 @@ function authMessage(error: unknown) {
       return "Too many attempts. Please try again later.";
     case "auth/network-request-failed":
       return "Network error. Check your connection and try again.";
+    case "DEVELOPER_ERROR":
+      return "Google Sign-In is not fully configured for this BuzNeet APK yet. Check the Firebase Android app and SHA-1.";
+    case "IN_PROGRESS":
+      return "Google Sign-In is already opening.";
+    case "PLAY_SERVICES_NOT_AVAILABLE":
+      return "Google Play Services is unavailable or needs an update.";
     default:
       return error instanceof Error && error.message
         ? error.message
@@ -70,59 +82,61 @@ export default function Login() {
   const [notice, setNotice] = useState("");
   const { patch } = useStore();
 
-  const [request, response, promptAsync] = Google.useAuthRequest({
-    androidClientId: ANDROID_CLIENT_ID,
-    webClientId: WEB_CLIENT_ID,
-    scopes: ["openid", "profile", "email"],
-    selectAccount: true,
-  });
-
-  useEffect(() => {
-    if (response?.type !== "success") return;
-
-    const idToken =
-      response.authentication?.idToken || response.params?.id_token;
-    const accessToken = response.authentication?.accessToken;
-
-    if (!idToken) {
-      setBusy(false);
-      setError("Google sign-in completed without an ID token. Please try again.");
-      return;
-    }
-
-    let cancelled = false;
-
-    (async () => {
-      try {
-        setError("");
-        const account = await signInWithGoogleCredential(idToken, accessToken);
-
-        if (cancelled) return;
-
-        patch({
-          user: {
-            name: account.displayName || "NEET Aspirant",
-            email: account.email || "",
-          },
-          onboarded: true,
-          telegramDone: false,
-        });
-
-        router.replace("/telegram");
-      } catch (e) {
-        if (!cancelled) setError(authMessage(e));
-      } finally {
-        if (!cancelled) setBusy(false);
-      }
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [response, patch]);
-
   const finish = () => {
     router.replace("/telegram");
+  };
+
+  const submitGoogle = async () => {
+    if (busy || Platform.OS === "web") return;
+
+    setError("");
+    setNotice("");
+    setBusy(true);
+
+    try {
+      await GoogleSignin.hasPlayServices();
+      const response = await GoogleSignin.signIn();
+
+      if (!isSuccessResponse(response)) {
+        setBusy(false);
+        return;
+      }
+
+      const idToken = response.data.idToken;
+      if (!idToken) {
+        throw new Error("Google did not return an ID token.");
+      }
+
+      const account = await signInWithGoogleCredential(idToken);
+
+      patch({
+        user: {
+          name:
+            account.displayName ||
+            response.data.user.name ||
+            "NEET Aspirant",
+          email: account.email || response.data.user.email || "",
+        },
+        onboarded: true,
+        telegramDone: false,
+      });
+
+      finish();
+    } catch (e) {
+      if (isErrorWithCode(e)) {
+        if (e.code === statusCodes.IN_PROGRESS) {
+          setError("Google Sign-In is already opening.");
+        } else if (e.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+          setError("Google Play Services is unavailable or needs an update.");
+        } else {
+          setError(authMessage(e));
+        }
+      } else {
+        setError(authMessage(e));
+      }
+    } finally {
+      setBusy(false);
+    }
   };
 
   const submitEmail = async () => {
@@ -164,20 +178,6 @@ export default function Login() {
       setError(authMessage(e));
     } finally {
       setBusy(false);
-    }
-  };
-
-  const submitGoogle = async () => {
-    if (!request || busy) return;
-    setError("");
-    setNotice("");
-    setBusy(true);
-
-    try {
-      await promptAsync({ showInRecents: true });
-    } catch (e) {
-      setBusy(false);
-      setError(authMessage(e));
     }
   };
 
@@ -227,9 +227,9 @@ export default function Login() {
           </Text>
 
           <Pressable
-            disabled={!request || busy}
+            disabled={busy || Platform.OS === "web"}
             onPress={submitGoogle}
-            style={[styles.google, (!request || busy) && { opacity: 0.6 }]}
+            style={[styles.google, busy && { opacity: 0.6 }]}
           >
             {busy ? (
               <ActivityIndicator size="small" />
@@ -237,7 +237,7 @@ export default function Login() {
               <Text style={styles.googleG}>G</Text>
             )}
             <Text style={styles.googleText}>
-              {busy ? "Opening Google…" : "Continue with Google"}
+              {busy ? "Signing in…" : "Continue with Google"}
             </Text>
           </Pressable>
 
@@ -347,7 +347,7 @@ export default function Login() {
           {!!notice && <Text style={styles.notice}>{notice}</Text>}
 
           <Text style={styles.footer}>
-            Your account is secured by Firebase Authentication.
+            Accounts are securely managed by Firebase Authentication.
           </Text>
         </ScrollView>
       </KeyboardAvoidingView>
