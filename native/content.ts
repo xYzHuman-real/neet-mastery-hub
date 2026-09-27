@@ -38,6 +38,8 @@ export async function loadContent() {
                 ? "ar"
                 : "mcq",
           prompt: q.question,
+          assertion: q.assertion,
+          reason: q.reason,
           options: q.options,
           answer: q.answer,
           difficulty: q.difficulty,
