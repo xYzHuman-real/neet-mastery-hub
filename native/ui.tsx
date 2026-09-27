@@ -20,7 +20,7 @@ export function Shell({ title, subtitle, children, right }: { title: string; sub
 
 function Nav() {
   const p = usePathname();
-  const a = [["/home","⌂","Home"],["/chapters","▦","Chapters"],["/mistakes","▤","Notebook"],["/tests","◷","Tests"],["/profile","◯","Profile"]];
+  const a = [["/home","⌂","Home"],["/chapters","▦","Practice"],["/progress","◒","Progress"],["/tests","◷","Tests"],["/profile","◯","Profile"]];
   return <View style={s.navWrap}><View style={s.navGlass}>{a.map(([h,i,l]) =>
     <Pressable key={h} onPress={()=>router.push(h as any)} style={[s.navItem, p === h && s.navActive]}>
       <Text style={[s.navIcon, p === h && { color:C.primary }]}>{i}</Text>
