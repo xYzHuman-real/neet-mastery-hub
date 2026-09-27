@@ -322,7 +322,7 @@ function questionCountForSeries(chapter, series) {
 
 const existing = fs.existsSync("data/questions.json") ? JSON.parse(fs.readFileSync("data/questions.json", "utf8")).questions || [] : [];
 const questions = [];
-const SERIES = ["ncert","mcq","ar","revision"];
+const SERIES = ["ncert","mcq","ar","pyq","revision"];
 for (const ch of chapters) {
   for (const series of SERIES) {
     const preserved = existing.filter(q => q.chapterId === ch.id && q.series === series);
@@ -336,6 +336,11 @@ for (const ch of chapters) {
       if (series === "ncert") q.question = "NCERT-aligned: " + q.question;
       if (series === "revision") q.question = "Revision: " + q.question;
       if (series === "ar") q.question = "Assertion & Reason: " + q.question;
+      if (series === "pyq") {
+        q.question = "PYQ Practice: " + q.question;
+        q.sourceType = "original_neet_style";
+        q.pyq = { derived: true, verbatim: false, verified: false, note: "Original paraphrased practice based on NEET-tested concepts; not an official PYQ reproduction." };
+      }
       questions.push(q);
     }
   }
@@ -344,10 +349,10 @@ for (const ch of chapters) {
 fs.writeFileSync("data/questions.json", JSON.stringify({
   version: "3.0",
   description: "NEET UG practice question bank. Generated drafts require subject-matter review before release.",
-  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, series: ["ncert","mcq","ar","pyq","revision"], noUnverifiedPYQs: true, noInventedNCERTPageCitations: true, pyqSeriesRequiresVerifiedSource: true },
+  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, series: ["ncert","mcq","ar","pyq","revision"], pyqSeriesMode: "original-paraphrased-pyq-derived-practice", noVerbatimCopyrightedPYQs: true, noInventedNCERTPageCitations: true },
   questions
 }, null, 2) + "\n");
-console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for each non-PYQ series. Existing Units and Measurements MCQs are preserved. Verified PYQs are not fabricated.`);
+console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for all five series. The PYQ series contains original paraphrased PYQ-derived practice, not verbatim official questions.`);
 
 // Regeneration trigger: generated bank is validated before commit.
 // Series counts are validated independently.
