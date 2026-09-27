@@ -79,7 +79,19 @@ async function request<T>(
 
 async function syncUserProfile(account: FirebaseAccount) {
   if (!account.localId || !account.idToken || !account.email) return;
-  try { await fetch(\`${FIRESTORE_BASE}/users/${encodeURIComponent(account.localId)}\`, {method:"PATCH",headers:{"Content-Type":"application/json",Authorization:\`Bearer ${account.idToken}\`},body:JSON.stringify({fields:{email:{stringValue:account.email.toLowerCase()},name:{stringValue:account.displayName||"NEET Aspirant"},updatedAt:{timestampValue:new Date().toISOString()}}})}); } catch {}
+  try {
+    await fetch(`${FIRESTORE_BASE}/users/${encodeURIComponent(account.localId)}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${account.idToken}` },
+      body: JSON.stringify({
+        fields: {
+          email: { stringValue: account.email.toLowerCase() },
+          name: { stringValue: account.displayName || "NEET Aspirant" },
+          updatedAt: { timestampValue: new Date().toISOString() },
+        },
+      }),
+    });
+  } catch {}
 }
 
 async function saveSession(account: FirebaseAccount) {
