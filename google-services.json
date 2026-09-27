@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "662275162506-8du5una6uau1pgk7jglktovbnd60h89b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.buzneet.app",
+            "certificate_hash": "e20c4763f30578f2259cb8acaa798c703ccc4211"
+          }
+        },
+        {
           "client_id": "662275162506-85ojnhl3eafr4j53jog8c0ukmte3crj1.apps.googleusercontent.com",
           "client_type": 3
         }
