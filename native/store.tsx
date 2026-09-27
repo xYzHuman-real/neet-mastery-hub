@@ -14,6 +14,7 @@ export type Rating = "again" | "hard" | "good" | "easy";
 type S = {
   streak: number;
   todayCount: number;
+  lastStudyDate: string | null;
   goal: number;
   answered: Record<string, boolean>;
   cards: Record<string, { step: number; due: number }>;
@@ -26,30 +27,13 @@ type S = {
 const D = 86400000;
 
 const initial: S = {
-  streak: 12,
-  todayCount: 18,
+  streak: 0,
+  todayCount: 0,
+  lastStudyDate: null,
   goal: 50,
-  answered: {
-    q1: true,
-    q6: true,
-    q9: true,
-    q11: false,
-    q15: true,
-    q3: false,
-    q13: false,
-  },
-  cards: {
-    q1: { step: 0, due: Date.now() - 1000 },
-    q6: { step: 1, due: Date.now() - 1000 },
-    q9: { step: 2, due: Date.now() - 1000 },
-    q15: { step: 3, due: Date.now() + 10 * D },
-    q11: { step: 0, due: Date.now() - 1000 },
-  },
-  mistakes: {
-    q11: { qid: "q11", at: Date.now() - 7200000, flagged: false },
-    q3: { qid: "q3", at: Date.now() - D, flagged: false },
-    q13: { qid: "q13", at: Date.now() - 3 * D, flagged: true },
-  },
+  answered: {},
+  cards: {},
+  mistakes: {},
   user: null,
   onboarded: false,
   telegramDone: false,
@@ -67,7 +51,7 @@ type Ctx = S & {
 };
 
 const Ctx = createContext<Ctx | null>(null);
-const KEY = "buzneet-native-v1";
+const KEY = "buzneet-native-v2";
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [s, setS] = useState(initial);
@@ -121,21 +105,39 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setS((x) => ({ ...x, user: null, telegramDone: false }));
       },
       record: (id, ok) =>
-        setS((x) => ({
-          ...x,
-          todayCount: x.todayCount + 1,
-          answered: { ...x.answered, [id]: ok },
-          mistakes: ok
-            ? x.mistakes
-            : {
-                ...x.mistakes,
-                [id]: {
-                  qid: id,
-                  at: Date.now(),
-                  flagged: x.mistakes[id]?.flagged ?? false,
+        setS((x) => {
+          const now = new Date();
+          const today = now.toISOString().slice(0, 10);
+          const yesterday = new Date(now.getTime() - D)
+            .toISOString()
+            .slice(0, 10);
+
+          const isNewDay = x.lastStudyDate !== today;
+          const nextStreak =
+            x.lastStudyDate === today
+              ? x.streak
+              : x.lastStudyDate === yesterday
+                ? x.streak + 1
+                : 1;
+
+          return {
+            ...x,
+            streak: nextStreak,
+            lastStudyDate: today,
+            todayCount: isNewDay ? 1 : x.todayCount + 1,
+            answered: { ...x.answered, [id]: ok },
+            mistakes: ok
+              ? x.mistakes
+              : {
+                  ...x.mistakes,
+                  [id]: {
+                    qid: id,
+                    at: Date.now(),
+                    flagged: x.mistakes[id]?.flagged ?? false,
+                  },
                 },
-              },
-        })),
+          };
+        }),
       rate: (id, r) =>
         setS((x) => {
           const cur = x.cards[id]?.step ?? -1;
