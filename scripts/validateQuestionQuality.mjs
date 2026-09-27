@@ -14,7 +14,12 @@ for (const q of bank) {
   if (q.citation?.page != null || q.citation?.line != null) errors.push(q.id + ": NCERT page/line must remain null until independently verified");
 }
 for (const c of chapters) {
-  if ((counts[c.id] || 0) < (c.minimumQuestionCount || 50)) errors.push(c.id + ": " + (counts[c.id] || 0) + " questions; minimum is " + (c.minimumQuestionCount || 50));
+  for (const series of seriesNames) {
+    const count = counts[c.id]?.[series] || 0;
+    if (series === "pyq") continue;
+    if (count < (c.minimumQuestionCount || 60)) errors.push(c.id + "/" + series + ": " + count + " questions; minimum is " + (c.minimumQuestionCount || 60));
+    if (count > (c.maximumQuestionCount || 200)) errors.push(c.id + "/" + series + ": " + count + " questions; maximum is " + (c.maximumQuestionCount || 200));
+  }
 }
 console.log(JSON.stringify({total: bank.length, chapters: counts, errors}, null, 2));
 if (errors.length) process.exit(1);
