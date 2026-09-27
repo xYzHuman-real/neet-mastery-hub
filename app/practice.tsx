@@ -28,7 +28,7 @@ export default function Practice(){
 
   if(contentError)return <Shell title="Practice unavailable" subtitle="BuzNeet"><Card><Text style={{fontSize:16,fontWeight:"800",color:C.foreground}}>The question bank could not be loaded.</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
   if(!content)return <Shell title="Loading practice" subtitle="BuzNeet"><Card><Text style={{fontSize:16,fontWeight:"800",color:C.foreground}}>Preparing your question bank…</Text></Card></Shell>;
-  if(!deck.length)return <Shell title="Series empty" subtitle="Content review"><Card><Text style={{fontSize:22,fontWeight:"900",color:C.foreground}}>No released questions here yet.</Text><Text style={{fontSize:13,lineHeight:20,color:C.mutedText,marginTop:8}}>{mode==="pyq"?"Verified PYQs are kept separate and are added only after source verification.":"This chapter series does not have released questions yet."}</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
+  if(!deck.length)return <Shell title="Series empty" subtitle="Content review"><Card><Text style={{fontSize:22,fontWeight:"900",color:C.foreground}}>No released questions here yet.</Text><Text style={{fontSize:13,lineHeight:20,color:C.mutedText,marginTop:8}}>{mode==="pyq"?"PYQ-derived practice is being prepared; verified official PYQs will be added separately when source-verified.":"This chapter series does not have released questions yet."}</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
 
   if(i>=deck.length){
     const correct=results.filter(r=>r.correct).length;
@@ -53,7 +53,7 @@ export default function Practice(){
     </Shell>;
   }
 
-  const modeLabel=p.review?"Revision Deck":p.mistakes?"Mistake Revision":mode==="ncert"?"NCERT Line-by-Line":mode==="pyq"?"PYQ Series":mode==="ar"?"Assertion & Reason":mode==="mcq"?"MCQ Series":"Full Chapter Revision";
+  const modeLabel=p.review?"Revision Deck":p.mistakes?"Mistake Revision":mode==="ncert"?"NCERT Line-by-Line":mode==="pyq"?"PYQ Practice":mode==="ar"?"Assertion & Reason":mode==="mcq"?"MCQ Series":"Full Chapter Revision";
   const correct=pick===q.answer;
 
   const submit=()=>{
@@ -75,7 +75,13 @@ export default function Practice(){
     <View style={{height:6,borderRadius:4,backgroundColor:C.muted,overflow:"hidden",marginBottom:12}}><View style={{height:6,width:(`${((i)/deck.length)*100}%` as any),backgroundColor:C.primary}}/></View>
 
     <Card>
-      <Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>
+      {mode==="ar" ? <View>
+        <Text style={{fontSize:12,fontWeight:"900",color:C.primary,letterSpacing:.4}}>Assertion (A)</Text>
+        <Text style={{fontSize:17,fontWeight:"800",lineHeight:25,color:C.foreground,marginTop:6}}>{q.assertion||q.prompt}</Text>
+        <Text style={{fontSize:12,fontWeight:"900",color:C.primary,letterSpacing:.4,marginTop:16}}>Reason (R)</Text>
+        <Text style={{fontSize:17,fontWeight:"800",lineHeight:25,color:C.foreground,marginTop:6}}>{q.reason||"Reason statement unavailable."}</Text>
+      </View> : <Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>}
+      {mode==="ar"&&<Text style={{fontSize:11,lineHeight:17,color:C.mutedText,marginTop:14}}>Choose the option that correctly evaluates A and R and whether R explains A.</Text>}
       {q.reviewStatus==="draft"&&<Text style={{fontSize:10,color:C.mutedText,marginTop:10}}>Draft bank item · subject review is still required before treating this as final released content.</Text>}
     </Card>
 
