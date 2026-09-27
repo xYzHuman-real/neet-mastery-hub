@@ -5,7 +5,7 @@ import{C}from"../native/theme";import{loadContent,CHAPTERS}from"../native/conten
 
 
 export default function Tests(){
-  const[qs,setQs]=useState<any[]>([]); const[content,setContent]=useState<any>(null);
+  const[qs,setQs]=useState<any[]>([]); const[content,setContent]=useState<any[]|null>(null);
   const[i,setI]=useState(0);
   const[picks,setPicks]=useState<(number|null)[]>([]);
   const[left,setLeft]=useState(0);
@@ -13,7 +13,7 @@ export default function Tests(){
   const[done,setDone]=useState(false); const[contentError,setContentError]=useState(false);
 
   const start=(sub?:string)=>{
-    const a=content!.filter(q=>q.options.length&&(!sub||CHAPTERS.find(c=>c.id===q.chapterId)?.subject===sub)).slice(0,50);
+    const a=(content??[]).filter(q=>q.options.length&&(!sub||CHAPTERS.find(c=>c.id===q.chapterId)?.subject===sub)).slice(0,50);
     setQs(a);setPicks(a.map(()=>null));setI(0);setLeft(a.length*60);setStarted(Date.now());setDone(false);
   };
   useEffect(()=>{loadContent().then(setContent).catch(()=>setContentError(true));},[]); useEffect(()=>{if(!qs.length||done)return;const t=setInterval(()=>setLeft(x=>{if(x<=1){setDone(true);return 0}return x-1}),1000);return()=>clearInterval(t)},[qs.length,done]);
