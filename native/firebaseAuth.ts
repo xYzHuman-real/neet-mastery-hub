@@ -1,4 +1,5 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";\nconst FIRESTORE_BASE="https://firestore.googleapis.com/v1/projects/buzneet/databases/(default)/documents";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+const FIRESTORE_BASE="https://firestore.googleapis.com/v1/projects/buzneet/databases/(default)/documents";
 
 const API_KEY = "AIzaSyDca8KD7nkcIRUyB0bYIrLDLgK8txX-4LQ";
 const AUTH_BASE = "https://identitytoolkit.googleapis.com/v1";
@@ -76,7 +77,12 @@ async function request<T>(
   return data;
 }
 
-async function syncUserProfile(account: FirebaseAccount) {\n  if (!account.localId || !account.idToken || !account.email) return;\n  try { await fetch(\`${FIRESTORE_BASE}/users/${encodeURIComponent(account.localId)}\`, {method:"PATCH",headers:{"Content-Type":"application/json",Authorization:\`Bearer ${account.idToken}\`},body:JSON.stringify({fields:{email:{stringValue:account.email.toLowerCase()},name:{stringValue:account.displayName||"NEET Aspirant"},updatedAt:{timestampValue:new Date().toISOString()}}})}); } catch {}\n}\n\nasync function saveSession(account: FirebaseAccount) {
+async function syncUserProfile(account: FirebaseAccount) {
+  if (!account.localId || !account.idToken || !account.email) return;
+  try { await fetch(\`${FIRESTORE_BASE}/users/${encodeURIComponent(account.localId)}\`, {method:"PATCH",headers:{"Content-Type":"application/json",Authorization:\`Bearer ${account.idToken}\`},body:JSON.stringify({fields:{email:{stringValue:account.email.toLowerCase()},name:{stringValue:account.displayName||"NEET Aspirant"},updatedAt:{timestampValue:new Date().toISOString()}}})}); } catch {}
+}
+
+async function saveSession(account: FirebaseAccount) {
   await AsyncStorage.setItem(
     SESSION_KEY,
     JSON.stringify({
@@ -107,6 +113,7 @@ export async function signInWithGoogleCredential(
   });
 
   await saveSession(account);
+  await syncUserProfile(account);
   return account;
 }
 
@@ -170,7 +177,9 @@ export function watchFirebaseUser(
         callback({
           displayName: session.displayName || undefined,
           email: session.email || undefined,
-          photoURL: session.photoUrl || undefined,\n          localId: session.localId || undefined,\n          idToken: session.idToken || undefined,
+          photoURL: session.photoUrl || undefined,
+          localId: session.localId || undefined,
+          idToken: session.idToken || undefined,
         });
       } catch {
         callback(null);
