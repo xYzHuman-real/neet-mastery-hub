@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: Generate variable 50–150-question draft bank
+      - name: Generate variable 60–200-question draft bank
         run: node scripts/generateQualityQuestionBank.mjs
 
       - name: Validate question bank
