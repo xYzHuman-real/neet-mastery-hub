@@ -7,7 +7,8 @@
     "scheme": "buzneet",
     "userInterfaceStyle": "light",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-notifications"
     ],
     "android": {
       "package": "com.buzneet.app"
