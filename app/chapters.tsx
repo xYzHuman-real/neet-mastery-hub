@@ -10,7 +10,7 @@ const CHAPTERS=(chapterData as any).chapters.map((c:any)=>({
   name:c.ncertChapter, topics:c.topics??[], questionTarget:c.questionTarget??50
 }));
 const SUBJECTS=[{id:"physics",name:"Physics"},{id:"chemistry",name:"Chemistry"},{id:"biology",name:"Biology"}];
-const MODES=[["ncert","NCERT Line-by-Line","NCERT-aligned recall"],["mcq","MCQ Series","NEET-style practice"],["ar","Assertion & Reason","Statement logic"],["pyq","PYQ Series","Verified previous-year questions"],["revision","Revision Series","Mixed active recall"]];
+const MODES=[["ncert","NCERT Line-by-Line","NCERT-aligned recall"],["mcq","MCQ Series","NEET-style practice"],["ar","Assertion & Reason","Statement logic"],["pyq","PYQ Practice","Original PYQ-derived practice"],["revision","Revision Series","Mixed active recall"]];
 
 export default function Chapters(){
  const[sub,setSub]=useState("biology"); const[open,setOpen]=useState<string|null>(null);
