@@ -342,3 +342,4 @@ fs.writeFileSync("data/questions.json", JSON.stringify({
 console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for each non-PYQ series. Verified PYQs are not fabricated.`);
 
 // Regeneration trigger: generated bank is validated before commit.
+// Series counts are validated independently.
