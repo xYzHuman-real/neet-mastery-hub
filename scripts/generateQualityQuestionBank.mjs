@@ -292,6 +292,7 @@ function buildQuestion(ch, n, series = "mcq") {
   return {
     id: `${ch.id}-q${String(n + 1).padStart(3, "0")}`,
     chapterId: ch.id,
+    series,
     topicId: topic,
     type: n % 11 === 0 ? "match" : n % 7 === 0 ? "statement" : "mcq",
     difficulty: n % 5 < 2 ? "easy" : n % 5 < 4 ? "medium" : "hard",
