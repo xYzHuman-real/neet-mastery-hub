@@ -5,7 +5,7 @@ const seriesNames = ["ncert","mcq","ar","pyq","revision"];
 const counts = Object.fromEntries(chapters.map(c => [c.id, Object.fromEntries(seriesNames.map(s => [s, 0]))]));
 const errors = [];
 for (const q of bank) {
-  if (counts[q.chapterId] !== undefined && counts[q.series] !== undefined) counts[q.chapterId][q.series]++;
+  if (counts[q.chapterId] !== undefined && counts[q.chapterId][q.series] !== undefined) counts[q.chapterId][q.series]++;
   if (!q.topicId) errors.push(q.id + ": missing topicId");
   if (!q.sourceType) errors.push(q.id + ": missing sourceType");
   if (!q.reviewStatus) errors.push(q.id + ": missing reviewStatus");
