@@ -13,6 +13,7 @@ import {
 import { router } from "expo-router";
 import { Phone } from "../native/ui";
 import { C } from "../native/theme";
+import { useStore } from "../native/store";
 import {
   createEmailAccount,
   resetPassword,
@@ -57,6 +58,7 @@ export default function Login() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  const { patch } = useStore();
 
   const finish = () => {
     router.replace("/telegram");
@@ -83,11 +85,18 @@ export default function Login() {
 
     setBusy(true);
     try {
-      if (mode === "signUp") {
-        await createEmailAccount(name, email, password);
-      } else {
-        await signInWithEmail(email, password);
-      }
+      const account = mode === "signUp"
+        ? await createEmailAccount(name, email, password)
+        : await signInWithEmail(email, password);
+
+      patch({
+        user: {
+          name: account.displayName || name.trim() || "NEET Aspirant",
+          email: account.email || email.trim(),
+        },
+        onboarded: true,
+        telegramDone: false,
+      });
       finish();
     } catch (e) {
       setError(authMessage(e));
@@ -102,7 +111,16 @@ export default function Login() {
     setBusy(true);
 
     try {
-      await signInWithGoogle();
+      const account = await signInWithGoogle();
+
+      patch({
+        user: {
+          name: account.displayName || "NEET Aspirant",
+          email: account.email || "",
+        },
+        onboarded: true,
+        telegramDone: false,
+      });
       finish();
     } catch (e) {
       setError(authMessage(e));
