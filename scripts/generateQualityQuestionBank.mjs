@@ -2,7 +2,7 @@
  * NEET question-bank quality generator.
  *
  * Purpose:
- * - Enforce a variable 60–200 questions per chapter.
+ * - Enforce a variable 60–200 questions per individual series within each chapter.
  * - Avoid generic "which topic belongs..." placeholders.
  * - Produce varied MCQ/statement/match-style drafts with difficulty rotation.
  * - Keep all generated questions explicitly marked as draft until human review.
