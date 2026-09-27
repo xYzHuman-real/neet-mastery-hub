@@ -153,7 +153,7 @@ export async function resetPassword(email: string) {
 }
 
 export function watchFirebaseUser(
-  callback: (user: { displayName?: string; email?: string; photoURL?: string } | null) => void,
+  callback: (user: { displayName?: string; email?: string; photoURL?: string; localId?: string; idToken?: string } | null) => void,
 ) {
   let active = true;
 
@@ -170,7 +170,7 @@ export function watchFirebaseUser(
         callback({
           displayName: session.displayName || undefined,
           email: session.email || undefined,
-          photoURL: session.photoUrl || undefined,
+          photoURL: session.photoUrl || undefined,\n          localId: session.localId || undefined,\n          idToken: session.idToken || undefined,
         });
       } catch {
         callback(null);
