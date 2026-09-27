@@ -2,7 +2,9 @@ import chapterData from "../data/chapters.json";
 import questionData from "../data/questions.json";
 
 export type ContentMode="ncert"|"mcq"|"ar"|"pyq"|"revision";
-export type NativeQuestion={id:string;chapterId:string;mode:"mcq"|"ar"|"pyq";prompt:string;options:string[];answer:number;difficulty:"easy"|"medium"|"hard";explanation?:string;reviewStatus:"draft"|"reviewed"|"verified";sourceType:"ncert_based"|"original_neet_style"|"pyq";topicId?:string;citation?:{book?:string;chapter?:string;page?:number|null;line?:number|null;reference?:string}};
+export const SERIES_MIN=60;
+export const SERIES_MAX=200;
+export type NativeQuestion={id:string;chapterId:string;series:ContentMode;mode:"mcq"|"ar"|"pyq";prompt:string;options:string[];answer:number;difficulty:"easy"|"medium"|"hard";explanation?:string;reviewStatus:"draft"|"reviewed"|"verified";sourceType:"ncert_based"|"original_neet_style"|"pyq";topicId?:string;citation?:{book?:string;chapter?:string;page?:number|null;line?:number|null;reference?:string}};
 export type NativeChapter={id:string;subject:"physics"|"chemistry"|"biology";classLevel:11|12;name:string;unitId:string;topics:string[]};
 
 const rawChapters=(chapterData as any).chapters as any[];
@@ -28,6 +30,7 @@ export async function loadContent() {
         ({
           id: q.id,
           chapterId: q.chapterId,
+          series: q.series ?? (q.sourceType === "pyq" ? "pyq" : q.type === "statement" ? "ar" : "mcq"),
           mode:
             q.sourceType === "pyq" && q.pyq?.verified
               ? "pyq"
@@ -52,15 +55,10 @@ export function chapterById(id?:string){return CHAPTERS.find(c=>c.id===id)}
 export function filterQuestions(questions:NativeQuestion[],chapterId?:string,mode?:ContentMode){
   let list=questions;
   if(chapterId)list=list.filter(q=>q.chapterId===chapterId);
-  if(!mode||mode==="revision")return list;
-  if(mode==="ncert"){
-    // Current bank items are NCERT-aligned originals, not fabricated textbook quotations.
-    return list.filter(q=>q.sourceType==="ncert_based" || q.sourceType==="original_neet_style");
-  }
-  if(mode==="pyq"){
-    // Never fall back to original questions here: PYQs must be explicitly verified.
-    return list.filter(q=>q.mode==="pyq" && q.sourceType==="pyq" && q.reviewStatus==="verified");
-  }
-  return list.filter(q=>q.mode===mode);
+  if(!mode)return list;
+  if(mode==="revision")return list.filter(q=>q.series==="revision");
+  if(mode==="ncert")return list.filter(q=>q.series==="ncert");
+  if(mode==="pyq")return list.filter(q=>q.series==="pyq" && q.sourceType==="pyq" && q.reviewStatus==="verified");
+  return list.filter(q=>q.series===mode);
 }
 export function chapterQuestionCount(questions:NativeQuestion[],chapterId:string,mode:ContentMode){return filterQuestions(questions,chapterId,mode).length}
