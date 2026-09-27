@@ -192,14 +192,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       saveTest: (result) => setS((x) => ({ ...x, testHistory: [result, ...x.testHistory].slice(0, 100) })),
       consumeAi: (limit) => {
         const today = new Date().toISOString().slice(0, 10);
-        let allowed = false;
-        setS((x) => {
-          const base = x.aiUsage.day === today ? x.aiUsage : { day: today, count: 0 };
-          if (base.count >= limit) return { ...x, aiUsage: base };
-          allowed = true;
-          return { ...x, aiUsage: { day: today, count: base.count + 1 } };
-        });
-        return allowed;
+        const base = s.aiUsage.day === today ? s.aiUsage : { day: today, count: 0 };
+        if (base.count >= limit) return false;
+        setS((x) => ({ ...x, aiUsage: { day: today, count: base.count + 1 } }));
+        return true;
       },
       due: Object.entries(s.cards)
         .filter(([, c]) => c.due <= Date.now())
