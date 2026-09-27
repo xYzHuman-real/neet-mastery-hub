@@ -5,7 +5,7 @@ import { C } from "../native/theme";
 import { useStore } from "../native/store";
 
 export default function Home() {
-  const { user, streak, todayCount, goal, due, mistakes } = useStore();
+  const { user, streak, todayCount, goal, due, mistakes, testHistory } = useStore();
   const answered = Math.min(todayCount, goal);
   const pct = goal ? Math.min(1, answered / goal) : 0;
 
@@ -49,10 +49,10 @@ export default function Home() {
           <Text style={s.quickSub}>Timed NEET tests</Text>
         </Pressable>
 
-        <Pressable onPress={() => router.push("/mistakes")} style={s.quick}>
+        <Pressable onPress={() => router.push("/progress")} style={s.quick}>
           <Text style={s.icon}>▤</Text>
-          <Text style={s.quickTitle}>Notebook</Text>
-          <Text style={s.quickSub}>{Object.keys(mistakes).length} saved</Text>
+          <Text style={s.quickTitle}>Progress</Text>
+          <Text style={s.quickSub}>{testHistory.length} tests · analytics</Text>
         </Pressable>
 
         <Pressable onPress={() => router.push({ pathname: "/practice", params: { review: "1" } })} style={s.quick}>
