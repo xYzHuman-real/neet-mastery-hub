@@ -83,8 +83,7 @@
     "expo-linking": "~57.0.11",
     "@react-native-firebase/app": "26.4.0",
     "@react-native-firebase/auth": "26.4.0",
-    "react-native-nitro-google-signin": "2.3.0",
-    "react-native-nitro-modules": "0.37.1"
+    "@react-native-google-signin/google-signin": "16.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
@@ -99,7 +98,6 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",
-    "nitro": "3.0.260603-beta",
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
