@@ -1,57 +1,124 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Platform } from "react-native";
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  getReactNativePersistence,
-  GoogleAuthProvider,
-  initializeAuth,
-  onAuthStateChanged,
-  sendPasswordResetEmail,
-  signInWithCredential,
-  signInWithEmailAndPassword,
-  signOut,
-  updateProfile,
-  type User,
-} from "firebase/auth";
-import { getApp, getApps, initializeApp as initializeFirebaseApp } from "firebase/app";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDca8KD7nkcIRUyB0bYIRLDLgK8txX-4LQ",
-  authDomain: "buzneet.firebaseapp.com",
-  projectId: "buzneet",
-  storageBucket: "buzneet.firebasestorage.app",
-  messagingSenderId: "662275162506",
-  appId: "1:662275162506:android:32df1c3b3fcb6103fb8873",
+const API_KEY = "AIzaSyDca8KD7nkcIRUyB0bYIrLDLgK8txX-4LQ";
+const AUTH_BASE = "https://identitytoolkit.googleapis.com/v1";
+const GOOGLE_REQUEST_URI = "https://buzneet.firebaseapp.com/__/auth/handler";
+const SESSION_KEY = "buzneet-firebase-session-v1";
+
+export type FirebaseAccount = {
+  localId?: string;
+  email?: string;
+  displayName?: string;
+  photoUrl?: string;
+  idToken?: string;
+  refreshToken?: string;
+  expiresIn?: string;
 };
 
-const firebaseApp = getApps().length
-  ? getApp()
-  : initializeFirebaseApp(firebaseConfig);
+type FirebaseErrorPayload = {
+  error?: {
+    message?: string;
+  };
+};
 
-const auth =
-  Platform.OS === "web"
-    ? getAuth(firebaseApp)
-    : initializeAuth(firebaseApp, {
-        persistence: getReactNativePersistence(AsyncStorage),
-      });
+class FirebaseAuthError extends Error {
+  code: string;
 
-export function watchFirebaseUser(callback: (user: User | null) => void) {
-  return onAuthStateChanged(auth, callback);
+  constructor(code: string, message: string) {
+    super(message);
+    this.name = "FirebaseAuthError";
+    this.code = code;
+  }
+}
+
+function mapFirebaseCode(message: string) {
+  switch (message) {
+    case "EMAIL_EXISTS":
+      return "auth/email-already-in-use";
+    case "EMAIL_NOT_FOUND":
+      return "auth/user-not-found";
+    case "INVALID_PASSWORD":
+    case "INVALID_LOGIN_CREDENTIALS":
+      return "auth/invalid-credential";
+    case "WEAK_PASSWORD":
+      return "auth/weak-password";
+    case "INVALID_EMAIL":
+      return "auth/invalid-email";
+    case "TOO_MANY_ATTEMPTS_TRY_LATER":
+    case "TOO_MANY_ATTEMPTS_TRY_LATER :":
+      return "auth/too-many-requests";
+    case "OPERATION_NOT_ALLOWED":
+      return "auth/operation-not-allowed";
+    case "USER_DISABLED":
+      return "auth/user-disabled";
+    default:
+      return "auth/unknown";
+  }
+}
+
+async function request<T>(
+  path: string,
+  body: Record<string, unknown>,
+): Promise<T> {
+  const response = await fetch(`${AUTH_BASE}/${path}?key=${API_KEY}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+
+  const data = (await response.json()) as T & FirebaseErrorPayload;
+
+  if (!response.ok || data.error) {
+    const message = data.error?.message || "AUTH_REQUEST_FAILED";
+    throw new FirebaseAuthError(mapFirebaseCode(message), message);
+  }
+
+  return data;
+}
+
+async function saveSession(account: FirebaseAccount) {
+  await AsyncStorage.setItem(
+    SESSION_KEY,
+    JSON.stringify({
+      idToken: account.idToken || "",
+      refreshToken: account.refreshToken || "",
+      expiresIn: account.expiresIn || "",
+      localId: account.localId || "",
+      email: account.email || "",
+      displayName: account.displayName || "",
+      photoUrl: account.photoUrl || "",
+    }),
+  );
 }
 
 export async function signInWithGoogleCredential(
   idToken: string,
   accessToken?: string,
 ) {
-  const credential = GoogleAuthProvider.credential(idToken, accessToken);
-  const result = await signInWithCredential(auth, credential);
-  return result.user;
+  const credential = accessToken
+    ? `access_token=${encodeURIComponent(accessToken)}&providerId=google.com`
+    : `id_token=${encodeURIComponent(idToken)}&providerId=google.com`;
+
+  const account = await request<FirebaseAccount>("accounts:signInWithIdp", {
+    postBody: credential,
+    requestUri: GOOGLE_REQUEST_URI,
+    returnIdpCredential: true,
+    returnSecureToken: true,
+  });
+
+  await saveSession(account);
+  return account;
 }
 
 export async function signInWithEmail(email: string, password: string) {
-  const result = await signInWithEmailAndPassword(auth, email.trim(), password);
-  return result.user;
+  const account = await request<FirebaseAccount>("accounts:signInWithPassword", {
+    email: email.trim(),
+    password,
+    returnSecureToken: true,
+  });
+
+  await saveSession(account);
+  return account;
 }
 
 export async function createEmailAccount(
@@ -59,23 +126,32 @@ export async function createEmailAccount(
   email: string,
   password: string,
 ) {
-  const result = await createUserWithEmailAndPassword(
-    auth,
-    email.trim(),
+  const account = await request<FirebaseAccount>("accounts:signUp", {
+    email: email.trim(),
     password,
-  );
+    returnSecureToken: true,
+  });
 
-  if (name.trim()) {
-    await updateProfile(result.user, { displayName: name.trim() });
+  if (name.trim() && account.idToken) {
+    const updated = await request<FirebaseAccount>("accounts:update", {
+      idToken: account.idToken,
+      displayName: name.trim(),
+      returnSecureToken: true,
+    });
+    Object.assign(account, updated);
   }
 
-  return result.user;
+  await saveSession(account);
+  return account;
 }
 
 export async function resetPassword(email: string) {
-  await sendPasswordResetEmail(auth, email.trim());
+  await request("accounts:sendOobCode", {
+    requestType: "PASSWORD_RESET",
+    email: email.trim(),
+  });
 }
 
 export async function logoutFirebase() {
-  await signOut(auth);
+  await AsyncStorage.removeItem(SESSION_KEY);
 }
