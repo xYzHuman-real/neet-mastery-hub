@@ -1,0 +1,15 @@
+name: AI Question Authoring
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  copilot-requests: write
+jobs:
+  author:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: npm install -g @github/copilot
+      - run: copilot -p "Inspect the repository question-bank architecture and prepare a plan for authoring one chapter of original NEET-style practice questions. Do not edit files yet." -s --no-ask-user
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
