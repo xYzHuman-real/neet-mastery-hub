@@ -2,6 +2,7 @@ name: Generate NEET Question Bank
 # BuzNeet content generation is deterministic and review-gated.
 # Final generation trigger after series completion.
 # Final fallback-series fix trigger.
+# Latest fallback metadata fix included.
 
 on:
   workflow_dispatch:
