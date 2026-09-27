@@ -3,6 +3,7 @@ import{Pressable,Text,View}from"react-native";
 import{Shell,Card}from"../native/ui";
 import{C}from"../native/theme";
 import{useStore}from"../native/store";
+import{logoutFirebase}from"../native/firebaseAuth";
 
 export default function Profile(){
   const{user,streak,answered,mistakes,goal,logout}=useStore();
@@ -15,6 +16,6 @@ export default function Profile(){
       <Pressable onPress={()=>router.push("/settings")} style={{padding:16,borderBottomWidth:1,borderBottomColor:C.border}}><Text style={{fontWeight:"700",color:C.foreground}}>⚙ Settings</Text></Pressable>
       <View style={{padding:16}}><Text style={{fontWeight:"700",color:C.foreground}}>◎ Daily goal <Text style={{color:C.mutedText,fontWeight:"400"}}>{goal} questions</Text></Text></View>
     </View>
-    <Pressable onPress={()=>{logout();router.replace("/login")}} style={{marginTop:12,borderWidth:1,borderColor:"#E7B5AC",borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.destructive}}>Log out</Text></Pressable>
+    <Pressable onPress={async()=>{await logoutFirebase();logout();router.replace("/login")}} style={{marginTop:12,borderWidth:1,borderColor:"#E7B5AC",borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.destructive}}>Log out</Text></Pressable>
   </Shell>
 }
