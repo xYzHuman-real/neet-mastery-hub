@@ -306,7 +306,7 @@ function buildQuestion(ch, n, series = "mcq") {
   };
 }
 
-function questionCountForChapter(chapter) {
+function questionCountForSeries(chapter, series) {
   // Chapter size follows conceptual breadth: more mapped topics get more practice,
   // with a deterministic small variation so the bank does not look mechanically uniform.
   const topics = Math.max(1, (chapter.topics || []).length);
@@ -323,7 +323,13 @@ const questions = [];
 const SERIES = ["ncert","mcq","ar","revision"];
 for (const ch of chapters) {
   for (const series of SERIES) {
-    for (let n = 0; n < questionCountForChapter(ch); n++) {
+    const preserved = existing.filter(q => q.chapterId === ch.id && q.series === series);
+    const target = questionCountForSeries(ch, series);
+    if (preserved.length >= 60 && ch.id === "phy-c1" && series === "mcq") {
+      questions.push(...preserved.slice(0, Math.min(200, preserved.length)));
+      continue;
+    }
+    for (let n = 0; n < target; n++) {
       const q = buildQuestion(ch, n, series);
       if (series === "ncert") q.question = "NCERT-aligned: " + q.question;
       if (series === "revision") q.question = "Revision: " + q.question;
@@ -334,12 +340,12 @@ for (const ch of chapters) {
 }
 
 fs.writeFileSync("data/questions.json", JSON.stringify({
-  version: "2.0",
+  version: "3.0",
   description: "NEET UG practice question bank. Generated drafts require subject-matter review before release.",
-  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, series: ["ncert","mcq","ar","pyq","revision"], noUnverifiedPYQs: true, noInventedNCERTPageCitations: true },
+  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, series: ["ncert","mcq","ar","pyq","revision"], noUnverifiedPYQs: true, noInventedNCERTPageCitations: true, pyqSeriesRequiresVerifiedSource: true },
   questions
 }, null, 2) + "\n");
-console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for each non-PYQ series. Verified PYQs are not fabricated.`);
+console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for each non-PYQ series. Existing Units and Measurements MCQs are preserved. Verified PYQs are not fabricated.`);
 
 // Regeneration trigger: generated bank is validated before commit.
 // Series counts are validated independently.
