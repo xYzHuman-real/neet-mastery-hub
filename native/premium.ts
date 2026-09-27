@@ -14,8 +14,8 @@ export const PREMIUM_FEATURES=[
 {icon:"◷",title:"Personal Study Planner",detail:"A practical daily plan based on your progress and revision backlog."},
 {icon:"AI",title:"BuzNeet AI Premium",detail:"Higher AI allowance and deeper question/test explanations when AI is connected."},
 {icon:"▤",title:"Detailed Test Reports",detail:"Review score, accuracy, timing, weak chapters and next actions."}];
-export const WHATSAPP_NUMBER="916281733184";
+const WHATSAPP_NUMBER=process.env.EXPO_PUBLIC_BUZNEET_WHATSAPP_NUMBER||"";
 export function subscriptionUrl(plan:PremiumPlan){
  const text=encodeURIComponent("Hi BuzNeet! I want to subscribe to BuzNeet Premium.\nPlan: "+plan.label+"\nOffer price: ₹"+plan.price+"\nPlease tell me the payment steps.");
- return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+text;
+ return WHATSAPP_NUMBER ? "https://wa.me/"+WHATSAPP_NUMBER+"?text="+text : "";
 }
