@@ -344,6 +344,40 @@ function buildQuestion(ch, n, series = "mcq") {
       `A question from "${ch.ncertChapter}" focuses on ${topic}. Which statement is correct?`
     ];
   const stem = stems[n % stems.length];
+  if (series === "ar") {
+    const arPattern = n % 4;
+    const assertion = "The concept of " + topic + " is directly relevant to " + ch.ncertChapter + ".";
+    const reason = arPattern === 0
+      ? "The defining principle of " + topic + " provides the basis for understanding this concept."
+      : arPattern === 1
+        ? "The concept of " + topic + " is mentioned in the chapter, but this statement does not establish the assertion as its explanation."
+        : arPattern === 2
+          ? "The opposite of the stated principle is the accepted relationship for " + topic + "."
+          : "A different concept, rather than " + topic + ", is responsible for the stated relationship.";
+    return {
+      id: ch.id + "-ar-q" + String(n + 1).padStart(3, "0"),
+      chapterId: ch.id,
+      series: "ar",
+      topicId: topic,
+      type: "statement",
+      difficulty: n % 5 < 2 ? "easy" : n % 5 < 4 ? "medium" : "hard",
+      question: "Assertion and Reason question",
+      assertion,
+      reason,
+      options: [
+        "Both A and R are true, and R is the correct explanation of A.",
+        "Both A and R are true, but R is not the correct explanation of A.",
+        "A is true, but R is false.",
+        "A is false, but R is true."
+      ],
+      answer: arPattern,
+      explanation: "Draft assertion-reason item. Verify both statements and the explanation relationship before release.",
+      sourceType: "original_neet_style",
+      reviewStatus: "draft",
+      citation: { source: "NCERT-aligned concept", chapter: ch.ncertChapter, page: null, line: null },
+      quality: { generated: true, requiresHumanReview: true, placeholder: true }
+    };
+  }
   const options = [topic, ...other, "None of these"];
   return {
     id: `${ch.id}-q${String(n + 1).padStart(3, "0")}`,
