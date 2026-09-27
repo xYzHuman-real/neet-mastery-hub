@@ -3,11 +3,8 @@ import { Platform } from "react-native";
 import {
   createUserWithEmailAndPassword,
   getAuth,
-  getApps,
-  getApp,
   getReactNativePersistence,
   GoogleAuthProvider,
-  initializeApp,
   initializeAuth,
   onAuthStateChanged,
   sendPasswordResetEmail,
@@ -17,7 +14,7 @@ import {
   updateProfile,
   type User,
 } from "firebase/auth";
-import { initializeApp as initializeFirebaseApp } from "firebase/app";
+import { getApp, getApps, initializeApp as initializeFirebaseApp } from "firebase/app";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
 const firebaseConfig = {
