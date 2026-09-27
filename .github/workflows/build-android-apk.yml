@@ -3,9 +3,6 @@ run-name: Build BuzNeet installable APK
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 concurrency:
   group: buzneet-android-build
@@ -45,10 +42,11 @@ jobs:
       - name: Expo Doctor
         run: npx expo-doctor
 
+      - name: Verify Firebase Android config
+        run: test -f google-services.json
+
       - name: Export Android JavaScript bundle
         env:
-          EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID: ${{ secrets.BUZNEET_GOOGLE_ANDROID_CLIENT_ID }}
-          EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID: ${{ secrets.BUZNEET_GOOGLE_WEB_CLIENT_ID }}
           EXPO_PUBLIC_TELEGRAM_URL: ${{ secrets.BUZNEET_TELEGRAM_URL }}
         run: npx expo export --platform android
 
