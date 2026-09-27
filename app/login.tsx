@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -11,6 +11,8 @@ import {
   View,
 } from "react-native";
 import { router } from "expo-router";
+import * as WebBrowser from "expo-web-browser";
+import * as Google from "expo-auth-session/providers/google";
 import { Phone } from "../native/ui";
 import { C } from "../native/theme";
 import { useStore } from "../native/store";
@@ -18,15 +20,23 @@ import {
   createEmailAccount,
   resetPassword,
   signInWithEmail,
-  signInWithGoogle,
+  signInWithGoogleCredential,
 } from "../native/firebaseAuth";
+
+WebBrowser.maybeCompleteAuthSession();
+
+const ANDROID_CLIENT_ID =
+  "662275162506-8du5una6uau1pgk7jglktovbnd60h89b.apps.googleusercontent.com";
+const WEB_CLIENT_ID =
+  "662275162506-85ojnhl3eafr4j53jog8c0ukmte3crj1.apps.googleusercontent.com";
 
 type Mode = "signIn" | "signUp";
 
 function authMessage(error: unknown) {
-  const code = typeof error === "object" && error && "code" in error
-    ? String((error as { code?: unknown }).code)
-    : "";
+  const code =
+    typeof error === "object" && error && "code" in error
+      ? String((error as { code?: unknown }).code)
+      : "";
 
   switch (code) {
     case "auth/invalid-credential":
@@ -60,6 +70,57 @@ export default function Login() {
   const [notice, setNotice] = useState("");
   const { patch } = useStore();
 
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId: ANDROID_CLIENT_ID,
+    webClientId: WEB_CLIENT_ID,
+    scopes: ["openid", "profile", "email"],
+    selectAccount: true,
+  });
+
+  useEffect(() => {
+    if (response?.type !== "success") return;
+
+    const idToken =
+      response.authentication?.idToken || response.params?.id_token;
+    const accessToken = response.authentication?.accessToken;
+
+    if (!idToken) {
+      setBusy(false);
+      setError("Google sign-in completed without an ID token. Please try again.");
+      return;
+    }
+
+    let cancelled = false;
+
+    (async () => {
+      try {
+        setError("");
+        const account = await signInWithGoogleCredential(idToken, accessToken);
+
+        if (cancelled) return;
+
+        patch({
+          user: {
+            name: account.displayName || "NEET Aspirant",
+            email: account.email || "",
+          },
+          onboarded: true,
+          telegramDone: false,
+        });
+
+        router.replace("/telegram");
+      } catch (e) {
+        if (!cancelled) setError(authMessage(e));
+      } finally {
+        if (!cancelled) setBusy(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [response, patch]);
+
   const finish = () => {
     router.replace("/telegram");
   };
@@ -85,9 +146,10 @@ export default function Login() {
 
     setBusy(true);
     try {
-      const account = mode === "signUp"
-        ? await createEmailAccount(name, email, password)
-        : await signInWithEmail(email, password);
+      const account =
+        mode === "signUp"
+          ? await createEmailAccount(name, email, password)
+          : await signInWithEmail(email, password);
 
       patch({
         user: {
@@ -106,26 +168,16 @@ export default function Login() {
   };
 
   const submitGoogle = async () => {
+    if (!request || busy) return;
     setError("");
     setNotice("");
     setBusy(true);
 
     try {
-      const account = await signInWithGoogle();
-
-      patch({
-        user: {
-          name: account.displayName || "NEET Aspirant",
-          email: account.email || "",
-        },
-        onboarded: true,
-        telegramDone: false,
-      });
-      finish();
+      await promptAsync({ showInRecents: true });
     } catch (e) {
-      setError(authMessage(e));
-    } finally {
       setBusy(false);
+      setError(authMessage(e));
     }
   };
 
@@ -141,7 +193,9 @@ export default function Login() {
 
     try {
       await resetPassword(email);
-      setNotice("If that email has an account, Firebase has sent the password reset email.");
+      setNotice(
+        "If that email has an account, Firebase has sent the password reset email.",
+      );
     } catch (e) {
       setError(authMessage(e));
     } finally {
@@ -156,7 +210,11 @@ export default function Login() {
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         <ScrollView
-          contentContainerStyle={{ flexGrow: 1, justifyContent: "center", padding: 24 }}
+          contentContainerStyle={{
+            flexGrow: 1,
+            justifyContent: "center",
+            padding: 24,
+          }}
           keyboardShouldPersistTaps="handled"
         >
           <View style={styles.logo}>
@@ -169,16 +227,18 @@ export default function Login() {
           </Text>
 
           <Pressable
-            disabled={busy}
+            disabled={!request || busy}
             onPress={submitGoogle}
-            style={[styles.google, busy && { opacity: 0.6 }]}
+            style={[styles.google, (!request || busy) && { opacity: 0.6 }]}
           >
             {busy ? (
               <ActivityIndicator size="small" />
             ) : (
               <Text style={styles.googleG}>G</Text>
             )}
-            <Text style={styles.googleText}>Continue with Google</Text>
+            <Text style={styles.googleText}>
+              {busy ? "Opening Google…" : "Continue with Google"}
+            </Text>
           </Pressable>
 
           <View style={styles.dividerRow}>
@@ -189,18 +249,42 @@ export default function Login() {
 
           <View style={styles.switcher}>
             <Pressable
-              onPress={() => { setMode("signIn"); setError(""); setNotice(""); }}
-              style={[styles.switchItem, mode === "signIn" && styles.switchActive]}
+              onPress={() => {
+                setMode("signIn");
+                setError("");
+                setNotice("");
+              }}
+              style={[
+                styles.switchItem,
+                mode === "signIn" && styles.switchActive,
+              ]}
             >
-              <Text style={[styles.switchText, mode === "signIn" && styles.switchTextActive]}>
+              <Text
+                style={[
+                  styles.switchText,
+                  mode === "signIn" && styles.switchTextActive,
+                ]}
+              >
                 Sign in
               </Text>
             </Pressable>
             <Pressable
-              onPress={() => { setMode("signUp"); setError(""); setNotice(""); }}
-              style={[styles.switchItem, mode === "signUp" && styles.switchActive]}
+              onPress={() => {
+                setMode("signUp");
+                setError("");
+                setNotice("");
+              }}
+              style={[
+                styles.switchItem,
+                mode === "signUp" && styles.switchActive,
+              ]}
             >
-              <Text style={[styles.switchText, mode === "signUp" && styles.switchTextActive]}>
+              <Text
+                style={[
+                  styles.switchText,
+                  mode === "signUp" && styles.switchTextActive,
+                ]}
+              >
                 Create account
               </Text>
             </Pressable>
@@ -250,7 +334,11 @@ export default function Login() {
           </Pressable>
 
           {mode === "signIn" && (
-            <Pressable onPress={forgotPassword} disabled={busy} style={{ padding: 12, alignItems: "center" }}>
+            <Pressable
+              onPress={forgotPassword}
+              disabled={busy}
+              style={{ padding: 12, alignItems: "center" }}
+            >
               <Text style={styles.link}>Forgot password?</Text>
             </Pressable>
           )}
@@ -276,11 +364,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  logoText: {
-    fontSize: 28,
-    fontWeight: "900",
-    color: C.highlightText,
-  },
+  logoText: { fontSize: 28, fontWeight: "900", color: C.highlightText },
   title: {
     fontSize: 31,
     fontWeight: "900",
@@ -306,32 +390,16 @@ const styles = StyleSheet.create({
     borderColor: C.border,
     marginTop: 24,
   },
-  googleG: {
-    fontSize: 19,
-    fontWeight: "900",
-    color: "#4285F4",
-  },
-  googleText: {
-    fontSize: 14,
-    fontWeight: "800",
-    color: C.foreground,
-  },
+  googleG: { fontSize: 19, fontWeight: "900", color: "#4285F4" },
+  googleText: { fontSize: 14, fontWeight: "800", color: C.foreground },
   dividerRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
     marginVertical: 18,
   },
-  line: {
-    height: 1,
-    flex: 1,
-    backgroundColor: C.border,
-  },
-  or: {
-    fontSize: 12,
-    color: C.mutedText,
-    fontWeight: "700",
-  },
+  line: { height: 1, flex: 1, backgroundColor: C.border },
+  or: { fontSize: 12, color: C.mutedText, fontWeight: "700" },
   switcher: {
     flexDirection: "row",
     backgroundColor: C.muted,
@@ -345,17 +413,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 11,
   },
-  switchActive: {
-    backgroundColor: C.card,
-  },
-  switchText: {
-    fontSize: 12,
-    fontWeight: "700",
-    color: C.mutedText,
-  },
-  switchTextActive: {
-    color: C.foreground,
-  },
+  switchActive: { backgroundColor: C.card },
+  switchText: { fontSize: 12, fontWeight: "700", color: C.mutedText },
+  switchTextActive: { color: C.foreground },
   input: {
     minHeight: 52,
     borderRadius: 15,
@@ -377,16 +437,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  primaryText: {
-    color: C.primaryText,
-    fontSize: 14,
-    fontWeight: "900",
-  },
-  link: {
-    color: C.primary,
-    fontSize: 12,
-    fontWeight: "800",
-  },
+  primaryText: { color: C.primaryText, fontSize: 14, fontWeight: "900" },
+  link: { color: C.primary, fontSize: 12, fontWeight: "800" },
   error: {
     color: C.destructive,
     fontSize: 12,
