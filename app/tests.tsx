@@ -12,15 +12,17 @@ export default function Tests(){
   const[started,setStarted]=useState(0); const{saveTest,testHistory}=useStore();
   const[done,setDone]=useState(false); const[contentError,setContentError]=useState(false);
 
-  const start=(sub?:string)=>{
-    const a=(content??[]).filter(q=>q.options.length&&(!sub||CHAPTERS.find(c=>c.id===q.chapterId)?.subject===sub)).slice(0,50);
-    setQs(a);setPicks(a.map(()=>null));setI(0);setLeft(a.length*60);setStarted(Date.now());setDone(false);
+  const start=(sub?:string,count=50,minutes=50)=>{
+    const pool=(content??[]).filter(q=>q.options.length&&(!sub||CHAPTERS.find(c=>c.id===q.chapterId)?.subject===sub));
+    const a=[...pool].sort(()=>Math.random()-.5).slice(0,count);
+    if(a.length<count)return;
+    setQs(a);setPicks(a.map(()=>null));setI(0);setLeft(minutes*60);setStarted(Date.now());setDone(false);
   };
   useEffect(()=>{loadContent().then(setContent).catch(()=>setContentError(true));},[]); useEffect(()=>{if(!qs.length||done)return;const t=setInterval(()=>setLeft(x=>{if(x<=1){setDone(true);return 0}return x-1}),1000);return()=>clearInterval(t)},[qs.length,done]);
 
   if(contentError)return <Shell title="Tests unavailable" subtitle="BuzNeet"><Text style={{fontSize:14,color:C.mutedText}}>The question bank could not be loaded.</Text></Shell>;
   if(!content)return <Shell title="Loading tests" subtitle="BuzNeet"><Text style={{fontSize:14,color:C.mutedText}}>Preparing the test bank…</Text></Shell>;
-  if(!qs.length)return <Shell title="Tests" subtitle="Timed · +4 / −1"><Text style={{fontSize:13,color:C.mutedText}}>Timed tests with +4 correct, −1 wrong and 0 for unattempted. The full mock uses 180 questions and 180 minutes under the current NEET structure. citeturn1search0</Text>{[[undefined,"Full Mixed Test"],["biology","Biology Test"],["chemistry","Chemistry Test"],["physics","Physics Test"]].map(([id,n])=><Pressable key={String(n)} onPress={()=>start(id as string|undefined, id?45:180, id?45:180)} style={{marginTop:9,padding:16,borderRadius:18,borderWidth:1,borderColor:C.border,backgroundColor:C.card}}><Text style={{fontWeight:"800",color:C.foreground}}>{n}</Text><Text style={{fontSize:11,color:C.mutedText,marginTop:3}}>45 questions · 45 minute limit</Text></Pressable>)}</Shell>;
+  if(!qs.length)return <Shell title="Tests" subtitle="Timed · +4 / −1"><Text style={{fontSize:13,color:C.mutedText}}>Timed tests with +4 correct, −1 wrong and 0 for unattempted. Full mock: 180 questions · 180 minutes.</Text>{[[undefined,"Full Mixed Test"],["biology","Biology Test"],["chemistry","Chemistry Test"],["physics","Physics Test"]].map(([id,n])=><Pressable key={String(n)} onPress={()=>start(id as string|undefined, id?45:180, id?45:180)} style={{marginTop:9,padding:16,borderRadius:18,borderWidth:1,borderColor:C.border,backgroundColor:C.card}}><Text style={{fontWeight:"800",color:C.foreground}}>{n}</Text><Text style={{fontSize:11,color:C.mutedText,marginTop:3}}>45 questions · 45 minute limit</Text></Pressable>)}</Shell>;
 
   if(done){
     const correct=picks.filter((x,k)=>x===qs[k].answer).length;
