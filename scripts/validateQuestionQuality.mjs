@@ -1,4 +1,4 @@
-const fs = require("node:fs");
+import fs from "node:fs";
 const chapters = JSON.parse(fs.readFileSync("data/chapters.json","utf8")).chapters;
 const bank = JSON.parse(fs.readFileSync("data/questions.json","utf8")).questions;
 const seriesNames = ["ncert","mcq","ar","pyq","revision"];
