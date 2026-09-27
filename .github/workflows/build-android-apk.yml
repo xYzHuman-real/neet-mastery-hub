@@ -56,6 +56,10 @@ jobs:
       - name: Generate Android project
         run: npx expo prebuild --platform android --clean --non-interactive
 
+      - name: Print Android signing fingerprints
+        working-directory: android
+        run: ./gradlew signingReport --no-daemon
+
       - name: Build release APK
         working-directory: android
         run: ./gradlew assembleRelease --no-daemon
