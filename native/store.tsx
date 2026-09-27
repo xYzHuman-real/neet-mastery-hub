@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { logoutFirebase, watchFirebaseUser } from "./firebaseAuth";
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";\nimport { fetchEntitlement } from "./premiumEntitlement";
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { fetchEntitlement } from "./premiumEntitlement";
 
 export type Rating = "again" | "hard" | "good" | "easy";
 
@@ -12,7 +13,9 @@ type S = {
   bookmarks: Record<string, number>;
   testHistory: Array<{ id: string; title: string; subject: string; total: number; score: number; accuracy: number; correct: number; wrong: number; skipped: number; timeSec: number; at: number }>;
   dailyGoals: Record<string, number>;
-  aiUsage: { day: string; count: number };\n  premium: { active: boolean; plan: string | null; expiresAt: number | null };\n  notifications: { enabled: boolean; hour: number; minute: number; revision: boolean; tests: boolean; streak: boolean; mission: boolean };
+  aiUsage: { day: string; count: number };
+  premium: { active: boolean; plan: string | null; expiresAt: number | null };
+  notifications: { enabled: boolean; hour: number; minute: number; revision: boolean; tests: boolean; streak: boolean; mission: boolean };
 };
 const D=86400000;
 const initial:S={streak:0,todayCount:0,lastStudyDate:null,goal:50,answered:{},cards:{},mistakes:{},user:null,onboarded:false,telegramDone:false,bookmarks:{},testHistory:[],dailyGoals:{},aiUsage:{day:"",count:0},premium:{active:false,plan:null,expiresAt:null},notifications:{enabled:false,hour:19,minute:0,revision:true,tests:true,streak:true,mission:true}};
