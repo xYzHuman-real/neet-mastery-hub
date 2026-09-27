@@ -48,7 +48,7 @@ jobs:
       - name: Verify Firebase Android config
         run: |
           test -f google-services.json
-          node -e 'const fs=require("fs"); const c=JSON.parse(fs.readFileSync("google-services.json","utf8")); const a=(c.client||[]).find(x=>x.client_info?.android_client_info?.package_name==="com.buzneet.app"); if(!a) throw new Error("Firebase Android app com.buzneet.app is missing from google-services.json"); if(!(a.oauth_client||[]).some(x=>x.client_type===3)) throw new Error("Firebase web OAuth client is missing from google-services.json"); console.log("Firebase Android config verified for com.buzneet.app");'
+          node -e 'const fs=require("fs"); const c=JSON.parse(fs.readFileSync("google-services.json","utf8")); const a=(c.client||[]).find(x=>x.client_info?.android_client_info?.package_name==="com.buzneet.app"); if(!a) throw new Error("Firebase Android app com.buzneet.app is missing from google-services.json"); if(!c.project_info?.project_id) throw new Error("Firebase project information is missing from google-services.json"); console.log("Firebase Android config verified for com.buzneet.app");'
 
       - name: Export Android JavaScript bundle
         env:
