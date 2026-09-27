@@ -125,6 +125,7 @@ export async function signInWithEmail(email: string, password: string) {
   });
 
   await saveSession(account);
+  await syncUserProfile(account);
   return account;
 }
 
@@ -149,6 +150,7 @@ export async function createEmailAccount(
   }
 
   await saveSession(account);
+  await syncUserProfile(account);
   return account;
 }
 
