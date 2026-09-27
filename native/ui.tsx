@@ -1,10 +1,11 @@
 import { router, usePathname } from "expo-router";
 import { Pressable, ScrollView, StyleSheet, Text, View, type ReactNode } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useStore } from "./store";
 import { C, R } from "./theme";
 
 export function Phone({ children }: { children: ReactNode }) {
-  return <View style={s.root}><View style={s.phone}>{children}</View></View>;
+  return <View style={s.root}><SafeAreaView style={s.phone} edges={["top", "bottom", "left", "right"]}>{children}</SafeAreaView></View>;
 }
 
 export function Shell({ title, subtitle, children, right }: { title: string; subtitle?: string; children: ReactNode; right?: ReactNode }) {
@@ -36,7 +37,7 @@ export const styles = s;
 const s = StyleSheet.create({
   root:{flex:1,backgroundColor:"#E9E8E1",alignItems:"center"},
   phone:{width:"100%",maxWidth:420,height:"100%",backgroundColor:C.background},
-  header:{paddingHorizontal:20,paddingTop:24,paddingBottom:12,flexDirection:"row",alignItems:"flex-end",justifyContent:"space-between"},
+  header:{paddingHorizontal:20,paddingTop:18,paddingBottom:12,flexDirection:"row",alignItems:"flex-end",justifyContent:"space-between"},
   eyebrow:{fontSize:11,fontWeight:"700",letterSpacing:1.5,color:C.primary,textTransform:"uppercase",marginBottom:3},
   title:{fontSize:26,fontWeight:"800",color:C.foreground},
   content:{paddingHorizontal:20,paddingBottom:118},
@@ -46,7 +47,7 @@ const s = StyleSheet.create({
   navItem:{alignItems:"center",justifyContent:"center",width:72,borderRadius:18},
   navActive:{backgroundColor:"rgba(231,241,237,0.88)"},
   navIcon:{fontSize:27,color:C.mutedText},
-  navLabel:{fontSize:12,fontWeight:"700",color:C.mutedText,marginTop:1},
+  navLabel:{fontSize:13,fontWeight:"800",color:C.mutedText,marginTop:1},
   button:{minHeight:52,borderRadius:16,alignItems:"center",justifyContent:"center",paddingHorizontal:18},
   primaryButton:{backgroundColor:C.primary},
   buttonText:{fontSize:15,fontWeight:"800",color:C.primaryText}
