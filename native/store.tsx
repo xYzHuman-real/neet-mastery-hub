@@ -22,6 +22,10 @@ type S = {
   user: { name: string; email: string } | null;
   onboarded: boolean;
   telegramDone: boolean;
+  bookmarks: Record<string, number>;
+  testHistory: Array<{ id: string; title: string; subject: string; total: number; score: number; accuracy: number; correct: number; wrong: number; skipped: number; timeSec: number; at: number }>;
+  dailyGoals: Record<string, number>;
+  aiUsage: { day: string; count: number };
 };
 
 const D = 86400000;
@@ -37,6 +41,10 @@ const initial: S = {
   user: null,
   onboarded: false,
   telegramDone: false,
+  bookmarks: {},
+  testHistory: [],
+  dailyGoals: {},
+  aiUsage: { day: "", count: 0 },
 };
 
 type Ctx = S & {
@@ -47,6 +55,9 @@ type Ctx = S & {
   rate: (id: string, r: Rating) => void;
   toggle: (id: string) => void;
   remove: (id: string) => void;
+  toggleBookmark: (id: string) => void;
+  saveTest: (result: S["testHistory"][number]) => void;
+  consumeAi: (limit: number) => boolean;
   due: string[];
 };
 
@@ -172,6 +183,24 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           delete m[id];
           return { ...x, mistakes: m };
         }),
+      toggleBookmark: (id) =>
+        setS((x) => {
+          const b = { ...x.bookmarks };
+          if (b[id]) delete b[id]; else b[id] = Date.now();
+          return { ...x, bookmarks: b };
+        }),
+      saveTest: (result) => setS((x) => ({ ...x, testHistory: [result, ...x.testHistory].slice(0, 100) })),
+      consumeAi: (limit) => {
+        const today = new Date().toISOString().slice(0, 10);
+        let allowed = false;
+        setS((x) => {
+          const base = x.aiUsage.day === today ? x.aiUsage : { day: today, count: 0 };
+          if (base.count >= limit) return { ...x, aiUsage: base };
+          allowed = true;
+          return { ...x, aiUsage: { day: today, count: base.count + 1 } };
+        });
+        return allowed;
+      },
       due: Object.entries(s.cards)
         .filter(([, c]) => c.due <= Date.now())
         .map(([id]) => id),
