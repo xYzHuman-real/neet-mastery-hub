@@ -37,7 +37,7 @@ jobs:
           java-version: '17'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-audit --no-fund
 
       - name: Align Expo SDK dependencies
         run: CI=1 npx expo install --fix
@@ -46,7 +46,9 @@ jobs:
         run: npx expo-doctor
 
       - name: Verify Firebase Android config
-        run: test -f google-services.json
+        run: |
+          test -f google-services.json
+          node -e 'const fs=require("fs"); const c=JSON.parse(fs.readFileSync("google-services.json","utf8")); const a=(c.client||[]).find(x=>x.client_info?.android_client_info?.package_name==="com.buzneet.app"); if(!a) throw new Error("Firebase Android app com.buzneet.app is missing from google-services.json"); if(!(a.oauth_client||[]).some(x=>x.client_type===3)) throw new Error("Firebase web OAuth client is missing from google-services.json"); console.log("Firebase Android config verified for com.buzneet.app");'
 
       - name: Export Android JavaScript bundle
         env:
@@ -58,7 +60,9 @@ jobs:
 
       - name: Print Android signing fingerprints
         working-directory: android
-        run: ./gradlew signingReport --no-daemon
+        run: |
+          ./gradlew signingReport --no-daemon
+          echo "Add the SHA-1 for the certificate used by the installable build to Firebase Console > Project settings > Your apps > BuzNeet Android > SHA certificate fingerprints if it is not already registered."
 
       - name: Build release APK
         working-directory: android
