@@ -8,16 +8,16 @@ for (const q of questions) counts.set(q.chapterId, (counts.get(q.chapterId) ?? 0
 
 const missing = chapters
   .map(c => ({ id: c.id, title: c.ncertChapter, count: counts.get(c.id) ?? 0 }))
-  .filter(x => x.count < 50);
+  .filter(x => x.count < 60 || x.count > 200);
 
 console.log(`Chapters: ${chapters.length}`);
 console.log(`Questions: ${questions.length}`);
-console.log(`Required minimum: ${chapters.length * 50}`);
-console.log(`Missing questions: ${missing.reduce((n, x) => n + (50 - x.count), 0)}`);
+console.log(`Required range: 60–200 questions per chapter`);
+console.log(`Chapters outside range: ${missing.length}`);
 
 if (missing.length) {
-  for (const x of missing) console.log(`- ${x.id}: ${x.title} — ${x.count}/50`);
+  for (const x of missing) console.log(`- ${x.id}: ${x.title} — ${x.count} (must be 60–200)`);
   process.exitCode = 1;
 } else {
-  console.log("PASS: every chapter has at least 50 questions.");
+  console.log("PASS: every chapter has 60–200 questions.");
 }
