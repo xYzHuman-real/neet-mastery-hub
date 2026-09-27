@@ -8,7 +8,7 @@ export type NativeChapter={id:string;subject:"physics"|"chemistry"|"biology";cla
 const rawChapters=(chapterData as any).chapters as any[];
 export const CHAPTERS=rawChapters.map(c=>({id:c.id,subject:String(c.subject).toLowerCase() as NativeChapter["subject"],classLevel:c.class as 11|12,name:c.ncertChapter,unitId:c.unitId,topics:c.topics??[]})) as NativeChapter[];
 export const SUBJECTS=[{id:"physics" as const,name:"Physics",emoji:"⚛"},{id:"chemistry" as const,name:"Chemistry",emoji:"⚗"},{id:"biology" as const,name:"Biology",emoji:"🧬"}];
-export const MODES: {id:ContentMode;label:string;desc:string}[]=[{id:"ncert",label:"NCERT Line-by-Line",desc:"NCERT-aligned recall"},{id:"mcq",label:"MCQ Series",desc:"NEET-style practice"},{id:"ar",label:"Assertion & Reason",desc:"Statement logic"},{id:"pyq",label:"PYQ Series",desc:"Verified previous-year questions"},{id:"revision",label:"Revision Series",desc:"Mixed active recall"}];
+export const MODES: {id:ContentMode;label:string;desc:string}[]=[{id:"ncert",label:"NCERT-Aligned Practice",desc:"NCERT-aligned recall"},{id:"mcq",label:"MCQ Series",desc:"NEET-style practice"},{id:"ar",label:"Assertion & Reason",desc:"Statement logic"},{id:"pyq",label:"PYQ Series",desc:"Verified previous-year questions"},{id:"revision",label:"Revision Series",desc:"Mixed active recall"}];
 
 let cache: NativeQuestion[] | null = null;
 
