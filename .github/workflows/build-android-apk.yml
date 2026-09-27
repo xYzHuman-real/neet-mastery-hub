@@ -102,6 +102,9 @@ jobs:
           echo "BUZNEET_KEY_ALIAS=$BUZNEET_KEY_ALIAS" >> gradle.properties
 
       - name: Print persistent Android signing fingerprint
+        env:
+          BUZNEET_KEYSTORE_PASSWORD: ${{ secrets.BUZNEET_KEYSTORE_PASSWORD }}
+          BUZNEET_KEY_ALIAS: ${{ secrets.BUZNEET_KEY_ALIAS }}
         working-directory: android
         run: |
           test -f app/buzneet-release.keystore
