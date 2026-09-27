@@ -97,9 +97,6 @@ jobs:
           )
           p.write_text(s)
 
-          gp = Path("gradle.properties")
-          with gp.open("a") as f:
-              f.write(f"\nBUZNEET_KEYSTORE_PASSWORD={Path('/dev/null').read_text() if False else ''}\n")
           PY
           echo "BUZNEET_KEYSTORE_PASSWORD=$BUZNEET_KEYSTORE_PASSWORD" >> gradle.properties
           echo "BUZNEET_KEY_ALIAS=$BUZNEET_KEY_ALIAS" >> gradle.properties
