@@ -8,7 +8,7 @@ import{loadContent,filterQuestions,chapterById}from"../native/content";
 
 export default function Practice(){
   const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string}>();
-  const{due,mistakes,record,rate}=useStore();
+  const{due,mistakes,record,rate,toggleBookmark,bookmarks}=useStore();
   const[content,setContent]=useState<any[]|null>(null);
   const[contentError,setContentError]=useState(false);
   useEffect(()=>{loadContent().then(setContent).catch(()=>setContentError(true))},[]);
