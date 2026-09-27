@@ -102,11 +102,5 @@
     "vite": "8.1.5"
   },
   "main": "expo-router/entry",
-  "expo": {
-    "autolinking": {
-      "exclude": [
-        "@react-native-google-signin/google-signin"
-      ]
-    }
-  }
+  "expo": {}
 }
