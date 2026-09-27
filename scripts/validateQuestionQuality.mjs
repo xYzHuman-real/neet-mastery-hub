@@ -1,7 +1,8 @@
 const fs = require("node:fs");
 const chapters = JSON.parse(fs.readFileSync("data/chapters.json","utf8")).chapters;
 const bank = JSON.parse(fs.readFileSync("data/questions.json","utf8")).questions;
-const counts = Object.fromEntries(chapters.map(c => [c.id, 0]));
+const seriesNames = ["ncert","mcq","ar","pyq","revision"];
+const counts = Object.fromEntries(chapters.map(c => [c.id, Object.fromEntries(seriesNames.map(s => [s, 0]))]));
 const errors = [];
 for (const q of bank) {
   if (counts[q.chapterId] !== undefined) counts[q.chapterId]++;
