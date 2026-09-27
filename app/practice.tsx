@@ -15,7 +15,7 @@ export default function Practice(){
     if(p.review)return filterQuestions(content,undefined,"revision").filter(x=>due.includes(x.id));
     if(p.mistakes)return filterQuestions(content,undefined,"revision").filter((x:any)=>mistakes[x.id]);
     return filterQuestions(content,p.chapter,mode);
-  },[p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
+  },[content,p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
   const[i,setI]=useState(0);
   const[pick,setPick]=useState<number|null>(null);
   const[text,setText]=useState("");
