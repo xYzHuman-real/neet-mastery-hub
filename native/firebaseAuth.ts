@@ -10,10 +10,10 @@ import {
   onAuthStateChanged,
   type User,
 } from "@react-native-firebase/auth";
-import {
-  GoogleOneTapSignIn,
-  isSuccessResponse,
-} from "react-native-nitro-google-signin";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
+
+const WEB_CLIENT_ID =
+  "662275162506-85ojnhl3eafr4j53jog8c0ukmte3crj1.apps.googleusercontent.com";
 
 let googleConfigured = false;
 
@@ -23,25 +23,26 @@ export function watchFirebaseUser(callback: (user: User | null) => void) {
 
 function configureGoogle() {
   if (googleConfigured) return;
-  GoogleOneTapSignIn.configure({
-    webClientId: "autoDetect",
+
+  GoogleSignin.configure({
+    webClientId: WEB_CLIENT_ID,
     scopes: ["email", "profile"],
   });
+
   googleConfigured = true;
 }
 
 export async function signInWithGoogle() {
   configureGoogle();
-  await GoogleOneTapSignIn.checkPlayServices();
 
-  let response = await GoogleOneTapSignIn.signIn();
+  await GoogleSignin.hasPlayServices({
+    showPlayServicesUpdateDialog: true,
+  });
 
-  if (!isSuccessResponse(response)) {
-    response = await GoogleOneTapSignIn.presentExplicitSignIn();
-  }
+  const response = await GoogleSignin.signIn();
 
-  if (!isSuccessResponse(response) || !response.data.idToken) {
-    throw new Error("Google sign-in was cancelled or no ID token was returned.");
+  if (response.type !== "success" || !response.data.idToken) {
+    throw new Error("Google sign-in was cancelled.");
   }
 
   const credential = GoogleAuthProvider.credential(response.data.idToken);
@@ -50,7 +51,11 @@ export async function signInWithGoogle() {
 }
 
 export async function signInWithEmail(email: string, password: string) {
-  const result = await signInWithEmailAndPassword(getAuth(), email.trim(), password);
+  const result = await signInWithEmailAndPassword(
+    getAuth(),
+    email.trim(),
+    password,
+  );
   return result.user;
 }
 
@@ -78,9 +83,9 @@ export async function resetPassword(email: string) {
 
 export async function logoutFirebase() {
   try {
-    await GoogleOneTapSignIn.signOut();
+    await GoogleSignin.signOut();
   } catch {
-    // A Firebase email/password account may not have a Google session.
+    // An email/password account may not have a Google session.
   }
   await signOut(getAuth());
 }
