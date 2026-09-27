@@ -152,6 +152,39 @@ export async function resetPassword(email: string) {
   });
 }
 
+export function watchFirebaseUser(
+  callback: (user: { displayName?: string; email?: string; photoURL?: string } | null) => void,
+) {
+  let active = true;
+
+  AsyncStorage.getItem(SESSION_KEY)
+    .then((raw) => {
+      if (!active) return;
+      if (!raw) {
+        callback(null);
+        return;
+      }
+
+      try {
+        const session = JSON.parse(raw) as FirebaseAccount;
+        callback({
+          displayName: session.displayName || undefined,
+          email: session.email || undefined,
+          photoURL: session.photoUrl || undefined,
+        });
+      } catch {
+        callback(null);
+      }
+    })
+    .catch(() => {
+      if (active) callback(null);
+    });
+
+  return () => {
+    active = false;
+  };
+}
+
 export async function logoutFirebase() {
   await AsyncStorage.removeItem(SESSION_KEY);
 }
