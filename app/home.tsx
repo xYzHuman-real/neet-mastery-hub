@@ -16,6 +16,7 @@ export default function Home() {
     <View style={s.sectionRow}><Text style={s.sectionTitle}>Today's mission</Text><Text style={s.missionCount}>{missions.filter(m=>m.done).length}/{missions.length}</Text></View>
     <View style={{gap:8}}>{missions.map(m=><Pressable key={m.id} onPress={()=>m.id==="test"?router.push("/tests"):m.id==="revision"?router.push({pathname:"/practice",params:{review:"1"}}):router.push("/chapters")} style={s.mission}><View style={[s.check,m.done&&s.checkDone]}><Text style={{color:m.done?C.primaryText:C.mutedText,fontWeight:"900"}}>{m.done?"✓":"·"}</Text></View><View style={{flex:1}}><Text style={s.missionTitle}>{m.title}</Text><Text style={s.missionSub}>{m.detail} · {m.progress}/{m.target}</Text></View></Pressable>)}</View>
 
+    <Pressable onPress={()=>router.push("/premium")} style={{marginTop:14,borderRadius:19,backgroundColor:C.card,borderWidth:1,borderColor:C.primary,padding:15}}><Text style={{fontSize:9,fontWeight:"900",letterSpacing:1.1,color:C.primary}}>BUZNEET PREMIUM</Text><Text style={{fontSize:16,fontWeight:"900",color:C.foreground,marginTop:4}}>Unlock advanced preparation tools</Text><Text style={{fontSize:10,color:C.mutedText,marginTop:3}}>Analytics · Smart Revision 2.0 · Advanced Tests · AI</Text></Pressable>
     <Text style={s.sectionTitle}>Continue preparing</Text>
     <View style={s.grid}>
       <Pressable onPress={()=>router.push("/chapters")} style={s.quick}><Text style={s.icon}>▦</Text><Text style={s.quickTitle}>Practice</Text><Text style={s.quickSub}>87 chapters</Text></Pressable>
