@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -11,9 +11,6 @@ import {
   View,
 } from "react-native";
 import { router } from "expo-router";
-import * as WebBrowser from "expo-web-browser";
-import * as Google from "expo-auth-session/providers/google";
-import { makeRedirectUri } from "expo-auth-session";
 import { Phone } from "../native/ui";
 import { C } from "../native/theme";
 import { useStore } from "../native/store";
@@ -21,15 +18,7 @@ import {
   createEmailAccount,
   resetPassword,
   signInWithEmail,
-  signInWithGoogleCredential,
 } from "../native/firebaseAuth";
-
-WebBrowser.maybeCompleteAuthSession();
-
-const ANDROID_CLIENT_ID =
-  "662275162506-8du5una6uau1pgk7jglktovbnd60h89b.apps.googleusercontent.com";
-const WEB_CLIENT_ID =
-  "662275162506-85ojnhl3eafr4j53jog8c0ukmte3crj1.apps.googleusercontent.com";
 
 type Mode = "signIn" | "signUp";
 
@@ -54,6 +43,10 @@ function authMessage(error: unknown) {
       return "Too many attempts. Please try again later.";
     case "auth/network-request-failed":
       return "Network error. Check your connection and try again.";
+    case "auth/operation-not-allowed":
+      return "Email and password sign-in is not enabled in Firebase yet.";
+    case "auth/user-disabled":
+      return "This account has been disabled.";
     default:
       return error instanceof Error && error.message
         ? error.message
@@ -70,79 +63,6 @@ export default function Login() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const { patch } = useStore();
-
-  const redirectUri = makeRedirectUri({
-    scheme: "buzneet",
-    path: "oauth",
-  });
-
-  const [request, response, promptAsync] = Google.useAuthRequest({
-    androidClientId: ANDROID_CLIENT_ID,
-    webClientId: WEB_CLIENT_ID,
-    redirectUri,
-    scopes: ["openid", "profile", "email"],
-    selectAccount: true,
-  });
-
-  useEffect(() => {
-    if (response?.type !== "success") return;
-
-    const accessToken = response.authentication?.accessToken;
-    if (!accessToken) {
-      setError("Google sign-in completed without an access token.");
-      return;
-    }
-
-    let cancelled = false;
-
-    (async () => {
-      try {
-        setBusy(true);
-        setError("");
-        const account = await signInWithGoogleCredential("", accessToken);
-
-        if (cancelled) return;
-
-        patch({
-          user: {
-            name: account.displayName || "NEET Aspirant",
-            email: account.email || "",
-          },
-          onboarded: true,
-          telegramDone: false,
-        });
-
-        router.replace("/telegram");
-      } catch (e) {
-        if (!cancelled) setError(authMessage(e));
-      } finally {
-        if (!cancelled) setBusy(false);
-      }
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [response, patch]);
-
-  const submitGoogle = async () => {
-    if (busy || !request) return;
-
-    setError("");
-    setNotice("");
-    setBusy(true);
-
-    try {
-      await promptAsync({ showInRecents: true });
-    } catch (e) {
-      setBusy(false);
-      setError(authMessage(e));
-    }
-  };
-
-  const finish = () => {
-    router.replace("/telegram");
-  };
 
   const submitEmail = async () => {
     setError("");
@@ -164,6 +84,7 @@ export default function Login() {
     }
 
     setBusy(true);
+
     try {
       const account =
         mode === "signUp"
@@ -178,7 +99,8 @@ export default function Login() {
         onboarded: true,
         telegramDone: false,
       });
-      finish();
+
+      router.replace("/telegram");
     } catch (e) {
       setError(authMessage(e));
     } finally {
@@ -230,27 +152,6 @@ export default function Login() {
           <Text style={styles.subtitle}>
             Sign in to save your preparation progress and continue anywhere.
           </Text>
-
-          <Pressable
-            disabled={busy || !request}
-            onPress={submitGoogle}
-            style={[styles.google, (busy || !request) && { opacity: 0.6 }]}
-          >
-            {busy ? (
-              <ActivityIndicator size="small" />
-            ) : (
-              <Text style={styles.googleG}>G</Text>
-            )}
-            <Text style={styles.googleText}>
-              {busy ? "Signing in…" : "Continue with Google"}
-            </Text>
-          </Pressable>
-
-          <View style={styles.dividerRow}>
-            <View style={styles.line} />
-            <Text style={styles.or}>or</Text>
-            <View style={styles.line} />
-          </View>
 
           <View style={styles.switcher}>
             <Pressable
@@ -352,7 +253,7 @@ export default function Login() {
           {!!notice && <Text style={styles.notice}>{notice}</Text>}
 
           <Text style={styles.footer}>
-            Accounts are securely managed by Firebase Authentication.
+            Your account is securely managed by Firebase Authentication.
           </Text>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -381,30 +282,8 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     color: C.mutedText,
     marginTop: 5,
+    marginBottom: 20,
   },
-  google: {
-    minHeight: 54,
-    borderRadius: 17,
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "row",
-    gap: 10,
-    paddingHorizontal: 18,
-    backgroundColor: C.card,
-    borderWidth: 1,
-    borderColor: C.border,
-    marginTop: 24,
-  },
-  googleG: { fontSize: 19, fontWeight: "900", color: "#4285F4" },
-  googleText: { fontSize: 14, fontWeight: "800", color: C.foreground },
-  dividerRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-    marginVertical: 18,
-  },
-  line: { height: 1, flex: 1, backgroundColor: C.border },
-  or: { fontSize: 12, color: C.mutedText, fontWeight: "700" },
   switcher: {
     flexDirection: "row",
     backgroundColor: C.muted,
