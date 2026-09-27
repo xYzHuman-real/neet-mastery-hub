@@ -319,6 +319,7 @@ function questionCountForSeries(chapter, series) {
   );
 }
 
+const existing = fs.existsSync("data/questions.json") ? JSON.parse(fs.readFileSync("data/questions.json", "utf8")).questions || [] : [];
 const questions = [];
 const SERIES = ["ncert","mcq","ar","revision"];
 for (const ch of chapters) {
