@@ -12,10 +12,10 @@ type S = {
   bookmarks: Record<string, number>;
   testHistory: Array<{ id: string; title: string; subject: string; total: number; score: number; accuracy: number; correct: number; wrong: number; skipped: number; timeSec: number; at: number }>;
   dailyGoals: Record<string, number>;
-  aiUsage: { day: string; count: number };\n  notifications: { enabled: boolean; hour: number; minute: number; revision: boolean; tests: boolean; streak: boolean; mission: boolean };
+  aiUsage: { day: string; count: number };\n  premium: { active: boolean; plan: string | null; expiresAt: number | null };\n  notifications: { enabled: boolean; hour: number; minute: number; revision: boolean; tests: boolean; streak: boolean; mission: boolean };
 };
 const D=86400000;
-const initial:S={streak:0,todayCount:0,lastStudyDate:null,goal:50,answered:{},cards:{},mistakes:{},user:null,onboarded:false,telegramDone:false,bookmarks:{},testHistory:[],dailyGoals:{},aiUsage:{day:"",count:0},notifications:{enabled:false,hour:19,minute:0,revision:true,tests:true,streak:true,mission:true}};
+const initial:S={streak:0,todayCount:0,lastStudyDate:null,goal:50,answered:{},cards:{},mistakes:{},user:null,onboarded:false,telegramDone:false,bookmarks:{},testHistory:[],dailyGoals:{},aiUsage:{day:"",count:0},premium:{active:false,plan:null,expiresAt:null},notifications:{enabled:false,hour:19,minute:0,revision:true,tests:true,streak:true,mission:true}};
 type Ctx=S&{hydrated:boolean;patch:(p:Partial<S>)=>void;logout:()=>Promise<void>;record:(id:string,ok:boolean)=>void;rate:(id:string,r:Rating)=>void;toggle:(id:string)=>void;remove:(id:string)=>void;toggleBookmark:(id:string)=>void;saveTest:(result:S["testHistory"][number])=>void;consumeAi:(limit:number)=>boolean;due:string[]};
 const Ctx=createContext<Ctx|null>(null); const KEY="buzneet-native-v2";
 
