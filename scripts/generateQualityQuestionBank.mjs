@@ -240,6 +240,41 @@ function makeOptions(correct, pool, i) {
   return [pool[correct], ...d].sort((a,b)=>a===pool[correct]?-1:b===pool[correct]?1:0);
 }
 
+function makeAssertionReason(ch, seed, n) {
+  const stem = String(seed[0]).replace(/[:?]\\s*$/, "").trim();
+  const options = seed[1];
+  const correct = options[seed[2]];
+  const wrong = options[(seed[2] + 1) % options.length];
+  const topic = ch.topics[n % Math.max(1, ch.topics.length)] || ch.ncertChapter;
+  const pattern = n % 4;
+  let assertion = stem + " " + correct + ".";
+  let reason = "";
+  let answer = 0;
+  if (pattern === 0) {
+    reason = "The stated result follows from the fundamental principle governing " + topic + ".";
+    answer = 0;
+  } else if (pattern === 1) {
+    reason = correct + " is a standard result associated with " + ch.ncertChapter + ", but this fact does not by itself explain the assertion.";
+    answer = 1;
+  } else if (pattern === 2) {
+    reason = "The correct result for the concept described is " + wrong + ".";
+    answer = 2;
+  } else {
+    assertion = stem + " " + wrong + ".";
+    reason = correct + " is the established result for this concept in " + ch.ncertChapter + ".";
+    answer = 3;
+  }
+  return {
+    assertion, reason,
+    options: [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    answer
+  };
+}
 function buildQuestion(ch, n, series = "mcq") {
   const bank = ch.subject === "Physics" ? physics[ch.ncertChapter]
     : ch.subject === "Chemistry" ? chemistry[ch.ncertChapter]
@@ -247,6 +282,27 @@ function buildQuestion(ch, n, series = "mcq") {
 
   if (bank) {
     const seed = bank[n % bank.length];
+    if (series === "ar") {
+      const ar = makeAssertionReason(ch, seed, n);
+      return {
+        id: ch.id + "-ar-q" + String(n + 1).padStart(3, "0"),
+        chapterId: ch.id,
+        series: "ar",
+        topicId: ch.topics[n % ch.topics.length],
+        type: "statement",
+        difficulty: n % 5 < 2 ? "easy" : n % 5 < 4 ? "medium" : "hard",
+        question: "Assertion and Reason question",
+        assertion: ar.assertion,
+        reason: ar.reason,
+        options: ar.options,
+        answer: ar.answer,
+        explanation: "Draft assertion-reason item. Verify both statements independently and verify whether the Reason actually explains the Assertion before release.",
+        sourceType: "original_neet_style",
+        reviewStatus: "draft",
+        citation: { source: "NCERT-aligned concept", chapter: ch.ncertChapter, page: null, line: null },
+        quality: { generated: true, requiresHumanReview: true, placeholder: false }
+      };
+    }
     const correctText = seed[1][seed[2]];
     const options = makeOptions(seed[2], seed[1], n);
     const answerIndex = options.indexOf(correctText);
@@ -335,7 +391,6 @@ for (const ch of chapters) {
       const q = buildQuestion(ch, n, series);
       if (series === "ncert") q.question = "NCERT-aligned: " + q.question;
       if (series === "revision") q.question = "Revision: " + q.question;
-      if (series === "ar") q.question = "Assertion & Reason: " + q.question;
       if (series === "pyq") {
         q.question = "PYQ Practice: " + q.question;
         q.sourceType = "original_neet_style";
