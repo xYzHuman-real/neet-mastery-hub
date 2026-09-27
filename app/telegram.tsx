@@ -13,9 +13,15 @@ export default function Telegram() {
   };
 
   const openTelegram = async () => {
-    const url = process.env.EXPO_PUBLIC_TELEGRAM_URL;
-    if (url) await Linking.openURL(url);
-    finish();
+    const url = process.env.EXPO_PUBLIC_TELEGRAM_URL || "https://t.me/buzneet";
+    try {
+      const supported = await Linking.canOpenURL(url);
+      if (!supported) return;
+      await Linking.openURL(url);
+      finish();
+    } catch {
+      // Keep the user on the Telegram step if the external link cannot be opened.
+    }
   };
 
   return (
