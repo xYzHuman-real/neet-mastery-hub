@@ -58,19 +58,6 @@ jobs:
       - name: Generate Android project
         run: npx expo prebuild --platform android --clean --non-interactive
 
-      - name: Pin Expo SDK 57 Gradle wrapper
-        working-directory: android
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          p = Path("gradle/wrapper/gradle-wrapper.properties")
-          s = p.read_text()
-          import re
-          s = re.sub(r"distributionUrl=.*", "distributionUrl=https\\://services.gradle.org/distributions/gradle-9.3.1-bin.zip", s)
-          p.write_text(s)
-          PY
-          grep distributionUrl gradle/wrapper/gradle-wrapper.properties
-
       - name: Configure persistent release signing
         env:
           BUZNEET_KEYSTORE_BASE64: ${{ secrets.BUZNEET_KEYSTORE_BASE64 }}
