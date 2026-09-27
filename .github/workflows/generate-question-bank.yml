@@ -3,6 +3,7 @@ name: Generate NEET Question Bank
 # Final generation trigger after series completion.
 # Final fallback-series fix trigger.
 # Latest fallback metadata fix included.
+# Final validation trigger.
 
 on:
   workflow_dispatch:
