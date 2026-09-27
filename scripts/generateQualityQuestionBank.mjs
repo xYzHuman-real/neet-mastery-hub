@@ -2,9 +2,9 @@
  * NEET question-bank quality generator.
  *
  * Purpose:
- * - Enforce 50 questions per chapter.
+ * - Enforce a variable 60–200 questions per chapter.
  * - Avoid generic "which topic belongs..." placeholders.
- * - Produce varied MCQ/numerical/statement/match-style drafts.
+ * - Produce varied MCQ/statement/match-style drafts with difficulty rotation.
  * - Keep all generated questions explicitly marked as draft until human review.
  *
  * This script is intentionally deterministic. It does not invent PYQ status or
@@ -305,14 +305,22 @@ function buildQuestion(ch, n) {
   };
 }
 
-const chapterCounts = [67,91,106,141,150,139,83,118,74,127,98,146,61,112,88,133,70,104,95,150,79,121,65,137,108,92,149,81,116,73,129,101,145,68,110,84,138,97,125,72,119,90,147,63,132,86,114,76,143,105,69,126,99,150,82,117,64,136,89,123,71,148,103,78,131,94,140,66,109,85,115,93,144,80,122,107,135,75,128,96,150,62,111,87,134,100,142,77];
-function questionCountForChapter(index) {
-  return Math.max(50, Math.min(150, chapterCounts[index % chapterCounts.length]));
+function questionCountForChapter(chapter) {
+  // Chapter size follows conceptual breadth: more mapped topics get more practice,
+  // with a deterministic small variation so the bank does not look mechanically uniform.
+  const topics = Math.max(1, (chapter.topics || []).length);
+  const topicBonus = Math.min(100, topics * 10);
+  const index = chapters.indexOf(chapter);
+  const variation = ((index * 13 + topics * 7) % 21) - 10;
+  return Math.max(
+    60,
+    Math.min(200, Number(chapter.questionTarget || (60 + topicBonus + variation)))
+  );
 }
 
 const questions = [];
-for (const [chapterIndex, ch] of chapters.entries()) {
-  for (let n = 0; n < questionCountForChapter(chapterIndex); n++) {
+for (const ch of chapters) {
+  for (let n = 0; n < questionCountForChapter(ch); n++) {
     questions.push(buildQuestion(ch, n));
   }
 }
@@ -320,9 +328,9 @@ for (const [chapterIndex, ch] of chapters.entries()) {
 fs.writeFileSync("data/questions.json", JSON.stringify({
   version: "2.0",
   description: "NEET UG practice question bank. Generated drafts require subject-matter review before release.",
-  policy: { minimumPerChapter: 50, maximumPerChapter: 150, variableCounts: true, noUnverifiedPYQs: true, noInventedNCERTPageCitations: true },
+  policy: { minimumPerChapter: 60, maximumPerChapter: 200, variableCounts: true, noUnverifiedPYQs: true, noInventedNCERTPageCitations: true },
   questions
 }, null, 2) + "\n");
-console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with variable 50–150 chapter sizes.`);
+console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with variable 60–200 chapter sizes based on chapter scope.`);
 
 // Regeneration trigger: generated bank is validated before commit.
