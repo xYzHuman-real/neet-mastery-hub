@@ -80,7 +80,9 @@
     "react-native-screens": "~4.26.0",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "expo-constants": "~57.0.19",
-    "expo-linking": "~57.0.11"
+    "expo-linking": "~57.0.11",
+    "expo-auth-session": "~7.0.8",
+    "expo-web-browser": "~15.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
