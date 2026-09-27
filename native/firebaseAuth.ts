@@ -1,16 +1,44 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Platform } from "react-native";
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  getApps,
+  getApp,
+  getReactNativePersistence,
+  GoogleAuthProvider,
+  initializeApp,
+  initializeAuth,
+  onAuthStateChanged,
   sendPasswordResetEmail,
-  signInWithEmailAndPassword,
   signInWithCredential,
+  signInWithEmailAndPassword,
   signOut,
   updateProfile,
-  GoogleAuthProvider,
-  onAuthStateChanged,
   type User,
-} from "@react-native-firebase/auth";
+} from "firebase/auth";
+import { initializeApp as initializeFirebaseApp } from "firebase/app";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDca8KD7nkcIRUyB0bYIrLDLgK8txX-4LQ",
+  authDomain: "buzneet.firebaseapp.com",
+  projectId: "buzneet",
+  storageBucket: "buzneet.firebasestorage.app",
+  messagingSenderId: "662275162506",
+  appId: "1:662275162506:android:32df1c3b3fcb6103fb8873",
+};
+
+const firebaseApp = getApps().length
+  ? getApp()
+  : initializeFirebaseApp(firebaseConfig);
+
+const auth =
+  Platform.OS === "web"
+    ? getAuth(firebaseApp)
+    : initializeAuth(firebaseApp, {
+        persistence: getReactNativePersistence(AsyncStorage),
+      });
 
 const WEB_CLIENT_ID =
   "662275162506-85ojnhl3eafr4j53jog8c0ukmte3crj1.apps.googleusercontent.com";
@@ -18,11 +46,11 @@ const WEB_CLIENT_ID =
 let googleConfigured = false;
 
 export function watchFirebaseUser(callback: (user: User | null) => void) {
-  return onAuthStateChanged(getAuth(), callback);
+  return onAuthStateChanged(auth, callback);
 }
 
 function configureGoogle() {
-  if (googleConfigured) return;
+  if (googleConfigured || Platform.OS === "web") return;
 
   GoogleSignin.configure({
     webClientId: WEB_CLIENT_ID,
@@ -33,6 +61,13 @@ function configureGoogle() {
 }
 
 export async function signInWithGoogle() {
+  if (Platform.OS === "web") {
+    const { signInWithPopup } = await import("firebase/auth");
+    const provider = new GoogleAuthProvider();
+    const result = await signInWithPopup(auth, provider);
+    return result.user;
+  }
+
   configureGoogle();
 
   await GoogleSignin.hasPlayServices({
@@ -46,13 +81,13 @@ export async function signInWithGoogle() {
   }
 
   const credential = GoogleAuthProvider.credential(response.data.idToken);
-  const result = await signInWithCredential(getAuth(), credential);
+  const result = await signInWithCredential(auth, credential);
   return result.user;
 }
 
 export async function signInWithEmail(email: string, password: string) {
   const result = await signInWithEmailAndPassword(
-    getAuth(),
+    auth,
     email.trim(),
     password,
   );
@@ -65,7 +100,7 @@ export async function createEmailAccount(
   password: string,
 ) {
   const result = await createUserWithEmailAndPassword(
-    getAuth(),
+    auth,
     email.trim(),
     password,
   );
@@ -78,14 +113,17 @@ export async function createEmailAccount(
 }
 
 export async function resetPassword(email: string) {
-  await sendPasswordResetEmail(getAuth(), email.trim());
+  await sendPasswordResetEmail(auth, email.trim());
 }
 
 export async function logoutFirebase() {
-  try {
-    await GoogleSignin.signOut();
-  } catch {
-    // An email/password account may not have a Google session.
+  if (Platform.OS !== "web") {
+    try {
+      await GoogleSignin.signOut();
+    } catch {
+      // Email/password accounts may not have a Google session.
+    }
   }
-  await signOut(getAuth());
+
+  await signOut(auth);
 }
