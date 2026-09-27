@@ -10,7 +10,7 @@
       "expo-router",
       "@react-native-firebase/app",
       "@react-native-firebase/auth",
-      "react-native-nitro-google-signin"
+      "@react-native-google-signin/google-signin"
     ],
     "android": {
       "package": "com.buzneet.app",
