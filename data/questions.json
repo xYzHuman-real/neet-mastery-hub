@@ -6,7 +6,11 @@
     "maximumPerChapter": 200,
     "variableCounts": true,
     "noUnverifiedPYQs": true,
-    "noInventedNCERTPageCitations": true
+    "noInventedNCERTPageCitations": true,
+    "minimumPerSeries": 60,
+    "maximumPerSeries": 200,
+    "seriesCount": 5,
+    "variableCountsPerSeries": true
   },
   "questions": [
     {
@@ -31,7 +35,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q002",
@@ -55,7 +60,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q003",
@@ -79,7 +85,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q004",
@@ -103,7 +110,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q005",
@@ -127,7 +135,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q006",
@@ -151,7 +160,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q007",
@@ -175,7 +185,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q008",
@@ -199,7 +210,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q009",
@@ -223,7 +235,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q010",
@@ -247,7 +260,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q011",
@@ -271,7 +285,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q012",
@@ -295,7 +310,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q013",
@@ -319,7 +335,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q014",
@@ -343,7 +360,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q015",
@@ -367,7 +385,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q016",
@@ -391,7 +410,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q017",
@@ -415,7 +435,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q018",
@@ -439,7 +460,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q019",
@@ -463,7 +485,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q020",
@@ -487,7 +510,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q021",
@@ -511,7 +535,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q022",
@@ -535,7 +560,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q023",
@@ -559,7 +585,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q024",
@@ -583,7 +610,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q025",
@@ -607,7 +635,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q026",
@@ -631,7 +660,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q027",
@@ -655,7 +685,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q028",
@@ -679,7 +710,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q029",
@@ -703,7 +735,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q030",
@@ -727,7 +760,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q031",
@@ -751,7 +785,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q032",
@@ -775,7 +810,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q033",
@@ -799,7 +835,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q034",
@@ -823,7 +860,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q035",
@@ -847,7 +885,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q036",
@@ -871,7 +910,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q037",
@@ -895,7 +935,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q038",
@@ -919,7 +960,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q039",
@@ -943,7 +985,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q040",
@@ -967,7 +1010,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q041",
@@ -991,7 +1035,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q042",
@@ -1015,7 +1060,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q043",
@@ -1039,7 +1085,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q044",
@@ -1063,7 +1110,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q045",
@@ -1087,7 +1135,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q046",
@@ -1111,7 +1160,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q047",
@@ -1135,7 +1185,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q048",
@@ -1159,7 +1210,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q049",
@@ -1183,7 +1235,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q050",
@@ -1206,7 +1259,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q051",
@@ -1230,7 +1284,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q052",
@@ -1254,7 +1309,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q053",
@@ -1278,7 +1334,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q054",
@@ -1302,7 +1359,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q055",
@@ -1326,7 +1384,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q056",
@@ -1350,7 +1409,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q057",
@@ -1374,7 +1434,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q058",
@@ -1398,7 +1459,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q059",
@@ -1422,7 +1484,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     },
     {
       "id": "phy-c1-q060",
@@ -1446,7 +1509,8 @@
         "chapter": "Units and Measurements",
         "page": null,
         "line": null
-      }
+      },
+      "series": "mcq"
     }
   ]
 }
