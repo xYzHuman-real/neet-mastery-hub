@@ -10,8 +10,7 @@
       "expo-router"
     ],
     "android": {
-      "package": "com.buzneet.app",
-      "googleServicesFile": "./google-services.json"
+      "package": "com.buzneet.app"
     },
     "ios": {
       "bundleIdentifier": "com.buzneet.app"
