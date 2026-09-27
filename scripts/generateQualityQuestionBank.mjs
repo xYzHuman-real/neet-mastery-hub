@@ -343,3 +343,4 @@ console.log(`Generated ${questions.length} questions across ${chapters.length} c
 
 // Regeneration trigger: generated bank is validated before commit.
 // Series counts are validated independently.
+// Validation uses chapter-and-series buckets.
