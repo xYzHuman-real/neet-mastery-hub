@@ -114,13 +114,6 @@ jobs:
             -alias "$BUZNEET_KEY_ALIAS" \
             | grep -E "Alias name:|SHA1:|SHA256:"
 
-      - name: Diagnose Android autolinking
-        run: |
-          echo "--- Expo Android autolinking ---"
-          npx expo-modules-autolinking resolve --platform android --json
-          echo "--- React Native config ---"
-          npx react-native config
-
       - name: Build release APK
         working-directory: android
         run: ./gradlew assembleRelease --no-daemon --stacktrace
