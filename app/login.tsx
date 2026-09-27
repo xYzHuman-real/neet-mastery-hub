@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -11,12 +11,9 @@ import {
   View,
 } from "react-native";
 import { router } from "expo-router";
-import {
-  GoogleSignin,
-  isErrorWithCode,
-  isSuccessResponse,
-  statusCodes,
-} from "@react-native-google-signin/google-signin";
+import * as WebBrowser from "expo-web-browser";
+import * as Google from "expo-auth-session/providers/google";
+import { makeRedirectUri } from "expo-auth-session";
 import { Phone } from "../native/ui";
 import { C } from "../native/theme";
 import { useStore } from "../native/store";
@@ -27,14 +24,12 @@ import {
   signInWithGoogleCredential,
 } from "../native/firebaseAuth";
 
+WebBrowser.maybeCompleteAuthSession();
+
+const ANDROID_CLIENT_ID =
+  "662275162506-8du5una6uau1pgk7jglktovbnd60h89b.apps.googleusercontent.com";
 const WEB_CLIENT_ID =
   "662275162506-85ojnhl3eafr4j53jog8c0ukmte3crj1.apps.googleusercontent.com";
-
-if (Platform.OS !== "web") {
-  GoogleSignin.configure({
-    webClientId: WEB_CLIENT_ID,
-  });
-}
 
 type Mode = "signIn" | "signUp";
 
@@ -59,12 +54,6 @@ function authMessage(error: unknown) {
       return "Too many attempts. Please try again later.";
     case "auth/network-request-failed":
       return "Network error. Check your connection and try again.";
-    case "DEVELOPER_ERROR":
-      return "Google Sign-In is not fully configured for this BuzNeet APK yet. Check the Firebase Android app and SHA-1.";
-    case "IN_PROGRESS":
-      return "Google Sign-In is already opening.";
-    case "PLAY_SERVICES_NOT_AVAILABLE":
-      return "Google Play Services is unavailable or needs an update.";
     default:
       return error instanceof Error && error.message
         ? error.message
@@ -82,61 +71,77 @@ export default function Login() {
   const [notice, setNotice] = useState("");
   const { patch } = useStore();
 
-  const finish = () => {
-    router.replace("/telegram");
-  };
+  const redirectUri = makeRedirectUri({
+    scheme: "buzneet",
+    path: "oauth",
+  });
+
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId: ANDROID_CLIENT_ID,
+    webClientId: WEB_CLIENT_ID,
+    redirectUri,
+    scopes: ["openid", "profile", "email"],
+    selectAccount: true,
+  });
+
+  useEffect(() => {
+    if (response?.type !== "success") return;
+
+    const accessToken = response.authentication?.accessToken;
+    if (!accessToken) {
+      setError("Google sign-in completed without an access token.");
+      return;
+    }
+
+    let cancelled = false;
+
+    (async () => {
+      try {
+        setBusy(true);
+        setError("");
+        const account = await signInWithGoogleCredential("", accessToken);
+
+        if (cancelled) return;
+
+        patch({
+          user: {
+            name: account.displayName || "NEET Aspirant",
+            email: account.email || "",
+          },
+          onboarded: true,
+          telegramDone: false,
+        });
+
+        router.replace("/telegram");
+      } catch (e) {
+        if (!cancelled) setError(authMessage(e));
+      } finally {
+        if (!cancelled) setBusy(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [response, patch]);
 
   const submitGoogle = async () => {
-    if (busy || Platform.OS === "web") return;
+    if (busy || !request) return;
 
     setError("");
     setNotice("");
     setBusy(true);
 
     try {
-      await GoogleSignin.hasPlayServices();
-      const response = await GoogleSignin.signIn();
-
-      if (!isSuccessResponse(response)) {
-        setBusy(false);
-        return;
-      }
-
-      const idToken = response.data.idToken;
-      if (!idToken) {
-        throw new Error("Google did not return an ID token.");
-      }
-
-      const account = await signInWithGoogleCredential(idToken);
-
-      patch({
-        user: {
-          name:
-            account.displayName ||
-            response.data.user.name ||
-            "NEET Aspirant",
-          email: account.email || response.data.user.email || "",
-        },
-        onboarded: true,
-        telegramDone: false,
-      });
-
-      finish();
+      await promptAsync({ showInRecents: true });
     } catch (e) {
-      if (isErrorWithCode(e)) {
-        if (e.code === statusCodes.IN_PROGRESS) {
-          setError("Google Sign-In is already opening.");
-        } else if (e.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-          setError("Google Play Services is unavailable or needs an update.");
-        } else {
-          setError(authMessage(e));
-        }
-      } else {
-        setError(authMessage(e));
-      }
-    } finally {
       setBusy(false);
+      setError(authMessage(e));
     }
+  };
+
+  const finish = () => {
+    router.replace("/telegram");
   };
 
   const submitEmail = async () => {
@@ -227,9 +232,9 @@ export default function Login() {
           </Text>
 
           <Pressable
-            disabled={busy || Platform.OS === "web"}
+            disabled={busy || !request}
             onPress={submitGoogle}
-            style={[styles.google, busy && { opacity: 0.6 }]}
+            style={[styles.google, (busy || !request) && { opacity: 0.6 }]}
           >
             {busy ? (
               <ActivityIndicator size="small" />
