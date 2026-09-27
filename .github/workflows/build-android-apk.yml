@@ -58,11 +58,57 @@ jobs:
       - name: Generate Android project
         run: npx expo prebuild --platform android --clean --non-interactive
 
-      - name: Print Android signing fingerprints
+      - name: Configure persistent release signing
+        env:
+          BUZNEET_KEYSTORE_BASE64: ${{ secrets.BUZNEET_KEYSTORE_BASE64 }}
+          BUZNEET_KEYSTORE_PASSWORD: ${{ secrets.BUZNEET_KEYSTORE_PASSWORD }}
+          BUZNEET_KEY_ALIAS: ${{ secrets.BUZNEET_KEY_ALIAS }}
+        working-directory: android
+        run: |
+          test -n "$BUZNEET_KEYSTORE_BASE64" || (echo "Missing BUZNEET_KEYSTORE_BASE64 GitHub Actions secret." && exit 1)
+          test -n "$BUZNEET_KEYSTORE_PASSWORD" || (echo "Missing BUZNEET_KEYSTORE_PASSWORD GitHub Actions secret." && exit 1)
+          test -n "$BUZNEET_KEY_ALIAS" || (echo "Missing BUZNEET_KEY_ALIAS GitHub Actions secret." && exit 1)
+          printf '%s' "$BUZNEET_KEYSTORE_BASE64" | base64 --decode > app/buzneet-release.keystore
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path("app/build.gradle")
+          s = p.read_text()
+
+          signing = '''    release {
+              storeFile file("buzneet-release.keystore")
+              storePassword project.findProperty("BUZNEET_KEYSTORE_PASSWORD")
+              keyAlias project.findProperty("BUZNEET_KEY_ALIAS")
+              keyPassword project.findProperty("BUZNEET_KEYSTORE_PASSWORD")
+            }'''
+
+          if "storeFile file(\"buzneet-release.keystore\")" not in s:
+              if re.search(r"signingConfigs\s*\{", s):
+                  s = re.sub(r"(signingConfigs\s*\{)", r"\1\n" + signing, s, count=1)
+              else:
+                  s = s.replace("    buildTypes {", "    signingConfigs {\n" + signing + "\n    }\n\n    buildTypes {", 1)
+
+          s = re.sub(
+              r"(buildTypes\s*\{[\s\S]*?release\s*\{[\s\S]*?)signingConfig\s+signingConfigs\.debug",
+              r"\1signingConfig signingConfigs.release",
+              s,
+              count=1,
+          )
+          p.write_text(s)
+
+          gp = Path("gradle.properties")
+          with gp.open("a") as f:
+              f.write(f"\nBUZNEET_KEYSTORE_PASSWORD={Path('/dev/null').read_text() if False else ''}\n")
+          PY
+          echo "BUZNEET_KEYSTORE_PASSWORD=$BUZNEET_KEYSTORE_PASSWORD" >> gradle.properties
+          echo "BUZNEET_KEY_ALIAS=$BUZNEET_KEY_ALIAS" >> gradle.properties
+
+      - name: Print persistent Android signing fingerprints
         working-directory: android
         run: |
           ./gradlew signingReport --no-daemon
-          echo "Add the SHA-1 for the certificate used by the installable build to Firebase Console > Project settings > Your apps > BuzNeet Android > SHA certificate fingerprints if it is not already registered."
+          echo "This build uses the persistent BuzNeet release keystore. The SHA-1 will remain stable across GitHub Actions runs."
 
       - name: Build release APK
         working-directory: android
