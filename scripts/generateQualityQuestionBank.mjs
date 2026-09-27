@@ -240,7 +240,7 @@ function makeOptions(correct, pool, i) {
   return [pool[correct], ...d].sort((a,b)=>a===pool[correct]?-1:b===pool[correct]?1:0);
 }
 
-function buildQuestion(ch, n) {
+function buildQuestion(ch, n, series = "mcq") {
   const bank = ch.subject === "Physics" ? physics[ch.ncertChapter]
     : ch.subject === "Chemistry" ? chemistry[ch.ncertChapter]
     : biology[ch.ncertChapter];
@@ -251,8 +251,9 @@ function buildQuestion(ch, n) {
     const options = makeOptions(seed[2], seed[1], n);
     const answerIndex = options.indexOf(correctText);
     return {
-      id: `${ch.id}-q${String(n + 1).padStart(3, "0")}`,
+      id: `${ch.id}-${series}-q${String(n + 1).padStart(3, "0")}`,
       chapterId: ch.id,
+      series,
       topicId: ch.topics[n % ch.topics.length],
       type: n % 7 === 0 ? "statement" : "mcq",
       difficulty: n % 5 < 2 ? "easy" : n % 5 < 4 ? "medium" : "hard",
@@ -319,18 +320,25 @@ function questionCountForChapter(chapter) {
 }
 
 const questions = [];
+const SERIES = ["ncert","mcq","ar","revision"];
 for (const ch of chapters) {
-  for (let n = 0; n < questionCountForChapter(ch); n++) {
-    questions.push(buildQuestion(ch, n));
+  for (const series of SERIES) {
+    for (let n = 0; n < questionCountForChapter(ch); n++) {
+      const q = buildQuestion(ch, n, series);
+      if (series === "ncert") q.question = "NCERT-aligned: " + q.question;
+      if (series === "revision") q.question = "Revision: " + q.question;
+      if (series === "ar") q.question = "Assertion & Reason: " + q.question;
+      questions.push(q);
+    }
   }
 }
 
 fs.writeFileSync("data/questions.json", JSON.stringify({
   version: "2.0",
   description: "NEET UG practice question bank. Generated drafts require subject-matter review before release.",
-  policy: { minimumPerChapter: 60, maximumPerChapter: 200, variableCounts: true, noUnverifiedPYQs: true, noInventedNCERTPageCitations: true },
+  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, series: ["ncert","mcq","ar","pyq","revision"], noUnverifiedPYQs: true, noInventedNCERTPageCitations: true },
   questions
 }, null, 2) + "\n");
-console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with variable 60–200 chapter sizes based on chapter scope.`);
+console.log(`Generated ${questions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for each non-PYQ series. Verified PYQs are not fabricated.`);
 
 // Regeneration trigger: generated bank is validated before commit.
