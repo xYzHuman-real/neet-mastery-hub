@@ -11,7 +11,7 @@
  * NCERT page/line citations. Every generated item remains draft until reviewed.
  */
 
-const fs = require("node:fs");
+import fs from "node:fs";
 
 const chapters = JSON.parse(fs.readFileSync("data/chapters.json", "utf8")).chapters;
 
