@@ -15,7 +15,7 @@ The official NMC NEET UG 2026 syllabus remains the top-level syllabus layer. NCE
 - **Biology:** 10/10 official NEET UG 2026 units
 - **Chapter layer:** 87 chapter/syllabus-section records mapped to units
 - **Lessons:** 87 chapter-level lesson records
-- **Questions:** 117 NEET-style MCQs
+- **Questions:** variable-size NEET-style MCQ bank
 - **Chapter coverage:** every chapter/syllabus-section record has at least one question
 - **Question schema:** `data/question.schema.json`
 
@@ -77,6 +77,6 @@ The schema already supports `mcq`, `numerical`, `statement`, and `match` modes. 
 
 ## Question-bank minimum
 
-Every chapter has a hard minimum target of **50 questions**. With 87 chapters, the complete bank must contain at least **4,350 questions**. The repository includes `scripts/validateQuestionMinimum.mjs` to fail validation whenever a chapter is below 50.
+Every chapter has a hard minimum target of **60 questions** and a maximum of **200**. The chapter target varies with conceptual breadth rather than forcing every chapter to the same count. The repository includes `scripts/validateQuestionMinimum.mjs` to enforce the minimum.
 
 Question records should use `topicId`, `sourceType`, and `reviewStatus`. Exact NCERT page/line citations must not be invented; they should remain null until verified against the intended textbook edition.
