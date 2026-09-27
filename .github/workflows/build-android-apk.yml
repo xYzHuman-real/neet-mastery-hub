@@ -3,6 +3,9 @@ run-name: Build BuzNeet installable APK
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 concurrency:
   group: buzneet-android-build
