@@ -42,4 +42,5 @@ jobs:
           git add data/questions.json
           git diff --cached --quiet && exit 0
           git commit -m "Generate validated variable-size question bank"
+          git pull --rebase origin main
           git push
