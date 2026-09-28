@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "policy": {
+    "ncert": "original questions derived from NCERT concepts; no textbook line reproduction",
+    "pyq": "only reusable/licensed question text is bundled",
+    "mcq": "original or permissively licensed NEET-style MCQs",
+    "ar": "original NCERT-derived assertion/reason questions plus reusable A/R PYQs when licensing permits"
+  },
+  "sources": [],
+  "questions": []
+}
