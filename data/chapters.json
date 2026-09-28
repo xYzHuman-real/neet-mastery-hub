@@ -19,8 +19,8 @@
         "errors and dimensions"
       ],
       "questionTarget": 80,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c2",
@@ -34,8 +34,8 @@
         "motion graphs"
       ],
       "questionTarget": 93,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c3",
@@ -49,8 +49,8 @@
         "uniform circular motion"
       ],
       "questionTarget": 85,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c4",
@@ -64,8 +64,8 @@
         "friction and circular motion"
       ],
       "questionTarget": 98,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c5",
@@ -79,8 +79,8 @@
         "power and collisions"
       ],
       "questionTarget": 90,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c6",
@@ -94,8 +94,8 @@
         "moment of inertia"
       ],
       "questionTarget": 82,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c7",
@@ -109,8 +109,8 @@
         "satellites and escape speed"
       ],
       "questionTarget": 95,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c8",
@@ -124,8 +124,8 @@
         "elastic energy"
       ],
       "questionTarget": 87,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c9",
@@ -139,8 +139,8 @@
         "Bernoulli principle and surface tension"
       ],
       "questionTarget": 100,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c10",
@@ -154,8 +154,8 @@
         "heat transfer"
       ],
       "questionTarget": 92,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c11",
@@ -169,8 +169,8 @@
         "second law and heat engines"
       ],
       "questionTarget": 84,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c12",
@@ -184,8 +184,8 @@
         "degrees of freedom"
       ],
       "questionTarget": 97,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c13",
@@ -199,8 +199,8 @@
         "pendulum"
       ],
       "questionTarget": 89,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c14",
@@ -214,8 +214,8 @@
         "standing waves and sound"
       ],
       "questionTarget": 81,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c15",
@@ -229,8 +229,8 @@
         "Gauss law"
       ],
       "questionTarget": 94,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c16",
@@ -244,8 +244,8 @@
         "dielectrics"
       ],
       "questionTarget": 86,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c17",
@@ -259,8 +259,8 @@
         "Kirchhoff laws and cells"
       ],
       "questionTarget": 99,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c18",
@@ -274,8 +274,8 @@
         "Ampere law"
       ],
       "questionTarget": 91,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c19",
@@ -289,8 +289,8 @@
         "earth magnetism"
       ],
       "questionTarget": 83,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c20",
@@ -304,8 +304,8 @@
         "inductance"
       ],
       "questionTarget": 96,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c21",
@@ -319,8 +319,8 @@
         "transformer"
       ],
       "questionTarget": 88,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c22",
@@ -334,8 +334,8 @@
         "applications"
       ],
       "questionTarget": 80,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c23",
@@ -349,8 +349,8 @@
         "optical instruments"
       ],
       "questionTarget": 93,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c24",
@@ -364,8 +364,8 @@
         "polarisation"
       ],
       "questionTarget": 85,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c25",
@@ -379,8 +379,8 @@
         "de Broglie waves"
       ],
       "questionTarget": 98,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c26",
@@ -394,8 +394,8 @@
         "hydrogen spectrum"
       ],
       "questionTarget": 90,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c27",
@@ -409,8 +409,8 @@
         "radioactivity and nuclear reactions"
       ],
       "questionTarget": 82,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c28",
@@ -424,8 +424,8 @@
         "diodes and logic gates"
       ],
       "questionTarget": 95,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c1",
@@ -439,8 +439,8 @@
         "concentration"
       ],
       "questionTarget": 87,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c2",
@@ -454,8 +454,8 @@
         "electronic configuration"
       ],
       "questionTarget": 100,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c3",
@@ -469,8 +469,8 @@
         "ionisation enthalpy and electronegativity"
       ],
       "questionTarget": 92,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c4",
@@ -484,8 +484,8 @@
         "hybridisation and hydrogen bonding"
       ],
       "questionTarget": 84,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c5",
@@ -499,8 +499,8 @@
         "Gibbs energy"
       ],
       "questionTarget": 97,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c6",
@@ -514,8 +514,8 @@
         "pH and buffers"
       ],
       "questionTarget": 89,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c7",
@@ -529,8 +529,8 @@
         "redox concepts"
       ],
       "questionTarget": 81,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c8",
@@ -544,8 +544,8 @@
         "reaction intermediates"
       ],
       "questionTarget": 94,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c9",
@@ -559,8 +559,8 @@
         "aromatic hydrocarbons"
       ],
       "questionTarget": 86,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c10",
@@ -574,8 +574,8 @@
         "colligative properties"
       ],
       "questionTarget": 99,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c11",
@@ -589,8 +589,8 @@
         "conductance and electrolysis"
       ],
       "questionTarget": 91,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c12",
@@ -604,8 +604,8 @@
         "Arrhenius equation"
       ],
       "questionTarget": 83,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c13",
@@ -619,8 +619,8 @@
         "oxidation states"
       ],
       "questionTarget": 96,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c14",
@@ -634,8 +634,8 @@
         "actinides"
       ],
       "questionTarget": 88,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c15",
@@ -649,8 +649,8 @@
         "bonding theories"
       ],
       "questionTarget": 80,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c16",
@@ -664,8 +664,8 @@
         "haloarene reactions"
       ],
       "questionTarget": 93,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c17",
@@ -679,8 +679,8 @@
         "ethers"
       ],
       "questionTarget": 85,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c18",
@@ -694,8 +694,8 @@
         "carboxylic acids"
       ],
       "questionTarget": 98,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c19",
@@ -709,8 +709,8 @@
         "diazonium salts"
       ],
       "questionTarget": 90,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c20",
@@ -724,8 +724,8 @@
         "nucleic acids"
       ],
       "questionTarget": 82,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c1",
@@ -739,8 +739,8 @@
         "binomial nomenclature"
       ],
       "questionTarget": 95,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c2",
@@ -754,8 +754,8 @@
         "protista and fungi"
       ],
       "questionTarget": 87,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c3",
@@ -769,8 +769,8 @@
         "gymnosperms and angiosperms"
       ],
       "questionTarget": 100,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c4",
@@ -784,8 +784,8 @@
         "chordates"
       ],
       "questionTarget": 92,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c5",
@@ -799,8 +799,8 @@
         "flower and fruit"
       ],
       "questionTarget": 84,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c6",
@@ -814,8 +814,8 @@
         "secondary growth"
       ],
       "questionTarget": 97,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c7",
@@ -829,8 +829,8 @@
         "cockroach and frog"
       ],
       "questionTarget": 89,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c8",
@@ -844,8 +844,8 @@
         "prokaryotic and eukaryotic cells"
       ],
       "questionTarget": 81,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c9",
@@ -859,8 +859,8 @@
         "enzymes"
       ],
       "questionTarget": 94,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c10",
@@ -874,8 +874,8 @@
         "meiosis"
       ],
       "questionTarget": 86,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c11",
@@ -889,8 +889,8 @@
         "transpiration"
       ],
       "questionTarget": 99,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c12",
@@ -904,8 +904,8 @@
         "nitrogen metabolism"
       ],
       "questionTarget": 91,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c13",
@@ -919,8 +919,8 @@
         "photorespiration"
       ],
       "questionTarget": 83,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c14",
@@ -934,8 +934,8 @@
         "electron transport"
       ],
       "questionTarget": 96,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c15",
@@ -949,8 +949,8 @@
         "photoperiodism"
       ],
       "questionTarget": 88,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c16",
@@ -964,8 +964,8 @@
         "absorption"
       ],
       "questionTarget": 80,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c17",
@@ -979,8 +979,8 @@
         "transport of gases"
       ],
       "questionTarget": 93,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c18",
@@ -994,8 +994,8 @@
         "circulation"
       ],
       "questionTarget": 85,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c19",
@@ -1009,8 +1009,8 @@
         "osmoregulation"
       ],
       "questionTarget": 98,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c20",
@@ -1024,8 +1024,8 @@
         "movement disorders"
       ],
       "questionTarget": 90,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c21",
@@ -1039,8 +1039,8 @@
         "central nervous system"
       ],
       "questionTarget": 82,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c22",
@@ -1054,8 +1054,8 @@
         "feedback regulation"
       ],
       "questionTarget": 95,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c23",
@@ -1069,8 +1069,8 @@
         "double fertilisation"
       ],
       "questionTarget": 87,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c24",
@@ -1084,8 +1084,8 @@
         "menstrual cycle"
       ],
       "questionTarget": 100,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c25",
@@ -1099,8 +1099,8 @@
         "assisted reproductive technologies"
       ],
       "questionTarget": 92,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c26",
@@ -1114,8 +1114,8 @@
         "inheritance patterns"
       ],
       "questionTarget": 84,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c27",
@@ -1129,8 +1129,8 @@
         "translation and regulation"
       ],
       "questionTarget": 97,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c28",
@@ -1144,8 +1144,8 @@
         "human evolution"
       ],
       "questionTarget": 89,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c29",
@@ -1159,8 +1159,8 @@
         "AIDS and cancer"
       ],
       "questionTarget": 81,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c30",
@@ -1174,8 +1174,8 @@
         "biocontrol and biofertilisers"
       ],
       "questionTarget": 94,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c31",
@@ -1189,8 +1189,8 @@
         "PCR and cloning"
       ],
       "questionTarget": 86,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c32",
@@ -1204,8 +1204,8 @@
         "gene therapy and biosafety"
       ],
       "questionTarget": 99,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c33",
@@ -1219,8 +1219,8 @@
         "adaptations"
       ],
       "questionTarget": 91,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c34",
@@ -1234,8 +1234,8 @@
         "ecological pyramids and cycles"
       ],
       "questionTarget": 83,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c35",
@@ -1249,8 +1249,8 @@
         "conservation"
       ],
       "questionTarget": 96,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "bio-c36",
@@ -1264,8 +1264,8 @@
         "waste management"
       ],
       "questionTarget": 88,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "phy-c29",
@@ -1280,8 +1280,8 @@
         "graphs and data interpretation"
       ],
       "questionTarget": 80,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c21",
@@ -1296,8 +1296,8 @@
         "characterisation"
       ],
       "questionTarget": 93,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     },
     {
       "id": "chem-c22",
@@ -1312,8 +1312,8 @@
         "laboratory principles"
       ],
       "questionTarget": 85,
-      "minimumQuestionCount": 60,
-      "maximumQuestionCount": 200
+      "minimumQuestionCount": 61,
+      "maximumQuestionCount": 199
     }
   ],
   "questionPolicy": {
