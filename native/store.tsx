@@ -6,7 +6,7 @@ import { fetchEntitlement } from "./premiumEntitlement";
 export type Rating = "again" | "hard" | "good" | "easy";
 
 type S = {
-  streak: number; todayCount: number; lastStudyDate: string | null; goal: number;
+  streak: number; todayCount: number; todayDate: string | null; lastStudyDate: string | null; goal: number;
   answered: Record<string, boolean>; cards: Record<string, { step: number; due: number }>;
   mistakes: Record<string, { qid: string; at: number; flagged: boolean }>;
   user: { name: string; email: string } | null; onboarded: boolean; telegramDone: boolean;
@@ -18,19 +18,19 @@ type S = {
   notifications: { enabled: boolean; hour: number; minute: number; revision: boolean; tests: boolean; streak: boolean; mission: boolean };
 };
 const D=86400000;
-const initial:S={streak:0,todayCount:0,lastStudyDate:null,goal:50,answered:{},cards:{},mistakes:{},user:null,onboarded:false,telegramDone:false,bookmarks:{},testHistory:[],dailyGoals:{},aiUsage:{day:"",count:0},premium:{active:false,plan:null,expiresAt:null},notifications:{enabled:false,hour:19,minute:0,revision:true,tests:true,streak:true,mission:true}};
+const initial:S={streak:0,todayCount:0,todayDate:null,lastStudyDate:null,goal:50,answered:{},cards:{},mistakes:{},user:null,onboarded:false,telegramDone:false,bookmarks:{},testHistory:[],dailyGoals:{},aiUsage:{day:"",count:0},premium:{active:false,plan:null,expiresAt:null},notifications:{enabled:false,hour:19,minute:0,revision:true,tests:true,streak:true,mission:true}};
 type Ctx=S&{hydrated:boolean;patch:(p:Partial<S>)=>void;logout:()=>Promise<void>;record:(id:string,ok:boolean)=>void;rate:(id:string,r:Rating)=>void;toggle:(id:string)=>void;remove:(id:string)=>void;toggleBookmark:(id:string)=>void;saveTest:(result:S["testHistory"][number])=>void;consumeAi:(limit:number)=>boolean;due:string[]};
 const Ctx=createContext<Ctx|null>(null); const KEY="buzneet-native-v2";
 
 export function StoreProvider({children}:{children:ReactNode}){
  const[s,setS]=useState(initial); const[hydrated,setH]=useState(false);
- useEffect(()=>{AsyncStorage.getItem(KEY).then(x=>{if(x)try{setS({...initial,...JSON.parse(x)})}catch{}}).finally(()=>setH(true))},[]);
+ useEffect(()=>{AsyncStorage.getItem(KEY).then(x=>{if(x)try{setS({...initial,...JSON.parse(x),todayDate:(JSON.parse(x).todayDate??null)})}catch{}}).finally(()=>setH(true))},[]);
  useEffect(()=>watchFirebaseUser(user=>{if(!user){setS(x=>({...x,user:null,premium:{active:false,plan:null,expiresAt:null}}));return} setS(x=>({...x,user:{name:user.displayName||"NEET Aspirant",email:user.email||""},onboarded:true})); if(user.localId&&user.idToken) fetchEntitlement(user.localId,user.idToken).then(premium=>setS(x=>({...x,premium})));}),[]);
  useEffect(()=>{if(hydrated)AsyncStorage.setItem(KEY,JSON.stringify(s))},[s,hydrated]);
  const v=useMemo<Ctx>(()=>({...s,hydrated,
   patch:p=>setS(x=>({...x,...p})),
   logout:async()=>{await logoutFirebase();setS(x=>({...x,user:null,telegramDone:false}))},
-  record:(id,ok)=>setS(x=>{const now=new Date(),today=now.toISOString().slice(0,10),yesterday=new Date(now.getTime()-D).toISOString().slice(0,10);const isNew=x.lastStudyDate!==today;const streak=x.lastStudyDate===today?x.streak:x.lastStudyDate===yesterday?x.streak+1:1;return {...x,streak,lastStudyDate:today,todayCount:isNew?1:x.todayCount+1,answered:{...x.answered,[id]:ok},mistakes:ok?x.mistakes:{...x.mistakes,[id]:{qid:id,at:Date.now(),flagged:x.mistakes[id]?.flagged??false}}}}),
+  record:(id,ok)=>setS(x=>{const now=new Date(),today=now.toISOString().slice(0,10),yesterday=new Date(now.getTime()-D).toISOString().slice(0,10);const sameDay=x.todayDate===today;const todayCount=(sameDay?x.todayCount:0)+1;const completedToday=x.lastStudyDate===today;const reached=todayCount>=Math.max(1,x.goal);const shouldComplete=!completedToday&&reached;const streak=shouldComplete?(x.lastStudyDate===yesterday?x.streak+1:1):x.streak;return {...x,todayDate:today,todayCount,lastStudyDate:shouldComplete?today:x.lastStudyDate,streak,answered:{...x.answered,[id]:ok},mistakes:ok?x.mistakes:{...x.mistakes,[id]:{qid:id,at:Date.now(),flagged:x.mistakes[id]?.flagged??false}}}}),
   rate:(id,r)=>setS(x=>{const cur=x.cards[id]?.step??-1;const step=r==="again"?0:r==="hard"?Math.max(0,cur):Math.min(3,cur+1);return {...x,cards:{...x.cards,[id]:{step,due:Date.now()+[1,3,7,30][step]*D}}}}),
   toggle:id=>setS(x=>{const m={...x.mistakes};if(m[id]?.flagged)delete m[id];else m[id]={qid:id,at:Date.now(),flagged:true};return {...x,mistakes:m}}),
   remove:id=>setS(x=>{const m={...x.mistakes};delete m[id];return {...x,mistakes:m}}),
