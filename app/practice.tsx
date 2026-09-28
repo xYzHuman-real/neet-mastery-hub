@@ -82,7 +82,6 @@ export default function Practice(){
         <Text style={{fontSize:17,fontWeight:"800",lineHeight:25,color:C.foreground,marginTop:6}}>{q.reason||"Reason statement unavailable."}</Text>
       </View> : <Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>}
       {mode==="ar"&&<Text style={{fontSize:11,lineHeight:17,color:C.mutedText,marginTop:14}}>Choose the option that correctly evaluates A and R and whether R explains A.</Text>}
-      {q.reviewStatus==="draft"&&<Text style={{fontSize:10,color:C.mutedText,marginTop:10}}>Draft bank item · subject review is still required before treating this as final released content.</Text>}
     </Card>
 
     <View style={{gap:8,marginTop:12}}>
