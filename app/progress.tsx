@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Animated, Pressable, Text, View } from "react-native";
 import { Shell, Card } from "../native/ui";
 import { C } from "../native/theme";
 import { useStore } from "../native/store";
@@ -7,6 +7,7 @@ import { loadContent } from "../native/content";
 import { buildAnalytics, smartRevision } from "../native/analytics";
 import { getAchievements } from "../native/personalization";
 import { router } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Progress(){
  const{answered,mistakes,testHistory,streak,premium}=useStore(); const[content,setContent]=useState<any[]>([]);
@@ -14,7 +15,48 @@ export default function Progress(){
  const a=useMemo(()=>buildAnalytics(content,answered,testHistory),[content,answered,testHistory]);
  const weak=useMemo(()=>smartRevision(content,answered,mistakes),[content,answered,mistakes]);
  const achievements=getAchievements(a.attempted,streak,a.accuracy,a.tests);
+ const unlockKey=achievements.filter(x=>x.unlocked).map(x=>x.id).join(",");
+ const[newAchievement,setNewAchievement]=useState<typeof achievements[number]|null>(null);
+ const badgeScale=useState(()=>new Animated.Value(0.72))[0];
+ const badgeOpacity=useState(()=>new Animated.Value(0))[0];
+ useEffect(()=>{
+   if(!unlockKey)return;
+   AsyncStorage.getItem("buzneet-seen-achievements-v1").then(raw=>{
+     let seen:string[]=[];
+     try{seen=raw?JSON.parse(raw):[]}catch{}
+     const newlyUnlocked=achievements.find(x=>x.unlocked&&!seen.includes(x.id));
+     if(newlyUnlocked){
+       setNewAchievement(newlyUnlocked);
+       badgeScale.setValue(0.72);
+       badgeOpacity.setValue(0);
+       Animated.parallel([
+         Animated.spring(badgeScale,{toValue:1,useNativeDriver:true,damping:9,stiffness:180}),
+         Animated.timing(badgeOpacity,{toValue:1,duration:220,useNativeDriver:true})
+       ]).start();
+       setTimeout(()=>{
+         Animated.timing(badgeOpacity,{toValue:0,duration:220,useNativeDriver:true}).start(({finished})=>{
+           if(finished)setNewAchievement(null);
+         });
+       },2600);
+     }
+     AsyncStorage.setItem("buzneet-seen-achievements-v1",JSON.stringify(Array.from(new Set([...seen,...achievements.filter(x=>x.unlocked).map(x=>x.id)]))));
+   });
+ },[unlockKey]);
  return <Shell title="Progress" subtitle="Your preparation data">
+  {newAchievement&&<Animated.View style={{opacity:badgeOpacity,transform:[{scale:badgeScale}],marginTop:4,marginBottom:10}}>
+    <Card style={{backgroundColor:C.primary,borderColor:C.primary}}>
+      <View style={{flexDirection:"row",alignItems:"center"}}>
+        <View style={{width:48,height:48,borderRadius:16,backgroundColor:"rgba(255,255,255,.18)",alignItems:"center",justifyContent:"center"}}>
+          <Text style={{fontSize:25}}>🏅</Text>
+        </View>
+        <View style={{marginLeft:12,flex:1}}>
+          <Text style={{fontSize:9,fontWeight:"900",letterSpacing:1,color:C.primaryText}}>ACHIEVEMENT UNLOCKED</Text>
+          <Text style={{fontSize:17,fontWeight:"900",color:C.primaryText,marginTop:2}}>{newAchievement.title}</Text>
+          <Text style={{fontSize:10,color:C.primaryText,opacity:.86,marginTop:2}}>{newAchievement.detail}</Text>
+        </View>
+      </View>
+    </Card>
+  </Animated.View>}
   <View style={{flexDirection:"row",gap:8}}><Card style={{flex:1}}><Text style={{fontSize:24,fontWeight:"900",color:C.foreground}}>{a.attempted}</Text><Text style={{fontSize:10,color:C.mutedText}}>Attempted</Text></Card><Card style={{flex:1}}><Text style={{fontSize:24,fontWeight:"900",color:C.foreground}}>{a.accuracy}%</Text><Text style={{fontSize:10,color:C.mutedText}}>Accuracy</Text></Card><Card style={{flex:1}}><Text style={{fontSize:24,fontWeight:"900",color:C.foreground}}>{a.tests}</Text><Text style={{fontSize:10,color:C.mutedText}}>Tests</Text></Card></View>
   <Card style={{marginTop:10,backgroundColor:C.highlight}}><Text style={{fontSize:10,fontWeight:"900",letterSpacing:1,color:C.highlightText}}>CONSISTENCY</Text><Text style={{fontSize:28,fontWeight:"900",color:C.highlightText,marginTop:3}}>{streak} day streak</Text><Text style={{fontSize:11,color:C.highlightText,marginTop:2}}>Keep practicing daily to maintain it.</Text></Card>
   {premium.active&&<Text style={{fontSize:18,fontWeight:"900",color:C.foreground,marginTop:20}}>Advanced Analytics</Text>}{!premium.active&&<Card style={{marginTop:20}}><Text style={{fontSize:18,fontWeight:"900",color:C.foreground}}>Advanced Analytics</Text><Text style={{fontSize:11,color:C.mutedText,marginTop:5}}>Premium unlocks deeper chapter, subject, series and test-performance insights.</Text><Pressable onPress={()=>router.push("/premium")} style={{marginTop:10,backgroundColor:C.primary,borderRadius:14,padding:12,alignItems:"center"}}><Text style={{fontWeight:"900",color:C.primaryText}}>Unlock Analytics</Text></Pressable></Card>} {premium.active&&<Text style={{fontSize:18,fontWeight:"900",color:C.foreground,marginTop:20}}>Chapter performance</Text>}
