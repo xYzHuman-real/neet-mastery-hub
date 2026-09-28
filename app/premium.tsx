@@ -2,12 +2,18 @@ import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
 import { router } from "expo-router";
 import { Shell, Card } from "../native/ui";
 import { C } from "../native/theme";
-import { PREMIUM_FEATURES, PREMIUM_PLANS, subscriptionUrl } from "../native/premium";
+import { PREMIUM_FEATURES, PREMIUM_PLANS, subscriptionUrl, premiumTimeLeft } from "../native/premium";
+import { useStore } from "../native/store";
+import { useEffect, useState } from "react";
 
 export default function Premium(){
+ const { premium } = useStore();
+ const [now,setNow]=useState(Date.now());
+ useEffect(()=>{const t=setInterval(()=>setNow(Date.now()),60000);return()=>clearInterval(t)},[]);
+ const left=premiumTimeLeft(premium.expiresAt,now);
  const subscribe=(plan:any)=>{const url=subscriptionUrl(plan);if(url)Linking.openURL(url);};
  return <Shell title="BuzNeet Premium" subtitle="More intelligence for your preparation" right={<Pressable onPress={()=>router.back()}><Text style={{fontSize:24,color:C.foreground}}>×</Text></Pressable>}>
-  <Card style={s.hero}><Text style={s.eyebrow}>BUZNEET PREMIUM</Text><Text style={s.heroTitle}>Prepare smarter.</Text><Text style={s.heroSub}>Unlock deeper analytics, adaptive revision, advanced tests and personalized preparation tools.</Text></Card>
+  <Card style={s.hero}><Text style={s.eyebrow}>BUZNEET PREMIUM</Text>{premium.active&&left?<><Text style={s.heroTitle}>Premium is active.</Text><Text style={s.heroSub}>{left.days} days {left.hours} hours remaining · Expires {new Date(premium.expiresAt!).toLocaleDateString()}</Text></>:<><Text style={s.heroTitle}>Prepare smarter.</Text><Text style={s.heroSub}>Unlock deeper analytics, adaptive revision, advanced tests and personalized preparation tools.</Text></>}</Card>
   <Text style={s.section}>Premium features</Text>
   <View style={{gap:8}}>{PREMIUM_FEATURES.map(f=><Card key={f.title}><View style={s.featureRow}><View style={s.icon}><Text style={s.iconText}>{f.icon}</Text></View><View style={{flex:1}}><Text style={s.featureTitle}>{f.title}</Text><Text style={s.featureDetail}>{f.detail}</Text></View></View></Card>)}</View>
   <Text style={s.section}>Choose your plan</Text>
