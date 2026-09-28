@@ -1,11 +1,768 @@
 {
-  "version": "1.0",
+  "version": "2.1",
   "source": {
-    "id": "kshitij-pes-neet-dataset",
-    "name": "Kshitij-PES NEET Previous Year Questions",
-    "url": "https://huggingface.co/datasets/Kshitij-PES/NEET_Dataset",
-    "license": "Apache-2.0",
-    "attribution": "Kshitij Gupta (Kshitij-PES)"
+    "id": "datavorous-entrance-exam-neet",
+    "name": "Entrance Exam Dataset — NEET split",
+    "url": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+    "license": "CC BY 4.0",
+    "attribution": "datavorous / KingNish"
   },
-  "questions": []
+  "questions": [
+    {
+      "id": "ccby-neet-21950",
+      "chapterId": "phy-c6",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The moment of inertia of a body depends upon",
+      "options": [
+        "mass only",
+        "angular velocity only",
+        "distribution of particles only",
+        "mass and distribution of mass about the axis"
+      ],
+      "answer": 3,
+      "difficulty": "medium",
+      "explanation": "mass and distribution of mass about the axis",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "the-moment-of-inertia-of-a-body-depends-upon"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "21950",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Physics', 'Rotational Motion', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-27111",
+      "chapterId": "phy-c9",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What does the equation log x/m = logk + 1/n logC (equation 5.4) represent in Freundlich's isotherm?",
+      "options": [
+        "The relationship between temperature and adsorption",
+        "The relationship between surface area and adsorption",
+        "The logarithmic form of Freundlich's equation for adsorption from the solution phase",
+        "Langmuir's equation for adsorption"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "The logarithmic form of Freundlich's equation for adsorption from the solution phase",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-does-the-equation-log-xm-logk-1n-logc-equation-54-represent-in-freundlichs-isotherm"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "27111",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'Surface Chemistry', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-24919",
+      "chapterId": "phy-c11",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Two moles of an ideal gas, with C P C V = 5 3 , are mixed with 3 moles of another ideal gas C P C V = 4 3 . The value of C P C V for the mixture is",
+      "options": [
+        "1.45",
+        "1.50",
+        "1.47",
+        "1.42"
+      ],
+      "answer": 3,
+      "difficulty": "medium",
+      "explanation": "1.42",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "two-moles-of-an-ideal-gas-with-c-p-c-v-5-3-are-mixed-with-3-moles-of-another-ideal-gas-c-p-c-v-4-3-the-value-of-c-p-c-v-for-the-mixture-is"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "24919",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Physics', 'Thermodynamics', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-28647",
+      "chapterId": "phy-c12",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is suggested about gases in relation to their critical temperature and liquifaction?",
+      "options": [
+        "Gases liquify when heated above their critical temperature.",
+        "Gases need to be heated to liquify.",
+        "Gases should be cooled below their critical temperature for liquifaction.",
+        "Gases can liquify at any temperature."
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Gases should be cooled below their critical temperature for liquifaction.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-suggested-about-gases-in-relation-to-their-critical-temperature-and-liquifaction"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "28647",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'States of Matter', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-10240",
+      "chapterId": "phy-c28",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Figure gives a system of logic gates. From the study of truth table it can be found that to produce a high output (1) at R , we must have",
+      "options": [
+        "X = 0 , Y = 1",
+        "X = 1 , Y = 1",
+        "X = 1 , Y = 0",
+        "X = 0 , Y = 0"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "X = 1 , Y = 0",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "figure-gives-a-system-of-logic-gates-from-the-study-of-truth-table-it-can-be-found-that-to-produce-a-high-output-1-at-r-we-must-have"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "10240",
+      "sourceDb": "MarksBatch1_P2.db",
+      "sourceTags": "['Physics', 'Semiconductors', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-10589",
+      "chapterId": "phy-c28",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "For a p - type semiconductor, which of the following statements is true?",
+      "options": [
+        "Electrons are the majority carriers and trivalent atoms are the dopants.",
+        "Holes are the majority carriers and trivalent atoms are the dopants.",
+        "Holes are the majority carriers and pentavalent atoms are the dopants.",
+        "Electrons are the majority carriers and pentavalent atoms are the dopants."
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Holes are the majority carriers and trivalent atoms are the dopants.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "for-a-p-type-semiconductor-which-of-the-following-statements-is-true"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "10589",
+      "sourceDb": "MarksBatch1_P2.db",
+      "sourceTags": "['Physics', 'Semiconductors', 'NEET', 'NEET 2019 (All India)']"
+    },
+    {
+      "id": "ccby-neet-23283",
+      "chapterId": "chem-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The segment of DNA which acts as the instrument manual for the synthesis of the protein is :",
+      "options": [
+        "Nucleoside",
+        "Nucleotide",
+        "Ribose",
+        "Gene"
+      ],
+      "answer": 3,
+      "difficulty": "medium",
+      "explanation": "Gene",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "the-segment-of-dna-which-acts-as-the-instrument-manual-for-the-synthesis-of-the-protein-is"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "23283",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'Chemistry in Everyday Life', 'NEET', 'NEET 2009 (Mains)']"
+    },
+    {
+      "id": "ccby-neet-27306",
+      "chapterId": "chem-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What does the term \"non-volatile\" mean in the context of solutes in a solution?",
+      "options": [
+        "The solute easily vaporizes.",
+        "The solute is not affected by temperature changes.",
+        "The solute has a high vapor pressure.",
+        "The solute does not easily vaporize at the given temperature."
+      ],
+      "answer": 3,
+      "difficulty": "medium",
+      "explanation": "The solute does not easily vaporize at the given temperature.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-does-the-term-nonvolatile-mean-in-the-context-of-solutes-in-a-solution"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "27306",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'Solutions', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-34892",
+      "chapterId": "chem-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What role do synthetic chemicals play in the synthesis of semi-synthetic polymers?",
+      "options": [
+        "Synthetic chemicals serve as the source material for semi-synthetic polymers.",
+        "Synthetic chemicals have no role in the synthesis of semi-synthetic polymers.",
+        "Synthetic chemicals are used to color semi-synthetic polymers.",
+        "Synthetic chemicals are added to enhance the durability of semi-synthetic polymers."
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Synthetic chemicals serve as the source material for semi-synthetic polymers.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-role-do-synthetic-chemicals-play-in-the-synthesis-of-semisynthetic-polymers"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "34892",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'Polymers', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-14201",
+      "chapterId": "chem-c3",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "It is said that the elemental composition of living organisms and that of inanimate objects (like earthâs crust) are similar in the sense that all the major elements are present in both. Then what would be the difference between these two groups? Choose the correct answer from among the following:",
+      "options": [
+        "Living organisms have more gold in them than inanimate objects",
+        "Living organisms have more water in their body than inanimate objects",
+        "Living organisms have more carbon, oxygen and hydrogen per unit mass than inanimate objects.",
+        "Living organisms have more calcium in them than inanimate objects."
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Living organisms have more carbon, oxygen and hydrogen per unit mass than inanimate objects.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "it-is-said-that-the-elemental-composition-of-living-organisms-and-that-of-inanimate-objects-like-earths-crust-are-similar-in-the-sense-that-all-the-ma-1"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "14201",
+      "sourceDb": "MarksBatch2_P1.db",
+      "sourceTags": "['Biology', 'Biomolecules (B)', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-14214",
+      "chapterId": "chem-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "IUPAC name for the compound",
+      "options": [
+        "Methylcyclohexanone",
+        "2-Methylcyclohexanone",
+        "Heptanone-2",
+        "Methylcyclo-hexanone"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "2-Methylcyclohexanone",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "iupac-name-for-the-compound"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "14214",
+      "sourceDb": "MarksBatch2_P1.db",
+      "sourceTags": "['Chemistry', 'General Organic Chemistry', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-19789",
+      "chapterId": "chem-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The correct IUPAC name of the compound",
+      "options": [
+        "4-ethyl-1-fluoro-2-nitrobenzene",
+        "4-ethyl-1-fluoro-6-nitrobenzene",
+        "3-ethyl-6-fluoro-1-nitrobenzene",
+        "1-ethyl-4-fluoro-3-nitrobenzene"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "4-ethyl-1-fluoro-2-nitrobenzene",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "the-correct-iupac-name-of-the-compound"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "19789",
+      "sourceDb": "MarksBatch2_P2.db",
+      "sourceTags": "['Chemistry', 'General Organic Chemistry', 'NEET', 'NEET 2024 (Re-NEET)']"
+    },
+    {
+      "id": "ccby-neet-21425",
+      "chapterId": "chem-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The IUPAC name of",
+      "options": [
+        "4-Hydroxy-1-methylpentanal",
+        "4-Hydroxy-2-methylpent-2-en-1-al",
+        "2-Hydroxy-4-methylpent-3-en-5-al",
+        "2-Hydroxy-3-methylpent-2-en-5-al"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "4-Hydroxy-2-methylpent-2-en-1-al",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "the-iupac-name-of-1"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "21425",
+      "sourceDb": "MarksBatch2_P2.db",
+      "sourceTags": "['Chemistry', 'General Organic Chemistry', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-28383",
+      "chapterId": "chem-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is hyperconjugation, and what type of interaction does it involve?",
+      "options": [
+        "Hyperconjugation is a temporary effect involving the delocalization of Ï electrons.",
+        "Hyperconjugation is a permanent effect involving the delocalization of Ï electrons.",
+        "Hyperconjugation is a temporary effect involving the delocalization of Ï electrons.",
+        "Hyperconjugation is a permanent effect involving the delocalization of Ï electrons."
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Hyperconjugation is a permanent effect involving the delocalization of Ï electrons.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-hyperconjugation-and-what-type-of-interaction-does-it-involve"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "28383",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'General Organic Chemistry', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-31508",
+      "chapterId": "chem-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is the name of the compound?",
+      "options": [
+        "Spiro [3.4] octane",
+        "Spiro [2.5] octane",
+        "Spiro [3.5] octane",
+        "None of these"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Spiro [3.4] octane",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-the-name-of-the-compound"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "31508",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'General Organic Chemistry', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-32492",
+      "chapterId": "chem-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is the product of the reaction between sulphur dioxide and oxygen in the presence of a vanadium(V) oxide catalyst?",
+      "options": [
+        "Sulphur hexafluoride",
+        "Sulphur trioxide",
+        "Sulphur tetrachloride",
+        "Sulphuryl fluoride"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Sulphur trioxide",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-the-product-of-the-reaction-between-sulphur-dioxide-and-oxygen-in-the-presence-of-a-vanadiumv-oxide-catalyst"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "32492",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'p Block Elements (Group 15, 16, 17 & 18)', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-25240",
+      "chapterId": "chem-c13",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Under what conditions does sulphur dioxide liquefy at room temperature?",
+      "options": [
+        "Under standard atmospheric pressure",
+        "Under a pressure of two atmospheres",
+        "Under reduced pressure",
+        "Under increased pressure"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Under a pressure of two atmospheres",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "under-what-conditions-does-sulphur-dioxide-liquefy-at-room-temperature"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "25240",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'p Block Elements (Group 15, 16, 17 & 18)', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-28341",
+      "chapterId": "chem-c13",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is formed when sulphur dioxide reacts with water?",
+      "options": [
+        "Sulphuric acid",
+        "Sulphurous acid",
+        "Hydrochloric acid",
+        "Nitric acid"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Sulphurous acid",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-formed-when-sulphur-dioxide-reacts-with-water"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "28341",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'p Block Elements (Group 15, 16, 17 & 18)', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-33033",
+      "chapterId": "chem-c13",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is the relationship between the solubility of sodium dichromate and potassium dichromate?",
+      "options": [
+        "Sodium dichromate is more soluble than potassium dichromate.",
+        "Potassium dichromate is more soluble than sodium dichromate.",
+        "They have equal solubility.",
+        "Their solubility depends on the temperature."
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Sodium dichromate is more soluble than potassium dichromate.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-the-relationship-between-the-solubility-of-sodium-dichromate-and-potassium-dichromate"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "33033",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'd and f Block Elements', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-39506",
+      "chapterId": "chem-c13",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following is not an actinoid?",
+      "options": [
+        "urium (Z = 96)",
+        "alifornium (Z = 98)",
+        "Uranium (Z = 92)",
+        "Terbium (Z = 65)"
+      ],
+      "answer": 3,
+      "difficulty": "medium",
+      "explanation": "Terbium (Z = 65)",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "which-of-the-following-is-not-an-actinoid"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "39506",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'd and f Block Elements', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-21435",
+      "chapterId": "chem-c18",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The IUPAC name of is",
+      "options": [
+        "hlorocarbonyl ethylbenzoate",
+        "arboxyethyl benzoyl chloride",
+        "Ethyl-2-(chlorocarbonyl) benzoate",
+        "Ethyl-1-(chlorocabonyl) benzoate"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Ethyl-2-(chlorocarbonyl) benzoate",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "the-iupac-name-of-is-3"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "21435",
+      "sourceDb": "MarksBatch2_P2.db",
+      "sourceTags": "['Chemistry', 'Carboxylic Acid Derivatives', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-27846",
+      "chapterId": "chem-c18",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What happens when carboxylic acids are dissolved in water?",
+      "options": [
+        "They form covalent bonds.",
+        "They dissociate to form carboxylate anions and hydronium ions.",
+        "They react with metals.",
+        "They evaporate."
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "They dissociate to form carboxylate anions and hydronium ions.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-happens-when-carboxylic-acids-are-dissolved-in-water"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "27846",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'Aldehydes, Ketones and Carboxylic Acids', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-29501",
+      "chapterId": "bio-c3",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is the difference between red algae and green algae?",
+      "options": [
+        "red algae contains the red colour pigment called r-phycoerythrin while green algae contains chlorophyll a, b.",
+        "green algae contains floridean starch as stored food while red algae has starch",
+        "the cell wall of green algae is made up of cellulose and pectin while that of red algae is made up of cellulose",
+        "none of the above"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "red algae contains the red colour pigment called r-phycoerythrin while green algae contains chlorophyll a, b.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-the-difference-between-red-algae-and-green-algae"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "29501",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Biology', 'Plant Kingdom', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-32918",
+      "chapterId": "bio-c3",
+      "series": "ar",
+      "mode": "ar",
+      "prompt": "What is the reason that Gymnosperms and angiosperms are classified separately even after bearing seeds ?",
+      "options": [
+        "In Gymnosperms, the ovules are not enclosed by any ovary wall while in angiosperms, the seeds are enclosed in the ovary.",
+        "In Gymnosperms, there are two ovules present while in angiosperms, five to six ovules are present",
+        "In Gymnosperms, the seeds are yellow coloured while in angiosperms, the seeds are of green colour",
+        "None of the above"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "In Gymnosperms, the ovules are not enclosed by any ovary wall while in angiosperms, the seeds are enclosed in the ovary.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-the-reason-that-gymnosperms-and-angiosperms-are-classified-separately-even-after-bearing-seeds"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "32918",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Biology', 'Plant Kingdom', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-39929",
+      "chapterId": "bio-c3",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following is the economic importance of algae?",
+      "options": [
+        "lgin is a unicellular alga rich in proteins used as a food supplement.",
+        "hlorella produces large amounts of hydrocolloids.",
+        "Gelidium and Gracilaria are used to grow microbes and in preparations of ice creams and jellies.",
+        "None of the above."
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Gelidium and Gracilaria are used to grow microbes and in preparations of ice creams and jellies.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "which-of-the-following-is-the-economic-importance-of-algae"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "39929",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Biology', 'Plant Kingdom', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-29478",
+      "chapterId": "bio-c4",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is the difference between intracellular and extracellular digestion?",
+      "options": [
+        "intracellular digestion occurs outside the cell while extracellular digestion occurs within cells",
+        "In intracellular digestion, metamorphosis is absent while metamorphosis is present in extracellular digestion",
+        "intracellular digestion occurs in fish while extracellular occurs in vertebrates",
+        "Intracellular digestion occurs in lower organisms and extracellular digestion occurs in Multicellular organisms"
+      ],
+      "answer": 3,
+      "difficulty": "medium",
+      "explanation": "Intracellular digestion occurs in lower organisms and extracellular digestion occurs in Multicellular organisms",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-the-difference-between-intracellular-and-extracellular-digestion"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "29478",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Biology', 'Animal Kingdom', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-39076",
+      "chapterId": "bio-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following is correct?",
+      "options": [
+        "ells of all living organisms have a nucleus",
+        "oth animal and plant cells have a well defined cell wall",
+        "In prokaryotes, there are no membrane bound organelles",
+        "ells are formed de novo from abiotic materials"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "In prokaryotes, there are no membrane bound organelles",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "which-of-the-following-is-correct-17"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "39076",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Biology', 'Cell - The Unit of Life', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-41151",
+      "chapterId": "bio-c35",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following statements is correct?",
+      "options": [
+        "Parthenium is an endemic species of our country",
+        "frican catfish is not a threat to indigenous catfishes.",
+        "Stellerâs sea cow is an extinct animal.",
+        "Lantana is popularly known as carrot grass."
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Stellerâs sea cow is an extinct animal.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "which-of-the-following-statements-is-correct-21"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "41151",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Biology', 'Biodiversity and its Conservation', 'NEET']"
+    }
+  ]
 }
