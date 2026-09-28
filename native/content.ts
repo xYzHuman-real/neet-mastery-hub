@@ -3,8 +3,8 @@ import licensedData from "../data/licensedQuestions.json";
 import questionBank from "../data/questionBank.json";
 
 export type ContentMode="ncert"|"mcq"|"ar"|"pyq"|"revision";
-export const SERIES_MIN=60;
-export const SERIES_MAX=200;
+export const SERIES_MIN=61;
+export const SERIES_MAX=199;
 export type NativeQuestion={id:string;chapterId:string;series:ContentMode;mode:"mcq"|"ar"|"pyq";prompt:string;assertion?:string;reason?:string;options:string[];answer:number;difficulty:"easy"|"medium"|"hard";explanation?:string;reviewStatus:"draft"|"reviewed"|"verified";sourceType:"ncert_based"|"original_neet_style"|"pyq";topicId?:string;citation?:{book?:string;chapter?:string;page?:number|null;line?:number|null;reference?:string};sourceLicense?:string;sourceId?:string;sourceQuestionId?:string};
 
 export type NativeChapter={id:string;subject:"physics"|"chemistry"|"biology";classLevel:11|12;name:string;unitId:string;topics:string[]};
