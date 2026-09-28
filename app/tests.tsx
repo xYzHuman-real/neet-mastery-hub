@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, View, Modal, ScrollView } from "react-native";
 import { Shell, Card } from "../native/ui";
 import { C } from "../native/theme";
 import { loadContent, CHAPTERS } from "../native/content";
@@ -16,13 +16,15 @@ export default function Tests() {
   const [contentError, setContentError] = useState(false);
   const [subject, setSubject] = useState<string | undefined>();
   const [count, setCount] = useState(45);
+  const [mockChapters, setMockChapters] = useState<string[]>([CHAPTERS.find(c=>c.subject==="physics")?.id||"",CHAPTERS.find(c=>c.subject==="chemistry")?.id||"",CHAPTERS.find(c=>c.subject==="biology")?.id||""]);
+  const [pickerSubject, setPickerSubject] = useState<string|null>(null);
   const { saveTest, premium } = useStore();
 
-  const start = (sub?: string, n = count, minutes = n) => {
+  const start = (sub?: string, n = count, minutes = n, chapterIds?: string[]) => {
     const pool = (content ?? []).filter(
       q =>
         q.options?.length &&
-        (!sub || CHAPTERS.find(c => c.id === q.chapterId)?.subject === sub)
+        (!sub || CHAPTERS.find(c => c.id === q.chapterId)?.subject === sub) && (!chapterIds || chapterIds.includes(q.chapterId))
     );
     const a = [...pool].sort(() => Math.random() - 0.5).slice(0, n);
     if (a.length < n) return;
@@ -121,111 +123,42 @@ export default function Tests() {
           ))}
         </View>
 
-        <Text
-          style={{
-            fontSize: 18,
-            fontWeight: "900",
-            color: C.foreground,
-            marginTop: 20,
-          }}
-        >
-          Custom Test {premium.active ? "" : "· Premium"}
-        </Text>
-
-        <Card style={{ marginTop: 10, opacity: premium.active ? 1 : 0.55 }}>
-          <Text style={{ fontSize: 11, fontWeight: "900", color: C.primary }}>
-            SUBJECT
-          </Text>
-
-          <View
-            style={{
-              flexDirection: "row",
-              gap: 7,
-              marginTop: 8,
-              flexWrap: "wrap",
-            }}
-          >
-            {[
-              ["mixed", "All"],
-              ["physics", "Physics"],
-              ["chemistry", "Chemistry"],
-              ["biology", "Biology"],
-            ].map(([id, title]) => {
-              const active = (id === "mixed" && !subject) || subject === id;
-              return (
-                <Pressable
-                  key={id}
-                  onPress={() => setSubject(id === "mixed" ? undefined : id)}
-                  style={{
-                    paddingHorizontal: 13,
-                    paddingVertical: 9,
-                    borderRadius: 12,
-                    borderWidth: 1,
-                    borderColor: active ? C.primary : C.border,
-                    backgroundColor: active ? C.accent : C.card,
-                  }}
-                >
-                  <Text style={{ fontSize: 11, fontWeight: "800" }}>
-                    {title}
-                  </Text>
-                </Pressable>
-              );
-            })}
+        <Text style={{fontSize:18,fontWeight:"900",color:C.foreground,marginTop:20}}>Advanced Test Builder {premium.active ? "" : "· Premium"}</Text>
+        <Card style={{marginTop:10,opacity:premium.active?1:.55}}>
+          <Text style={{fontSize:11,fontWeight:"900",color:C.primary}}>CUSTOM NEET MOCK</Text>
+          <Text style={{fontSize:12,lineHeight:18,color:C.mutedText,marginTop:5}}>Choose one chapter from each subject. The mock contains 180 questions, 720 marks and a 180-minute exam timer.</Text>
+          {["physics","chemistry","biology"].map(sub=>{
+            const selected=mockChapters.find(id=>CHAPTERS.find(ch=>ch.id===id)?.subject===sub)||"";
+            const chapter=CHAPTERS.find(ch=>ch.id===selected);
+            return <Pressable key={sub} disabled={!premium.active} onPress={()=>setPickerSubject(sub)} style={{marginTop:9,padding:13,borderRadius:14,borderWidth:1,borderColor:C.border,backgroundColor:C.card}}>
+              <Text style={{fontSize:9,fontWeight:"900",letterSpacing:1,color:C.primary}}>{sub.toUpperCase()}</Text>
+              <Text style={{fontSize:13,fontWeight:"900",color:C.foreground,marginTop:4}}>{chapter?.name||"Choose chapter"} <Text style={{fontSize:10,color:C.primary}}> · Change</Text></Text>
+            </Pressable>
+          })}
+          <View style={{flexDirection:"row",gap:8,marginTop:12}}>
+            <View style={{flex:1,padding:12,borderRadius:14,backgroundColor:C.accent}}><Text style={{fontSize:9,fontWeight:"900",color:C.primary}}>QUESTIONS</Text><Text style={{fontSize:18,fontWeight:"900",color:C.foreground,marginTop:3}}>180</Text></View>
+            <View style={{flex:1,padding:12,borderRadius:14,backgroundColor:C.accent}}><Text style={{fontSize:9,fontWeight:"900",color:C.primary}}>MARKS</Text><Text style={{fontSize:18,fontWeight:"900",color:C.foreground,marginTop:3}}>720</Text></View>
+            <View style={{flex:1,padding:12,borderRadius:14,backgroundColor:C.accent}}><Text style={{fontSize:9,fontWeight:"900",color:C.primary}}>TIME</Text><Text style={{fontSize:18,fontWeight:"900",color:C.foreground,marginTop:3}}>180m</Text></View>
           </View>
-
-          <Text
-            style={{
-              fontSize: 11,
-              fontWeight: "900",
-              color: C.primary,
-              marginTop: 16,
-            }}
-          >
-            QUESTIONS
-          </Text>
-
-          <View style={{ flexDirection: "row", gap: 7, marginTop: 8 }}>
-            {[10, 20, 30, 45].map(n => (
-              <Pressable
-                key={n}
-                onPress={() => setCount(n)}
-                style={{
-                  flex: 1,
-                  paddingVertical: 10,
-                  borderRadius: 12,
-                  borderWidth: 1,
-                  borderColor: count === n ? C.primary : C.border,
-                  backgroundColor: count === n ? C.accent : C.card,
-                }}
-              >
-                <Text style={{ textAlign: "center", fontWeight: "800" }}>
-                  {n}
-                </Text>
-              </Pressable>
-            ))}
-          </View>
-
-          <Pressable
-            disabled={!premium.active}
-            onPress={() => start(subject, count, count)}
-            style={{
-              marginTop: 14,
-              backgroundColor: premium.active ? C.primary : C.muted,
-              borderRadius: 15,
-              padding: 14,
-              alignItems: "center",
-            }}
-          >
-            <Text
-              style={{
-                fontWeight: "900",
-                color: premium.active ? C.primaryText : C.mutedText,
-              }}
-            >
-              {premium.active ? "Start Custom Test" : "Premium Required"}
-            </Text>
+          <Pressable disabled={!premium.active||mockChapters.some(x=>!x)} onPress={()=>start(undefined,180,180,mockChapters)} style={{marginTop:14,backgroundColor:premium.active?C.primary:C.muted,borderRadius:15,padding:14,alignItems:"center"}}>
+            <Text style={{fontWeight:"900",color:premium.active?C.primaryText:C.mutedText}}>{premium.active?"Start 180Q Mock":"Premium Required"}</Text>
           </Pressable>
         </Card>
+        <Modal visible={!!pickerSubject} transparent animationType="slide" onRequestClose={()=>setPickerSubject(null)}>
+          <View style={{flex:1,justifyContent:"flex-end",backgroundColor:"rgba(0,0,0,.35)"}}>
+            <View style={{maxHeight:"78%",backgroundColor:C.background,borderTopLeftRadius:24,borderTopRightRadius:24,padding:18}}>
+              <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+                <Text style={{fontSize:18,fontWeight:"900",color:C.foreground}}>Choose {pickerSubject}</Text>
+                <Pressable onPress={()=>setPickerSubject(null)}><Text style={{fontSize:22,color:C.foreground}}>×</Text></Pressable>
+              </View>
+              <ScrollView style={{marginTop:10}}>
+                {CHAPTERS.filter(ch=>ch.subject===pickerSubject).map(ch=><Pressable key={ch.id} onPress={()=>{if(!pickerSubject)return;setMockChapters(prev=>{const next=prev.filter(id=>CHAPTERS.find(x=>x.id===id)?.subject!==pickerSubject);return [...next,ch.id]});setPickerSubject(null)}} style={{padding:13,borderRadius:14,borderWidth:1,borderColor:C.border,backgroundColor:C.card,marginBottom:7}}>
+                  <Text style={{fontSize:12,fontWeight:"800",color:C.foreground}}>{ch.name}</Text>
+                </Pressable>)}
+              </ScrollView>
+            </View>
+          </View>
+        </Modal>
       </Shell>
     );
 
