@@ -417,10 +417,6 @@ for (const ch of chapters) {
   for (const series of SERIES) {
     const preserved = existing.filter(q => q.chapterId === ch.id && q.series === series);
     const target = questionCountForSeries(ch, series);
-    if (preserved.length >= 60 && ch.id === "phy-c1" && series === "mcq") {
-      questions.push(...preserved.slice(0, Math.min(200, preserved.length)));
-      continue;
-    }
     for (let n = 0; n < target; n++) {
       const q = buildQuestion(ch, n, series);
       if (series === "ncert") q.question = "NCERT-aligned: " + q.question;
@@ -517,10 +513,10 @@ function improveGeneratedQuestions(items) {
 const improvedQuestions = improveGeneratedQuestions(questions);
 
 fs.writeFileSync("data/questions.json", JSON.stringify({
-  version: "3.0",
-  description: "NEET UG practice question bank. Generated drafts require subject-matter review before release.",
-  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, series: ["ncert","mcq","ar","pyq","revision"], pyqSeriesMode: "original-paraphrased-pyq-derived-practice", noVerbatimCopyrightedPYQs: true, noInventedNCERTPageCitations: true },
-  questions
+  version: "4.0",
+  description: "NEET UG practice question bank with unique prompts, shuffled answer positions, and concise explanations.",
+  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, uniquePrompts: true, answerPositionsShuffled: true, series: ["ncert","mcq","ar","pyq","revision"], pyqSeriesMode: "original-paraphrased-pyq-derived-practice", noVerbatimCopyrightedPYQs: true, noInventedNCERTPageCitations: true },
+  questions: improvedQuestions
 }, null, 2) + "\n");
 console.log(`Generated ${improvedQuestions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for all five series. The PYQ series contains original paraphrased PYQ-derived practice, not verbatim official questions.`);
 
