@@ -468,6 +468,33 @@
       "sourceTags": "['Chemistry', 'p Block Elements (Group 15, 16, 17 & 18)', 'NEET']"
     },
     {
+      "id": "ccby-neet-28297",
+      "chapterId": "chem-c13",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is dry ice, and how is it obtained?",
+      "options": [
+        "Dry ice is a gas used for fire extinguishing, and it is obtained by burning carbon.",
+        "Dry ice is solid CO 2 obtained by allowing liquified CO 2 to expand rapidly.",
+        "Dry ice is a type of ice used in refrigeration, and it is obtained by freezing water vapor.",
+        "Dry ice is a form of carbon obtained by heating limestone."
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Dry ice is solid CO 2 obtained by allowing liquified CO 2 to expand rapidly.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-dry-ice-and-how-is-it-obtained"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "28297",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Chemistry', 'p Block Elements (Group 13 & 14)', 'NEET']"
+    },
+    {
       "id": "ccby-neet-28341",
       "chapterId": "chem-c13",
       "series": "mcq",
@@ -522,14 +549,41 @@
       "sourceTags": "['Chemistry', 'd and f Block Elements', 'NEET']"
     },
     {
+      "id": "ccby-neet-36202",
+      "chapterId": "chem-c13",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "When moist, how does sulphur dioxide behave?",
+      "options": [
+        "As a strong acid",
+        "As a powerful oxidizing agent",
+        "As a reducing agent",
+        "As a catalyst"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "As a reducing agent",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "when-moist-how-does-sulphur-dioxide-behave"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "36202",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'p Block Elements (Group 15, 16, 17 & 18)', 'NEET']"
+    },
+    {
       "id": "ccby-neet-39506",
       "chapterId": "chem-c13",
       "series": "mcq",
       "mode": "mcq",
       "prompt": "Which of the following is not an actinoid?",
       "options": [
-        "urium (Z = 96)",
-        "alifornium (Z = 98)",
+        "Curium (Z = 96)",
+        "Californium (Z = 98)",
         "Uranium (Z = 92)",
         "Terbium (Z = 65)"
       ],
@@ -549,14 +603,95 @@
       "sourceTags": "['Chemistry', 'd and f Block Elements', 'NEET']"
     },
     {
+      "id": "ccby-neet-38957",
+      "chapterId": "chem-c15",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following is an example of a macromolecular ligand?",
+      "options": [
+        "H 2 O",
+        "NH 3",
+        "N(CH 2 CH 2 NH 2 ) 3",
+        "Clâ"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "N(CH 2 CH 2 NH 2 ) 3",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "which-of-the-following-is-an-example-of-a-macromolecular-ligand"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "38957",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'Coordination Compounds', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-41529",
+      "chapterId": "chem-c15",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following will give a pair of enantiomers?",
+      "options": [
+        "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_3\\right)_6\\right]\\left[\\mathrm{Co}(\\mathrm{CN})_6\\right]$",
+        "$\\left[\\mathrm{Co}(e n)_2 \\mathrm{Cl}_2\\right] \\mathrm{Cl}$",
+        "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_3\\right)_4\\right]\\left[\\mathrm{PtCl}_6\\right]$",
+        "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_3\\right)_4 \\mathrm{Cl}_2\\right] \\mathrm{NO}_2$"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "$\\left[\\mathrm{Co}(e n)_2 \\mathrm{Cl}_2\\right] \\mathrm{Cl}$",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "which-of-the-following-will-give-a-pair-of-enantiomers-1"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "41529",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Chemistry', 'Coordination Compounds', 'JEE Main']"
+    },
+    {
+      "id": "ccby-neet-12036",
+      "chapterId": "chem-c18",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "In comparison to alcohols and many simple phenols, where do carboxylic acids rank in terms of acidity?",
+      "options": [
+        "Carboxylic acids are less acidic than alcohols.",
+        "Carboxylic acids are equally acidic as alcohols.",
+        "Carboxylic acids are more acidic than alcohols and many simple phenols.",
+        "Carboxylic acids are less acidic than simple phenols."
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Carboxylic acids are more acidic than alcohols and many simple phenols.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "in-comparison-to-alcohols-and-many-simple-phenols-where-do-carboxylic-acids-rank-in-terms-of-acidity"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "12036",
+      "sourceDb": "MarksBatch2_P1.db",
+      "sourceTags": "['Chemistry', 'Aldehydes, Ketones and Carboxylic Acids', 'NEET']"
+    },
+    {
       "id": "ccby-neet-21435",
       "chapterId": "chem-c18",
       "series": "mcq",
       "mode": "mcq",
       "prompt": "The IUPAC name of is",
       "options": [
-        "hlorocarbonyl ethylbenzoate",
-        "arboxyethyl benzoyl chloride",
+        "2-Chlorocarbonyl ethylbenzoate",
+        "2-Carboxyethyl benzoyl chloride",
         "Ethyl-2-(chlorocarbonyl) benzoate",
         "Ethyl-1-(chlorocabonyl) benzoate"
       ],
@@ -601,6 +736,33 @@
       "sourceQuestionId": "27846",
       "sourceDb": "MarksBatch2_P3.db",
       "sourceTags": "['Chemistry', 'Aldehydes, Ketones and Carboxylic Acids', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-26888",
+      "chapterId": "bio-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What do we learn from identification of individuals and populations?",
+      "options": [
+        "Description of any organism should enable the people to arrive at the same name",
+        "There is no word such as identification",
+        "The reason is unknown",
+        "None of the above"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Description of any organism should enable the people to arrive at the same name",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-do-we-learn-from-identification-of-individuals-and-populations-1"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "26888",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Biology', 'The Living World', 'NEET']"
     },
     {
       "id": "ccby-neet-29501",
@@ -663,8 +825,8 @@
       "mode": "mcq",
       "prompt": "Which of the following is the economic importance of algae?",
       "options": [
-        "lgin is a unicellular alga rich in proteins used as a food supplement.",
-        "hlorella produces large amounts of hydrocolloids.",
+        "Algin is a unicellular alga rich in proteins used as a food supplement.",
+        "Chlorella produces large amounts of hydrocolloids.",
         "Gelidium and Gracilaria are used to grow microbes and in preparations of ice creams and jellies.",
         "None of the above."
       ],
@@ -717,10 +879,10 @@
       "mode": "mcq",
       "prompt": "Which of the following is correct?",
       "options": [
-        "ells of all living organisms have a nucleus",
-        "oth animal and plant cells have a well defined cell wall",
+        "Cells of all living organisms have a nucleus",
+        "Both animal and plant cells have a well defined cell wall",
         "In prokaryotes, there are no membrane bound organelles",
-        "ells are formed de novo from abiotic materials"
+        "Cells are formed de novo from abiotic materials"
       ],
       "answer": 2,
       "difficulty": "medium",
@@ -738,6 +900,60 @@
       "sourceTags": "['Biology', 'Cell - The Unit of Life', 'NEET']"
     },
     {
+      "id": "ccby-neet-39568",
+      "chapterId": "bio-c8",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following is not correct?",
+      "options": [
+        "Robert Brown discovered the cell.",
+        "Schleiden and Schwann formulated the cell theory.",
+        "Virchow explained that cells are formed from pre-existing cells",
+        "A Unicellular organism carries out its life activities within a single cell."
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Robert Brown discovered the cell.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "which-of-the-following-is-not-correct-30"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "39568",
+      "sourceDb": "MarksBatch2_P4.db",
+      "sourceTags": "['Biology', 'Cell - The Unit of Life', 'NEET']"
+    },
+    {
+      "id": "ccby-neet-29455",
+      "chapterId": "bio-c28",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "What is the difference between convergent evolution and adaptive radiation?",
+      "options": [
+        "Convergent evolution is when multiple adaptive radiations occurred in an isolated geographical area. Adaptive radiation is when different species evolved from a common ancestor in a given geographical area.",
+        "Adaptive radiation is when multiple adaptive radiations occurred in an isolated geographical areA) Convergent evolution is when different species evolved from a common ancestor in a given geographical area.",
+        "Adaptive radiation is when different species evolved from a common ancestor in a given geographical area. Convergent evolution is when multiple adaptive radiations occurred in an isolated geographical area.",
+        "Adaptive radiation is when different species evolved from a common ancestor in a given geographical area.Convergent evolution is when different species evolved from a common ancestor in a different geographical area."
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Adaptive radiation is when multiple adaptive radiations occurred in an isolated geographical areA) Convergent evolution is when different species evolved from a common ancestor in a given geographical area.",
+      "reviewStatus": "draft",
+      "sourceType": "original_neet_style",
+      "citation": {
+        "reference": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "chapter": "what-is-the-difference-between-convergent-evolution-and-adaptive-radiation"
+      },
+      "sourceLicense": "CC BY 4.0",
+      "sourceId": "datavorous-entrance-exam-neet",
+      "sourceQuestionId": "29455",
+      "sourceDb": "MarksBatch2_P3.db",
+      "sourceTags": "['Biology', 'Evolution', 'NEET']"
+    },
+    {
       "id": "ccby-neet-41151",
       "chapterId": "bio-c35",
       "series": "mcq",
@@ -745,7 +961,7 @@
       "prompt": "Which of the following statements is correct?",
       "options": [
         "Parthenium is an endemic species of our country",
-        "frican catfish is not a threat to indigenous catfishes.",
+        "African catfish is not a threat to indigenous catfishes.",
         "Stellerâs sea cow is an extinct animal.",
         "Lantana is popularly known as carrot grass."
       ],
