@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "scripts/importLicensedNEETDataset.mjs"
+      - "scripts/importCCBYNEETDataset.py"
       - "data/chapters.json"
       - ".github/workflows/import-licensed-neet.yml"
   workflow_dispatch:
