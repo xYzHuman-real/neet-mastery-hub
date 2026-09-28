@@ -40,11 +40,14 @@ for _,r in df.iterrows():
     prompt=clean_html(r.get("question",""))
     if not prompt or len(prompt)<15: continue
     opts=[]
-    raw=clean_html(r.get("options",""))
-    # Dataset stores options as HTML/list text; recover A-D blocks.
-    labels=re.findall(r"([ABCD])\s*([^ABCD]+?)(?=\s*[ABCD]\s|$)",raw)
-    if labels:
-        opts=[clean_html(x[1]) for x in labels]
+    raw=str(r.get("options",""))
+    # Parse HTML option blocks so letters inside option text are never treated as labels.
+    blocks=re.findall(r"<li[^>]*>(.*?)</li>", raw, flags=re.I|re.S)
+    for block in blocks:
+        m=re.search(r"option-data[^>]*>(.*?)</(?:span|li)>", block, flags=re.I|re.S)
+        value=clean_html(m.group(1) if m else block)
+        value=re.sub(r"^[ABCD]\\s*[:.)-]?\\s*","",value,flags=re.I)
+        if value: opts.append(value)
     if len(opts)!=4: continue
     answer_text=clean_html(r.get("answer",""))
     correct=clean_html(r.get("correct_option",""))
