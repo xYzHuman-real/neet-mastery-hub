@@ -1,0 +1,31 @@
+name: Import licensed NEET question bank
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/importLicensedNEETDataset.mjs"
+      - "data/chapters.json"
+      - ".github/workflows/import-licensed-neet.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download and normalize licensed dataset
+        run: node scripts/importLicensedNEETDataset.mjs
+      - name: Commit imported questions
+        run: |
+          git config user.name "buzneet-bot"
+          git config user.email "buzneet-bot@users.noreply.github.com"
+          git add data/licensedQuestions.json
+          git diff --cached --quiet || git commit -m "Import licensed NEET question bank [skip ci]"
+          git push
