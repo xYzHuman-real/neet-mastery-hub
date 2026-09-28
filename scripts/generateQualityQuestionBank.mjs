@@ -433,78 +433,73 @@ for (const ch of chapters) {
 
 
 function improveGeneratedQuestions(items) {
-  const prefixes = [
-    "Select the correct answer for this NEET concept:",
-    "Which option correctly answers the following question?",
-    "Choose the statement that best resolves the question below:",
-    "During revision, a student encounters this question:",
-    "For a quick NEET check, determine the correct response:",
-    "An examiner asks the following:",
-    "Identify the correct option in this case:",
-    "Which answer is scientifically correct for the following?",
-    "Use the chapter concept to answer:",
-    "Consider the following NEET-style question:",
-    "A student is testing their understanding with:",
+  const wrappers = [
+    "Select the correct answer:",
+    "Choose the scientifically correct option:",
+    "Which option is correct?",
+    "Identify the correct response:",
+    "Select the statement that gives the correct result:",
     "Choose the most appropriate answer:",
-    "Which option follows from the stated principle?",
-    "Apply the relevant concept and select the answer:",
-    "What is the correct conclusion from the following?",
-    "Which choice is consistent with the concept being tested?",
-    "Read the question carefully and select the correct option:",
-    "Which response correctly matches the situation?",
-    "Using the prescribed syllabus concept, answer:",
-    "Which statement gives the correct result here?",
-    "A NEET aspirant is revising this concept:",
-    "Determine the correct answer from the options:",
-    "Which option correctly represents the underlying principle?",
-    "For this chapter concept, select the valid answer:",
-    "Which choice should be selected based on the stated information?",
-    "Apply the chapter principle to this question:",
-    "Which option is supported by the concept in question?",
-    "Choose the scientifically accurate response:",
-    "What should the correct answer be?",
-    "Which alternative correctly describes the result?",
-    "Select the option that agrees with the relevant principle:",
-    "Which answer best fits the question?"
+    "Which alternative correctly answers the question?",
+    "Determine the correct option:",
+    "Which choice is supported by the stated concept?",
+    "Apply the relevant concept and choose the answer:",
+    "Read the question carefully and select the correct response:",
+    "Which option best matches the concept being tested?"
   ];
+
   const seen = new Set();
-  return items.map((q, index) => {
-    const base = String(q.question || "").replace(/^(NCERT-aligned: |Revision: |PYQ Practice: )/i, "").trim();
+  return items.map((q,index) => {
+    const base = String(q.question || "")
+      .replace(/^(NCERT-aligned: |Revision: |PYQ Practice: )/i,"")
+      .replace(/\s*Focus:\s*[^.]+\.?$/i,"")
+      .trim();
+
+    // The old generator only had four seed questions per many chapters and
+    // then repeatedly prefixed the same question. Keep lexical variants
+    // deterministic, but never claim these are new concepts.
     let prompt = base;
     let attempt = 0;
     while (seen.has(prompt)) {
-      const prefix = prefixes[(index + attempt) % prefixes.length];
-      const context = q.series === "ncert" ? "NCERT-aligned practice" : q.series === "pyq" ? "PYQ-derived practice" : q.series === "revision" ? "revision practice" : q.series === "ar" ? "Assertion–Reason practice" : "MCQ practice";
-      prompt = prefix + " " + base + " Focus: " + context + ".";
+      const wrapper = wrappers[(index + attempt) % wrappers.length];
+      const seriesLabel = q.series === "ncert" ? "NCERT-aligned practice"
+        : q.series === "pyq" ? "PYQ-derived practice"
+        : q.series === "revision" ? "revision practice"
+        : q.series === "ar" ? "Assertion–Reason practice"
+        : "MCQ practice";
+      prompt = wrapper + " " + base + " [" + seriesLabel + "].";
       attempt++;
-      if (attempt > prefixes.length) {
-        prompt = prefix + " " + base + " Focus on " + q.chapterId + " concept " + ((index % 17) + 1) + ".";
+      if (attempt > wrappers.length) {
+        prompt = wrapper + " " + base + " Variant " + ((index % 50) + 1) + ".";
         break;
       }
     }
-    if (q.series === "ar") {
-      const answerText = q.options?.[q.answer] || "";
-      const labels = [
+
+    // Shuffle FIRST, then derive the explanation from the final answer index.
+    if (Array.isArray(q.options) && q.options.length > 1) {
+      const pairs=q.options.map((text,index)=>({text,index}));
+      const shift=(index*7 + q.id.length*3) % pairs.length;
+      const reordered=pairs.map((_,i)=>pairs[(i+shift)%pairs.length]);
+      const oldAnswer=q.answer;
+      q.options=reordered.map(x=>x.text);
+      q.answer=reordered.findIndex(x=>x.index===oldAnswer);
+    }
+
+    const answerText=q.options?.[q.answer]||"";
+    if(q.series==="ar"){
+      const labels=[
         "Both A and R are true, and R correctly explains A.",
         "Both A and R are true, but R does not correctly explain A.",
         "A is true, but R is false.",
         "A is false, but R is true."
       ];
-      q.explanation = "Correct option: " + answerText + ". " + labels[q.answer] + " This follows from evaluating the truth of the Assertion and Reason separately and then checking the explanation relationship.";
-    } else {
-      const answerText = q.options?.[q.answer] || "";
-      q.explanation = "Correct answer: " + answerText + ". This option matches the principle or relationship tested by the question. The remaining options do not satisfy the stated condition.";
+      q.explanation="Correct option: "+String.fromCharCode(65+q.answer)+". "+answerText+". "+labels[q.answer];
+    }else{
+      q.explanation="Correct option: "+String.fromCharCode(65+q.answer)+". "+answerText+". This option matches the concept or condition tested by the question.";
     }
-    if (Array.isArray(q.options) && q.options.length > 1) {
-      const len = q.options.length;
-      const shift = (index * 7 + q.id.length * 3) % len;
-      const reordered = q.options.map((_, i) => q.options[(i + shift) % len]);
-      const oldAnswer = q.answer;
-      q.options = reordered;
-      q.answer = (oldAnswer - shift + len) % len;
-    }
-    q.question = prompt;
-    q.quality = {...(q.quality || {}), generated: true, requiresHumanReview: true, placeholder: false, uniquePrompt: true};
+
+    q.question=prompt;
+    q.quality={...(q.quality||{}),generated:true,requiresHumanReview:true,placeholder:false,uniquePrompt:true,conceptuallyUnique:false};
     seen.add(prompt);
     return q;
   });
