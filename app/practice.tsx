@@ -113,7 +113,7 @@ export default function Practice(){
       {mode==="ar"&&<Text style={{fontSize:11,lineHeight:17,color:C.mutedText,marginTop:14}}>Choose the option that correctly evaluates A and R and whether R explains A.</Text>}
     </Card>
     <View style={{gap:8,marginTop:12}}>
-      {q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>setPick(k)} style={{padding:15,borderRadius:16,borderWidth:1,borderColor:shown&&k===q.answer?C.success:pick===k?C.primary:C.border,backgroundColor:shown&&k===q.answer?C.accent:pick===k?"#EEF5F1":C.card}}>
+      {q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>setPick(k)} style={{padding:15,borderRadius:16,borderWidth:1,borderColor:shown&&k===q.answer?C.success:shown&&k===pick?C.destructive:pick===k?C.primary:C.border,backgroundColor:shown&&k===q.answer?C.accent:pick===k?"#EEF5F1":C.card}}>
         <Text style={{fontSize:13,fontWeight:pick===k?"800":"500",color:C.foreground}}>{String.fromCharCode(65+k)}. {o}</Text>
       </Pressable>)}
     </View>
@@ -122,8 +122,9 @@ export default function Practice(){
     </Pressable>}
     {shown&&<Card style={{marginTop:12,backgroundColor:C.accent}}>
       <Text style={{fontWeight:"900",color:correct?C.success:C.destructive}}>{correct?"Correct answer":"Incorrect answer"}</Text>
-      {!correct&&<Text style={{fontSize:12,fontWeight:"800",color:C.foreground,marginTop:5}}>Correct option: {String.fromCharCode(65+q.answer)}</Text>}
-      {q.explanation&&<Text style={{fontSize:12,lineHeight:19,color:C.foreground,marginTop:6}}>{q.explanation}</Text>}
+      <Text style={{fontSize:12,fontWeight:"800",color:C.foreground,marginTop:5}}>Your answer: {pick===null?"Not answered":`${String.fromCharCode(65+pick)}. ${q.options[pick]}`}</Text>
+      <Text style={{fontSize:12,fontWeight:"800",color:C.foreground,marginTop:4}}>Correct answer: {String.fromCharCode(65+q.answer)}. {q.options[q.answer]}</Text>
+      {q.explanation&&<Text style={{fontSize:12,lineHeight:19,color:C.foreground,marginTop:7}}>{q.explanation}</Text>}
     </Card>}
     {shown&&<View style={{marginTop:10}}>
       <Pressable onPress={()=>next("good")} style={{minHeight:52,borderRadius:16,alignItems:"center",justifyContent:"center",backgroundColor:C.primary}}>
