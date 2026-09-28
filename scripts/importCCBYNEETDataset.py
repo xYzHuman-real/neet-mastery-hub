@@ -39,15 +39,18 @@ seen=set()
 for _,r in df.iterrows():
     prompt=clean_html(r.get("question",""))
     if not prompt or len(prompt)<15: continue
-    opts=[]
     raw=str(r.get("options",""))
-    # Parse HTML option blocks so letters inside option text are never treated as labels.
-    blocks=re.findall(r"<li[^>]*>(.*?)</li>", raw, flags=re.I|re.S)
-    for block in blocks:
-        m=re.search(r"option-data[^>]*>(.*?)</(?:span|li)>", block, flags=re.I|re.S)
-        value=clean_html(m.group(1) if m else block)
-        value=re.sub(r"^[ABCD]\\s*[:.)-]?\\s*","",value,flags=re.I)
+    # The dataset stores each answer choice in <span class="option-data">.
+    # Extract those spans directly instead of relying on the surrounding <li>.
+    opts=[]
+    for m in re.finditer(r'<span\\s+class=["\\\']option-data["\\\'][^>]*>(.*?)</span>', raw, flags=re.I|re.S):
+        value=clean_html(m.group(1))
         if value: opts.append(value)
+    if len(opts)!=4:
+        # Some rows contain nested markup; strip tags after locating option-data.
+        chunks=re.findall(r'option-data["\\\'][^>]*>(.*?)</span>', raw, flags=re.I|re.S)
+        opts=[clean_html(x) for x in chunks if clean_html(x)]
+    if len(opts)!=4: continue
     if len(opts)!=4: continue
     answer_text=clean_html(r.get("answer",""))
     correct=clean_html(r.get("correct_option",""))
