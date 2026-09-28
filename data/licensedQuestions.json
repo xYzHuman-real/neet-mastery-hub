@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "source": {
+    "id": "kshitij-pes-neet-dataset",
+    "name": "Kshitij-PES NEET Previous Year Questions",
+    "url": "https://huggingface.co/datasets/Kshitij-PES/NEET_Dataset",
+    "license": "Apache-2.0",
+    "attribution": "Kshitij Gupta (Kshitij-PES)"
+  },
+  "questions": []
+}
