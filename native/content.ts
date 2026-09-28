@@ -1,5 +1,6 @@
 import chapterData from "../data/chapters.json";
 import licensedData from "../data/licensedQuestions.json";
+import questionBank from "../data/questionBank.json";
 
 export type ContentMode="ncert"|"mcq"|"ar"|"pyq"|"revision";
 export const SERIES_MIN=60;
@@ -27,16 +28,20 @@ function shuffleOptions(options:string[],answer:number){
 
 export async function loadContent(){
   if(cache)return cache;
-  const data=licensedData as any;
-  cache=(data?.questions??[])
+  const licensed=licensedData as any;
+  const editorial=questionBank as any;
+  const combined=[...(licensed?.questions??[]),...(editorial?.questions??[])];
+  const seen=new Set<string>();
+  cache=combined
     .filter((q:any)=>typeof q.chapterId==="string"&&Array.isArray(q.options)&&q.options.length>=2&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length)
+    .filter((q:any)=>{const key=String(q.prompt||"").trim().toLowerCase().replace(/\\s+/g," ");if(!key||seen.has(key))return false;seen.add(key);return true;})
     .map((q:any)=>{
       const shuffled=shuffleOptions(q.options,q.answer);
       return ({
         id:q.id,
         chapterId:q.chapterId,
-        series:"pyq",
-        mode:"pyq",
+        series:(q.series??q.mode??"mcq") as ContentMode,
+        mode:(q.mode??q.series??"mcq") as NativeQuestion["mode"],
         prompt:String(q.prompt||"").trim(),
         assertion:q.assertion,
         reason:q.reason,
@@ -45,7 +50,7 @@ export async function loadContent(){
         difficulty:q.difficulty??"medium",
         explanation:String(q.explanation||"").trim(),
         reviewStatus:q.reviewStatus??"reviewed",
-        sourceType:"pyq",
+        sourceType:q.sourceType??(q.mode==="pyq"?"pyq":"original_neet_style"),
         topicId:q.topicId,
         citation:q.citation,
         sourceLicense:q.sourceLicense,
