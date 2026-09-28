@@ -43,7 +43,7 @@ for _,r in df.iterrows():
     # The dataset stores each answer choice in <span class="option-data">.
     # Extract those spans directly instead of relying on the surrounding <li>.
     opts=[]
-    for m in re.finditer(r'<span\\s+class=["\\\']option-data["\\\'][^>]*>(.*?)</span>', raw, flags=re.I|re.S):
+    for m in re.finditer(r'<span\\s+class=["\\']option-data["\\'][^>]*>(.*?)</span>', raw, flags=re.I|re.S):
         value=clean_html(m.group(1))
         if value: opts.append(value)
     if len(opts)!=4:
