@@ -37,7 +37,7 @@ export default function Practice(){
   },[content,p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
   const deck=useMemo(()=>{
     const fresh=baseDeck.filter((q:any)=>!recentIds.includes(q.id));
-    const pool=fresh.length>=Math.min(10,baseDeck.length)?fresh:baseDeck;
+    const pool=fresh.length?fresh:baseDeck;
     return shuffle(pool);
   },[baseDeck,recentIds]);
 
