@@ -1,24 +1,46 @@
 import{useLocalSearchParams,router}from"expo-router";
 import{useMemo,useState,useEffect}from"react";
 import{Pressable,Text,View}from"react-native";
+import AsyncStorage from"@react-native-async-storage/async-storage";
 import{Shell,Card}from"../native/ui";
 import{C}from"../native/theme";
 import{useStore,type Rating}from"../native/store";
 import{loadContent,filterQuestions,chapterById}from"../native/content";
 
+const RECENT_KEY="buzneet-recent-questions-v1";
+const RECENT_LIMIT=100;
+
+function shuffle<T>(items:T[]){
+  const out=[...items];
+  for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]];}
+  return out;
+}
+
 export default function Practice(){
   const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string}>();
-  const{due,mistakes,record,rate,toggleBookmark,bookmarks}=useStore();
+  const{due,mistakes,record,rate}=useStore();
   const[content,setContent]=useState<any[]|null>(null);
   const[contentError,setContentError]=useState(false);
-  useEffect(()=>{loadContent().then(setContent).catch(()=>setContentError(true))},[]);
+  const[recentIds,setRecentIds]=useState<string[]>([]);
+  useEffect(()=>{
+    loadContent().then(setContent).catch(()=>setContentError(true));
+    AsyncStorage.getItem(RECENT_KEY).then(raw=>{
+      try{setRecentIds(raw?JSON.parse(raw):[])}catch{setRecentIds([])}
+    });
+  },[]);
   const mode=p.mode||"revision";
-  const deck=useMemo(()=>{
-    if(!content)return [];
+  const baseDeck=useMemo(()=>{
+    if(!content)return[];
     if(p.review)return filterQuestions(content,undefined,"revision").filter(x=>due.includes(x.id));
     if(p.mistakes)return filterQuestions(content,undefined,"revision").filter((x:any)=>mistakes[x.id]);
     return filterQuestions(content,p.chapter,mode);
   },[content,p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
+  const deck=useMemo(()=>{
+    const fresh=baseDeck.filter((q:any)=>!recentIds.includes(q.id));
+    const pool=fresh.length>=Math.min(10,baseDeck.length)?fresh:baseDeck;
+    return shuffle(pool);
+  },[baseDeck,recentIds]);
+
   const[i,setI]=useState(0);
   const[pick,setPick]=useState<number|null>(null);
   const[shown,setShown]=useState(false);
@@ -26,9 +48,15 @@ export default function Practice(){
   const[results,setResults]=useState<{qid:string;correct:boolean;pick:number|null;time:number}[]>([]);
   const q=deck[i];
 
+  const rememberQuestion=async(id:string)=>{
+    const next=[id,...recentIds.filter(x=>x!==id)].slice(0,RECENT_LIMIT);
+    setRecentIds(next);
+    await AsyncStorage.setItem(RECENT_KEY,JSON.stringify(next));
+  };
+
   if(contentError)return <Shell title="Practice unavailable" subtitle="BuzNeet"><Card><Text style={{fontSize:16,fontWeight:"800",color:C.foreground}}>The question bank could not be loaded.</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
   if(!content)return <Shell title="Loading practice" subtitle="BuzNeet"><Card><Text style={{fontSize:16,fontWeight:"800",color:C.foreground}}>Preparing your question bank…</Text></Card></Shell>;
-  if(!deck.length)return <Shell title="Series empty" subtitle="Content review"><Card><Text style={{fontSize:22,fontWeight:"900",color:C.foreground}}>No released questions here yet.</Text><Text style={{fontSize:13,lineHeight:20,color:C.mutedText,marginTop:8}}>{mode==="pyq"?"PYQ-derived practice is being prepared; verified official PYQs will be added separately when source-verified.":"This chapter series does not have released questions yet."}</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
+  if(!deck.length)return <Shell title="Series empty" subtitle="Content review"><Card><Text style={{fontSize:22,fontWeight:"900",color:C.foreground}}>No questions available here yet.</Text><Text style={{fontSize:13,lineHeight:20,color:C.mutedText,marginTop:8}}>{mode==="pyq"?"PYQ-derived practice is being prepared; verified official PYQs will be added separately when source-verified.":"This chapter series does not have questions available yet."}</Text><Pressable onPress={()=>router.back()} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Go back</Text></Pressable></Card></Shell>;
 
   if(i>=deck.length){
     const correct=results.filter(r=>r.correct).length;
@@ -48,7 +76,7 @@ export default function Practice(){
         <Card style={{flex:1,alignItems:"center"}}><Text style={{fontSize:20,fontWeight:"900",color:C.foreground}}>{mins}:{String(secs).padStart(2,"0")}</Text><Text style={{fontSize:10,color:C.mutedText}}>Time</Text></Card>
       </View>
       <Text style={{fontSize:17,fontWeight:"900",color:C.foreground,marginTop:18}}>Review your questions</Text>
-      <View style={{gap:8,marginTop:10}}>{results.slice().reverse().map((r,idx)=><Pressable key={r.qid} onPress={()=>{const at=deck.findIndex(x=>x.id===r.qid);if(at>=0){setI(at);setShown(true);setPick(r.pick)}}} style={{padding:14,borderRadius:17,borderWidth:1,borderColor:r.correct?C.success:C.destructive,backgroundColor:C.card}}><Text style={{fontSize:11,fontWeight:"800",color:r.correct?C.success:C.destructive}}>{r.correct?"✓ Correct":"× Review this"}</Text><Text numberOfLines={2} style={{fontSize:12,color:C.foreground,marginTop:4}}>{deck.find(x=>x.id===r.qid)?.prompt}</Text></Pressable>)}</View>
+      <View style={{gap:8,marginTop:10}}>{results.slice().reverse().map(r=><Pressable key={r.qid} onPress={()=>{const at=deck.findIndex(x=>x.id===r.qid);if(at>=0){setI(at);setShown(true);setPick(r.pick)}}} style={{padding:14,borderRadius:17,borderWidth:1,borderColor:r.correct?C.success:C.destructive,backgroundColor:C.card}}><Text style={{fontSize:11,fontWeight:"800",color:r.correct?C.success:C.destructive}}>{r.correct?"✓ Correct":"× Review this"}</Text><Text numberOfLines={2} style={{fontSize:12,color:C.foreground,marginTop:4}}>{deck.find(x=>x.id===r.qid)?.prompt}</Text></Pressable>)}</View>
       <Pressable onPress={()=>router.replace("/chapters")} style={{marginTop:16,backgroundColor:C.primary,borderRadius:16,padding:14,alignItems:"center"}}><Text style={{fontWeight:"800",color:C.primaryText}}>Back to chapters</Text></Pressable>
     </Shell>;
   }
@@ -57,9 +85,10 @@ export default function Practice(){
   const correct=pick===q.answer;
 
   const submit=()=>{
-    if(shown || pick===null)return;
+    if(shown||pick===null)return;
     const isCorrect=pick===q.answer;
     record(q.id,isCorrect);
+    rememberQuestion(q.id);
     setResults(x=>[...x,{qid:q.id,correct:isCorrect,pick,time:Date.now()}]);
     setShown(true);
   };
@@ -73,37 +102,28 @@ export default function Practice(){
 
   return <Shell title={p.chapter?(chapterById(p.chapter)?.name||"Practice"):modeLabel} subtitle={modeLabel} right={<Text style={{fontWeight:"800",color:C.primary}}>{i+1}/{deck.length}</Text>}>
     <View style={{height:6,borderRadius:4,backgroundColor:C.muted,overflow:"hidden",marginBottom:12}}><View style={{height:6,width:(`${((i)/deck.length)*100}%` as any),backgroundColor:C.primary}}/></View>
-
     <Card>
-      {mode==="ar" ? <View>
+      {mode==="ar"?<View>
         <Text style={{fontSize:12,fontWeight:"900",color:C.primary,letterSpacing:.4}}>Assertion (A)</Text>
         <Text style={{fontSize:17,fontWeight:"800",lineHeight:25,color:C.foreground,marginTop:6}}>{q.assertion||q.prompt}</Text>
         <Text style={{fontSize:12,fontWeight:"900",color:C.primary,letterSpacing:.4,marginTop:16}}>Reason (R)</Text>
         <Text style={{fontSize:17,fontWeight:"800",lineHeight:25,color:C.foreground,marginTop:6}}>{q.reason||"Reason statement unavailable."}</Text>
-      </View> : <Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>}
+      </View>:<Text style={{fontSize:18,fontWeight:"800",lineHeight:25,color:C.foreground}}>{q.prompt}</Text>}
       {mode==="ar"&&<Text style={{fontSize:11,lineHeight:17,color:C.mutedText,marginTop:14}}>Choose the option that correctly evaluates A and R and whether R explains A.</Text>}
     </Card>
-
     <View style={{gap:8,marginTop:12}}>
-      {q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>setPick(k)} style={{
-        padding:15,borderRadius:16,borderWidth:1,
-        borderColor:shown&&k===q.answer?C.success:pick===k?C.primary:C.border,
-        backgroundColor:shown&&k===q.answer?C.accent:pick===k?"#EEF5F1":C.card
-      }}>
+      {q.options.map((o,k)=><Pressable key={k} disabled={shown} onPress={()=>setPick(k)} style={{padding:15,borderRadius:16,borderWidth:1,borderColor:shown&&k===q.answer?C.success:pick===k?C.primary:C.border,backgroundColor:shown&&k===q.answer?C.accent:pick===k?"#EEF5F1":C.card}}>
         <Text style={{fontSize:13,fontWeight:pick===k?"800":"500",color:C.foreground}}>{String.fromCharCode(65+k)}. {o}</Text>
       </Pressable>)}
     </View>
-
     {!shown&&<Pressable disabled={pick===null} onPress={submit} style={{marginTop:14,minHeight:52,borderRadius:16,alignItems:"center",justifyContent:"center",backgroundColor:pick===null?C.muted:C.primary}}>
       <Text style={{fontSize:15,fontWeight:"900",color:pick===null?C.mutedText:C.primaryText}}>Submit answer</Text>
     </Pressable>}
-
     {shown&&<Card style={{marginTop:12,backgroundColor:C.accent}}>
       <Text style={{fontWeight:"900",color:correct?C.success:C.destructive}}>{correct?"Correct answer":"Incorrect answer"}</Text>
       {!correct&&<Text style={{fontSize:12,fontWeight:"800",color:C.foreground,marginTop:5}}>Correct option: {String.fromCharCode(65+q.answer)}</Text>}
       {q.explanation&&<Text style={{fontSize:12,lineHeight:19,color:C.foreground,marginTop:6}}>{q.explanation}</Text>}
     </Card>}
-
     {shown&&<View style={{marginTop:10}}>
       <Pressable onPress={()=>next("good")} style={{minHeight:52,borderRadius:16,alignItems:"center",justifyContent:"center",backgroundColor:C.primary}}>
         <Text style={{fontSize:15,fontWeight:"900",color:C.primaryText}}>{i===deck.length-1?"Finish":"Next question"}</Text>
