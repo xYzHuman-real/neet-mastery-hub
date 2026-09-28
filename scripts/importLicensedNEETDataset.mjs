@@ -11,6 +11,14 @@ const SOURCE = {
   attribution: "Kshitij Gupta (Kshitij-PES)"
 };
 
+const existingPath = path.join(ROOT, "data/licensedQuestions.json");
+try {
+  const existing = JSON.parse(await fs.readFile(existingPath, "utf8"));
+  if (Array.isArray(existing.questions) && existing.questions.length > 0 && existing.source?.license === "CC BY 4.0") {
+    console.log(`Preserving existing CC BY 4.0 bank (${existing.questions.length} questions).`);
+    process.exit(0);
+  }
+} catch {}
 const chapters = JSON.parse(await fs.readFile(path.join(ROOT, "data/chapters.json"), "utf8")).chapters;
 
 const normalize = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9+.-]+/g, " ");
