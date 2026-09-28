@@ -33,6 +33,7 @@ def clean_html(s):
     return re.sub(r"\s+"," ",s).strip()
 
 print("Downloading reusable CC BY 4.0 NEET dataset...")
+print("Importer build: 2026-09-28-option-parser-v3")
 df=pd.read_parquet(URL)
 rows=[]
 seen=set()
