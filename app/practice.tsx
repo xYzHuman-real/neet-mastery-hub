@@ -17,8 +17,8 @@ function shuffle<T>(items:T[]){
 }
 
 export default function Practice(){
-  const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string}>();
-  const{due,mistakes,record,rate}=useStore();
+  const p=useLocalSearchParams<{chapter?:string;mode?:string;review?:string;mistakes?:string;weak?:string}>();
+  const{due,mistakes,answered,record,rate}=useStore();
   const[content,setContent]=useState<any[]|null>(null);
   const[contentError,setContentError]=useState(false);
   const[recentIds,setRecentIds]=useState<string[]>([]);
@@ -33,8 +33,9 @@ export default function Practice(){
     if(!content)return[];
     if(p.review)return filterQuestions(content,undefined,"revision").filter(x=>due.includes(x.id));
     if(p.mistakes)return filterQuestions(content,undefined,"revision").filter((x:any)=>mistakes[x.id]);
+    if(p.weak)return filterQuestions(content,undefined,"revision").filter((x:any)=>mistakes[x.id] || (x.id in answered && !answered[x.id]));
     return filterQuestions(content,p.chapter,mode);
-  },[content,p.chapter,p.mode,p.review,p.mistakes,due,mistakes]);
+  },[content,p.chapter,p.mode,p.review,p.mistakes,p.weak,due,mistakes,answered]);
   const deck=useMemo(()=>{
     const fresh=baseDeck.filter((q:any)=>!recentIds.includes(q.id));
     const pool=fresh.length?fresh:baseDeck;
@@ -81,7 +82,7 @@ export default function Practice(){
     </Shell>;
   }
 
-  const modeLabel=p.review?"Revision Deck":p.mistakes?"Mistake Revision":mode==="ncert"?"NCERT Line-by-Line":mode==="pyq"?"PYQ Practice":mode==="ar"?"Assertion & Reason":mode==="mcq"?"MCQ Series":"Full Chapter Revision";
+  const modeLabel=p.review?"Revision Deck":p.mistakes?"Mistake Revision":p.weak?"Fix My Weakness":mode==="ncert"?"NCERT Line-by-Line":mode==="pyq"?"PYQ Practice":mode==="ar"?"Assertion & Reason":mode==="mcq"?"MCQ Series":"Full Chapter Revision";
   const correct=pick===q.answer;
 
   const submit=()=>{
