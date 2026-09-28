@@ -136,7 +136,7 @@ export default function Tests() {
               <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
                 <Text style={{fontSize:10,fontWeight:"900",letterSpacing:1,color:C.primary}}>{sub.toUpperCase()}</Text>
                 <View style={{flexDirection:"row",alignItems:"center",gap:10}}>
-                  <Pressable disabled={!premium.active||count<=1} onPress={()=>{const next=Math.max(1,count-1);setChapterCounts(x=>({...x,[sub]:next}));setMockChapters(x=>x.filter(id=>CHAPTERS.find(ch=>ch.id===id)?.subject!==sub).slice(0,0))}}><Text style={{fontSize:20,fontWeight:"900",color:count<=1?C.mutedText:C.foreground}}>−</Text></Pressable>
+                  <Pressable disabled={!premium.active||count<=1} onPress={()=>{const next=Math.max(1,count-1);setChapterCounts(x=>({...x,[sub]:next}));setMockChapters(x=>{const ids=x.filter(id=>CHAPTERS.find(ch=>ch.id===id)?.subject===sub);const keep=ids.slice(0,next);return x.filter(id=>CHAPTERS.find(ch=>ch.id===id)?.subject!==sub).concat(keep)})}}><Text style={{fontSize:20,fontWeight:"900",color:count<=1?C.mutedText:C.foreground}}>−</Text></Pressable>
                   <Text style={{fontSize:15,fontWeight:"900",color:C.foreground}}>{count}</Text>
                   <Pressable disabled={!premium.active||count>=max} onPress={()=>setChapterCounts(x=>({...x,[sub]:Math.min(max,count+1)}))}><Text style={{fontSize:20,fontWeight:"900",color:count>=max?C.mutedText:C.foreground}}>+</Text></Pressable>
                 </View>
