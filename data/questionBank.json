@@ -6,6 +6,433 @@
     "mcq": "original or permissively licensed NEET-style MCQs",
     "ar": "original NCERT-derived assertion/reason questions plus reusable A/R PYQs when licensing permits"
   },
-  "sources": [],
-  "questions": []
+  "sources": [
+    {
+      "id": "buzneet-authoring-v1",
+      "name": "BuzNeet original NCERT-derived question authoring",
+      "license": "Original questions; no NCERT text reproduced"
+    }
+  ],
+  "questions": [
+    {
+      "id": "auth-phy-c1-001",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A vernier caliper has 10 vernier divisions equal to 9 main-scale divisions, with 1 MSD = 1 mm. Its least count is:",
+      "options": [
+        "0.01 mm",
+        "0.1 mm",
+        "0.9 mm",
+        "1.1 mm"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Least count = 1 MSD − 1 VSD = 1 − 0.9 = 0.1 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-002",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A measured length is reported as 2.50 cm. How many significant figures does this value contain?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Trailing zero after a decimal point is significant, so 2.50 has three significant figures.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-003",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which pair has the same dimensions?",
+      "options": [
+        "Pressure and energy",
+        "Work and torque",
+        "Force and power",
+        "Momentum and energy"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Both work and torque have dimensions ML²T⁻².",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-004",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If x = (a²b)/c and the percentage errors in a, b and c are 1%, 2% and 3%, respectively, the maximum percentage error in x is:",
+      "options": [
+        "4%",
+        "5%",
+        "7%",
+        "9%"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "For products and powers, maximum fractional errors add with powers as multipliers: 2(1)+2+3 = 7%.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-005",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensional formula of Planck's constant is:",
+      "options": [
+        "MLT⁻¹",
+        "ML²T⁻¹",
+        "ML²T⁻²",
+        "M⁻¹L²T"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Planck's constant has dimensions of energy × time = ML²T⁻² × T.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-006",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A physical quantity is 0.004070 m. Its number of significant figures is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Leading zeros are not significant; zeros between and after significant digits are significant.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-007",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If a relation is dimensionally inconsistent, it can be:",
+      "options": [
+        "Automatically physically correct",
+        "Physically incorrect",
+        "Proved correct by units",
+        "Used without checking"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Dimensional consistency is necessary for a valid physical equation, though it is not sufficient to prove correctness.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-008",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The SI base unit of luminous intensity is:",
+      "options": [
+        "lumen",
+        "lux",
+        "candela",
+        "watt"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Candela is one of the seven SI base units and measures luminous intensity.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-009",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A stopwatch reads 12.4 s for an event whose accepted value is 12.0 s. The absolute error is:",
+      "options": [
+        "0.04 s",
+        "0.4 s",
+        "1.03 s",
+        "12.4 s"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Absolute error is the magnitude of measured value minus accepted value: |12.4 − 12.0| = 0.4 s.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-010",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which quantity is dimensionless?",
+      "options": [
+        "Force",
+        "Pressure",
+        "Strain",
+        "Energy"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Strain is a ratio of two lengths, so its dimensions cancel.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-011",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The percentage uncertainty in a quantity measured as 5.0 ± 0.1 cm is:",
+      "options": [
+        "0.5%",
+        "1%",
+        "2%",
+        "5%"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Percentage uncertainty = (0.1/5.0) × 100 = 2%.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-012",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which prefix represents 10⁻⁶?",
+      "options": [
+        "nano",
+        "micro",
+        "milli",
+        "pico"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "The SI prefix micro (μ) represents 10⁻⁶.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-013",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If a quantity has dimensions M⁰L⁰T⁻¹, it represents the dimensions of:",
+      "options": [
+        "Velocity",
+        "Acceleration",
+        "Frequency",
+        "Energy"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Frequency is inverse time, so its dimensions are T⁻¹.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-014",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A quantity is calculated as A = p/q. If p and q have fractional uncertainties 2% and 3%, the maximum fractional percentage uncertainty in A is:",
+      "options": [
+        "1%",
+        "2%",
+        "3%",
+        "5%"
+      ],
+      "answer": 3,
+      "difficulty": "easy",
+      "explanation": "For division, maximum fractional uncertainties add: 2% + 3% = 5%.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-015",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which measurement is most precise?",
+      "options": [
+        "4 m",
+        "4.2 m",
+        "4.20 m",
+        "4.200 m"
+      ],
+      "answer": 3,
+      "difficulty": "easy",
+      "explanation": "More reported significant digits indicate finer stated precision, assuming the measurements are comparable.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-016",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensions of pressure are:",
+      "options": [
+        "MLT⁻²",
+        "ML⁻¹T⁻²",
+        "ML²T⁻²",
+        "M⁰L⁰T⁻²"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Pressure = force/area, giving ML T⁻² / L² = ML⁻¹T⁻².",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-017",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A result is written as 6.0 × 10³. The number of significant figures is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Both 6 and the trailing zero after the decimal are significant, so there are two significant figures.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-018",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which statement about dimensional analysis is correct?",
+      "options": [
+        "It can determine numerical constants in every equation",
+        "It can prove an equation is physically correct",
+        "It can check dimensional consistency",
+        "It can replace experiments"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Dimensional analysis is useful for checking consistency, but cannot establish every aspect of a physical law.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-019",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If y = ab² and the percentage uncertainties in a and b are 2% and 1%, the maximum percentage uncertainty in y is:",
+      "options": [
+        "2%",
+        "3%",
+        "4%",
+        "5%"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "The power of b doubles its contribution: 2% + 2(1%) = 4%.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-020",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which of the following is an SI derived unit?",
+      "options": [
+        "metre",
+        "second",
+        "kelvin",
+        "newton"
+      ],
+      "answer": 3,
+      "difficulty": "easy",
+      "explanation": "Newton is derived from kg·m·s⁻², whereas metre, second and kelvin are base units.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    }
+  ]
 }
