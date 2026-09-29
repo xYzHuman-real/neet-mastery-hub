@@ -433,6 +433,826 @@
       "sourceLicense": "original_authoring",
       "sourceId": "buzneet-authoring-v1",
       "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-021",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A physical quantity has dimensions M L² T⁻². Which SI derived unit can represent it?",
+      "options": [
+        "joule",
+        "watt",
+        "pascal",
+        "newton"
+      ],
+      "answer": 0,
+      "difficulty": "This is the dimensional formula of energy, whose SI unit is joule.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-022",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which pair consists only of SI base quantities?",
+      "options": [
+        "force and pressure",
+        "mass and time",
+        "energy and power",
+        "velocity and length"
+      ],
+      "answer": 1,
+      "difficulty": "Mass and time are SI base quantities; the other listed mechanical quantities are derived.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-023",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A length is measured as 5.00 cm. The stated precision is closest to:",
+      "options": [
+        "1 cm",
+        "0.1 cm",
+        "0.01 cm",
+        "0.001 cm"
+      ],
+      "answer": 2,
+      "difficulty": "The last reported digit is the hundredth of a centimetre.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-024",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which zero is not significant in 0.00520?",
+      "options": [
+        "the first zero after the decimal",
+        "the zero immediately before 5",
+        "the zero between 5 and 2",
+        "the final zero"
+      ],
+      "answer": 0,
+      "difficulty": "Leading zeros only locate the decimal point and are not significant.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-025",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If 1 Å = 10⁻¹⁰ m, then 5 Å equals:",
+      "options": [
+        "5×10⁻⁸ m",
+        "5×10⁻¹⁰ m",
+        "5×10⁻¹² m",
+        "5×10⁻⁶ m"
+      ],
+      "answer": 1,
+      "difficulty": "Multiplying 5 by 10⁻¹⁰ m gives 5×10⁻¹⁰ m.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-026",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The SI unit of plane angle is:",
+      "options": [
+        "degree",
+        "radian",
+        "steradian",
+        "revolution"
+      ],
+      "answer": 1,
+      "difficulty": "Radian is the SI derived unit for plane angle.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-027",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The SI unit of solid angle is:",
+      "options": [
+        "radian",
+        "degree",
+        "steradian",
+        "candela"
+      ],
+      "answer": 2,
+      "difficulty": "Steradian is the SI derived unit of solid angle.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-028",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which quantity has dimensions L T⁻¹?",
+      "options": [
+        "acceleration",
+        "speed",
+        "force",
+        "momentum"
+      ],
+      "answer": 1,
+      "difficulty": "Speed is distance divided by time.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-029",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which quantity has dimensions M L T⁻²?",
+      "options": [
+        "power",
+        "pressure",
+        "force",
+        "energy"
+      ],
+      "answer": 2,
+      "difficulty": "Force equals mass multiplied by acceleration.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-030",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which statement about accuracy is correct?",
+      "options": [
+        "It describes closeness to the true value",
+        "It always increases with more decimal places",
+        "It is identical to precision",
+        "It depends only on instrument size"
+      ],
+      "answer": 0,
+      "difficulty": "Accuracy concerns closeness to the accepted or true value.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-031",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Precision mainly indicates:",
+      "options": [
+        "closeness to the true value",
+        "reproducibility of repeated measurements",
+        "the unit chosen",
+        "the physical dimension"
+      ],
+      "answer": 1,
+      "difficulty": "Precision reflects the consistency or reproducibility of repeated measurements.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-032",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Random errors are generally reduced by:",
+      "options": [
+        "changing the physical quantity",
+        "repeating measurements and averaging",
+        "dropping all small readings",
+        "changing SI units"
+      ],
+      "answer": 1,
+      "difficulty": "Averaging repeated measurements can reduce random fluctuations.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-033",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A systematic error is characterized by:",
+      "options": [
+        "unpredictable sign in every reading",
+        "a consistent bias in measurements",
+        "absence of any instrument effect",
+        "infinite precision"
+      ],
+      "answer": 1,
+      "difficulty": "Systematic error tends to shift measurements in a consistent direction.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-034",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If measured values are 9.8, 9.9 and 10.0 cm, their mean is:",
+      "options": [
+        "9.7 cm",
+        "9.8 cm",
+        "9.9 cm",
+        "10.1 cm"
+      ],
+      "answer": 2,
+      "difficulty": "The arithmetic mean is (9.8+9.9+10.0)/3 = 9.9 cm.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-035",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "For repeated measurements, mean absolute error is based on:",
+      "options": [
+        "deviations from the mean",
+        "only the largest reading",
+        "the unit conversion",
+        "the number of significant figures"
+      ],
+      "answer": 0,
+      "difficulty": "Mean absolute error uses the magnitudes of deviations of readings from the mean.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-036",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If a = 2.0 ± 0.1, the relative uncertainty in a is:",
+      "options": [
+        "0.02",
+        "0.05",
+        "0.1",
+        "2"
+      ],
+      "answer": 1,
+      "difficulty": "Relative uncertainty = absolute uncertainty/value = 0.1/2.0 = 0.05.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-037",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "A quantity Q = xy. If percentage uncertainties in x and y are 2% and 4%, maximum uncertainty in Q is:",
+      "options": [
+        "2%",
+        "4%",
+        "6%",
+        "8%"
+      ],
+      "answer": 2,
+      "difficulty": "For multiplication, percentage uncertainties add: 2% + 4% = 6%.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-038",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "For Q = x/y, uncertainties of x and y are 3% and 2%. Maximum percentage uncertainty is:",
+      "options": [
+        "1%",
+        "2%",
+        "5%",
+        "6%"
+      ],
+      "answer": 2,
+      "difficulty": "For division, maximum percentage uncertainties add.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-039",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "For Q = x³, if x has 2% uncertainty, Q has maximum percentage uncertainty:",
+      "options": [
+        "2%",
+        "4%",
+        "6%",
+        "9%"
+      ],
+      "answer": 2,
+      "difficulty": "The power rule gives 3×2% = 6%.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-040",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If radius has 1% uncertainty, percentage uncertainty in area πr² is:",
+      "options": [
+        "1%",
+        "2%",
+        "3%",
+        "4%"
+      ],
+      "answer": 1,
+      "difficulty": "Area depends on r², so the percentage uncertainty doubles.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-041",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensions of density are:",
+      "options": [
+        "M L⁻³",
+        "M L⁻²",
+        "M⁻¹L³",
+        "M L³"
+      ],
+      "answer": 0,
+      "difficulty": "Density is mass per volume, hence M/L³.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-042",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensions of impulse are the same as those of:",
+      "options": [
+        "energy",
+        "momentum",
+        "power",
+        "pressure"
+      ],
+      "answer": 1,
+      "difficulty": "Impulse equals change in momentum.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-043",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensions of angular momentum are:",
+      "options": [
+        "M L T⁻¹",
+        "M L² T⁻¹",
+        "M L² T⁻²",
+        "M T⁻¹"
+      ],
+      "answer": 1,
+      "difficulty": "Angular momentum has dimensions of linear momentum times length.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-044",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensions of power are:",
+      "options": [
+        "M L² T⁻²",
+        "M L² T⁻³",
+        "M L T⁻²",
+        "M L⁻¹ T⁻²"
+      ],
+      "answer": 1,
+      "difficulty": "Power is energy per time.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-045",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensions of gravitational constant G are:",
+      "options": [
+        "M L T⁻²",
+        "M⁻¹ L³ T⁻²",
+        "M L³ T⁻²",
+        "M⁻¹ L² T⁻¹"
+      ],
+      "answer": 1,
+      "difficulty": "From F=Gm₁m₂/r², G has dimensions M⁻¹L³T⁻².",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-046",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensions of Planck constant divided by energy are:",
+      "options": [
+        "T",
+        "T⁻¹",
+        "L",
+        "M"
+      ],
+      "answer": 0,
+      "difficulty": "Since h has dimensions energy×time, h/E has dimensions of time.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-047",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which equation is dimensionally possible?",
+      "options": [
+        "v=u+at",
+        "v=u+at²",
+        "s=u+a t",
+        "F=mv"
+      ],
+      "answer": 0,
+      "difficulty": "Each term in v=u+at has dimensions of velocity.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-048",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Dimensional analysis cannot determine:",
+      "options": [
+        "whether terms have matching dimensions",
+        "dimensions of a derived quantity",
+        "a dimensionless numerical constant",
+        "possible unit conversions"
+      ],
+      "answer": 2,
+      "difficulty": "Pure numerical constants cannot generally be obtained by dimensional analysis.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-049",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If x = A sin(ωt), the dimensions of ω are:",
+      "options": [
+        "T",
+        "T⁻¹",
+        "L",
+        "L T⁻¹"
+      ],
+      "answer": 1,
+      "difficulty": "The sine argument must be dimensionless, so ωt is dimensionless and ω has T⁻¹.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-050",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "In an equation x = a + bt, the dimensions of a must be the same as:",
+      "options": [
+        "b",
+        "t",
+        "x",
+        "bt only"
+      ],
+      "answer": 2,
+      "difficulty": "Terms added together must have identical dimensions, so a and x match.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-051",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If y = a + bt, the dimensions of b are:",
+      "options": [
+        "[y]",
+        "[y]/[t]",
+        "[t]/[y]",
+        "dimensionless"
+      ],
+      "answer": 1,
+      "difficulty": "Since bt has dimensions y, b has dimensions y divided by time.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-052",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The SI prefix nano represents:",
+      "options": [
+        "10⁻³",
+        "10⁻⁶",
+        "10⁻⁹",
+        "10⁻¹²"
+      ],
+      "answer": 2,
+      "difficulty": "Nano denotes 10⁻⁹.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-053",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The SI prefix pico represents:",
+      "options": [
+        "10⁻⁶",
+        "10⁻⁹",
+        "10⁻¹²",
+        "10⁻¹⁵"
+      ],
+      "answer": 2,
+      "difficulty": "Pico denotes 10⁻¹².",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-054",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "One micrometre is equal to:",
+      "options": [
+        "10⁻³ m",
+        "10⁻⁶ m",
+        "10⁻⁹ m",
+        "10⁻¹² m"
+      ],
+      "answer": 1,
+      "difficulty": "Micro represents 10⁻⁶.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-055",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which is a derived SI unit expressed using kg, m and s?",
+      "options": [
+        "kelvin",
+        "ampere",
+        "pascal",
+        "mole"
+      ],
+      "answer": 2,
+      "difficulty": "Pascal is kg m⁻¹ s⁻².",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-056",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensional formula of frequency is:",
+      "options": [
+        "T",
+        "T⁻¹",
+        "L T⁻¹",
+        "M T⁻¹"
+      ],
+      "answer": 1,
+      "difficulty": "Frequency is number of cycles per unit time.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-057",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensional formula of surface tension is:",
+      "options": [
+        "M T⁻²",
+        "M L T⁻²",
+        "M L⁻¹ T⁻²",
+        "M L² T⁻²"
+      ],
+      "answer": 0,
+      "difficulty": "Surface tension is force per length, giving M T⁻².",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-058",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensional formula of coefficient of viscosity is:",
+      "options": [
+        "M L⁻¹ T⁻¹",
+        "M L T⁻¹",
+        "M L⁻² T⁻¹",
+        "M L⁻¹ T⁻²"
+      ],
+      "answer": 0,
+      "difficulty": "Dynamic viscosity has dimensions M L⁻¹ T⁻¹.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-059",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "The dimensional formula of Young's modulus is:",
+      "options": [
+        "M L T⁻²",
+        "M L⁻¹ T⁻²",
+        "M L² T⁻²",
+        "M⁻¹ L T²"
+      ],
+      "answer": 1,
+      "difficulty": "Young's modulus is stress divided by strain; strain is dimensionless.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-060",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "Which quantity is dimensionless?",
+      "options": [
+        "refractive index",
+        "pressure",
+        "surface tension",
+        "Young's modulus"
+      ],
+      "answer": 0,
+      "difficulty": "Refractive index is a ratio of speeds and is dimensionless.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-061",
+      "chapterId": "phy-c1",
+      "series": "mcq",
+      "mode": "mcq",
+      "prompt": "If a physical equation passes dimensional analysis, it is:",
+      "options": [
+        "certainly correct",
+        "dimensionally consistent but not necessarily physically correct",
+        "certainly experimental",
+        "necessarily exact"
+      ],
+      "answer": 1,
+      "difficulty": "Dimensional consistency is necessary but not sufficient for physical validity.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v1",
+      "topic": "units and measurements"
     }
   ]
 }
