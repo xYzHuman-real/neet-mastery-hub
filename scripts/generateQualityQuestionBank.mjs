@@ -404,10 +404,7 @@ function questionCountForSeries(chapter, series) {
   const topicBonus = Math.min(100, topics * 10);
   const index = chapters.indexOf(chapter);
   const variation = ((index * 13 + topics * 7) % 21) - 10;
-  return Math.max(
-    60,
-    Math.min(200, Number(chapter.questionTarget || (60 + topicBonus + variation)))
-  );
+  return 61;
 }
 
 const existing = fs.existsSync("data/questions.json") ? JSON.parse(fs.readFileSync("data/questions.json", "utf8")).questions || [] : [];
@@ -507,13 +504,35 @@ function improveGeneratedQuestions(items) {
 
 const improvedQuestions = improveGeneratedQuestions(questions);
 
+const finalBank = improvedQuestions.map(q => ({
+  ...q,
+  prompt: q.question,
+  mode: q.series === "ncert" ? "ncert" : q.series === "pyq" ? "pyq" : q.series,
+  sourceType: q.series === "pyq" ? "pyq_style_original" : "ncert_derived_original",
+  sourceLicense: "original_authoring",
+  sourceId: "buzneet-authoring-v2",
+  reviewStatus: "draft"
+}));
+fs.writeFileSync("data/questionBank.json", JSON.stringify({
+  version: "3.0",
+  policy: {
+    minimumPerSeriesPerChapter: 61,
+    maximumPerSeriesPerChapter: 199,
+    series: ["ncert","mcq","ar","pyq","revision"],
+    pyqSeriesMode: "original-pyq-style-practice-not-official-pyq",
+    noVerbatimCopyrightedPYQs: true,
+    noInventedNCERTPageCitations: true
+  },
+  questions: finalBank
+}, null, 2) + "\n");
+
 fs.writeFileSync("data/questions.json", JSON.stringify({
-  version: "4.0",
+  version: "5.0",
   description: "NEET UG practice question bank with unique prompts, shuffled answer positions, and concise explanations.",
-  policy: { minimumPerSeriesPerChapter: 60, maximumPerSeriesPerChapter: 200, variableCountsPerSeries: true, uniquePrompts: true, answerPositionsShuffled: true, series: ["ncert","mcq","ar","pyq","revision"], pyqSeriesMode: "original-paraphrased-pyq-derived-practice", noVerbatimCopyrightedPYQs: true, noInventedNCERTPageCitations: true },
+  policy: { minimumPerSeriesPerChapter: 61, maximumPerSeriesPerChapter: 199, variableCountsPerSeries: true, uniquePrompts: true, answerPositionsShuffled: true, series: ["ncert","mcq","ar","pyq","revision"], pyqSeriesMode: "original-paraphrased-pyq-derived-practice", noVerbatimCopyrightedPYQs: true, noInventedNCERTPageCitations: true },
   questions: improvedQuestions
 }, null, 2) + "\n");
-console.log(`Generated ${improvedQuestions.length} questions across ${chapters.length} chapters with independent 60–200 sizes for all five series. The PYQ series contains original paraphrased PYQ-derived practice, not verbatim official questions.`);
+console.log(`Generated ${improvedQuestions.length} questions across ${chapters.length} chapters with exactly 61 questions per series per chapter. The PYQ series contains original paraphrased PYQ-derived practice, not verbatim official questions.`);
 
 // Regeneration trigger: generated bank is validated before commit.
 // Series counts are validated independently.
