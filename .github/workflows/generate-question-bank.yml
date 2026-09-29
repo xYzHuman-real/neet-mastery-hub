@@ -12,6 +12,7 @@ on:
     paths:
       - "data/chapters.json"
       - "scripts/generateQualityQuestionBank.mjs"
+      - "scripts/validateCompleteQuestionBank.mjs"
       - ".github/workflows/generate-question-bank.yml"
 
 permissions:
@@ -29,17 +30,19 @@ jobs:
         with:
           node-version: 22
 
-      - name: Generate variable 60–200-question draft bank
+      - name: Generate complete 61-question pools for every chapter and series
         run: node scripts/generateQualityQuestionBank.mjs
 
       - name: Validate question bank
         run: node scripts/validateQuestionQuality.mjs
+      - name: Validate complete 61–199 pools
+        run: node scripts/validateCompleteQuestionBank.mjs
 
       - name: Commit generated bank
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/questions.json
+          git add data/questions.json data/questionBank.json
           git diff --cached --quiet && exit 0
           git commit -m "Generate validated variable-size question bank"
           git pull --rebase origin main
