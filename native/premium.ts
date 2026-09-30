@@ -19,3 +19,8 @@ export function subscriptionUrl(plan:PremiumPlan){
  const text=encodeURIComponent("Hi BuzNeet! I want to subscribe to BuzNeet Premium.\nPlan: "+plan.label+"\nOffer price: ₹"+plan.price+"\nPlease tell me the payment steps.");
  return WHATSAPP_NUMBER ? "https://wa.me/"+WHATSAPP_NUMBER+"?text="+text : "";
 }
+export function premiumTimeLeft(expiresAt:number|null, now=Date.now()):{days:number;hours:number}|null{
+  if(!expiresAt || !Number.isFinite(expiresAt) || expiresAt<=now) return null;
+  const ms=expiresAt-now;
+  return {days:Math.floor(ms/86400000),hours:Math.floor((ms%86400000)/3600000)};
+}
