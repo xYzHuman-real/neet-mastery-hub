@@ -2616,7 +2616,7 @@
         "A is true, but R is false.",
         "A is false, but R is true."
       ],
-      "answer": 3,
+      "answer": 0,
       "difficulty": "easy",
       "explanation": "A plane angle is dimensionless, and the radian is used to express it; the assertion that every dimensionless quantity can have a unit is too broad in this context.",
       "reviewStatus": "draft",
@@ -4111,7 +4111,7 @@
       "chapterId": "phy-c1",
       "series": "revision",
       "mode": "revision",
-      "prompt": "Which is dimensionless?",
+      "prompt": "Which listed quantity is a dimensionless ratio?",
       "options": [
         "force",
         "refractive index",
@@ -5360,7 +5360,7 @@
         "5",
         "6"
       ],
-      "answer": 2,
+      "answer": 1,
       "difficulty": "easy",
       "explanation": "Digits 5, 0, 6, and final 0 are significant: four? In 0.05060, significant digits are 5,0,6,0 = 4.",
       "reviewStatus": "draft",
@@ -5576,7 +5576,7 @@
         "5.00 m/s",
         "5.000 m/s"
       ],
-      "answer": 1,
+      "answer": 2,
       "difficulty": "medium",
       "explanation": "10.0/2.00 = 5.00, with three significant figures; option formatting should be 5.00 m/s.",
       "reviewStatus": "draft",
@@ -6355,7 +6355,7 @@
       "prompt": "Which reading has the greatest number of significant figures?",
       "options": [
         "0.0032",
-        "3.20",
+        "4.50",
         "32.00",
         "0.032"
       ],
@@ -6489,7 +6489,7 @@
       "mode": "pyq",
       "prompt": "The measured length is 25.0 cm and width 4.0 cm. Approximate area:",
       "options": [
-        "100 cm²",
+        "1.0 × 10² cm²",
         "100.0 cm²",
         "100.00 cm²",
         "100.000 cm²"
@@ -6602,7 +6602,7 @@
         "123.4",
         "1234"
       ],
-      "answer": 3,
+      "answer": 2,
       "difficulty": "hard",
       "explanation": "1.234 m = 123.4 cm, so correct option is 123.4.",
       "reviewStatus": "draft",
@@ -6649,7 +6649,7 @@
       "chapterId": "phy-c1",
       "series": "pyq",
       "mode": "pyq",
-      "prompt": "Which is a coherent SI derived unit?",
+      "prompt": "Which of these is the SI derived unit for force?",
       "options": [
         "newton",
         "inch",
