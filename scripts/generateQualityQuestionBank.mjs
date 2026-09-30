@@ -8,6 +8,7 @@
  * - Keep all generated questions explicitly marked as draft until human review.
  *
  * This script is intentionally deterministic.
+// Full-bank completion pass requested: populate all remaining chapter/series pools to 61+ questions.
  * Full-bank authoring run: populate every chapter/series to the strict 61-question minimum. It does not invent PYQ status or
  * NCERT page/line citations. Every generated item remains draft until reviewed.
  */
