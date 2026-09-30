@@ -3958,6 +3958,426 @@
       "sourceLicense": "original_authoring",
       "sourceId": "buzneet-authoring-v2",
       "topic": "units and measurements"
+    },
+    {
+      "id": "auth-phy-c1-revision-001",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Which is an SI base unit?",
+      "options": [
+        "metre",
+        "newton",
+        "joule",
+        "pascal"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Metre is a base unit.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "units"
+    },
+    {
+      "id": "auth-phy-c1-revision-002",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Significant figures in 0.00670?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Leading zeros do not count; the final zero does.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-revision-003",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Dimensions of acceleration?",
+      "options": [
+        "[LT⁻¹]",
+        "[LT⁻²]",
+        "[MLT⁻²]",
+        "[L²T⁻²]"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Acceleration is velocity per time.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-revision-004",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Dimensions of momentum?",
+      "options": [
+        "[MLT⁻¹]",
+        "[MLT⁻²]",
+        "[ML²T⁻¹]",
+        "[M⁻¹LT⁻¹]"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Momentum is mass times velocity.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-revision-005",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Dimensions of pressure?",
+      "options": [
+        "[MLT⁻²]",
+        "[ML⁻¹T⁻²]",
+        "[ML²T⁻²]",
+        "[M⁻¹LT⁻²]"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "Pressure is force per area.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-revision-006",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Which pair has identical dimensions?",
+      "options": [
+        "energy and power",
+        "work and torque",
+        "force and pressure",
+        "momentum and force"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Work and torque share [ML²T⁻²].",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-revision-007",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Dimensions of frequency?",
+      "options": [
+        "[T]",
+        "[T⁻¹]",
+        "[LT⁻¹]",
+        "[T⁻²]"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Frequency is cycles per unit time.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-revision-008",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Which is dimensionless?",
+      "options": [
+        "force",
+        "refractive index",
+        "pressure",
+        "momentum"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Refractive index is a ratio of speeds.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "dimensionless quantities"
+    },
+    {
+      "id": "auth-phy-c1-revision-009",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "SI unit of pressure?",
+      "options": [
+        "newton",
+        "joule",
+        "pascal",
+        "watt"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "One pascal is one newton per square metre.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-revision-010",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "One nanometre equals:",
+      "options": [
+        "10⁻⁶ m",
+        "10⁻⁹ m",
+        "10⁻¹² m",
+        "10⁹ m"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Nano denotes 10⁻⁹.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "prefixes"
+    },
+    {
+      "id": "auth-phy-c1-revision-011",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "10 vernier divisions equal 9 mm; least count?",
+      "options": [
+        "1 mm",
+        "0.9 mm",
+        "0.1 mm",
+        "9 mm"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Least count is 1.0 − 0.9 = 0.1 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "vernier calipers"
+    },
+    {
+      "id": "auth-phy-c1-revision-012",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Pitch 0.5 mm and 50 divisions; least count?",
+      "options": [
+        "0.1 mm",
+        "0.01 mm",
+        "0.025 mm",
+        "0.5 mm"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Least count is pitch divided by divisions.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "screw gauge"
+    },
+    {
+      "id": "auth-phy-c1-revision-013",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Reading 4.26 mm with +0.03 mm zero error; corrected value?",
+      "options": [
+        "4.29",
+        "4.26",
+        "4.23",
+        "4.20"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Subtract positive zero error: 4.26 − 0.03 = 4.23 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "zero error"
+    },
+    {
+      "id": "auth-phy-c1-revision-014",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Which is a random error?",
+      "options": [
+        "constant calibration offset",
+        "varying reaction time",
+        "wrongly marked scale",
+        "fixed zero error"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Reaction-time variation can fluctuate randomly.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-revision-015",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Which is systematic error?",
+      "options": [
+        "constant zero offset",
+        "random last-digit scatter",
+        "scatter around mean",
+        "random fluctuations"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "A fixed offset shifts readings consistently.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-revision-016",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Parallax error is caused by:",
+      "options": [
+        "oblique viewing",
+        "SI units",
+        "averaging",
+        "dimensionless values"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Apparent alignment changes with viewing angle.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "measurement"
+    },
+    {
+      "id": "auth-phy-c1-revision-017",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "To reduce parallax, view the mark:",
+      "options": [
+        "from the side",
+        "perpendicularly at the mark",
+        "from far above",
+        "from any angle"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "The line of sight should be perpendicular to the scale.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "measurement"
+    },
+    {
+      "id": "auth-phy-c1-revision-018",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "In x=at+bt², x is length. Dimensions of a?",
+      "options": [
+        "[LT⁻¹]",
+        "[LT⁻²]",
+        "[L]",
+        "[T⁻¹]"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "The term at must have dimensions of length.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-revision-019",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Unit equivalent to a joule?",
+      "options": [
+        "N m",
+        "N/m",
+        "W/s",
+        "kg m s⁻¹"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Work equals force times displacement.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-revision-020",
+      "chapterId": "phy-c1",
+      "series": "revision",
+      "mode": "revision",
+      "prompt": "Which is not an SI base unit?",
+      "options": [
+        "kelvin",
+        "mole",
+        "newton",
+        "ampere"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Newton is a derived unit of force.",
+      "reviewStatus": "draft",
+      "sourceType": "ncert_derived_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "topic": "units"
     }
   ]
 }
