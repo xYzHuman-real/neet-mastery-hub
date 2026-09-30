@@ -1,0 +1,129 @@
+name: NTA-Style Question Bank Authoring
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/chapters.json"
+      - ".github/workflows/ai-question-authoring.yml"
+      - "scripts/mergeAIAuthoredQuestionBank.mjs"
+
+permissions:
+  contents: write
+  copilot-requests: write
+
+concurrency:
+  group: buzneet-question-authoring
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      chapters: ${{ steps.matrix.outputs.chapters }}
+    steps:
+      - uses: actions/checkout@v6
+      - id: matrix
+        run: |
+          node -e 'const x=require("./data/chapters.json").chapters.map(c=>c.id); console.log("chapters="+JSON.stringify(x))' >> "$GITHUB_OUTPUT"
+
+  author:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        chapter: ${{ fromJSON(needs.plan.outputs.chapters) }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install Copilot CLI
+        run: npm install -g @github/copilot
+      - name: Author complete chapter question bank
+        env:
+          CHAPTER_ID: ${{ matrix.chapter }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p generated
+          copilot -p '
+          You are the senior NEET question-paper author for BuzNEET.
+          AUTHOR a complete high-quality question bank for chapter '"$CHAPTER_ID"'.
+          Read data/chapters.json for the exact chapter, subject, topics and questionTarget.
+          Read data/question.schema.json and the existing repository question-bank architecture.
+          Create generated/'"$CHAPTER_ID"'.json containing EXACTLY questionTarget questions for EACH of ncert, mcq, ar, pyq and revision.
+
+          Think like an experienced NTA paper setter and senior NCERT subject expert.
+          Every question must test a distinct fact, relationship, inference, calculation, application, graph/data interpretation, misconception or multi-step reasoning point.
+          Do NOT recycle a seed question with a new wrapper, synonym, number, or Variant label.
+          Do NOT create filler, generic topic-identification questions, or questions whose only difference is wording.
+          Across all five series for this chapter, avoid testing the same fact in essentially the same way.
+          Use exactly four plausible options with one unambiguously correct answer.
+          Distractors must reflect realistic student misconceptions, not nonsense.
+          Balance answer positions A/B/C/D across every series and mix easy, medium and hard realistically.
+
+          Biology: stay tightly NCERT-factual; use statements, examples, exceptions and application of NCERT facts where appropriate.
+          Chemistry: use conceptual, numerical, trend, structure, reaction/product and mechanism questions where applicable.
+          Physics: use equations, dimensional reasoning, graph interpretation, numerical/application and conceptual questions where applicable; numerical questions must contain sufficient data.
+
+          NCERT series = line-by-line NCERT facts and relationships.
+          MCQ series = NTA-style single-correct conceptual/application questions.
+          AR series = standard four Assertion-Reason options only; both statements must be meaningful and the explanation relationship must be correct.
+          PYQ series = original PYQ-derived practice based on known NEET/AIPMT-tested concepts; never reproduce an official PYQ verbatim and never falsely label an item as an official PYQ.
+          Revision series = high-yield mixed recall/application for spaced revision.
+
+          Do not invent NCERT page/line citations. Chapter/topic citations are acceptable unless verified page data already exists.
+          Explanations must state why the correct answer is correct and explain the key distractor when useful.
+          Do not use the words draft, variant, placeholder, dummy, practice variant, or AI generated in any prompt.
+
+          Before finishing, perform your own quality audit:
+          1. Exact count for all five series.
+          2. Semantic duplicate check across the whole chapter, not merely exact-string matching.
+          3. Independent answer-key check.
+          4. Assertion-Reason logic check.
+          5. Remove anything that would not belong on a serious NEET mock paper.
+
+          Write JSON only to generated/'"$CHAPTER_ID"'.json. Do not modify data/questions.json or data/questionBank.json.
+          ' --model auto --allow-tool='write, shell(node:*), shell(python:*)' --no-ask-user
+
+      - name: Validate authored chapter JSON
+        run: |
+          node -e 'const fs=require("fs"); const files=fs.readdirSync("generated").filter(x=>x.endsWith(".json")); if(files.length!==1) throw new Error("expected exactly one authored JSON"); const p="generated/"+files[0]; const x=JSON.parse(fs.readFileSync(p,"utf8")); if(!x.chapterId) throw new Error("chapterId missing"); if(!Array.isArray(x.questions)) throw new Error("questions missing"); console.log("Authored",x.questions.length,"questions for",x.chapterId);'
+        env:
+          __CHAPTER__: ${{ matrix.chapter }}
+
+      - name: Upload authored chapter
+        uses: actions/upload-artifact@v4
+        with:
+          name: authored-${{ matrix.chapter }}
+          path: generated/${{ matrix.chapter }}.json
+          retention-days: 7
+
+  merge:
+    needs: author
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - name: Download all authored chapters
+        uses: actions/download-artifact@v5
+        with:
+          pattern: authored-*
+          path: generated-authored
+          merge-multiple: true
+      - name: Merge and perform strict quality validation
+        run: node scripts/mergeAIAuthoredQuestionBank.mjs generated-authored
+      - name: Validate complete bank
+        run: |
+          node scripts/validateQuestionQuality.mjs
+          node scripts/validateCompleteQuestionBank.mjs
+      - name: Commit final question bank
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@github.com"
+          git add data/questions.json data/questionBank.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Author complete NTA-style NEET question bank"
+          git push
