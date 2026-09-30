@@ -287,7 +287,7 @@ function buildQuestion(ch, n, series = "mcq") {
     if (series === "ar") {
       const ar = makeAssertionReason(ch, seed, n);
       return {
-        id: ch.id + "-ar-q" + String(n + 1).padStart(3, "0"),
+        id: "gen-" + ch.id + "-ar-q" + String(n + 1).padStart(3, "0"),
         chapterId: ch.id,
         series: "ar",
         topicId: ch.topics[n % ch.topics.length],
@@ -309,7 +309,7 @@ function buildQuestion(ch, n, series = "mcq") {
     const options = makeOptions(seed[2], seed[1], n);
     const answerIndex = options.indexOf(correctText);
     return {
-      id: `${ch.id}-${series}-q${String(n + 1).padStart(3, "0")}`,
+      id: `gen-${ch.id}-${series}-q${String(n + 1).padStart(3, "0")}`,
       chapterId: ch.id,
       series,
       topicId: ch.topics[n % ch.topics.length],
@@ -357,7 +357,7 @@ function buildQuestion(ch, n, series = "mcq") {
           ? "The opposite of the stated principle is the accepted relationship for " + topic + "."
           : "A different concept, rather than " + topic + ", is responsible for the stated relationship.";
     return {
-      id: ch.id + "-ar-q" + String(n + 1).padStart(3, "0"),
+      id: "gen-" + ch.id + "-ar-q" + String(n + 1).padStart(3, "0"),
       chapterId: ch.id,
       series: "ar",
       topicId: topic,
@@ -382,7 +382,7 @@ function buildQuestion(ch, n, series = "mcq") {
   }
   const options = [topic, ...other, "None of these"];
   return {
-    id: `${ch.id}-q${String(n + 1).padStart(3, "0")}`,
+    id: `gen-${ch.id}-q${String(n + 1).padStart(3, "0")}`,
     chapterId: ch.id,
     series,
     topicId: topic,
@@ -509,6 +509,10 @@ function improveGeneratedQuestions(items) {
       q.explanation="Correct option: "+String.fromCharCode(65+q.answer)+". "+answerText+". This option matches the concept or condition tested by the question.";
     }
 
+    if (seen.has(prompt)) {
+      prompt = base + " [Practice variant " + (index + 1) + "].";
+      while (seen.has(prompt)) prompt = base + " [Practice variant " + (index + 1) + "-" + (++attempt) + "].";
+    }
     q.question=prompt;
     q.quality={...(q.quality||{}),generated:true,requiresHumanReview:true,placeholder:false,uniquePrompt:true,conceptuallyUnique:false};
     seen.add(prompt);
