@@ -382,7 +382,7 @@ function buildQuestion(ch, n, series = "mcq") {
   }
   const options = [topic, ...other, "None of these"];
   return {
-    id: `gen-${ch.id}-q${String(n + 1).padStart(3, "0")}`,
+    id: `gen-${ch.id}-${series}-q${String(n + 1).padStart(3, "0")}`,
     chapterId: ch.id,
     series,
     topicId: topic,
