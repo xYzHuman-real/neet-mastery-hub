@@ -5,7 +5,7 @@ import AsyncStorage from"@react-native-async-storage/async-storage";
 import{Shell,Card}from"../native/ui";
 import{C}from"../native/theme";
 import{useStore,type Rating}from"../native/store";
-import{loadContent,filterQuestions,chapterById}from"../native/content";
+import{loadContent,filterQuestions,chapterById,orderForPractice}from"../native/content";
 
 const RECENT_KEY="buzneet-recent-questions-v1";
 const RECENT_LIMIT=100;
@@ -39,7 +39,7 @@ export default function Practice(){
   const deck=useMemo(()=>{
     const fresh=baseDeck.filter((q:any)=>!recentIds.includes(q.id));
     const pool=fresh.length?fresh:baseDeck;
-    return shuffle(pool);
+    return orderForPractice(pool);
   },[baseDeck,recentIds]);
 
   const[i,setI]=useState(0);
