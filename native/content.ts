@@ -26,6 +26,55 @@ function shuffleOptions(options:string[],answer:number){
   return {options:pairs.map(x=>x.text),answer:pairs.findIndex(x=>x.index===answer)};
 }
 
+/**
+ * Normalise question language for semantic-repeat avoidance.
+ * This is intentionally lightweight: it is not a claim that two questions
+ * are mathematically equivalent. It only prevents obvious near-duplicates
+ * from appearing back-to-back in the mobile practice deck.
+ */
+const STOP_WORDS=new Set(["a","an","the","is","are","was","were","be","being","been","of","to","in","on","for","from","with","and","or","by","as","at","which","what","who","how","why","when","where","using","called","option","options","correct","best","most","following","select","choose","scientifically","conventionally","written","matches","concept","tested","practice","answer","response"]);
+function tokens(text:string){
+  return new Set(
+    text.toLowerCase()
+      .replace(/\[[^\]]*\]/g," ")
+      .replace(/[^a-z0-9]+/g," ")
+      .split(/\s+/)
+      .filter(Boolean)
+      .map(w=>w.length>5&&w.endsWith("ing")?w.slice(0,-3):w.length>4&&w.endsWith("ed")?w.slice(0,-2):w)
+      .filter(w=>!STOP_WORDS.has(w))
+  );
+}
+function semanticSimilarity(a:NativeQuestion,b:NativeQuestion){
+  const A=tokens(a.prompt+" "+(a.assertion??"")+" "+(a.reason??""));
+  const B=tokens(b.prompt+" "+(b.assertion??"")+" "+(b.reason??""));
+  if(!A.size||!B.size)return 0;
+  let intersection=0;
+  for(const x of A)if(B.has(x))intersection++;
+  return intersection/Math.min(A.size,B.size);
+}
+function orderForPractice(list:NativeQuestion[]){
+  const remaining=shuffle(list);
+  const ordered:NativeQuestion[]=[];
+  const recent:NativeQuestion[]=[];
+  while(remaining.length){
+    let best=0;
+    let bestScore=Infinity;
+    for(let i=0;i<remaining.length;i++){
+      const candidate=remaining[i];
+      const scores=recent.slice(-6).map(prev=>semanticSimilarity(candidate,prev));
+      const maxSimilarity=scores.length?Math.max(...scores):0;
+      const sameTopic=recent.some(prev=>prev.topicId&&candidate.topicId&&prev.topicId===candidate.topicId);
+      const score=maxSimilarity+(sameTopic?0.12:0);
+      if(score<bestScore){bestScore=score;best=i;}
+      if(score===0)break;
+    }
+    const [next]=remaining.splice(best,1);
+    ordered.push(next);
+    recent.push(next);
+  }
+  return ordered;
+}
+
 export async function loadContent(){
   if(cache)return cache;
   const licensed=licensedData as any;
@@ -68,3 +117,4 @@ export function filterQuestions(questions:NativeQuestion[],chapterId?:string,mod
   return mode==="pyq"?list.filter(q=>q.series==="pyq"):list.filter(q=>q.series===mode);
 }
 export function chapterQuestionCount(questions:NativeQuestion[],chapterId:string,mode:ContentMode){return filterQuestions(questions,chapterId,mode).length}
+export { orderForPractice };
