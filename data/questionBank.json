@@ -5239,6 +5239,1653 @@
       "sourceLicense": "original_authoring",
       "sourceId": "buzneet-authoring-v2",
       "topic": "units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-001",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A vernier has 20 divisions equal to 19 mm. Its least count is:",
+      "options": [
+        "1 mm",
+        "0.5 mm",
+        "0.05 mm",
+        "0.01 mm"
+      ],
+      "answer": 2,
+      "difficulty": "hard",
+      "explanation": "1 MSD = 1 mm and 1 VSD = 19/20 mm; LC = 0.05 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "vernier calipers"
+    },
+    {
+      "id": "auth-phy-c1-pyq-002",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A screw gauge pitch is 1 mm and has 100 circular divisions. Least count:",
+      "options": [
+        "1 mm",
+        "0.1 mm",
+        "0.01 mm",
+        "0.001 mm"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "LC = pitch/divisions = 1/100 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "screw gauge"
+    },
+    {
+      "id": "auth-phy-c1-pyq-003",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A length is 2.4 cm and breadth 1.25 cm. Product to correct significant figures:",
+      "options": [
+        "3.000 cm²",
+        "3.0 cm²",
+        "3.00 cm²",
+        "3.0000 cm²"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "2.4 has two significant figures, so 3.0 cm².",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-004",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A rectangle has sides 3.20 m and 2.1 m. Its area should be reported as:",
+      "options": [
+        "6.72 m²",
+        "6.7 m²",
+        "6.720 m²",
+        "7 m²"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "The least precise factor has two significant figures.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-005",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A distance is recorded as 0.05060 m. Significant figures:",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Digits 5, 0, 6, and final 0 are significant: four? In 0.05060, significant digits are 5,0,6,0 = 4.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-006",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If x = 3.0 m and y = 2.00 m, x+y with proper precision is:",
+      "options": [
+        "5 m",
+        "5.0 m",
+        "5.00 m",
+        "5.000 m"
+      ],
+      "answer": 1,
+      "difficulty": "hard",
+      "explanation": "Addition is rounded to the least precise decimal place: one decimal place.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-007",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A measured time is 4.6 s with uncertainty 0.2 s. Percentage uncertainty is closest to:",
+      "options": [
+        "0.4%",
+        "2.3%",
+        "4.3%",
+        "8.7%"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "(0.2/4.6)×100 ≈ 4.3%.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-008",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A value 10.0 is measured with absolute uncertainty 0.1. Percentage uncertainty:",
+      "options": [
+        "0.1%",
+        "1%",
+        "10%",
+        "0.01%"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "(0.1/10.0)×100 = 1%.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-009",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Two lengths are (4.0 ± 0.1) cm and (2.0 ± 0.1) cm. Maximum absolute uncertainty in their sum:",
+      "options": [
+        "0.0 cm",
+        "0.1 cm",
+        "0.2 cm",
+        "0.4 cm"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Absolute uncertainties add: 0.1 + 0.1 = 0.2 cm.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-010",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "For a product z=xy, x has 2% error and y has 3% error. Maximum percentage error in z:",
+      "options": [
+        "1%",
+        "5%",
+        "6%",
+        "0.5%"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "For a product, relative percentage errors add: 2% + 3% = 5%.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-011",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "For V = l³, percentage error in l is 1%. Approximate percentage error in V:",
+      "options": [
+        "1%",
+        "2%",
+        "3%",
+        "9%"
+      ],
+      "answer": 2,
+      "difficulty": "hard",
+      "explanation": "For a power, percentage error is multiplied by the exponent: 3×1%.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-012",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "For A = πr², radius has 2% uncertainty. Approximate area uncertainty:",
+      "options": [
+        "1%",
+        "2%",
+        "4%",
+        "8%"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Area varies as r², so percentage uncertainty is approximately 2×2%.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-013",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If time t = 2.00 s and distance s = 10.0 m, speed to correct significant figures is:",
+      "options": [
+        "5 m/s",
+        "5.0 m/s",
+        "5.00 m/s",
+        "5.000 m/s"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "10.0/2.00 = 5.00, with three significant figures; option formatting should be 5.00 m/s.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-014",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A length is 12.0 cm and width 3.0 cm. Area with correct significant figures:",
+      "options": [
+        "36 cm²",
+        "36.0 cm²",
+        "36.00 cm²",
+        "35.9 cm²"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "The least precise factor has two significant figures; report 36 cm².",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-015",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which expression has dimensions of length?",
+      "options": [
+        "velocity × time",
+        "acceleration × time",
+        "force × time",
+        "power × time"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Velocity multiplied by time gives length.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-016",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which expression has dimensions of energy?",
+      "options": [
+        "force × distance",
+        "force / distance",
+        "mass × velocity",
+        "power × distance"
+      ],
+      "answer": 0,
+      "difficulty": "hard",
+      "explanation": "Work/energy equals force times displacement.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-017",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which combination is dimensionless?",
+      "options": [
+        "gT²/l",
+        "gt/l",
+        "g/l²",
+        "gT/l"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "gT²/l has L T⁻² × T² / L = 1.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-018",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "In v² = u² + 2as, dimensions of as are:",
+      "options": [
+        "[LT⁻¹]",
+        "[L²T⁻²]",
+        "[LT⁻²]",
+        "[L²T⁻¹]"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Acceleration times displacement has dimensions L²T⁻².",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-019",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If force F = kx, dimensions of k are:",
+      "options": [
+        "[MT⁻²]",
+        "[MLT⁻²]",
+        "[ML²T⁻²]",
+        "[MT⁻¹]"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "k = force/displacement = [MT⁻²].",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-020",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If energy E = A v² and A has dimensions of mass, E has dimensions of:",
+      "options": [
+        "[MLT⁻²]",
+        "[ML²T⁻²]",
+        "[ML²T⁻¹]",
+        "[M²L²T⁻²]"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Mass times velocity squared has dimensions of energy.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-021",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "The dimensions of coefficient in F = av + bv², where F is force, for a are:",
+      "options": [
+        "[MT⁻¹]",
+        "[ML⁻¹]",
+        "[MLT⁻²]",
+        "[MT⁻²]"
+      ],
+      "answer": 0,
+      "difficulty": "hard",
+      "explanation": "av must be force; a = force/velocity = [MT⁻¹].",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-022",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "For F = av + bv², dimensions of b are:",
+      "options": [
+        "[MT⁻¹]",
+        "[ML⁻¹]",
+        "[MLT⁻²]",
+        "[MT⁻²]"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "b = force/velocity² = [ML⁻¹].",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-023",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If P = F/A, and force dimensions are [MLT⁻²], pressure dimensions are:",
+      "options": [
+        "[ML⁻¹T⁻²]",
+        "[MLT⁻²]",
+        "[ML²T⁻²]",
+        "[MT⁻²]"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Divide force dimensions by area [L²].",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-024",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A physical quantity has dimensions [ML²T⁻³]. It could represent:",
+      "options": [
+        "energy",
+        "power",
+        "momentum",
+        "force"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "Power is energy per time.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-025",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which quantity has dimensions [MLT⁻¹]?",
+      "options": [
+        "impulse",
+        "power",
+        "pressure",
+        "surface tension"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Impulse equals change in momentum.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-026",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which quantity has dimensions [ML²T⁻¹]?",
+      "options": [
+        "angular momentum",
+        "energy",
+        "force",
+        "pressure"
+      ],
+      "answer": 0,
+      "difficulty": "hard",
+      "explanation": "Angular momentum has dimensions mass × length²/time.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-027",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A quantity has SI unit kg m² s⁻³. It is:",
+      "options": [
+        "energy",
+        "power",
+        "pressure",
+        "momentum"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "kg m² s⁻³ is the watt, unit of power.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-028",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A quantity has SI unit kg m⁻¹ s⁻². It is:",
+      "options": [
+        "pressure",
+        "energy",
+        "momentum",
+        "charge"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "These are the dimensions of pressure.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-029",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A quantity has unit N s. It has the dimensions of:",
+      "options": [
+        "impulse",
+        "power",
+        "pressure",
+        "work"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "N s is force × time, equal to impulse dimensions.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-030",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A quantity has unit N m⁻¹. Which can have this unit?",
+      "options": [
+        "surface tension",
+        "work",
+        "momentum",
+        "power"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Surface tension is force per unit length.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-031",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A quantity has unit J kg⁻¹ K⁻¹. It represents:",
+      "options": [
+        "specific heat capacity",
+        "latent heat",
+        "power",
+        "pressure"
+      ],
+      "answer": 0,
+      "difficulty": "hard",
+      "explanation": "Specific heat capacity is energy per mass per temperature.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-032",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "The unit of G in F=Gm₁m₂/r² is:",
+      "options": [
+        "N m² kg⁻²",
+        "N kg² m⁻²",
+        "N m kg⁻¹",
+        "kg m s⁻¹"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Rearranging gives G = Fr²/(m₁m₂).",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-033",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If a pendulum period T depends on length l and gravity g as T∝lᵃgᵇ, dimensional analysis gives:",
+      "options": [
+        "a=1/2,b=−1/2",
+        "a=1,b=−1",
+        "a=−1/2,b=1/2",
+        "a=1/2,b=1/2"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Matching dimensions yields T ∝ √(l/g).",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-034",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If force depends on mass m and acceleration a as F∝mᵖaᑫ, dimensional homogeneity gives:",
+      "options": [
+        "p=1,q=1",
+        "p=0,q=1",
+        "p=1,q=0",
+        "p=2,q=1"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "Matching M, L and T powers gives p=q=1.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-035",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If kinetic energy K∝mᵃvᵇ, dimensions imply:",
+      "options": [
+        "a=1,b=2",
+        "a=2,b=1",
+        "a=1,b=1",
+        "a=0,b=2"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Energy dimensions require one power of mass and two of velocity.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-036",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which statement about radians is correct in dimensional analysis?",
+      "options": [
+        "Angle is treated as dimensionless",
+        "Angle has dimension length",
+        "Radian is a base unit",
+        "Angle has dimension time"
+      ],
+      "answer": 0,
+      "difficulty": "hard",
+      "explanation": "Plane angle is dimensionless in dimensional analysis.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensionless quantities"
+    },
+    {
+      "id": "auth-phy-c1-pyq-037",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A screw gauge reading is 5.64 mm with a positive zero error of 0.04 mm. Correct reading:",
+      "options": [
+        "5.68 mm",
+        "5.64 mm",
+        "5.60 mm",
+        "5.40 mm"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "Subtract the positive zero error: 5.64 − 0.04 = 5.60 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "zero error"
+    },
+    {
+      "id": "auth-phy-c1-pyq-038",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A vernier reading is 2.30 cm with a negative zero error of 0.02 cm. Correct reading:",
+      "options": [
+        "2.28 cm",
+        "2.30 cm",
+        "2.32 cm",
+        "2.20 cm"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "Add 0.02 cm to correct the negative zero error.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "zero error"
+    },
+    {
+      "id": "auth-phy-c1-pyq-039",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A vernier has 1 MSD=1 mm and 1 VSD=0.95 mm. Least count:",
+      "options": [
+        "0.5 mm",
+        "0.05 mm",
+        "0.95 mm",
+        "1.95 mm"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "LC = 1.00 − 0.95 = 0.05 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "vernier calipers"
+    },
+    {
+      "id": "auth-phy-c1-pyq-040",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A screw gauge has pitch 0.25 mm and 25 divisions. Least count:",
+      "options": [
+        "0.1 mm",
+        "0.01 mm",
+        "0.001 mm",
+        "1 mm"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "0.25/25 = 0.01 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "screw gauge"
+    },
+    {
+      "id": "auth-phy-c1-pyq-041",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A scale has 0.5 cm divisions. A reasonable reading precision is limited by its:",
+      "options": [
+        "least count",
+        "mass",
+        "temperature",
+        "dimension"
+      ],
+      "answer": 0,
+      "difficulty": "hard",
+      "explanation": "The scale division sets its direct resolution.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "least count"
+    },
+    {
+      "id": "auth-phy-c1-pyq-042",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which reading has the greatest number of significant figures?",
+      "options": [
+        "0.0032",
+        "3.20",
+        "32.00",
+        "0.032"
+      ],
+      "answer": 2,
+      "difficulty": "easy",
+      "explanation": "32.00 has four significant figures.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-043",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Round 0.009876 to two significant figures.",
+      "options": [
+        "0.0098",
+        "0.0099",
+        "0.010",
+        "0.00987"
+      ],
+      "answer": 1,
+      "difficulty": "medium",
+      "explanation": "The first two significant digits are 9 and 8; the next digit 7 rounds 8 up to 9.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-044",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Round 15.95 to three significant figures.",
+      "options": [
+        "15.9",
+        "16.0",
+        "15.0",
+        "16.5"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "15.95 rounds to 16.0 at three significant figures.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-045",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "For 2.0 + 3.44, report the sum as:",
+      "options": [
+        "5.44",
+        "5.4",
+        "5.440",
+        "5"
+      ],
+      "answer": 1,
+      "difficulty": "easy",
+      "explanation": "The first term is precise only to one decimal place.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-046",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "For 6.0 ÷ 2.00, report the quotient as:",
+      "options": [
+        "3",
+        "3.0",
+        "3.00",
+        "3.000"
+      ],
+      "answer": 1,
+      "difficulty": "hard",
+      "explanation": "The answer should have two significant figures.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-047",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "The measured length is 25.0 cm and width 4.0 cm. Approximate area:",
+      "options": [
+        "100 cm²",
+        "100.0 cm²",
+        "100.00 cm²",
+        "100.000 cm²"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "The product is 1000 cm²? 25.0×4.0 = 100; two significant figures.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-048",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A quantity is measured repeatedly as 5.1, 5.2, 5.1, 5.2 cm. The scatter mainly reflects:",
+      "options": [
+        "random variation",
+        "fixed zero error only",
+        "dimensional error",
+        "unit conversion"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Variation between readings is consistent with random scatter.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-049",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "An instrument reads 0.3 units at true zero. This is:",
+      "options": [
+        "zero error",
+        "random error",
+        "precision",
+        "least count"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "A nonzero reading at true zero is zero error.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "zero error"
+    },
+    {
+      "id": "auth-phy-c1-pyq-050",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which measurement is most precise as written?",
+      "options": [
+        "2 m",
+        "2.0 m",
+        "2.00 m",
+        "2.000 m"
+      ],
+      "answer": 3,
+      "difficulty": "easy",
+      "explanation": "More stated significant figures indicate finer reported precision.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "significant figures"
+    },
+    {
+      "id": "auth-phy-c1-pyq-051",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A length of 1.234 m is converted to centimetres. Numerical value:",
+      "options": [
+        "0.01234",
+        "12.34",
+        "123.4",
+        "1234"
+      ],
+      "answer": 3,
+      "difficulty": "hard",
+      "explanation": "1.234 m = 123.4 cm, so correct option is 123.4.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-052",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A length of 0.75 m is expressed in millimetres as:",
+      "options": [
+        "7.5 mm",
+        "75 mm",
+        "750 mm",
+        "7500 mm"
+      ],
+      "answer": 2,
+      "difficulty": "medium",
+      "explanation": "0.75 m × 1000 = 750 mm.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "prefixes"
+    },
+    {
+      "id": "auth-phy-c1-pyq-053",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which is a coherent SI derived unit?",
+      "options": [
+        "newton",
+        "inch",
+        "calorie",
+        "dyne"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Newton is an SI derived unit.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "derived units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-054",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which quantity is not dimensionless?",
+      "options": [
+        "strain",
+        "refractive index",
+        "relative density",
+        "surface tension"
+      ],
+      "answer": 3,
+      "difficulty": "easy",
+      "explanation": "Surface tension has dimensions of force per length.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensionless quantities"
+    },
+    {
+      "id": "auth-phy-c1-pyq-055",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "The numerical value of a length in centimetres compared with metres is:",
+      "options": [
+        "100 times larger",
+        "100 times smaller",
+        "unchanged",
+        "10 times larger"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "One metre equals 100 centimetres.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-056",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If the unit of length doubles while the physical length is fixed, its numerical value becomes:",
+      "options": [
+        "twice",
+        "half",
+        "four times",
+        "unchanged"
+      ],
+      "answer": 1,
+      "difficulty": "hard",
+      "explanation": "A larger unit gives a smaller numerical value.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "units"
+    },
+    {
+      "id": "auth-phy-c1-pyq-057",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which is a valid use of dimensional analysis?",
+      "options": [
+        "Checking equation consistency",
+        "Finding every additive constant",
+        "Proving an experimental law",
+        "Determining exact measurement error"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "Dimensional analysis is a consistency check.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-058",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "Which error is least likely to disappear by averaging many readings?",
+      "options": [
+        "fixed zero error",
+        "random reaction-time scatter",
+        "random reading scatter",
+        "small random fluctuations"
+      ],
+      "answer": 0,
+      "difficulty": "medium",
+      "explanation": "A systematic zero offset persists under averaging.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "errors"
+    },
+    {
+      "id": "auth-phy-c1-pyq-059",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "A quantity Q has dimensions [M⁰L⁰T⁰]. It is:",
+      "options": [
+        "dimensionless",
+        "always unitless in every convention",
+        "a force",
+        "a length"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "All zero powers mean the quantity is dimensionless.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensions"
+    },
+    {
+      "id": "auth-phy-c1-pyq-060",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "If y = A sin(ωt), dimensions of A match those of:",
+      "options": [
+        "y",
+        "ω",
+        "t",
+        "ωt"
+      ],
+      "answer": 0,
+      "difficulty": "easy",
+      "explanation": "The sine argument is dimensionless, so A has the dimensions of y.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
+    },
+    {
+      "id": "auth-phy-c1-pyq-061",
+      "chapterId": "phy-c1",
+      "series": "pyq",
+      "mode": "pyq",
+      "prompt": "For E = mc², dimensions of c are:",
+      "options": [
+        "[LT⁻¹]",
+        "[LT⁻²]",
+        "[L²T⁻¹]",
+        "[T⁻¹]"
+      ],
+      "answer": 0,
+      "difficulty": "hard",
+      "explanation": "Energy divided by mass and square-rooted gives velocity dimensions.",
+      "reviewStatus": "draft",
+      "sourceType": "pyq_style_original",
+      "sourceLicense": "original_authoring",
+      "sourceId": "buzneet-authoring-v2",
+      "pyq": {
+        "derived": false,
+        "verbatim": false,
+        "verified": false,
+        "note": "Original NEET-style practice question; not an official previous-year question."
+      },
+      "topic": "dimensional analysis"
     }
   ]
 }
