@@ -794,8 +794,8 @@
     {
       "id": "ccby-neet-32918",
       "chapterId": "bio-c3",
-      "series": "ar",
-      "mode": "ar",
+      "series": "mcq",
+      "mode": "mcq",
       "prompt": "What is the reason that Gymnosperms and angiosperms are classified separately even after bearing seeds ?",
       "options": [
         "In Gymnosperms, the ovules are not enclosed by any ovary wall while in angiosperms, the seeds are enclosed in the ovary.",
