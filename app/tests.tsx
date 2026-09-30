@@ -150,7 +150,7 @@ export default function Tests() {
         </View>
         {!!startError&&<Text style={{fontSize:11,lineHeight:17,color:C.destructive,marginTop:10}}>{startError}</Text>}
         <Pressable disabled={!premium.active||!allSelected} onPress={()=>requestStart({n:180,minutes:180,chapterIds:mockChapters,title:"Custom NEET Mock"})} style={{marginTop:14,backgroundColor:premium.active&&allSelected?C.primary:C.muted,borderRadius:15,padding:14,alignItems:"center"}}>
-          <Text style={{fontWeight:"900",color:premium.active&&allSelected?C.primaryText:C.mutedText}>{premium.active?(allSelected?"Start 180Q Mock":"Select all required chapters"):"Premium Required"}</Text>
+          <Text style={{fontWeight:"900",color:premium.active&&allSelected?C.primaryText:C.mutedText}}>{premium.active?(allSelected?"Start 180Q Mock":"Select all required chapters"):"Premium Required"}</Text>
         </Pressable>
       </Card>
 
