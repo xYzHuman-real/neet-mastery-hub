@@ -7,7 +7,8 @@
  * - Produce varied MCQ/statement/match-style drafts with difficulty rotation.
  * - Keep all generated questions explicitly marked as draft until human review.
  *
- * This script is intentionally deterministic. It does not invent PYQ status or
+ * This script is intentionally deterministic.
+ * Full-bank authoring run: populate every chapter/series to the strict 61-question minimum. It does not invent PYQ status or
  * NCERT page/line citations. Every generated item remains draft until reviewed.
  */
 
