@@ -293,7 +293,7 @@ function buildQuestion(ch, n, series = "mcq") {
         topicId: ch.topics[n % ch.topics.length],
         type: "statement",
         difficulty: n % 5 < 2 ? "easy" : n % 5 < 4 ? "medium" : "hard",
-        question: "Assertion and Reason question",
+        question: "Assertion: " + ar.assertion + " Reason: " + ar.reason,
         assertion: ar.assertion,
         reason: ar.reason,
         options: ar.options,
@@ -363,7 +363,7 @@ function buildQuestion(ch, n, series = "mcq") {
       topicId: topic,
       type: "statement",
       difficulty: n % 5 < 2 ? "easy" : n % 5 < 4 ? "medium" : "hard",
-      question: "Assertion and Reason question",
+      question: "Assertion: " + assertion + " Reason: " + reason,
       assertion,
       reason,
       options: [
@@ -400,14 +400,26 @@ function buildQuestion(ch, n, series = "mcq") {
 }
 
 function questionCountForSeries(chapter, series) {
-  // Chapter size follows conceptual breadth: more mapped topics get more practice,
-  // with a deterministic small variation so the bank does not look mechanically uniform.
-  const topics = Math.max(1, (chapter.topics || []).length);
-  const topicBonus = Math.min(100, topics * 10);
-  const index = chapters.indexOf(chapter);
-  const variation = ((index * 13 + topics * 7) % 21) - 10;
-  return 61;
+  return Math.max(61, Math.min(199, Number(chapter.questionTarget) || 61));
 }
+
+function migrateMalformedLicensedAR() {
+  const licensedPath = "data/licensedQuestions.json";
+  if (!fs.existsSync(licensedPath)) return false;
+  const data = JSON.parse(fs.readFileSync(licensedPath, "utf8"));
+  let changed = false;
+  for (const q of (data.questions || [])) {
+    if (q.series === "ar" && (!String(q.assertion || "").trim() || !String(q.reason || "").trim())) {
+      q.series = "mcq";
+      q.mode = "mcq";
+      changed = true;
+    }
+  }
+  if (changed) fs.writeFileSync(licensedPath, JSON.stringify(data, null, 2) + "\n");
+  return changed;
+}
+
+migrateMalformedLicensedAR();
 
 const existing = fs.existsSync("data/questions.json") ? JSON.parse(fs.readFileSync("data/questions.json", "utf8")).questions || [] : [];
 const questions = [];
@@ -534,7 +546,7 @@ fs.writeFileSync("data/questions.json", JSON.stringify({
   policy: { minimumPerSeriesPerChapter: 61, maximumPerSeriesPerChapter: 199, variableCountsPerSeries: true, uniquePrompts: true, answerPositionsShuffled: true, series: ["ncert","mcq","ar","pyq","revision"], pyqSeriesMode: "original-paraphrased-pyq-derived-practice", noVerbatimCopyrightedPYQs: true, noInventedNCERTPageCitations: true },
   questions: improvedQuestions
 }, null, 2) + "\n");
-console.log(`Generated ${improvedQuestions.length} questions across ${chapters.length} chapters with exactly 61 questions per series per chapter. The PYQ series contains original paraphrased PYQ-derived practice, not verbatim official questions.`);
+console.log(`Generated ${improvedQuestions.length} questions across ${chapters.length} chapters using chapter-specific targets. The PYQ series contains original paraphrased PYQ-derived practice, not verbatim official questions.`);
 
 // Regeneration trigger: generated bank is validated before commit.
 // Series counts are validated independently.
