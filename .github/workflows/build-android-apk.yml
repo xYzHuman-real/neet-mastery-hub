@@ -40,7 +40,7 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Align Expo SDK dependencies
-        run: CI=1 npx expo install --fix
+        run: npm install expo@57.0.26 expo-router@57.0.24 expo-notifications@0.32.17 react@19.2.4 @types/react@19.2.4 @types/react-dom@19.2.3 --save --no-audit --no-fund
 
       - name: Expo Doctor
         run: npx expo-doctor
