@@ -1,0 +1,15 @@
+name: NTA Question Bank Authoring V2
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  copilot-requests: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: npm install -g @github/copilot
+      - env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: copilot -p "Read data/chapters.json and confirm the repository question-bank authoring setup is ready. Do not modify files." --model auto --no-ask-user
